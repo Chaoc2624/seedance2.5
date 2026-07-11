@@ -97,20 +97,25 @@ console.log('Cloudflare Worker name:', config.name);
 "
 }
 
-patch_worker_custom_domain() {
-  local custom_domain="${CF_WORKER_CUSTOM_DOMAIN:-}"
-  [[ -n "$custom_domain" ]] || return 0
+patch_worker_route() {
+  local route_pattern="${CF_WORKER_ROUTE_PATTERN:-}"
+  local route_zone_name="${CF_WORKER_ROUTE_ZONE_NAME:-}"
+  [[ -n "$route_pattern" ]] || return 0
 
-  CF_WORKER_CUSTOM_DOMAIN="$custom_domain" node --input-type=module -e "
+  CF_WORKER_ROUTE_PATTERN="$route_pattern" \
+    CF_WORKER_ROUTE_ZONE_NAME="$route_zone_name" \
+    node --input-type=module -e "
 import { readFileSync, writeFileSync } from 'node:fs';
 const path = '.output/server/wrangler.json';
 const config = JSON.parse(readFileSync(path, 'utf8'));
 config.routes = [{
-  pattern: process.env.CF_WORKER_CUSTOM_DOMAIN,
-  custom_domain: true,
+  pattern: process.env.CF_WORKER_ROUTE_PATTERN,
+  ...(process.env.CF_WORKER_ROUTE_ZONE_NAME
+    ? { zone_name: process.env.CF_WORKER_ROUTE_ZONE_NAME }
+    : {}),
 }];
 writeFileSync(path, JSON.stringify(config, null, 2) + '\n');
-console.log('Cloudflare Worker custom domain:', process.env.CF_WORKER_CUSTOM_DOMAIN);
+console.log('Cloudflare Worker route:', process.env.CF_WORKER_ROUTE_PATTERN);
 "
 }
 
@@ -279,7 +284,7 @@ run_worker_deploy() {
   echo "Site URL: $VITE_APP_URL"
   bun run build:cf:worker
   patch_worker_name
-  patch_worker_custom_domain
+  patch_worker_route
   patch_worker_runtime_vars
   bunx wrangler deploy --config .output/server/wrangler.json
 }
