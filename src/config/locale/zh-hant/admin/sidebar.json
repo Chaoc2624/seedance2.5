@@ -1,0 +1,158 @@
+{
+  "header": {
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 512,
+        "height": 512
+      },
+      "url": "/shiponce"
+    },
+    "show_trigger": false
+  },
+  "main_navs": [
+    {
+      "title": "系統",
+      "items": [
+        {
+          "title": "使用者與權限",
+          "icon": "User",
+          "is_expand": true,
+          "children": [
+            {
+              "title": "使用者",
+              "url": "/shiponce/users",
+              "icon": "User"
+            },
+            {
+              "title": "角色",
+              "url": "/shiponce/roles",
+              "icon": "Users"
+            },
+            {
+              "title": "權限",
+              "url": "/shiponce/permissions",
+              "icon": "ShieldCheck"
+            }
+          ]
+        },
+        {
+          "title": "頁面與內容",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "分類",
+              "icon": "Folder",
+              "url": "/shiponce/categories"
+            },
+            {
+              "title": "文章",
+              "icon": "FileText",
+              "url": "/shiponce/posts"
+            }
+          ]
+        },
+        {
+          "title": "付款與點數",
+          "icon": "DollarSign",
+          "children": [
+            {
+              "title": "付款記錄",
+              "url": "/shiponce/payments",
+              "icon": "DollarSign"
+            },
+            {
+              "title": "訂閱管理",
+              "url": "/shiponce/subscriptions",
+              "icon": "CreditCard"
+            },
+            {
+              "title": "點數",
+              "url": "/shiponce/credits",
+              "icon": "Coins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "業務",
+      "items": [
+        {
+          "title": "AI 任務",
+          "url": "/shiponce/ai-tasks",
+          "icon": "Brain"
+        }
+      ]
+    }
+  ],
+  "bottom_nav": {
+    "items": [
+      {
+        "title": "設定",
+        "url": "/shiponce/settings/general",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "user": {
+    "nav": {
+      "items": [
+        {
+          "title": "個人資料",
+          "url": "/settings/profile",
+          "icon": "User",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_email": false,
+    "show_signout": true,
+    "signout_callback": "/"
+  },
+  "sign": {
+    "sign_in_title": "登入",
+    "sign_out_title": "登出"
+  },
+  "footer": {
+    "nav": {
+      "items": [
+        {
+          "title": "首頁",
+          "url": "/",
+          "icon": "Home",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/your-app-name",
+          "icon": "Github",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/your-app-name",
+          "icon": "RiTwitterXFill",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "url": "https://discord.gg/your-app-name",
+          "icon": "RiDiscordFill",
+          "target": "_blank"
+        },
+        {
+          "title": "電子郵件",
+          "url": "mailto:support@your-domain.com",
+          "icon": "Mail",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": false
+  },
+  "variant": "sidebar"
+}

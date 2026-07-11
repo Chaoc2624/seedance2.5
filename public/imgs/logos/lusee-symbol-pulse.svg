@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee symbol option pulse</title>
+  <desc id="desc">A voice and audio waveform orb for multimodal AI creation.</desc>
+  <defs>
+    <linearGradient id="pulse-bg" x1="78" x2="434" y1="64" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#020617"/>
+      <stop offset="0.52" stop-color="#0F172A"/>
+      <stop offset="1" stop-color="#134E4A"/>
+    </linearGradient>
+    <linearGradient id="pulse-line" x1="118" x2="394" y1="132" y2="380" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#86EFAC"/>
+      <stop offset="0.48" stop-color="#22D3EE"/>
+      <stop offset="1" stop-color="#A78BFA"/>
+    </linearGradient>
+    <filter id="pulse-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#14B8A6" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="22" stdDeviation="26" flood-color="#0EA5E9" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="112" fill="url(#pulse-bg)"/>
+  <circle cx="256" cy="256" r="144" fill="none" stroke="#FFFFFF" stroke-width="10" opacity="0.08"/>
+  <path d="M133 258h46l28-82 46 168 55-198 39 112h33" fill="none" stroke="url(#pulse-line)" stroke-width="26" stroke-linecap="round" stroke-linejoin="round" filter="url(#pulse-glow)"/>
+  <path d="M160 350c58 45 137 52 203 11" fill="none" stroke="#86EFAC" stroke-width="14" stroke-linecap="round" opacity="0.45"/>
+  <path d="M154 166c61-48 146-51 210-8" fill="none" stroke="#A78BFA" stroke-width="14" stroke-linecap="round" opacity="0.45"/>
+</svg>

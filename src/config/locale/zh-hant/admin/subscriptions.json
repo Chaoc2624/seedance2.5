@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "subscription_no": "訂閱編號",
+    "user": "使用者",
+    "amount": "金額",
+    "interval": "週期",
+    "provider": "供應商",
+    "created_at": "建立時間",
+    "current_period_start": "當前週期開始",
+    "current_period_end": "當前週期結束",
+    "status": "狀態",
+    "description": "描述",
+    "action": "操作"
+  },
+  "list": {
+    "title": "訂閱管理",
+    "crumbs": {
+      "admin": "管理",
+      "subscriptions": "訂閱管理"
+    },
+    "tabs": {
+      "all": "全部",
+      "month": "月繳",
+      "year": "年繳"
+    }
+  }
+}

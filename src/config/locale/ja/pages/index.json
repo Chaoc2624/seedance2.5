@@ -1,0 +1,408 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "logos",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Seedance 2.5 動画生成と画像生成",
+        "description": "Seedance 2.5、Nano Banana、nanobanana、GPT Image 2 を使い、プロンプト中心の制作を一つの場所で進められます。",
+        "tip": "作成を始める",
+        "highlight_text": "AI搭載",
+        "announcement": {
+          "badge": "新着",
+          "title": "Seedance 2.5 が動画と画像のワークフローに対応",
+          "url": "/pricing"
+        },
+        "avatars_tip": "クリエイターがキャンペーンビジュアル、短編動画、モデル検証に Seedance 2.5 を活用しています。",
+        "buttons": [
+          {
+            "icon": "Zap",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "default",
+            "title": "始める"
+          },
+          {
+            "icon": "BookOpenText",
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "title": "無料で試す"
+          }
+        ],
+        "show_avatars": true,
+        "show_award": false,
+        "image": {
+          "src": "/imgs/features/admin.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        },
+        "image_invert": {
+          "src": "/imgs/features/admin-dark.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        }
+      },
+      "logos": {
+        "id": "logos",
+        "title": "AI クリエイター、制作チーム、成長チーム向け",
+        "items": [
+          {
+            "title": "TanStack",
+            "image": {
+              "src": "/imgs/logos/tanstack.svg",
+              "alt": "TanStack"
+            }
+          },
+          {
+            "title": "React",
+            "image": {
+              "src": "/imgs/logos/react.svg",
+              "alt": "React"
+            }
+          },
+          {
+            "title": "TailwindCSS",
+            "image": {
+              "src": "/imgs/logos/tailwindcss.svg",
+              "alt": "TailwindCSS"
+            }
+          },
+          {
+            "title": "Shadcn/UI",
+            "image": {
+              "src": "/imgs/logos/shadcn.svg",
+              "alt": "Shadcn/UI"
+            }
+          },
+          {
+            "title": "Vercel",
+            "image": {
+              "src": "/imgs/logos/vercel.svg",
+              "alt": "Vercel"
+            }
+          },
+          {
+            "title": "Supabase",
+            "image": {
+              "src": "/imgs/logos/supabase.svg",
+              "alt": "Supabase"
+            }
+          }
+        ]
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "Seedance 2.5 で制作する",
+        "description": "Seedance 2.5 は動画生成、画像生成、モデル選択、プロンプト制作を一つの集中したワークスペースにまとめます。",
+        "items": [
+          {
+            "title": "プロンプト中心の制作",
+            "description": "動画生成ワークスペース",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "動画生成ワークスペース",
+            "description": "画像生成と編集",
+            "icon": "RiDatabase2Line",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "画像生成と編集",
+            "description": "モデル比較",
+            "icon": "RiCloudyFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "モデル比較",
+            "description": "参照素材ベースのワークフロー",
+            "icon": "RiRobot2Line",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "introduce"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/landing-page.png",
+          "alt": "introduce"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "Seedance 2.5 を選ぶ理由",
+        "description": "制作に必要な操作性で、アイデアから画像と動画までをより速く進められます。",
+        "items": [
+          {
+            "title": "プロンプト中心の制作",
+            "description": "動画生成ワークスペース",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "動画生成ワークスペース",
+            "description": "画像生成と編集",
+            "icon": "RiClapperboardAiLine",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "画像生成と編集",
+            "description": "モデル比較",
+            "icon": "RiCodeFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "benefits"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "Seedance 2.5 の使い方",
+        "description": "プロンプトから始め、ビジュアルを調整し、モデルを比較し、参照素材を制作アセットに変換します。",
+        "items": [
+          {
+            "title": "プロンプト中心の制作",
+            "description": "動画生成ワークスペース",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "動画生成ワークスペース",
+            "description": "画像生成と編集",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "画像生成と編集",
+            "description": "モデル比較",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "モデル比較",
+            "description": "参照素材ベースのワークフロー",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "usage"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "Seedance 2.5 の機能",
+        "description": "AI 画像と動画制作に必要なツールをまとめました。",
+        "items": [
+          {
+            "title": "プロンプト中心の制作",
+            "description": "動画生成ワークスペース",
+            "icon": "RiNextjsFill"
+          },
+          {
+            "title": "動画生成ワークスペース",
+            "description": "画像生成と編集",
+            "icon": "RiKey2Fill"
+          },
+          {
+            "title": "画像生成と編集",
+            "description": "モデル比較",
+            "icon": "RiDatabase2Line"
+          },
+          {
+            "title": "モデル比較",
+            "description": "参照素材ベースのワークフロー",
+            "icon": "RiCloudy2Fill"
+          },
+          {
+            "title": "参照素材ベースのワークフロー",
+            "description": "商用クリエイティブ制作",
+            "icon": "RiBarChart2Line"
+          },
+          {
+            "title": "商用クリエイティブ制作",
+            "description": "プロンプト中心の制作",
+            "icon": "RiRobot2Line"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Seedance 2.5 ワークフロー指標",
+        "description": "実際の制作フローとクリエイティブ需要から見えるシグナルです。",
+        "items": [
+          {
+            "title": "10K+",
+            "description": "Seedance 2.5をAI動画と画像生成に利用するプロフェッショナル。"
+          },
+          {
+            "title": "98%",
+            "description": "最近の調査に基づくユーザー満足度。"
+          },
+          {
+            "title": "500+",
+            "description": "AIツールにより月間ユーザーあたり節約された時間。"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "クリエイターの声",
+        "description": "チームは Seedance 2.5 でコンセプト探索、出力比較、公開までの制作を加速しています。",
+        "items": [
+          {
+            "name": "John Doe",
+            "role": "プロカメラマン",
+            "quote": "Seedance 2.5のおかげで数え切れないほどの時間を節約できました。AIアップスケーリングは画期的です。",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "John Doe"
+            }
+          },
+          {
+            "name": "Jane Smith",
+            "role": "クリエイティブディレクター",
+            "quote": "Seedance 2.5のおかげで、チームは面倒な作業ではなくクリエイティブに集中できます。",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "Jane Smith"
+            }
+          },
+          {
+            "name": "Emily Johnson",
+            "role": "エージェンシーオーナー",
+            "quote": "Seedance 2.5のバッチ処理は、忙しい締め切りの救世主です。",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "Emily Johnson"
+            }
+          },
+          {
+            "name": "Michael Brown",
+            "role": "カメラマン",
+            "quote": "スタイル変換機能で、ポートレートが全く新しいレベルに到達しました。",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "Michael Brown"
+            }
+          },
+          {
+            "name": "Sophia Lee",
+            "role": "グラフィックデザイナー",
+            "quote": "Seedance 2.5の使いやすいインターフェースで、AI動画と画像生成が簡単になりました。",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "Sophia Lee"
+            }
+          },
+          {
+            "name": "David Wilson",
+            "role": "フリーランスカメラマン",
+            "quote": "Seedance 2.5のAIツールなしのワークフローはもう考えられません。",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "David Wilson"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "よくある質問",
+        "description": "Seedance 2.5 の動画生成と画像生成についての回答です。",
+        "items": [
+          {
+            "question": "Seedance 2.5 とは何ですか？",
+            "answer": "Seedance 2.5 は動画生成、画像生成、プロンプトベース制作のための AI クリエイティブワークスペースです。"
+          },
+          {
+            "question": "どのモデルに対応していますか？",
+            "answer": "Seedance 2.5、GPT Image 2、Nano Banana、nanobanana などのワークフローを扱えます。"
+          },
+          {
+            "question": "画像から動画を生成できますか？",
+            "answer": "はい。プロンプトや参照画像から画像から動画のワークフローに進めます。"
+          },
+          {
+            "question": "生成画像を編集できますか？",
+            "answer": "はい。ポスター、商品ビジュアル、広告、コンセプト制作向けの画像生成と編集に対応します。"
+          },
+          {
+            "question": "最新ブラウザは必要ですか？",
+            "answer": "はい。参照素材のアップロードとプレビューには最新ブラウザと安定したネットワークを推奨します。"
+          },
+          {
+            "question": "商用利用できますか？",
+            "answer": "商用利用は選択したモデル、プラン、プロバイダー規約により異なります。公開前にライセンスを確認してください。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Seedance 2.5 で作成",
+        "description": "現代の制作チーム向けに設計されたプロンプト中心のワークフローで動画と画像を生成しましょう。",
+        "buttons": [
+          {
+            "url": "/pricing",
+            "target": "_self",
+            "icon": "Zap",
+            "title": "今すぐ開始"
+          },
+          {
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "icon": "BookOpenText",
+            "title": "詳しく見る"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    },
+    "title": "Seedance 2.5 動画生成と画像生成",
+    "description": "Seedance 2.5、Nano Banana、nanobanana、GPT Image 2 を使い、プロンプト中心の制作を一つの場所で進められます。"
+  }
+}

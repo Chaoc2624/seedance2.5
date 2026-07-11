@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "Name",
+    "avatar": "Awatara",
+    "email": "E-mail",
+    "email_verified": "Adres e-mail zweryfikowany",
+    "remaining_credits": "Pozostałe kredyty",
+    "created_at": "Utworzono o godz",
+    "actions": "Działania",
+    "roles": "Role",
+    "ip": "IP",
+    "locale": "Widownia",
+    "utm_source": "Źródło UTM"
+  },
+  "list": {
+    "title": "Użytkownicy",
+    "crumbs": {
+      "admin": "Administrator",
+      "users": "Użytkownicy"
+    },
+    "buttons": {
+      "add": "Dodaj użytkownika",
+      "edit": "Edytuj użytkownika",
+      "view": "Wyświetl użytkownika",
+      "delete": "Usuń użytkownika",
+      "edit_roles": "Edytuj role",
+      "grant_credits": "Przyznaj kredyty"
+    },
+    "search": {
+      "email": {
+        "title": "E-mail",
+        "placeholder": "E-mail"
+      }
+    }
+  },
+  "edit": {
+    "title": "Edytuj użytkownika",
+    "crumbs": {
+      "admin": "Administrator",
+      "users": "Użytkownicy",
+      "edit": "Redagować"
+    },
+    "buttons": {
+      "submit": "Aktualizacja"
+    }
+  },
+  "edit_roles": {
+    "title": "Edytuj role",
+    "crumbs": {
+      "admin": "Administrator",
+      "users": "Użytkownicy",
+      "edit_roles": "Edytuj role"
+    },
+    "buttons": {
+      "submit": "Aktualizacja"
+    }
+  },
+  "grant_credits": {
+    "title": "Przyznaj kredyty",
+    "crumbs": {
+      "admin": "Administrator",
+      "users": "Użytkownicy",
+      "grant_credits": "Przyznaj kredyty"
+    },
+    "buttons": {
+      "submit": "Dotacja"
+    },
+    "fields": {
+      "credits": "Kwota kredytów",
+      "valid_days": "Kredyty ważne w dni",
+      "valid_days_tip": "0 oznacza brak wygaśnięcia",
+      "description": "Opis przyznania kredytów",
+      "description_placeholder": "Kredyty przyznane przez administratora"
+    }
+  }
+}

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Vetrine",
+    "description": "Progetti fantastici realizzati con Seedance 2.5"
+  },
+  "page": {
+    "title": "Vetrine",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Startup SaaS AI create con Seedance 2.5",
+        "description": "Facile da usare e veloce da spedire.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "Showcase prompt GPT Image 2",
+      "description": "Esplora esempi di prompt GPT Image 2, risultati generati e strutture riutilizzabili."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "Showcase prompt GPT Image 2",
+      "description": "Una libreria ricca di prompt riutilizzabili con output generati. Apri una card per inviare il prompt al generatore.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "Showcase GPT Image 2",
+        "preview": "Anteprima",
+        "preview_aria": "Anteprima di {title}",
+        "dialog_description": "Anteprima grande dell’immagine generata.",
+        "prompt": "Prompt",
+        "use_prompt": "Usa questo prompt",
+        "view_more": "Vedi altri showcase",
+        "all": "Tutti"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "Poster esploso di visore VR",
+          "description": "Genera un diagramma high-tech esploso di un visore VR con callout dettagliati dei componenti e testo promozionale."
+        },
+        "13983": {
+          "title": "Slide esplicativa su Momotaro in stile ibrido",
+          "description": "Combina l’estetica semplice e calda di Irasutoya con l’alta densità informativa tipica delle slide governative giapponesi."
+        },
+        "16624": {
+          "title": "Feature magazine giapponese per la Giornata dell’Elefante",
+          "description": "Genera una pagina editoriale giapponese raffinata sulla Giornata dell’Elefante, ideale per grafiche stagionali, layout lifestyle o arte educativa a tema zoo."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

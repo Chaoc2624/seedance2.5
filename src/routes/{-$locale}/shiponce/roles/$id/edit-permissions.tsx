@@ -1,0 +1,68 @@
+import { createFileRoute } from '@tanstack/react-router';
+
+import { getThemePage } from '@/core/theme';
+
+import { DynamicPage } from '@/types/blocks/landing';
+
+const ThemeDynamicPage = getThemePage('dynamic-page');
+
+export const Route = createFileRoute(
+  '/{-$locale}/shiponce/roles/$id/edit-permissions'
+)({
+  component: EditPermissionsPage,
+});
+
+function EditPermissionsPage() {
+  const page: DynamicPage = {
+    title: '角色',
+    sections: {
+      'edit-permissions': {
+        fields: {
+          id: 'ID',
+          name: '名称',
+          title: '标题',
+          description: '描述',
+          status: '状态',
+          sort: '排序',
+          created_at: '创建时间',
+          updated_at: '更新时间',
+          permissions: '权限',
+          actions: '操作',
+        },
+        list: {
+          title: '角色',
+          crumbs: {
+            admin: '管理后台',
+            roles: '角色',
+          },
+          buttons: {
+            create: '创建角色',
+            edit: '编辑角色',
+            edit_permissions: '编辑权限',
+            delete: '删除角色',
+          },
+        },
+        edit: {
+          title: '编辑角色',
+          crumbs: {
+            admin: '管理后台',
+            roles: '角色',
+            edit: '编辑角色',
+          },
+          buttons: { submit: '更新' },
+        },
+        edit_permissions: {
+          title: '编辑权限',
+          crumbs: {
+            admin: '管理后台',
+            roles: '角色',
+            edit_permissions: '编辑权限',
+          },
+          buttons: { submit: '更新' },
+        },
+      },
+    },
+  };
+
+  return <ThemeDynamicPage page={page} />;
+}

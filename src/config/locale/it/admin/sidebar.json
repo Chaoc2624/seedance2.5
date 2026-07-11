@@ -1,0 +1,154 @@
+{
+  "header": {
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 512,
+        "height": 512
+      },
+      "url": "/shiponce"
+    },
+    "show_trigger": false
+  },
+  "main_navs": [
+    {
+      "title": "Sistema",
+      "items": [
+        {
+          "title": "Utenti e autorizzazioni",
+          "icon": "User",
+          "is_expand": true,
+          "children": [
+            {
+              "title": "Utenti",
+              "url": "/shiponce/users",
+              "icon": "User"
+            },
+            {
+              "title": "Ruoli",
+              "url": "/shiponce/roles",
+              "icon": "Users"
+            },
+            {
+              "title": "Autorizzazioni",
+              "url": "/shiponce/permissions",
+              "icon": "ShieldCheck"
+            }
+          ]
+        },
+        {
+          "title": "Pagine e contenuti",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "Categorie",
+              "icon": "Folder",
+              "url": "/shiponce/categories"
+            },
+            {
+              "title": "Messaggi",
+              "icon": "FileText",
+              "url": "/shiponce/posts"
+            }
+          ]
+        },
+        {
+          "title": "Pagamenti e crediti",
+          "icon": "DollarSign",
+          "children": [
+            {
+              "title": "Pagamenti",
+              "url": "/shiponce/payments",
+              "icon": "DollarSign"
+            },
+            {
+              "title": "Abbonamenti",
+              "url": "/shiponce/subscriptions",
+              "icon": "CreditCard"
+            },
+            {
+              "title": "Crediti",
+              "url": "/shiponce/credits",
+              "icon": "Coins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Attività commerciale",
+      "items": [
+        {
+          "title": "Compiti dell'intelligenza artificiale",
+          "url": "/shiponce/ai-tasks",
+          "icon": "Brain"
+        }
+      ]
+    }
+  ],
+  "bottom_nav": {
+    "items": [
+      {
+        "title": "Impostazioni",
+        "url": "/shiponce/settings/general",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "user": {
+    "nav": {
+      "items": [
+        {
+          "title": "Profilo",
+          "url": "/settings/profile",
+          "icon": "User",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_email": false,
+    "show_signout": true,
+    "signout_callback": "/"
+  },
+  "footer": {
+    "nav": {
+      "items": [
+        {
+          "title": "Casa",
+          "url": "/",
+          "icon": "Home",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/your-app-name",
+          "icon": "Github",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/your-app-name",
+          "icon": "RiTwitterXFill",
+          "target": "_blank"
+        },
+        {
+          "title": "Discordia",
+          "url": "https://discord.gg/your-app-name",
+          "icon": "RiDiscordFill",
+          "target": "_blank"
+        },
+        {
+          "title": "E-mail",
+          "url": "mailto:support@your-domain.com",
+          "icon": "Mail",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": false
+  },
+  "variant": "sidebar"
+}

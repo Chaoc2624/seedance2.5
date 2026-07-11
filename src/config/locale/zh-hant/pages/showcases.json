@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "展示案例",
+    "description": "使用 Seedance 2.5 構建的精彩專案"
+  },
+  "page": {
+    "title": "展示案例",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "使用 Seedance 2.5 構建的 AI SaaS 新創公司",
+        "description": "易於使用，快速發布。",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "GPT Image 2 提示詞案例",
+      "description": "瀏覽 GPT Image 2 提示詞範例、生成結果與可重用提示結構。"
+    },
+    "section": {
+      "id": "showcase",
+      "title": "GPT Image 2 提示詞案例",
+      "description": "密集收錄可重用提示詞與生成結果。打開任一卡片，即可把提示詞送進生成器。",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "GPT Image 2 案例庫",
+        "preview": "預覽",
+        "preview_aria": "預覽 {title}",
+        "dialog_description": "生成案例圖片的大尺寸預覽。",
+        "prompt": "提示詞",
+        "use_prompt": "使用此提示詞",
+        "view_more": "查看更多案例",
+        "all": "全部"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "VR 頭戴裝置分解視圖海報",
+          "description": "生成高科技 VR 頭戴裝置分解圖，包含詳細零件標註與宣傳文案。"
+        },
+        "13983": {
+          "title": "桃太郎混合風格解說投影片",
+          "description": "結合 Irasutoya 溫暖簡潔插畫風與日本政府投影片高資訊密度的提示詞。"
+        },
+        "16624": {
+          "title": "日本象日雜誌專題",
+          "description": "生成精緻日式 editorial 雜誌頁，以象日為主題，適合季節專題、生活風版面或教育型動物園藝術。"
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

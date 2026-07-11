@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "すべて",
+    "image": "画像",
+    "video": "動画",
+    "audio": "音声",
+    "favorites": "お気に入り"
+  },
+  "status": {
+    "success": "完了",
+    "failed": "失敗",
+    "partial_failed": "一部完了",
+    "processing": "生成中",
+    "queued": "待機中"
+  },
+  "scene": {
+    "image_to_image": "画像から画像",
+    "text_to_image": "テキストから画像",
+    "image_to_video": "画像から動画",
+    "video_to_video": "動画から動画",
+    "text_to_video": "テキストから動画"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} は近日公開予定です。",
+    "share_copied": "共有リンクをコピーしました。",
+    "copy_failed": "コピーできませんでした。もう一度お試しください。",
+    "sign_in_required": "生成する前にログインしてください。",
+    "model_unavailable": "このモデルは利用できません。別のモデルを選択して再試行してください。",
+    "all_failed": "生成に失敗しました。タスクカードで詳細を確認してください。",
+    "partial_submission_failed": "{count} 件の出力に失敗しました。残りのタスクは送信されました。",
+    "generation_failed": "生成に失敗しました：{message}"
+  },
+  "timeline": {
+    "video": "動画",
+    "images": "画像 {completed}/{total}",
+    "slot_failed": "生成に失敗しました",
+    "queued_waiting": "キューに追加されました。処理を待っています。",
+    "generating": "生成中 {completed}/{total}",
+    "retry_load": "履歴を読み込めませんでした。再試行",
+    "edit_prompt": "プロンプトを編集",
+    "regenerate": "再生成"
+  },
+  "actions": {
+    "fullscreen": "プレビューを開く",
+    "download": "ダウンロード",
+    "share": "共有",
+    "favorite": "お気に入りに追加",
+    "unfavorite": "お気に入りから削除",
+    "image_to_video": "画像から動画",
+    "image_to_image": "画像から画像",
+    "ai_restore": "AI 修復",
+    "enhance": "高画質化",
+    "more": "その他",
+    "remove_background": "背景を削除",
+    "erase_object": "オブジェクトを消去",
+    "outpaint": "画像を拡張",
+    "ai_background": "AI 背景"
+  },
+  "preview": {
+    "title": "生成結果のプレビュー",
+    "description": "生成結果を確認し、ダウンロード、共有、お気に入り、編集を続けられます。",
+    "close": "プレビューを閉じる",
+    "prompt": "プロンプト",
+    "copy": "コピー",
+    "copied": "コピーしました",
+    "information": "情報",
+    "type": "タイプ",
+    "status": "ステータス",
+    "image": "画像",
+    "video": "動画",
+    "recreate": "再生成",
+    "edit": "編集"
+  },
+  "empty": {
+    "favorites_title": "お気に入りはありません",
+    "favorites_description": "結果にカーソルを合わせてハートを選ぶと、ここに追加されます。",
+    "default_title": "新しい生成を開始",
+    "default_description": "生成タスクはこのタイムラインに表示され、準備ができるとここに結果が表示されます。"
+  },
+  "skeleton": {
+    "history_loading": "生成履歴を読み込んでいます",
+    "history_loading_more": "さらに生成履歴を読み込んでいます",
+    "processing": "モデルがリクエストを処理しています。",
+    "progress": "生成の進行状況 {progress}%"
+  },
+  "prompt": {
+    "fallback": "無題の生成",
+    "copy": "コピー",
+    "copied": "プロンプトをコピーしました。",
+    "collapse": "折りたたむ",
+    "expand": "展開"
+  }
+}

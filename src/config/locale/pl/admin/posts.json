@@ -1,0 +1,60 @@
+{
+  "fields": {
+    "slug": "Ślimak",
+    "title": "Tytuł",
+    "description": "Opis",
+    "image": "Obraz",
+    "content": "Treść",
+    "categories": "Kategorie",
+    "tags": "Tagi",
+    "author_name": "Imię autora",
+    "author_role": "Rola autora",
+    "author_image": "Autor obrazu",
+    "status": "Status",
+    "created_at": "Utworzono o godz",
+    "updated_at": "Zaktualizowano o godz",
+    "deleted_at": "Usunięto o godz"
+  },
+  "list": {
+    "title": "Posty",
+    "crumbs": {
+      "admin": "Administrator",
+      "posts": "Posty"
+    },
+    "buttons": {
+      "add": "Dodaj post",
+      "edit": "Edytuj post",
+      "view": "Zobacz wpis",
+      "delete": "Usuń post"
+    },
+    "tabs": {
+      "all": "Wszystko",
+      "published": "Opublikowany",
+      "pending": "Aż do",
+      "draft": "Projekt",
+      "archived": "Zarchiwizowane"
+    }
+  },
+  "add": {
+    "title": "Dodaj post",
+    "crumbs": {
+      "admin": "Administrator",
+      "posts": "Posty",
+      "add": "Dodaj post"
+    },
+    "buttons": {
+      "submit": "Dodaj post"
+    }
+  },
+  "edit": {
+    "title": "Edytuj post",
+    "crumbs": {
+      "admin": "Administrator",
+      "posts": "Posty",
+      "edit": "Edytuj post"
+    },
+    "buttons": {
+      "submit": "Edytuj post"
+    }
+  }
+}

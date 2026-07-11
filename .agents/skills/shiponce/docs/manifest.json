@@ -1,0 +1,452 @@
+{
+  "categories": [
+    "快速开始",
+    "使用指南",
+    "登录鉴权",
+    "数据库",
+    "支付",
+    "存储",
+    "邮件",
+    "数据分析",
+    "广告",
+    "客服",
+    "部署上线",
+    "核心配置",
+    "定制化",
+    "页面构建器",
+    "AI编程",
+    "社区经验"
+  ],
+  "pages": [
+    {
+      "slug": "快速开始",
+      "category": "快速开始",
+      "title": "快速开始"
+    },
+    {
+      "slug": "登录鉴权/email",
+      "category": "登录鉴权",
+      "title": "邮箱登录"
+    },
+    {
+      "slug": "登录鉴权/github",
+      "category": "登录鉴权",
+      "title": "Github 登录"
+    },
+    {
+      "slug": "登录鉴权/google",
+      "category": "登录鉴权",
+      "title": "Google 登录"
+    },
+    {
+      "slug": "数据分析/ga",
+      "category": "数据分析",
+      "title": "Google Analytics"
+    },
+    {
+      "slug": "AI编程/mcp",
+      "category": "AI编程",
+      "title": "MCP"
+    },
+    {
+      "slug": "AI编程/skills",
+      "category": "AI编程",
+      "title": "Skills"
+    },
+    {
+      "slug": "部署上线/cloudflare",
+      "category": "部署上线",
+      "title": "部署到 Cloudflare Workers"
+    },
+    {
+      "slug": "部署上线/deploy-to-cloudflare-mac",
+      "category": "部署上线",
+      "title": "项目部署到 Cloudflare Workers（Mac）"
+    },
+    {
+      "slug": "部署上线/deploy-to-cloudflare-windows",
+      "category": "部署上线",
+      "title": "项目部署到 Cloudflare Workers（Windows）"
+    },
+    {
+      "slug": "部署上线/deploy-to-vercel",
+      "category": "部署上线",
+      "title": "项目部署到Vercel"
+    },
+    {
+      "slug": "部署上线/dokploy",
+      "category": "部署上线",
+      "title": "使用 Dokploy 部署"
+    },
+    {
+      "slug": "部署上线/how-to-view-project-logs",
+      "category": "部署上线",
+      "title": "项目如何查看日志（Vercel、Cloudflare）"
+    },
+    {
+      "slug": "部署上线/vercel",
+      "category": "部署上线",
+      "title": "部署到 Vercel"
+    },
+    {
+      "slug": "使用指南/architecture",
+      "category": "使用指南",
+      "title": "系统架构"
+    },
+    {
+      "slug": "使用指南/faq",
+      "category": "使用指南",
+      "title": "常见问题解答"
+    },
+    {
+      "slug": "使用指南/get-shipany",
+      "category": "使用指南",
+      "title": "获取 ShipAny"
+    },
+    {
+      "slug": "使用指南/prerequisites",
+      "category": "使用指南",
+      "title": "前置要求"
+    },
+    {
+      "slug": "使用指南/tutorial",
+      "category": "使用指南",
+      "title": "视频教程"
+    },
+    {
+      "slug": "数据库/d1",
+      "category": "数据库",
+      "title": "Cloudflare D1"
+    },
+    {
+      "slug": "数据库/how-use-db-neon",
+      "category": "数据库",
+      "title": "项目如何配置使用neon数据库"
+    },
+    {
+      "slug": "数据库/how-use-local-psql",
+      "category": "数据库",
+      "title": "项目本地开发时使用本地psql数据库"
+    },
+    {
+      "slug": "数据库/mysql",
+      "category": "数据库",
+      "title": "MySQL"
+    },
+    {
+      "slug": "数据库/neon",
+      "category": "数据库",
+      "title": "Neon"
+    },
+    {
+      "slug": "数据库/postgresql",
+      "category": "数据库",
+      "title": "PostgreSQL"
+    },
+    {
+      "slug": "数据库/share-about-dbbackup",
+      "category": "数据库",
+      "title": "分享数据库不花钱-每天自动备份"
+    },
+    {
+      "slug": "数据库/sqlite",
+      "category": "数据库",
+      "title": "SQLite"
+    },
+    {
+      "slug": "数据库/supabase",
+      "category": "数据库",
+      "title": "Supabase"
+    },
+    {
+      "slug": "数据库/turso",
+      "category": "数据库",
+      "title": "Turso"
+    },
+    {
+      "slug": "社区经验/ai-platform-tutorial",
+      "category": "社区经验",
+      "title": "ShipanyTwo视频课：一站式 AI 生成平台"
+    },
+    {
+      "slug": "社区经验/ai-wallpaper-tutorial",
+      "category": "社区经验",
+      "title": "ShipanyTwo视频课：AI 壁纸生成器开发"
+    },
+    {
+      "slug": "社区经验/buy-cheap-domain",
+      "category": "社区经验",
+      "title": "如何购买便宜的域名"
+    },
+    {
+      "slug": "社区经验/chatgpt-one-year",
+      "category": "社区经验",
+      "title": "Chatgpt老兵认证免费一年会员"
+    },
+    {
+      "slug": "社区经验/error-api-auth-get-session",
+      "category": "社区经验",
+      "title": "[2025-12-13]/api/auth/get-session刷起来了"
+    },
+    {
+      "slug": "社区经验/error-get-configs",
+      "category": "社区经验",
+      "title": "[2025-12-24]启动后频繁调用get-configs接口"
+    },
+    {
+      "slug": "社区经验/have-some-pay",
+      "category": "社区经验",
+      "title": "必读！模版集合-老顾客优惠"
+    },
+    {
+      "slug": "社区经验/hongkong-clubsim",
+      "category": "社区经验",
+      "title": "香港手机号线上申请全攻略"
+    },
+    {
+      "slug": "社区经验/how-desgin-webpage",
+      "category": "社区经验",
+      "title": "分享如何使用AI能力设计美化网页"
+    },
+    {
+      "slug": "社区经验/how-dev-to-production",
+      "category": "社区经验",
+      "title": "「一人可执行」ShipanyTwo 从 0 到上线的完整闭环"
+    },
+    {
+      "slug": "社区经验/how-use-ai-cursor",
+      "category": "社区经验",
+      "title": "最全最细的 CurSor AI编程零基础全套教程"
+    },
+    {
+      "slug": "社区经验/how-use-ai-ide",
+      "category": "社区经验",
+      "title": "分享下我在用的编程IDE"
+    },
+    {
+      "slug": "社区经验/how-use-ai-trae",
+      "category": "社区经验",
+      "title": "Trae 保姆级教程｜AI 编程工具完整入门"
+    },
+    {
+      "slug": "社区经验/how-use-antigravity",
+      "category": "社区经验",
+      "title": "史上最详细教程：如何使用 Antigravity"
+    },
+    {
+      "slug": "社区经验/how-use-claude-code",
+      "category": "社区经验",
+      "title": "Claude Code 0基础入门指南"
+    },
+    {
+      "slug": "社区经验/how-use-clawdbot",
+      "category": "社区经验",
+      "title": "爆火的OpenClaw零基础入门上手"
+    },
+    {
+      "slug": "社区经验/how-use-mofa",
+      "category": "社区经验",
+      "title": "如何买和使用魔法梯子"
+    },
+    {
+      "slug": "社区经验/ide-rules",
+      "category": "社区经验",
+      "title": "分享下我对编程Agent的rules配置"
+    },
+    {
+      "slug": "社区经验/neon-or-supabase",
+      "category": "社区经验",
+      "title": "关于数据库Neon和Supabase的区别"
+    },
+    {
+      "slug": "社区经验/problems-encountered",
+      "category": "社区经验",
+      "title": "项目使用遇到的问题"
+    },
+    {
+      "slug": "社区经验/quick-start-guide",
+      "category": "社区经验",
+      "title": "项目快速上手图文教程"
+    },
+    {
+      "slug": "社区经验/readme",
+      "category": "社区经验",
+      "title": "仓库必读，请仔细阅读"
+    },
+    {
+      "slug": "社区经验/saas-payment-ban-creem-database-leak-postmortem",
+      "category": "社区经验",
+      "title": "Creem账户被封后的完整复盘"
+    },
+    {
+      "slug": "社区经验/share-zhonghzuan-api",
+      "category": "社区经验",
+      "title": "分享Token中转站"
+    },
+    {
+      "slug": "社区经验/update-logs",
+      "category": "社区经验",
+      "title": "更新日志"
+    },
+    {
+      "slug": "社区经验/what-is-skills",
+      "category": "社区经验",
+      "title": "一文带你看懂，Skills到底是个啥"
+    },
+    {
+      "slug": "存储/cloudflare-r2",
+      "category": "存储",
+      "title": "Cloudflare R2"
+    },
+    {
+      "slug": "存储/r2-storage-configuration",
+      "category": "存储",
+      "title": "项目中关于R2存储相关配置"
+    },
+    {
+      "slug": "客服/crisp",
+      "category": "客服",
+      "title": "Crisp"
+    },
+    {
+      "slug": "支付/creem",
+      "category": "支付",
+      "title": "Creem"
+    },
+    {
+      "slug": "支付/hk-bank-account-guide",
+      "category": "支付",
+      "title": "香港主流银行开户攻略"
+    },
+    {
+      "slug": "支付/how-china-person-pay",
+      "category": "支付",
+      "title": "国内支付没有企业资质如何用微信支付宝收款"
+    },
+    {
+      "slug": "支付/how-set-stripe-radar",
+      "category": "支付",
+      "title": "Stripe雷达设置，防止封号"
+    },
+    {
+      "slug": "支付/how-test-pay",
+      "category": "支付",
+      "title": "支付测试卡"
+    },
+    {
+      "slug": "支付/how-to-transfer-a-small-amount-of-money-back-to-china",
+      "category": "支付",
+      "title": "如何将海外挣的一点点钱弄回国内"
+    },
+    {
+      "slug": "支付/how-to-use-creem-wise",
+      "category": "支付",
+      "title": "未办理港卡的同学看过来，试试Creem+Wise组合"
+    },
+    {
+      "slug": "支付/how-use-paypal-cn",
+      "category": "支付",
+      "title": "Paypal.cn国内身份+银行卡注册后如何接入使用"
+    },
+    {
+      "slug": "支付/paypal-cn-person",
+      "category": "支付",
+      "title": "Paypal.cn现在支持个人收款了"
+    },
+    {
+      "slug": "支付/paypal-world-china-person",
+      "category": "支付",
+      "title": "PayPal 海外收款账号转至中国个人卖家全流程"
+    },
+    {
+      "slug": "支付/paypal",
+      "category": "支付",
+      "title": "Paypal"
+    },
+    {
+      "slug": "支付/saas-pay-calc",
+      "category": "支付",
+      "title": "SaaS 出海收款计算器"
+    },
+    {
+      "slug": "支付/stripe-configuration",
+      "category": "支付",
+      "title": "项目中关于Stripe支付相关配置"
+    },
+    {
+      "slug": "支付/stripe-jiqiao",
+      "category": "支付",
+      "title": "Stripe减少客户流失+增加收入的小技巧"
+    },
+    {
+      "slug": "支付/stripe-re",
+      "category": "支付",
+      "title": "如何用大陆护照+个人港卡注册Stripe个人账户"
+    },
+    {
+      "slug": "支付/stripe",
+      "category": "支付",
+      "title": "Stripe"
+    },
+    {
+      "slug": "支付/use-pay-by-creem",
+      "category": "支付",
+      "title": "项目中关于Creem支付相关配置"
+    },
+    {
+      "slug": "支付/wise-card-guide",
+      "category": "支付",
+      "title": "Wise在线开卡（含PayPal无损转Wise实操视频）"
+    },
+    {
+      "slug": "页面构建器/dynamic-page",
+      "category": "页面构建器",
+      "title": "动态页面构建"
+    },
+    {
+      "slug": "页面构建器/static-page",
+      "category": "页面构建器",
+      "title": "静态页面构建"
+    },
+    {
+      "slug": "核心配置/admin-settings",
+      "category": "核心配置",
+      "title": "可视化配置"
+    },
+    {
+      "slug": "核心配置/env-variables",
+      "category": "核心配置",
+      "title": "环境变量"
+    },
+    {
+      "slug": "定制化/appinfo",
+      "category": "定制化",
+      "title": "自定义应用信息"
+    },
+    {
+      "slug": "定制化/locale",
+      "category": "定制化",
+      "title": "自定义多语言"
+    },
+    {
+      "slug": "定制化/page",
+      "category": "定制化",
+      "title": "自定义页面展示"
+    },
+    {
+      "slug": "定制化/theme",
+      "category": "定制化",
+      "title": "自定义主题"
+    },
+    {
+      "slug": "广告/adsense",
+      "category": "广告",
+      "title": "Adsense"
+    },
+    {
+      "slug": "邮件/resend",
+      "category": "邮件",
+      "title": "Resend"
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "header": {
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 512,
+        "height": 512
+      },
+      "url": "/shiponce"
+    },
+    "show_trigger": false
+  },
+  "main_navs": [
+    {
+      "title": "システム",
+      "items": [
+        {
+          "title": "ユーザーと権限",
+          "icon": "User",
+          "is_expand": true,
+          "children": [
+            {
+              "title": "ユーザー",
+              "url": "/shiponce/users",
+              "icon": "User"
+            },
+            {
+              "title": "ロール",
+              "url": "/shiponce/roles",
+              "icon": "Users"
+            },
+            {
+              "title": "権限",
+              "url": "/shiponce/permissions",
+              "icon": "ShieldCheck"
+            }
+          ]
+        },
+        {
+          "title": "ページとコンテンツ",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "カテゴリ",
+              "icon": "Folder",
+              "url": "/shiponce/categories"
+            },
+            {
+              "title": "記事",
+              "icon": "FileText",
+              "url": "/shiponce/posts"
+            }
+          ]
+        },
+        {
+          "title": "決済とクレジット",
+          "icon": "DollarSign",
+          "children": [
+            {
+              "title": "決済",
+              "url": "/shiponce/payments",
+              "icon": "DollarSign"
+            },
+            {
+              "title": "サブスクリプション",
+              "url": "/shiponce/subscriptions",
+              "icon": "CreditCard"
+            },
+            {
+              "title": "クレジット",
+              "url": "/shiponce/credits",
+              "icon": "Coins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "ビジネス",
+      "items": [
+        {
+          "title": "AIタスク",
+          "url": "/shiponce/ai-tasks",
+          "icon": "Brain"
+        }
+      ]
+    }
+  ],
+  "bottom_nav": {
+    "items": [
+      {
+        "title": "設定",
+        "url": "/shiponce/settings/general",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "user": {
+    "nav": {
+      "items": [
+        {
+          "title": "プロフィール",
+          "url": "/settings/profile",
+          "icon": "User",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_email": false,
+    "show_signout": true,
+    "signout_callback": "/"
+  },
+  "footer": {
+    "nav": {
+      "items": [
+        {
+          "title": "ホーム",
+          "url": "/",
+          "icon": "Home",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/your-app-name",
+          "icon": "Github",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/your-app-name",
+          "icon": "RiTwitterXFill",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "url": "https://discord.gg/your-app-name",
+          "icon": "RiDiscordFill",
+          "target": "_blank"
+        },
+        {
+          "title": "メール",
+          "url": "mailto:support@your-domain.com",
+          "icon": "Mail",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": false
+  },
+  "variant": "sidebar"
+}

@@ -1,0 +1,158 @@
+{
+  "header": {
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 512,
+        "height": 512
+      },
+      "url": "/shiponce"
+    },
+    "show_trigger": false
+  },
+  "main_navs": [
+    {
+      "title": "System",
+      "items": [
+        {
+          "title": "Users & Permissions",
+          "icon": "User",
+          "is_expand": true,
+          "children": [
+            {
+              "title": "Users",
+              "url": "/shiponce/users",
+              "icon": "User"
+            },
+            {
+              "title": "Roles",
+              "url": "/shiponce/roles",
+              "icon": "Users"
+            },
+            {
+              "title": "Permissions",
+              "url": "/shiponce/permissions",
+              "icon": "ShieldCheck"
+            }
+          ]
+        },
+        {
+          "title": "Pages & Content",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "Categories",
+              "icon": "Folder",
+              "url": "/shiponce/categories"
+            },
+            {
+              "title": "Posts",
+              "icon": "FileText",
+              "url": "/shiponce/posts"
+            }
+          ]
+        },
+        {
+          "title": "Payments & Credits",
+          "icon": "DollarSign",
+          "children": [
+            {
+              "title": "Payments",
+              "url": "/shiponce/payments",
+              "icon": "DollarSign"
+            },
+            {
+              "title": "Subscriptions",
+              "url": "/shiponce/subscriptions",
+              "icon": "CreditCard"
+            },
+            {
+              "title": "Credits",
+              "url": "/shiponce/credits",
+              "icon": "Coins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Business",
+      "items": [
+        {
+          "title": "AI Tasks",
+          "url": "/shiponce/ai-tasks",
+          "icon": "Brain"
+        }
+      ]
+    }
+  ],
+  "bottom_nav": {
+    "items": [
+      {
+        "title": "Settings",
+        "url": "/shiponce/settings/general",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "user": {
+    "nav": {
+      "items": [
+        {
+          "title": "Profile",
+          "url": "/settings/profile",
+          "icon": "User",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_email": false,
+    "show_signout": true,
+    "signout_callback": "/"
+  },
+  "sign": {
+    "sign_in_title": "Sign In",
+    "sign_out_title": "Sign Out"
+  },
+  "footer": {
+    "nav": {
+      "items": [
+        {
+          "title": "Home",
+          "url": "/",
+          "icon": "Home",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/your-app-name",
+          "icon": "Github",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/your-app-name",
+          "icon": "RiTwitterXFill",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "url": "https://discord.gg/your-app-name",
+          "icon": "RiDiscordFill",
+          "target": "_blank"
+        },
+        {
+          "title": "Email",
+          "url": "mailto:support@your-domain.com",
+          "icon": "Mail",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": false
+  },
+  "variant": "sidebar"
+}

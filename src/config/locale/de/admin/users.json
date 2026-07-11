@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "Name",
+    "avatar": "Avatar",
+    "email": "E-Mail",
+    "email_verified": "E-Mail verifiziert",
+    "remaining_credits": "Verbleibendes Guthaben",
+    "created_at": "Erstellt am",
+    "actions": "Aktionen",
+    "roles": "Rollen",
+    "ip": "IP",
+    "locale": "Sprache",
+    "utm_source": "UTM-Quelle"
+  },
+  "list": {
+    "title": "Benutzer",
+    "crumbs": {
+      "admin": "Admin",
+      "users": "Benutzer"
+    },
+    "buttons": {
+      "add": "Benutzer hinzufuegen",
+      "edit": "Benutzer bearbeiten",
+      "view": "Benutzer anzeigen",
+      "delete": "Benutzer loeschen",
+      "edit_roles": "Rollen bearbeiten",
+      "grant_credits": "Guthaben gewaehren"
+    },
+    "search": {
+      "email": {
+        "title": "E-Mail",
+        "placeholder": "E-Mail"
+      }
+    }
+  },
+  "edit": {
+    "title": "Benutzer bearbeiten",
+    "crumbs": {
+      "admin": "Admin",
+      "users": "Benutzer",
+      "edit": "Bearbeiten"
+    },
+    "buttons": {
+      "submit": "Aktualisieren"
+    }
+  },
+  "edit_roles": {
+    "title": "Rollen bearbeiten",
+    "crumbs": {
+      "admin": "Admin",
+      "users": "Benutzer",
+      "edit_roles": "Rollen bearbeiten"
+    },
+    "buttons": {
+      "submit": "Aktualisieren"
+    }
+  },
+  "grant_credits": {
+    "title": "Guthaben gewaehren",
+    "crumbs": {
+      "admin": "Admin",
+      "users": "Benutzer",
+      "grant_credits": "Guthaben gewaehren"
+    },
+    "buttons": {
+      "submit": "Gewaehren"
+    },
+    "fields": {
+      "credits": "Guthabenbetrag",
+      "valid_days": "Gueltigkeitstage",
+      "valid_days_tip": "0 bedeutet keine Ablaufzeit",
+      "description": "Beschreibung der Guthabenvergabe",
+      "description_placeholder": "Admin-Guthabenvergabe"
+    }
+  }
+}

@@ -1,0 +1,192 @@
+{
+  "groups": {
+    "email_auth": "이메일 인증",
+    "google_auth": "Google 인증",
+    "github_auth": "GitHub 인증",
+    "basic_payment": "기본 결제",
+    "stripe": "Stripe",
+    "creem": "Creem",
+    "paypal": "Paypal",
+    "resend": "Resend",
+    "r2": "Cloudflare R2",
+    "s3": "AWS S3",
+    "openrouter": "OpenRouter",
+    "replicate": "Replicate",
+    "fal": "Fal",
+    "gemini": "Gemini",
+    "kie": "Kie",
+    "ai_access": "AI 접근 제어",
+    "ai_model_catalog": "AI 모델 카탈로그",
+    "google_analytics": "Google Analytics",
+    "clarity": "Clarity",
+    "plausible": "Plausible",
+    "adsense": "Adsense",
+    "affonso": "Affonso",
+    "promotekit": "PromoteKit",
+    "credit": "크레딧",
+    "appinfo": "앱 정보",
+    "user_role": "사용자 역할"
+  },
+  "descriptions": {
+    "ai_access": "유료 기능 접근 규칙을 직접 설정합니다.",
+    "ai_model_catalog": "표시할 이미지 모델, 공급자 매핑, 표시 메타데이터, 크레딧 비용을 설정합니다.",
+    "openrouter": "사용자 지정 OpenRouter 설정입니다.",
+    "replicate": "사용자 지정 Replicate 설정입니다.",
+    "fal": "사용자 지정 Fal 설정입니다.",
+    "gemini": "사용자 지정 Gemini 설정입니다.",
+    "kie": "사용자 지정 Kie 설정입니다."
+  },
+  "settings": {
+    "pay_as_you_go_enabled": {
+      "title": "Pay as you go 표시",
+      "tip": "공개 가격 페이지에 일회성 크레딧 패키지를 표시합니다."
+    },
+    "openrouter_api_key": {
+      "title": "OpenRouter API 키"
+    },
+    "openrouter_base_url": {
+      "title": "OpenRouter Base URL",
+      "tip": "Set any OpenAI compatible API URL. Leave empty to use the default OpenRouter API URL."
+    },
+    "replicate_api_token": {
+      "title": "Replicate API 토큰"
+    },
+    "replicate_custom_storage": {
+      "title": "Replicate 사용자 지정 스토리지",
+      "tip": "Replicate에서 생성된 파일을 저장하려면 사용자 지정 스토리지를 사용하세요."
+    },
+    "fal_api_key": {
+      "title": "Fal API 키",
+      "tip": "Fal API 키는 Fal API 접근에 사용됩니다."
+    },
+    "fal_custom_storage": {
+      "title": "Fal 사용자 지정 스토리지",
+      "tip": "Fal에서 생성된 파일을 저장하려면 사용자 지정 스토리지를 사용하세요."
+    },
+    "gemini_api_key": {
+      "title": "Gemini API 키",
+      "tip": "Google Gemini API 키입니다."
+    },
+    "kie_api_key": {
+      "title": "Kie API 키",
+      "tip": "Kie API 키는 Kie API 접근에 사용됩니다."
+    },
+    "kie_custom_storage": {
+      "title": "Kie 사용자 지정 스토리지",
+      "tip": "Kie에서 생성된 파일을 저장하려면 사용자 지정 스토리지를 사용하세요."
+    },
+    "pro_feature_plan_names": {
+      "title": "Pro 기능 요금제 이름",
+      "tip": "4K 출력 같은 Pro 전용 AI 기능을 사용할 수 있는 활성 구독 플랜명 또는 제품 ID를 쉼표로 구분해 입력하세요."
+    },
+    "ai_image_model_catalog": {
+      "title": "이미지 모델 카탈로그",
+      "tip": "생성기와 서버 측 크레딧 계산에 사용하는 편집 가능한 JSON입니다. AI 설정 페이지에서는 이 필드보다 위의 시각적 편집기를 우선 사용하세요."
+    }
+  },
+  "ai_model_catalog": {
+    "title": "AI 모델 카탈로그",
+    "description": "생성기에 표시되는 이미지 모델, 각 모델의 공급자, 모드별 크레딧 비용을 제어합니다.",
+    "enabled_count": "{count}개 활성화",
+    "provider_count": "{count} providers",
+    "runtime_notice": "저장된 변경 사항은 런타임 설정으로 적용됩니다. 프론트엔드 재배포는 필요하지 않습니다.",
+    "defaults": "기본값",
+    "add_model": "모델 추가",
+    "save_catalog": "카탈로그 저장",
+    "saving": "저장 중...",
+    "enabled": "활성화",
+    "disabled": "비활성화",
+    "default_model": "기본값",
+    "drag_to_sort": "드래그하여 정렬",
+    "expand": "펼치기",
+    "collapse": "접기",
+    "actions": {
+      "upload_logo": "로고 업로드"
+    },
+    "fields": {
+      "display_name": "표시 이름",
+      "provider": "Provider",
+      "provider_model_id": "Provider model ID",
+      "description": "설명",
+      "display_tags": "표시 태그",
+      "modes": "모드",
+      "mode_model_id": "Model ID",
+      "mode_model_hint": "이 모드는 별도의 공급자 모델 ID를 사용할 수 있습니다.",
+      "text_to_image_credits": "텍스트-이미지 크레딧",
+      "image_to_image_credits": "이미지-이미지 크레딧",
+      "ultra4k_credits": "4K 총 크레딧",
+      "icon_text": "아이콘 텍스트",
+      "logo_url": "Logo URL",
+      "badge": "배지",
+      "badge_tone": "배지 톤"
+    },
+    "scenes": {
+      "text_to_image": "텍스트에서 이미지",
+      "image_to_image": "이미지에서 이미지"
+    },
+    "tones": {
+      "quality": "품질",
+      "multi": "멀티",
+      "speed": "속도",
+      "neutral": "중립"
+    },
+    "placeholders": {
+      "provider": "Provider",
+      "provider_model_id": "provider/model-id",
+      "uses_mode_cost": "모드 비용 사용",
+      "icon_text": "AI",
+      "logo_url": "/imgs/logos/model.svg",
+      "badge": "고품질",
+      "display_tags": "멀티모달, 고품질",
+      "tone": "톤",
+      "new_model": "새 모델",
+      "untitled": "제목 없는 모델",
+      "provider_fallback": "provider",
+      "model_fallback": "model-id"
+    },
+    "messages": {
+      "saved": "AI 모델 카탈로그가 저장되었습니다",
+      "save_failed": "AI 모델 카탈로그 저장에 실패했습니다",
+      "no_changes": "저장할 변경 사항이 없습니다",
+      "logo_uploaded": "로고가 업로드되었습니다",
+      "logo_upload_failed": "로고 업로드에 실패했습니다",
+      "logo_upload_invalid": "Please upload an image file"
+    },
+    "validation": {
+      "provider_required": "Model {row}: provider is required",
+      "model_required": "Model {row}: provider model ID is required",
+      "label_required": "Model {row}: display name is required",
+      "scene_required": "Model {row}: select at least one mode",
+      "text_credits_required": "Model {row}: text-to-image credits are required",
+      "image_credits_required": "Model {row}: image-to-image credits are required",
+      "unique_required": "Model {row}: provider, model ID, and mode must be unique"
+    }
+  },
+  "edit": {
+    "title": "설정",
+    "crumbs": {
+      "admin": "관리자",
+      "settings": "설정"
+    },
+    "tabs": {
+      "general": "일반",
+      "auth": "인증",
+      "payment": "결제",
+      "credit": "크레딧",
+      "email": "이메일",
+      "storage": "스토리지",
+      "ai": "AI",
+      "analytics": "분석",
+      "ads": "광고",
+      "affiliate": "제휴"
+    },
+    "buttons": {
+      "submit": "저장"
+    },
+    "status": {
+      "defined_names": "정의됨: {names}",
+      "undefined": "정의되지 않음",
+      "name_separator": ", "
+    }
+  }
+}

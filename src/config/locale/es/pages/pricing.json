@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "title": "Precios",
+    "description": "Paga una vez. Crea proyectos ilimitados."
+  },
+  "page": {
+    "title": "Precios de GPT Image 2",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "Paga una vez. Crea proyectos ilimitados.",
+        "description": "Elige créditos, mensual o anual: cambia cuando quieras.",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "Pago por uso"
+          },
+          {
+            "name": "monthly",
+            "title": "Mensual",
+            "is_featured": true,
+            "label": "Ahorra 15%"
+          },
+          {
+            "name": "yearly",
+            "title": "Anual"
+          }
+        ],
+        "items": [
+          {
+            "title": "Starter",
+            "description": "Para creadores en solitario que están probando.",
+            "features_title": "Incluye",
+            "features": [
+              "200 generaciones",
+              "Hasta 2K de resolución",
+              "Exportación PNG / JPG",
+              "Cola estándar",
+              "Los créditos no caducan"
+            ],
+            "interval": "one-time",
+            "amount": 1200,
+            "currency": "USD",
+            "price": "$12",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Paga una vez. Los créditos no caducan.",
+            "button": {
+              "title": "Elegir Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-credits",
+            "product_name": "GPT Image 2 Starter Credits",
+            "credits": 200,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Pro",
+            "description": "Para creativos profesionales que entregan cada semana.",
+            "label": "Popular",
+            "features_title": "Todo lo de Starter, además",
+            "features": [
+              "1.500 generaciones",
+              "Resolución 4K nativa",
+              "Edición guiada por referencia",
+              "Composición de 8 paneles",
+              "Cola prioritaria"
+            ],
+            "interval": "one-time",
+            "amount": 3200,
+            "currency": "USD",
+            "price": "$32",
+            "original_price": "$38",
+            "unit": "",
+            "is_featured": true,
+            "tip": "Paga una vez. Los créditos no caducan.",
+            "button": {
+              "title": "Elegir Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-credits",
+            "product_name": "GPT Image 2 Pro Credits",
+            "credits": 1500,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Ultra",
+            "description": "Para equipos con sistemas de marca que proteger.",
+            "features_title": "Todo lo de Pro, además",
+            "features": [
+              "6.000 generaciones",
+              "Referencias de marca compartidas",
+              "Espacio de equipo + roles",
+              "SSO + registro de auditoría",
+              "Soporte dedicado"
+            ],
+            "interval": "one-time",
+            "amount": 9600,
+            "currency": "USD",
+            "price": "$96",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Paga una vez. Los créditos no caducan.",
+            "button": {
+              "title": "Elegir Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-credits",
+            "product_name": "GPT Image 2 Ultra Credits",
+            "credits": 6000,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Starter",
+            "description": "Para creadores en solitario que están probando.",
+            "features_title": "Incluye",
+            "features": [
+              "200 generaciones / mes",
+              "Hasta 2K de resolución",
+              "Exportación PNG / JPG",
+              "Soporte estándar"
+            ],
+            "interval": "month",
+            "amount": 1500,
+            "currency": "USD",
+            "price": "$15",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "Renovación mensual. Cancela cuando quieras.",
+            "button": {
+              "title": "Elegir Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-monthly",
+            "product_name": "GPT Image 2 Starter Monthly",
+            "credits": 200,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "Para creativos profesionales que entregan cada semana.",
+            "label": "Popular",
+            "features_title": "Todo lo de Starter, además",
+            "features": [
+              "1.500 generaciones / mes",
+              "Resolución 4K nativa",
+              "Edición guiada por referencia",
+              "Composición de 8 paneles",
+              "Cola prioritaria"
+            ],
+            "interval": "month",
+            "amount": 2900,
+            "currency": "USD",
+            "price": "$29",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": true,
+            "tip": "Renovación mensual. Cancela cuando quieras.",
+            "button": {
+              "title": "Elegir Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-monthly",
+            "product_name": "GPT Image 2 Pro Monthly",
+            "credits": 1500,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "Para equipos con sistemas de marca que proteger.",
+            "features_title": "Todo lo de Pro, además",
+            "features": [
+              "6.000 generaciones / mes",
+              "Referencias de marca compartidas",
+              "Espacio de equipo + roles",
+              "SSO + registro de auditoría",
+              "Soporte dedicado"
+            ],
+            "interval": "month",
+            "amount": 13900,
+            "currency": "USD",
+            "price": "$139",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "Renovación mensual. Cancela cuando quieras.",
+            "button": {
+              "title": "Elegir Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-monthly",
+            "product_name": "GPT Image 2 Ultra Monthly",
+            "credits": 6000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Ultra"
+          },
+          {
+            "title": "Starter",
+            "description": "Para creadores en solitario que están probando.",
+            "features_title": "Incluye",
+            "features": [
+              "200 generaciones / mes",
+              "Hasta 2K de resolución",
+              "Exportación PNG / JPG",
+              "Soporte estándar"
+            ],
+            "interval": "year",
+            "amount": 12000,
+            "currency": "USD",
+            "price": "$120",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Elegir Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-yearly",
+            "product_name": "GPT Image 2 Starter Annually",
+            "credits": 2400,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "Para creativos profesionales que entregan cada semana.",
+            "label": "Popular",
+            "features_title": "Todo lo de Starter, además",
+            "features": [
+              "1.500 generaciones / mes",
+              "Resolución 4K nativa",
+              "Edición guiada por referencia",
+              "Composición de 8 paneles",
+              "Cola prioritaria"
+            ],
+            "interval": "year",
+            "amount": 17400,
+            "currency": "USD",
+            "price": "$174",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": true,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Elegir Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-yearly",
+            "product_name": "GPT Image 2 Pro Annually",
+            "credits": 18000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "Para equipos con sistemas de marca que proteger.",
+            "features_title": "Todo lo de Pro, además",
+            "features": [
+              "6.000 generaciones / mes",
+              "Referencias de marca compartidas",
+              "Espacio de equipo + roles",
+              "SSO + registro de auditoría",
+              "Soporte dedicado"
+            ],
+            "interval": "year",
+            "amount": 129900,
+            "currency": "USD",
+            "price": "$1,299",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Elegir Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-yearly",
+            "product_name": "GPT Image 2 Ultra Annually",
+            "credits": 72000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Ultra"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "Plan actual",
+    "processing": "Procesando"
+  }
+}

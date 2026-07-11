@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "Tutto",
+    "image": "Immagini",
+    "video": "Video",
+    "audio": "Audio",
+    "favorites": "Preferiti"
+  },
+  "status": {
+    "success": "Completato",
+    "failed": "Non riuscito",
+    "partial_failed": "Parzialmente completato",
+    "processing": "Generazione",
+    "queued": "In coda"
+  },
+  "scene": {
+    "image_to_image": "Immagine in immagine",
+    "text_to_image": "Testo in immagine",
+    "image_to_video": "Immagine in video",
+    "video_to_video": "Video in video",
+    "text_to_video": "Testo in video"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} sara disponibile a breve.",
+    "share_copied": "Link di condivisione copiato.",
+    "copy_failed": "Impossibile copiare. Riprova.",
+    "sign_in_required": "Accedi prima di generare.",
+    "model_unavailable": "Questo modello non e disponibile. Scegli un altro modello e riprova.",
+    "all_failed": "La generazione non e riuscita. Controlla la scheda dell attivita.",
+    "partial_submission_failed": "{count} output non sono riusciti. Le altre attivita sono state inviate.",
+    "generation_failed": "Generazione non riuscita: {message}"
+  },
+  "timeline": {
+    "video": "Video",
+    "images": "Immagini {completed}/{total}",
+    "slot_failed": "Generazione non riuscita",
+    "queued_waiting": "In coda. In attesa di elaborazione.",
+    "generating": "Generazione {completed}/{total}",
+    "retry_load": "Impossibile caricare la cronologia. Riprova",
+    "edit_prompt": "Modifica prompt",
+    "regenerate": "Ricrea"
+  },
+  "actions": {
+    "fullscreen": "Apri anteprima",
+    "download": "Scarica",
+    "share": "Condividi",
+    "favorite": "Aggiungi ai preferiti",
+    "unfavorite": "Rimuovi dai preferiti",
+    "image_to_video": "Immagine in video",
+    "image_to_image": "Immagine in immagine",
+    "ai_restore": "Ripristino IA",
+    "enhance": "Migliora",
+    "more": "Altro",
+    "remove_background": "Rimuovi sfondo",
+    "erase_object": "Rimuovi oggetto",
+    "outpaint": "Espandi immagine",
+    "ai_background": "Sfondo IA"
+  },
+  "preview": {
+    "title": "Anteprima del risultato",
+    "description": "Visualizza il risultato e continua con download, condivisione, preferiti o modifica.",
+    "close": "Chiudi anteprima",
+    "prompt": "PROMPT",
+    "copy": "Copia",
+    "copied": "Copiato",
+    "information": "INFORMAZIONI",
+    "type": "Tipo",
+    "status": "Stato",
+    "image": "Immagine",
+    "video": "Video",
+    "recreate": "Ricrea",
+    "edit": "Modifica"
+  },
+  "empty": {
+    "favorites_title": "Nessun preferito",
+    "favorites_description": "Passa il cursore su un risultato e seleziona il cuore per aggiungerlo qui.",
+    "default_title": "Avvia una nuova generazione",
+    "default_description": "La tua generazione apparira in questa timeline e verra visualizzata qui quando sara pronta."
+  },
+  "skeleton": {
+    "history_loading": "Caricamento della cronologia delle generazioni",
+    "history_loading_more": "Caricamento di altra cronologia",
+    "processing": "Il modello sta elaborando la tua richiesta.",
+    "progress": "Avanzamento generazione {progress}%"
+  },
+  "prompt": {
+    "fallback": "Generazione senza titolo",
+    "copy": "Copia",
+    "copied": "Prompt copiato.",
+    "collapse": "Comprimi",
+    "expand": "Espandi"
+  }
+}

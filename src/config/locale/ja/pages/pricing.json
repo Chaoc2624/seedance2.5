@@ -1,0 +1,315 @@
+{
+  "metadata": {
+    "title": "料金プラン",
+    "description": "一度の支払いで、プロジェクトを無制限に。"
+  },
+  "page": {
+    "title": "GPT Image 2 料金",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "一度の支払いで、プロジェクトを無制限に。",
+        "description": "クレジット、月額、年額からお選びください — いつでも切り替え可能。",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "従量課金"
+          },
+          {
+            "name": "monthly",
+            "title": "月額",
+            "is_featured": true,
+            "label": "15% お得"
+          },
+          {
+            "name": "yearly",
+            "title": "年額"
+          }
+        ],
+        "items": [
+          {
+            "title": "Starter",
+            "description": "試してみたい個人クリエイター向け。",
+            "features_title": "含まれるもの",
+            "features": [
+              "200 回の生成",
+              "最大 2K 解像度",
+              "PNG / JPG エクスポート",
+              "標準キュー",
+              "クレジットの有効期限なし"
+            ],
+            "interval": "one-time",
+            "amount": 1200,
+            "currency": "USD",
+            "price": "$12",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "一度のお支払い。クレジットの有効期限なし。",
+            "button": {
+              "title": "Starter を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-credits",
+            "product_name": "GPT Image 2 Starter Credits",
+            "credits": 200,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Pro",
+            "description": "毎週納品するプロのクリエイター向け。",
+            "label": "人気",
+            "features_title": "Starter のすべてに加えて",
+            "features": [
+              "1,500 回の生成",
+              "ネイティブ 4K 解像度",
+              "リファレンス連携の編集",
+              "8 パネル構成",
+              "優先キュー"
+            ],
+            "interval": "one-time",
+            "amount": 3200,
+            "currency": "USD",
+            "price": "$32",
+            "original_price": "$38",
+            "unit": "",
+            "is_featured": true,
+            "tip": "一度のお支払い。クレジットの有効期限なし。",
+            "button": {
+              "title": "Pro を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-credits",
+            "product_name": "GPT Image 2 Pro Credits",
+            "credits": 1500,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Ultra",
+            "description": "ブランドを守るチーム向け。",
+            "features_title": "Pro のすべてに加えて",
+            "features": [
+              "6,000 回の生成",
+              "共有ブランドリファレンス",
+              "チームワークスペース + ロール",
+              "SSO + 監査ログ",
+              "専任サポート"
+            ],
+            "interval": "one-time",
+            "amount": 9600,
+            "currency": "USD",
+            "price": "$96",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "一度のお支払い。クレジットの有効期限なし。",
+            "button": {
+              "title": "Ultra を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-credits",
+            "product_name": "GPT Image 2 Ultra Credits",
+            "credits": 6000,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Starter",
+            "description": "試してみたい個人クリエイター向け。",
+            "features_title": "含まれるもの",
+            "features": [
+              "月 200 回の生成",
+              "最大 2K 解像度",
+              "PNG / JPG エクスポート",
+              "標準サポート"
+            ],
+            "interval": "month",
+            "amount": 1500,
+            "currency": "USD",
+            "price": "$15",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "毎月更新。いつでも解約できます。",
+            "button": {
+              "title": "Starter を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-monthly",
+            "product_name": "GPT Image 2 Starter Monthly",
+            "credits": 200,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "毎週納品するプロのクリエイター向け。",
+            "label": "人気",
+            "features_title": "Starter のすべてに加えて",
+            "features": [
+              "月 1,500 回の生成",
+              "ネイティブ 4K 解像度",
+              "リファレンス連携の編集",
+              "8 パネル構成",
+              "優先キュー"
+            ],
+            "interval": "month",
+            "amount": 2900,
+            "currency": "USD",
+            "price": "$29",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": true,
+            "tip": "毎月更新。いつでも解約できます。",
+            "button": {
+              "title": "Pro を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-monthly",
+            "product_name": "GPT Image 2 Pro Monthly",
+            "credits": 1500,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "ブランドを守るチーム向け。",
+            "features_title": "Pro のすべてに加えて",
+            "features": [
+              "月 6,000 回の生成",
+              "共有ブランドリファレンス",
+              "チームワークスペース + ロール",
+              "SSO + 監査ログ",
+              "専任サポート"
+            ],
+            "interval": "month",
+            "amount": 13900,
+            "currency": "USD",
+            "price": "$139",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "毎月更新。いつでも解約できます。",
+            "button": {
+              "title": "Ultra を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-monthly",
+            "product_name": "GPT Image 2 Ultra Monthly",
+            "credits": 6000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Ultra"
+          },
+          {
+            "title": "Starter",
+            "description": "試してみたい個人クリエイター向け。",
+            "features_title": "含まれるもの",
+            "features": [
+              "月 200 回の生成",
+              "最大 2K 解像度",
+              "PNG / JPG エクスポート",
+              "標準サポート"
+            ],
+            "interval": "year",
+            "amount": 12000,
+            "currency": "USD",
+            "price": "$120",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Starter を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-yearly",
+            "product_name": "GPT Image 2 Starter Annually",
+            "credits": 2400,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "毎週納品するプロのクリエイター向け。",
+            "label": "人気",
+            "features_title": "Starter のすべてに加えて",
+            "features": [
+              "月 1,500 回の生成",
+              "ネイティブ 4K 解像度",
+              "リファレンス連携の編集",
+              "8 パネル構成",
+              "優先キュー"
+            ],
+            "interval": "year",
+            "amount": 17400,
+            "currency": "USD",
+            "price": "$174",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": true,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Pro を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-yearly",
+            "product_name": "GPT Image 2 Pro Annually",
+            "credits": 18000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "ブランドを守るチーム向け。",
+            "features_title": "Pro のすべてに加えて",
+            "features": [
+              "月 6,000 回の生成",
+              "共有ブランドリファレンス",
+              "チームワークスペース + ロール",
+              "SSO + 監査ログ",
+              "専任サポート"
+            ],
+            "interval": "year",
+            "amount": 129900,
+            "currency": "USD",
+            "price": "$1,299",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Ultra を選ぶ",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-yearly",
+            "product_name": "GPT Image 2 Ultra Annually",
+            "credits": 72000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Ultra"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "現在のプラン",
+    "processing": "処理中"
+  }
+}

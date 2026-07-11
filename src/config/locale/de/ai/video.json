@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "KI-Videogenerator",
+    "description": "Videos mit KI-Modellen erstellen, Text-zu-Video, Bild-zu-Video und Video-zu-Video werden unterstuetzt."
+  },
+  "page": {
+    "title": "KI-Videogenerator",
+    "description": "Videos mit KI-Modellen erstellen, Text-zu-Video, Bild-zu-Video und Video-zu-Video werden unterstuetzt."
+  },
+  "generator": {
+    "title": "Videogenerator",
+    "description": "Videos mit KI-Modellen erstellen, Text-zu-Video, Bild-zu-Video und Video-zu-Video werden unterstuetzt.",
+    "tabs": {
+      "text-to-video": "Text zu Video",
+      "image-to-video": "Bild zu Video",
+      "video-to-video": "Video zu Video"
+    },
+    "form": {
+      "provider": "Anbieter",
+      "model": "Modell",
+      "select_provider": "Anbieter auswaehlen",
+      "select_model": "Modell auswaehlen",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Beschreiben Sie den Videoinhalt, wie Szene, Handlung, Stil usw.",
+      "reference_image": "Referenzbild",
+      "reference_image_placeholder": "Ein Referenzbild fuer die Videogenerierung hochladen",
+      "reference_video": "Referenzvideo-URL",
+      "reference_video_placeholder": "Geben Sie die URL des Referenzvideos ein",
+      "some_images_failed_to_upload": "Bild konnte nicht hochgeladen werden, bitte loeschen und erneut hochladen",
+      "prompt_too_long": "Prompt ist zu lang, bitte kuerzen Sie den Inhalt"
+    },
+    "generate": "Video generieren",
+    "checking_account": "Konto wird geprueft...",
+    "loading": "Wird geladen...",
+    "generating": "Wird generiert...",
+    "sign_in_to_generate": "Anmelden zum Generieren von Videos",
+    "credits_cost": "Kostet {credits} Guthaben",
+    "credits_remaining": "Verbleibend {credits} Guthaben",
+    "buy_credits": "Guthaben kaufen",
+    "progress": "Fortschritt",
+    "generated_videos": "Videovorschau",
+    "ready_to_generate": "Bereit zum Generieren",
+    "ready_for_generating": "Bereit zur Generierung",
+    "no_videos_generated": "Keine Videos generiert"
+  }
+}

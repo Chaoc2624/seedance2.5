@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Image to Image">
+  <title>Image to Image</title>
+  <rect x="3" y="5" width="13" height="10" rx="1.5"/>
+  <path d="M3 11.5l2-1.8a1 1 0 0 1 1.4 0l4.6 4.3"/>
+  <circle cx="12.5" cy="8" r="1" fill="currentColor" stroke="none"/>
+  <path d="M19 9.5a4 4 0 0 1 0 7l-1 0"/>
+  <path d="M19.5 19l-1.5-2"/>
+</svg>

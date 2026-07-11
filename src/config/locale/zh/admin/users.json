@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "姓名",
+    "avatar": "头像",
+    "email": "邮箱",
+    "email_verified": "邮箱已验证",
+    "remaining_credits": "剩余点数",
+    "created_at": "创建时间",
+    "actions": "操作",
+    "roles": "角色",
+    "ip": "IP",
+    "locale": "语言",
+    "utm_source": "UTM 来源"
+  },
+  "list": {
+    "title": "用户",
+    "crumbs": {
+      "admin": "管理",
+      "users": "用户"
+    },
+    "buttons": {
+      "add": "新增用户",
+      "edit": "编辑用户",
+      "view": "查看用户",
+      "delete": "删除用户",
+      "edit_roles": "编辑角色",
+      "grant_credits": "发放点数"
+    },
+    "search": {
+      "email": {
+        "title": "邮箱",
+        "placeholder": "邮箱"
+      }
+    }
+  },
+  "edit": {
+    "title": "编辑用户",
+    "crumbs": {
+      "admin": "管理",
+      "users": "用户",
+      "edit": "编辑"
+    },
+    "buttons": {
+      "submit": "更新"
+    }
+  },
+  "edit_roles": {
+    "title": "编辑角色",
+    "crumbs": {
+      "admin": "管理",
+      "users": "用户",
+      "edit_roles": "编辑角色"
+    },
+    "buttons": {
+      "submit": "更新"
+    }
+  },
+  "grant_credits": {
+    "title": "发放点数",
+    "crumbs": {
+      "admin": "管理",
+      "users": "用户",
+      "grant_credits": "发放点数"
+    },
+    "buttons": {
+      "submit": "发放"
+    },
+    "fields": {
+      "credits": "点数数量",
+      "valid_days": "点数有效天数",
+      "valid_days_tip": "0 表示永不过期",
+      "description": "点数发放说明",
+      "description_placeholder": "管理员发放点数"
+    }
+  }
+}

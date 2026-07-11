@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "N° de transaction",
+    "description": "Description",
+    "type": "Type",
+    "scene": "Scène",
+    "credits": "Crédits",
+    "expires_at": "Expire le",
+    "created_at": "Créé le",
+    "action": "Action"
+  },
+  "list": {
+    "title": "Historique des crédits",
+    "tabs": {
+      "all": "Tous",
+      "grant": "Octroi",
+      "consume": "Consommation"
+    }
+  },
+  "view": {
+    "title": "Solde de crédits",
+    "description": "Les crédits sont utilisés pour la génération IA et les autres actions payantes.",
+    "never_expires": "N'expire jamais",
+    "soonest_expiring": "Expiration la plus proche : <credits>{credits}</credits> crédits le <date>{date}</date>",
+    "no_expiring_credits": "Aucun crédit n'expire prochainement",
+    "buttons": {
+      "purchase": "Acheter des crédits"
+    }
+  },
+  "types": {
+    "grant": "Octroi",
+    "consume": "Consommation"
+  }
+}

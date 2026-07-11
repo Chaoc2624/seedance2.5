@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Generatore musicale AI",
+    "description": "Genera musica straordinaria con l'intelligenza artificiale"
+  },
+  "page": {
+    "title": "Generatore musicale AI",
+    "description": "Genera musica straordinaria con l'intelligenza artificiale"
+  },
+  "generator": {
+    "title": "Generatore di musica",
+    "prompt": "Richiesta",
+    "prompt_placeholder": "Una storia d'amore di Romeo e Giulietta",
+    "generate": "Genera musica",
+    "loading": "Caricamento...",
+    "generating": "Generazione...",
+    "sign_in_to_generate": "Accedi per generare musica",
+    "credits_cost": "Costo in {credits} crediti",
+    "credits_remaining": "{credits} crediti rimanenti",
+    "buy_credits": "Acquista crediti",
+    "generation_progress": "Progresso generazionale",
+    "time_cost": "L'operazione potrebbe richiedere fino a 2-3 minuti...",
+    "generated_song": "Canzone generata",
+    "ready_to_play": "Pronto per giocare",
+    "audio_generating": "Generazione audio...",
+    "generating_song": "Generazione del brano...",
+    "waiting_generation": "Ti preghiamo di attendere mentre creiamo il tuo capolavoro",
+    "no_song_generated": "Nessuna canzone generata",
+    "downloading": "Download in corso...",
+    "download_success": "Download completato con successo",
+    "download_failed": "Impossibile scaricare l'audio",
+    "form": {
+      "custom_mode": "Modalità personalizzata",
+      "title": "Titolo",
+      "title_placeholder": "Il suono del silenzio",
+      "style": "Stile di musica",
+      "style_placeholder": "indie, elettronica, sintetizzatori, 120 bpm, distorta",
+      "instrumental": "Strumentale",
+      "prompt": "Richiesta",
+      "prompt_placeholder": "Una canzone popolare country sull'amore",
+      "model": "Modella",
+      "lyrics": "Testi",
+      "lyrics_placeholder": "Scrivi i tuoi testi, due versi (8 righe) per il miglior risultato"
+    }
+  }
+}

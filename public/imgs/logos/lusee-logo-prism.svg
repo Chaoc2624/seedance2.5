@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee logo option prism</title>
+  <desc id="desc">A faceted L mark with cinematic violet and cyan light beams.</desc>
+  <defs>
+    <linearGradient id="lusee-prism-bg" x1="64" x2="448" y1="80" y2="432" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="1" stop-color="#18181B"/>
+    </linearGradient>
+    <linearGradient id="lusee-prism-face-a" x1="164" x2="342" y1="116" y2="386" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F5F3FF"/>
+      <stop offset="0.55" stop-color="#C4B5FD"/>
+      <stop offset="1" stop-color="#818CF8"/>
+    </linearGradient>
+    <linearGradient id="lusee-prism-face-b" x1="252" x2="384" y1="164" y2="388" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="lusee-prism-shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#8B5CF6" flood-opacity="0.32"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="96" fill="url(#lusee-prism-bg)"/>
+  <path d="M166 116h67v216h137v64H184c-10 0-18-8-18-18V116Z" fill="url(#lusee-prism-face-a)" filter="url(#lusee-prism-shadow)"/>
+  <path d="M233 116l62 39v177h-62V116Z" fill="url(#lusee-prism-face-b)" opacity="0.9"/>
+  <path d="M295 332l75 64H184c-10 0-18-8-18-18v-46h129Z" fill="#F8FAFC" opacity="0.95"/>
+  <path d="M98 144h28M386 128h30M360 210h48M102 360h42" stroke="#A78BFA" stroke-width="14" stroke-linecap="round" opacity="0.5"/>
+</svg>

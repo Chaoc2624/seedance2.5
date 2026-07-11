@@ -1,0 +1,49 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "Name",
+    "title": "Tytuł",
+    "description": "Opis",
+    "status": "Status",
+    "sort": "Sortować",
+    "created_at": "Utworzono o godz",
+    "updated_at": "Zaktualizowano o godz",
+    "permissions": "Uprawnienia",
+    "actions": "Działania"
+  },
+  "list": {
+    "title": "Role",
+    "crumbs": {
+      "admin": "Administrator",
+      "roles": "Role"
+    },
+    "buttons": {
+      "create": "Utwórz rolę",
+      "edit": "Edytuj rolę",
+      "edit_permissions": "Edytuj uprawnienia",
+      "delete": "Usuń rolę"
+    }
+  },
+  "edit": {
+    "title": "Edytuj rolę",
+    "crumbs": {
+      "admin": "Administrator",
+      "roles": "Role",
+      "edit": "Edytuj rolę"
+    },
+    "buttons": {
+      "submit": "Aktualizacja"
+    }
+  },
+  "edit_permissions": {
+    "title": "Edytuj uprawnienia",
+    "crumbs": {
+      "admin": "Administrator",
+      "roles": "Role",
+      "edit_permissions": "Edytuj uprawnienia"
+    },
+    "buttons": {
+      "submit": "Aktualizacja"
+    }
+  }
+}

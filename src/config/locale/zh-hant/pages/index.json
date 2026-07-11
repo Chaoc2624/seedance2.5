@@ -1,0 +1,408 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "logos",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Seedance 2.5 影片生成與圖片生成",
+        "description": "使用 Seedance 2.5、Nano Banana、nanobanana、GPT Image 2，在同一個工作區完成以提示詞為核心的創作流程。",
+        "tip": "開始創作",
+        "highlight_text": "AI 驅動",
+        "announcement": {
+          "badge": "新功能",
+          "title": "Seedance 2.5 已支援影片與圖片工作流程",
+          "url": "/pricing"
+        },
+        "avatars_tip": "創作者使用 Seedance 2.5 製作行銷視覺、短影片與模型實驗。",
+        "buttons": [
+          {
+            "icon": "Zap",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "default",
+            "title": "立即開始"
+          },
+          {
+            "icon": "BookOpenText",
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "title": "免費試用"
+          }
+        ],
+        "show_avatars": true,
+        "show_award": false,
+        "image": {
+          "src": "/imgs/features/admin.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        },
+        "image_invert": {
+          "src": "/imgs/features/admin-dark.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        }
+      },
+      "logos": {
+        "id": "logos",
+        "title": "為 AI 創作者、工作室與成長團隊打造",
+        "items": [
+          {
+            "title": "TanStack",
+            "image": {
+              "src": "/imgs/logos/tanstack.svg",
+              "alt": "TanStack"
+            }
+          },
+          {
+            "title": "React",
+            "image": {
+              "src": "/imgs/logos/react.svg",
+              "alt": "React"
+            }
+          },
+          {
+            "title": "TailwindCSS",
+            "image": {
+              "src": "/imgs/logos/tailwindcss.svg",
+              "alt": "TailwindCSS"
+            }
+          },
+          {
+            "title": "Shadcn/UI",
+            "image": {
+              "src": "/imgs/logos/shadcn.svg",
+              "alt": "Shadcn/UI"
+            }
+          },
+          {
+            "title": "Vercel",
+            "image": {
+              "src": "/imgs/logos/vercel.svg",
+              "alt": "Vercel"
+            }
+          },
+          {
+            "title": "Supabase",
+            "image": {
+              "src": "/imgs/logos/supabase.svg",
+              "alt": "Supabase"
+            }
+          }
+        ]
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "用 Seedance 2.5 創作",
+        "description": "Seedance 2.5 將影片生成、圖片生成、模型選擇與提示詞工作流程整合到一個專注的創作工作區。",
+        "items": [
+          {
+            "title": "提示詞優先創作",
+            "description": "影片生成工作區",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "影片生成工作區",
+            "description": "圖片生成與編輯",
+            "icon": "RiDatabase2Line",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "圖片生成與編輯",
+            "description": "模型比較",
+            "icon": "RiCloudyFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "模型比較",
+            "description": "參考素材工作流程",
+            "icon": "RiRobot2Line",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "introduce"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/landing-page.png",
+          "alt": "introduce"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "為什麼選擇 Seedance 2.5？",
+        "description": "用實用的創作控制，把想法更快變成圖片與影片。",
+        "items": [
+          {
+            "title": "提示詞優先創作",
+            "description": "影片生成工作區",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "影片生成工作區",
+            "description": "圖片生成與編輯",
+            "icon": "RiClapperboardAiLine",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "圖片生成與編輯",
+            "description": "模型比較",
+            "icon": "RiCodeFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "benefits"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "Seedance 2.5 如何融入工作流程",
+        "description": "從提示詞開始，調整視覺、比較模型，並把參考素材轉為可用的創作資產。",
+        "items": [
+          {
+            "title": "提示詞優先創作",
+            "description": "影片生成工作區",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "影片生成工作區",
+            "description": "圖片生成與編輯",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "圖片生成與編輯",
+            "description": "模型比較",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "模型比較",
+            "description": "參考素材工作流程",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "usage"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "Seedance 2.5 功能",
+        "description": "AI 圖片與影片製作所需的工具。",
+        "items": [
+          {
+            "title": "提示詞優先創作",
+            "description": "影片生成工作區",
+            "icon": "RiNextjsFill"
+          },
+          {
+            "title": "影片生成工作區",
+            "description": "圖片生成與編輯",
+            "icon": "RiKey2Fill"
+          },
+          {
+            "title": "圖片生成與編輯",
+            "description": "模型比較",
+            "icon": "RiDatabase2Line"
+          },
+          {
+            "title": "模型比較",
+            "description": "參考素材工作流程",
+            "icon": "RiCloudy2Fill"
+          },
+          {
+            "title": "參考素材工作流程",
+            "description": "商用創意輸出",
+            "icon": "RiBarChart2Line"
+          },
+          {
+            "title": "商用創意輸出",
+            "description": "提示詞優先創作",
+            "icon": "RiRobot2Line"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Seedance 2.5 工作流程指標",
+        "description": "來自真實創作流程與製作需求的訊號。",
+        "items": [
+          {
+            "title": "10K+",
+            "description": "專業人士使用 Seedance 2.5 滿足其AI 影片與圖片生成需求。"
+          },
+          {
+            "title": "98%",
+            "description": "根據最新調查的使用者滿意度。"
+          },
+          {
+            "title": "500+",
+            "description": "每位使用者每月透過我們的 AI 工具節省的時數。"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "創作者怎麼說",
+        "description": "團隊使用 Seedance 2.5 探索概念、比較輸出，並更快從提示詞走到發布。",
+        "items": [
+          {
+            "name": "John Doe",
+            "role": "專業攝影師",
+            "quote": "Seedance 2.5 幫我節省了無數時間。AI 放大功能是一個劃時代的改變。",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "John Doe"
+            }
+          },
+          {
+            "name": "Jane Smith",
+            "role": "創意總監",
+            "quote": "有了 Seedance 2.5，我們的團隊可以專注於創意，而不是繁瑣的任務。",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "Jane Smith"
+            }
+          },
+          {
+            "name": "Emily Johnson",
+            "role": "公司負責人",
+            "quote": "Seedance 2.5 的批次處理功能在緊迫的截止日期前拯救了我們。",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "Emily Johnson"
+            }
+          },
+          {
+            "name": "Michael Brown",
+            "role": "攝影師",
+            "quote": "風格轉換功能將我的人像攝影提升到了全新的水準。",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "Michael Brown"
+            }
+          },
+          {
+            "name": "Sophia Lee",
+            "role": "平面設計師",
+            "quote": "Seedance 2.5 友善的使用介面讓AI 影片與圖片生成變得輕而易舉。",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "Sophia Lee"
+            }
+          },
+          {
+            "name": "David Wilson",
+            "role": "自由攝影師",
+            "quote": "我無法想像沒有 Seedance 2.5 的 AI 驅動工具的工作流程。",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "David Wilson"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "常見問題",
+        "description": "關於 Seedance 2.5 影片與圖片生成的清楚解答。",
+        "items": [
+          {
+            "question": "Seedance 2.5 是什麼？",
+            "answer": "Seedance 2.5 是用於影片生成、圖片生成與提示詞製作的 AI 創作工作區。"
+          },
+          {
+            "question": "Seedance 2.5 支援哪些模型？",
+            "answer": "Seedance 2.5 聚焦 Seedance 2.5、GPT Image 2、Nano Banana、nanobanana 以及其他支援供應商的工作流程。"
+          },
+          {
+            "question": "可以從圖片生成影片嗎？",
+            "answer": "可以。你可以從提示詞或參考圖片開始，進入圖片轉影片流程。"
+          },
+          {
+            "question": "可以編輯生成的圖片嗎？",
+            "answer": "可以。Seedance 2.5 支援海報、商品視覺、廣告與概念製作的圖片生成和編輯。"
+          },
+          {
+            "question": "需要現代瀏覽器嗎？",
+            "answer": "需要。請使用新版瀏覽器與穩定網路，以便上傳參考素材與預覽結果。"
+          },
+          {
+            "question": "可以商用嗎？",
+            "answer": "商用權利取決於所選模型、方案與供應商條款。發布前請確認適用授權。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "用 Seedance 2.5 創作",
+        "description": "使用為現代創作團隊打造的提示詞工作流程生成影片與圖片。",
+        "buttons": [
+          {
+            "url": "/pricing",
+            "target": "_self",
+            "icon": "Zap",
+            "title": "立即開始"
+          },
+          {
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "icon": "BookOpenText",
+            "title": "了解更多"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    },
+    "title": "Seedance 2.5 影片生成與圖片生成",
+    "description": "使用 Seedance 2.5、Nano Banana、nanobanana、GPT Image 2，在同一個工作區完成以提示詞為核心的創作流程。"
+  }
+}

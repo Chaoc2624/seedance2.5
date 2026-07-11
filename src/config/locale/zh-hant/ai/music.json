@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "AI 音樂產生器",
+    "description": "使用 AI 產生令人驚艷的音樂"
+  },
+  "page": {
+    "title": "AI 音樂產生器",
+    "description": "使用 AI 產生令人驚艷的音樂"
+  },
+  "generator": {
+    "title": "音樂產生器",
+    "prompt": "提示詞",
+    "prompt_placeholder": "羅密歐與茱麗葉的愛情故事",
+    "generate": "產生音樂",
+    "loading": "載入中...",
+    "generating": "產生中...",
+    "sign_in_to_generate": "登入以產生音樂",
+    "credits_cost": "消耗 {credits} 點數",
+    "credits_remaining": "剩餘 {credits} 點數",
+    "buy_credits": "購買點數",
+    "generation_progress": "產生進度",
+    "time_cost": "這可能需要 2-3 分鐘...",
+    "generated_song": "已產生的歌曲",
+    "ready_to_play": "準備播放",
+    "audio_generating": "音訊產生中...",
+    "generating_song": "歌曲產生中...",
+    "waiting_generation": "請稍候，我們正在為您創作傑作",
+    "no_song_generated": "尚未產生歌曲",
+    "downloading": "下載中...",
+    "download_success": "下載完成",
+    "download_failed": "音訊下載失敗",
+    "form": {
+      "custom_mode": "自訂模式",
+      "title": "標題",
+      "title_placeholder": "寂靜之聲",
+      "style": "音樂風格",
+      "style_placeholder": "獨立音樂、電子、合成器、120bpm、失真",
+      "instrumental": "純音樂",
+      "prompt": "提示詞",
+      "prompt_placeholder": "一首關於愛情的鄉村民謠",
+      "model": "模型",
+      "lyrics": "歌詞",
+      "lyrics_placeholder": "撰寫您的歌詞，建議兩段（8行）以獲得最佳效果"
+    }
+  }
+}

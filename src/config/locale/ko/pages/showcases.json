@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "쇼케이스",
+    "description": "Seedance 2.5로 만든 주요 프로젝트"
+  },
+  "page": {
+    "title": "쇼케이스",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Seedance 2.5로 만든 AI SaaS 스타트업",
+        "description": "사용하기 쉽고 빠르게 출시할 수 있습니다.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "GPT Image 2 프롬프트 쇼케이스",
+      "description": "GPT Image 2 프롬프트 예시, 생성 결과, 재사용 가능한 프롬프트 구조를 둘러보세요."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "GPT Image 2 프롬프트 쇼케이스",
+      "description": "재사용 가능한 프롬프트와 생성 결과를 함께 모은 밀도 높은 라이브러리입니다. 카드를 열어 해당 프롬프트를 바로 생성기로 보낼 수 있습니다.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "GPT Image 2 쇼케이스",
+        "preview": "미리보기",
+        "preview_aria": "{title} 미리보기",
+        "dialog_description": "생성된 쇼케이스 이미지를 큰 화면으로 미리봅니다.",
+        "prompt": "프롬프트",
+        "use_prompt": "이 프롬프트 사용",
+        "view_more": "쇼케이스 더 보기",
+        "all": "전체"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "VR 헤드셋 분해도 포스터",
+          "description": "세부 부품 설명과 홍보 문구가 포함된 하이테크 VR 헤드셋 분해도 다이어그램을 생성합니다."
+        },
+        "13983": {
+          "title": "하이브리드 스타일 모모타로 설명 슬라이드",
+          "description": "이라스토야풍의 따뜻하고 단순한 그림체와 일본 관공서 슬라이드 특유의 높은 정보 밀도를 결합한 프롬프트입니다."
+        },
+        "16624": {
+          "title": "일본 코끼리의 날 매거진 특집",
+          "description": "코끼리의 날을 다루는 일본식 편집 매거진 페이지를 생성합니다. 시즌 그래픽, 라이프스타일 지면, 교육용 동물원 아트에 적합합니다."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

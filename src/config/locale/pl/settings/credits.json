@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "Nr transakcji",
+    "description": "Opis",
+    "type": "Typ",
+    "scene": "Scena",
+    "credits": "Kredyty",
+    "expires_at": "Wygasa o godz",
+    "created_at": "Utworzono o godz",
+    "action": "Działanie"
+  },
+  "list": {
+    "title": "Zapisy kredytów",
+    "tabs": {
+      "all": "Wszystko",
+      "grant": "Dotacja",
+      "consume": "Konsumować"
+    }
+  },
+  "view": {
+    "title": "Saldo kredytów",
+    "description": "Kredyty sa uzywane do generowania AI i innych platnych akcji.",
+    "never_expires": "Nigdy nie wygasa",
+    "soonest_expiring": "Najblizsze wygasniecie: <credits>{credits}</credits> kredytow dnia <date>{date}</date>",
+    "no_expiring_credits": "Brak kredytow zblizajacych sie do wygasniecia",
+    "buttons": {
+      "purchase": "Kup kredyty"
+    }
+  },
+  "types": {
+    "grant": "Przyznanie",
+    "consume": "Zuzycie"
+  }
+}

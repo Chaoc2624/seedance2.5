@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee symbol option nebula</title>
+  <desc id="desc">An abstract generative nebula symbol with orbiting creative nodes.</desc>
+  <defs>
+    <radialGradient id="nebula-bg" cx="0" cy="0" r="1" gradientTransform="translate(260 238) rotate(90) scale(270)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1E1B4B"/>
+      <stop offset="0.52" stop-color="#080812"/>
+      <stop offset="1" stop-color="#020617"/>
+    </radialGradient>
+    <linearGradient id="nebula-core" x1="137" x2="383" y1="116" y2="394" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#22D3EE"/>
+      <stop offset="0.45" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F472B6"/>
+    </linearGradient>
+    <filter id="nebula-glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="22" flood-color="#8B5CF6" flood-opacity="0.45"/>
+      <feDropShadow dx="0" dy="22" stdDeviation="30" flood-color="#06B6D4" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="112" fill="url(#nebula-bg)"/>
+  <path d="M155 264c23-79 96-124 172-104 61 16 93 74 72 123-24 55-101 82-169 59-56-19-86-67-70-112 18-50 87-72 142-45 40 20 55 62 34 94-22 34-77 42-113 17" fill="none" stroke="url(#nebula-core)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round" filter="url(#nebula-glow)"/>
+  <circle cx="358" cy="155" r="22" fill="#F472B6"/>
+  <circle cx="158" cy="330" r="18" fill="#22D3EE"/>
+  <circle cx="365" cy="342" r="12" fill="#A78BFA"/>
+</svg>

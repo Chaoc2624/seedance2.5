@@ -1,0 +1,31 @@
+{
+  "title": "Działalność",
+  "nav": {
+    "items": [
+      {
+        "title": "Zadania AI",
+        "url": "/activity/ai-tasks",
+        "icon": "RiTaskLine"
+      },
+      {
+        "title": "AI Koty",
+        "url": "/activity/chats",
+        "icon": "RiChat2Line"
+      }
+    ]
+  },
+  "top_nav": {
+    "items": [
+      {
+        "title": "Działalność",
+        "url": "/activity",
+        "icon": "Activity"
+      },
+      {
+        "title": "Ustawienia",
+        "url": "/settings",
+        "icon": "Settings"
+      }
+    ]
+  }
+}

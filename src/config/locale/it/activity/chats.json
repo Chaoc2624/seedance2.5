@@ -1,0 +1,24 @@
+{
+  "fields": {
+    "title": "Titolo",
+    "status": "Stato",
+    "model": "Modella",
+    "provider": "Fornitrice",
+    "created_at": "Creato a",
+    "action": "Azione"
+  },
+  "list": {
+    "title": "Gatti AI",
+    "tabs": {
+      "all": "Tutto",
+      "pending": "In attesa di",
+      "completed": "Completato",
+      "failed": "Fallito"
+    },
+    "buttons": {
+      "view": "Visualizza la chat",
+      "new": "Nuova chiacchierata"
+    },
+    "empty_message": "Nessuna chat trovata"
+  }
+}

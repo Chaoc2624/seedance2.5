@@ -1,0 +1,48 @@
+{
+  "groups": {
+    "email_auth": "Autoryzacja e-mailem",
+    "google_auth": "Autoryzacja Google",
+    "github_auth": "Autoryzacja Githuba",
+    "basic_payment": "Płatność podstawowa",
+    "stripe": "Naszywka",
+    "creem": "Uważać",
+    "paypal": "PayPal",
+    "resend": "Wyślij ponownie",
+    "r2": "Cloudflare R2",
+    "s3": "AWS-a3",
+    "openrouter": "OtwórzRouter",
+    "replicate": "Replika",
+    "fal": "Fala",
+    "google_analytics": "Google Analytics",
+    "clarity": "Przejrzystość",
+    "plausible": "Plausible",
+    "adsense": "Adsens",
+    "affonso": "Afonso",
+    "promotekit": "Promuj zestaw",
+    "credit": "Kredyt",
+    "appinfo": "Informacje o aplikacji",
+    "user_role": "Rola użytkownika"
+  },
+  "edit": {
+    "title": "Ustawienia",
+    "crumbs": {
+      "admin": "Administrator",
+      "settings": "Ustawienia"
+    },
+    "tabs": {
+      "general": "Ogólny",
+      "auth": "Autoryt",
+      "payment": "Zapłata",
+      "credit": "Kredyt",
+      "email": "E-mail",
+      "storage": "Składowanie",
+      "ai": "AI",
+      "analytics": "Analityka",
+      "ads": "Reklamy",
+      "affiliate": "Przyłączać"
+    },
+    "buttons": {
+      "submit": "Ratować"
+    }
+  }
+}

@@ -1,0 +1,869 @@
+{
+  "version": 1,
+  "fixtures": {
+    "image__text-to-image__kie__gpt-image-2-text-to-image": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "Style: An Instagram story-style photo of {argument name=\"character\" default=\"Albedo\"} cosplay; Content: {argument name=\"action\" default=\"squatting on the ground facing the camera, making exaggerated rebellious gestures with both hands, rolling eyes, with an arrogant and disdainful expression\"}",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-08T15:50:46.460Z",
+            "imageUrl": "/dev-mocks/ai-images/mock-30bc15f657b6704e.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-08T15:50:46.460Z"
+      },
+      "taskResult": {
+        "taskId": "f2d58564c38971bf196fe18ee7249e4d",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"auto\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Style: An Instagram story-style photo of {argument name=\\\\\\\"character\\\\\\\" default=\\\\\\\"Albedo\\\\\\\"} cosplay; Content: {argument name=\\\\\\\"action\\\\\\\" default=\\\\\\\"squatting on the ground facing the camera, making exaggerated rebellious gestures with both hands, rolling eyes, with an arrogant and disdainful expression\\\\\\\"}\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/mock-376d1e5b67572a2f.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 55,
+        "completeTime": 1783525903459,
+        "createTime": 1783525846460,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-08T15:51:55.597Z",
+      "imageUrls": ["/dev-mocks/ai-images/mock-30bc15f657b6704e.png"]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__06ccdb5439": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__06ccdb5439",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "{\n\"type\": \"image_generation_prompt\",\n\"style\": \"photorealistic cinematic street photography, documentary aesthetic\",\n\"resolution\": \"ultra-high resolution\",\n\"identity_preservation\": {\n\"use_reference_image\": true,\n\"alter_face\": false,\n\"strict_identity_lock\": true,\n\"notes\": \"Use the uploaded reference image as the compositional base. Replace the central character with the woman from the reference image, preserving exact facial structure, skin texture, lighting direction, shadows, depth of field, angle, and emotional expression. No distortions, no artifacts, no skin tone mismatch.\"\n},\n\"subject\": {\n\"gender\": \"female\",\n\"appearance\": {\n\"hair\": \"bald (as in the original composition)\",\n\"age\": \"adult\",\n\"expression\": \"calm, introspective, emotionally neutral\",\n\"skin\": \"realistic texture with natural pores and tones\"\n},\n\"pose\": {\n\"position\": \"standing still in the center of a busy urban crosswalk\",\n\"action\": \"gently smelling a flower held near the face\",\n\"posture\": \"upright, relaxed, perfectly static\"\n},\n\"wardrobe\": {\n\"outerwear\": \"dark minimalist blazer\",\n\"top\": \"black shirt\"\n}\n},\n\"environment\": {\n\"location\": \"busy urban pedestrian crosswalk\",\n\"atmosphere\": \"metropolitan street scene\",\n\"crowd\": {\n\"behavior\": \"people moving rapidly around the subject\",\n\"effect\": \"motion blur from long exposure\"\n}\n},\n\"lighting\": {\n\"type\": \"natural daylight\",\n\"conditions\": \"overcast sky\",\n\"quality\": \"soft, diffused light\",\n\"effects\": [\n\"realistic skin tones\",\n\"no artificial highlights\",\n\"natural shadows\"\n]\n},\n\"cinematic_effects\": {\n\"long_exposure\": true,\n\"subject_clarity\": \"central subject perfectly sharp\",\n\"surroundings\": \"crowd blurred with motion\",\n\"mood\": \"isolation and stillness amid chaos\"\n},\n\"color_grading\": {\n\"palette\": [\n\"cool grays\",\n\"muted browns\",\n\"soft blacks\"\n],\n\"saturation\": \"desaturated\",\n\"style\": \"professional cinematic grading\"\n},\n\"camera\": {\n\"lens_look\": \"85mm\",\n\"depth_of_field\": \"shallow\",\n\"grain\": \"realistic film grain\",\n\"perspective\": \"identical to original reference image\"\n},\n\"quality_constraints\": [\n\"no facial deformation\",\n\"no AI artifacts\",\n\"no artificial lighting effects\",\n\"perfect facial integration\",\n\"consistent shadows and perspective\"\n],\n\"output_goal\": \"Create a photorealistic, cinematic street photograph featuring a woman standing still in a busy crosswalk, smelling a flower, with long-exposure motion blur around her, preserving the exact realism, lighting, depth, and emotional tone of the original reference image.\"\n}",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-08T16:44:14.351Z",
+            "imageUrl": "/dev-mocks/ai-images/mock-57a53a519f789af1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-08T16:44:14.351Z"
+      },
+      "taskResult": {
+        "taskId": "b2b1df30f3acee61db63d0a13f593725",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"{\\\\n\\\\\\\"type\\\\\\\": \\\\\\\"image_generation_prompt\\\\\\\",\\\\n\\\\\\\"style\\\\\\\": \\\\\\\"photorealistic cinematic street photography, documentary aesthetic\\\\\\\",\\\\n\\\\\\\"resolution\\\\\\\": \\\\\\\"ultra-high resolution\\\\\\\",\\\\n\\\\\\\"identity_preservation\\\\\\\": {\\\\n\\\\\\\"use_reference_image\\\\\\\": true,\\\\n\\\\\\\"alter_face\\\\\\\": false,\\\\n\\\\\\\"strict_identity_lock\\\\\\\": true,\\\\n\\\\\\\"notes\\\\\\\": \\\\\\\"Use the uploaded reference image as the compositional base. Replace the central character with the woman from the reference image, preserving exact facial structure, skin texture, lighting direction, shadows, depth of field, angle, and emotional expression. No distortions, no artifacts, no skin tone mismatch.\\\\\\\"\\\\n},\\\\n\\\\\\\"subject\\\\\\\": {\\\\n\\\\\\\"gender\\\\\\\": \\\\\\\"female\\\\\\\",\\\\n\\\\\\\"appearance\\\\\\\": {\\\\n\\\\\\\"hair\\\\\\\": \\\\\\\"bald (as in the original composition)\\\\\\\",\\\\n\\\\\\\"age\\\\\\\": \\\\\\\"adult\\\\\\\",\\\\n\\\\\\\"expression\\\\\\\": \\\\\\\"calm, introspective, emotionally neutral\\\\\\\",\\\\n\\\\\\\"skin\\\\\\\": \\\\\\\"realistic texture with natural pores and tones\\\\\\\"\\\\n},\\\\n\\\\\\\"pose\\\\\\\": {\\\\n\\\\\\\"position\\\\\\\": \\\\\\\"standing still in the center of a busy urban crosswalk\\\\\\\",\\\\n\\\\\\\"action\\\\\\\": \\\\\\\"gently smelling a flower held near the face\\\\\\\",\\\\n\\\\\\\"posture\\\\\\\": \\\\\\\"upright, relaxed, perfectly static\\\\\\\"\\\\n},\\\\n\\\\\\\"wardrobe\\\\\\\": {\\\\n\\\\\\\"outerwear\\\\\\\": \\\\\\\"dark minimalist blazer\\\\\\\",\\\\n\\\\\\\"top\\\\\\\": \\\\\\\"black shirt\\\\\\\"\\\\n}\\\\n},\\\\n\\\\\\\"environment\\\\\\\": {\\\\n\\\\\\\"location\\\\\\\": \\\\\\\"busy urban pedestrian crosswalk\\\\\\\",\\\\n\\\\\\\"atmosphere\\\\\\\": \\\\\\\"metropolitan street scene\\\\\\\",\\\\n\\\\\\\"crowd\\\\\\\": {\\\\n\\\\\\\"behavior\\\\\\\": \\\\\\\"people moving rapidly around the subject\\\\\\\",\\\\n\\\\\\\"effect\\\\\\\": \\\\\\\"motion blur from long exposure\\\\\\\"\\\\n}\\\\n},\\\\n\\\\\\\"lighting\\\\\\\": {\\\\n\\\\\\\"type\\\\\\\": \\\\\\\"natural daylight\\\\\\\",\\\\n\\\\\\\"conditions\\\\\\\": \\\\\\\"overcast sky\\\\\\\",\\\\n\\\\\\\"quality\\\\\\\": \\\\\\\"soft, diffused light\\\\\\\",\\\\n\\\\\\\"effects\\\\\\\": [\\\\n\\\\\\\"realistic skin tones\\\\\\\",\\\\n\\\\\\\"no artificial highlights\\\\\\\",\\\\n\\\\\\\"natural shadows\\\\\\\"\\\\n]\\\\n},\\\\n\\\\\\\"cinematic_effects\\\\\\\": {\\\\n\\\\\\\"long_exposure\\\\\\\": true,\\\\n\\\\\\\"subject_clarity\\\\\\\": \\\\\\\"central subject perfectly sharp\\\\\\\",\\\\n\\\\\\\"surroundings\\\\\\\": \\\\\\\"crowd blurred with motion\\\\\\\",\\\\n\\\\\\\"mood\\\\\\\": \\\\\\\"isolation and stillness amid chaos\\\\\\\"\\\\n},\\\\n\\\\\\\"color_grading\\\\\\\": {\\\\n\\\\\\\"palette\\\\\\\": [\\\\n\\\\\\\"cool grays\\\\\\\",\\\\n\\\\\\\"muted browns\\\\\\\",\\\\n\\\\\\\"soft blacks\\\\\\\"\\\\n],\\\\n\\\\\\\"saturation\\\\\\\": \\\\\\\"desaturated\\\\\\\",\\\\n\\\\\\\"style\\\\\\\": \\\\\\\"professional cinematic grading\\\\\\\"\\\\n},\\\\n\\\\\\\"camera\\\\\\\": {\\\\n\\\\\\\"lens_look\\\\\\\": \\\\\\\"85mm\\\\\\\",\\\\n\\\\\\\"depth_of_field\\\\\\\": \\\\\\\"shallow\\\\\\\",\\\\n\\\\\\\"grain\\\\\\\": \\\\\\\"realistic film grain\\\\\\\",\\\\n\\\\\\\"perspective\\\\\\\": \\\\\\\"identical to original reference image\\\\\\\"\\\\n},\\\\n\\\\\\\"quality_constraints\\\\\\\": [\\\\n\\\\\\\"no facial deformation\\\\\\\",\\\\n\\\\\\\"no AI artifacts\\\\\\\",\\\\n\\\\\\\"no artificial lighting effects\\\\\\\",\\\\n\\\\\\\"perfect facial integration\\\\\\\",\\\\n\\\\\\\"consistent shadows and perspective\\\\\\\"\\\\n],\\\\n\\\\\\\"output_goal\\\\\\\": \\\\\\\"Create a photorealistic, cinematic street photograph featuring a woman standing still in a busy crosswalk, smelling a flower, with long-exposure motion blur around her, preserving the exact realism, lighting, depth, and emotional tone of the original reference image.\\\\\\\"\\\\n}\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/mock-bf7652b9642bfc59.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 202,
+        "completeTime": 1783529259964,
+        "createTime": 1783529054351,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-08T16:47:46.453Z",
+      "imageUrls": ["/dev-mocks/ai-images/mock-57a53a519f789af1.png"]
+    },
+    "image__text-to-image__kie__nano-banana-2__82efacee83": {
+      "key": "image__text-to-image__kie__nano-banana-2__82efacee83",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "cinematic, wide-angle portrait of her sitting in a {argument name=\"setting\" default=\"wildflower field\"} during the day. She leans slightly forward, extending one arm to hold a {argument name=\"flower type\" default=\"daisy\"} toward the camera, gently blurring the flower in the foreground. Her expression is soft and charming, with messy hair adding to his relaxed, effortless look. She wears a {argument name=\"outfit\" default=\"sky-blue sweater adorned with white cloud patterns\"} and light-wash denim jeans. The field around him is bursting with yellow wildflowers and daisies, set beneath a dramatic, partly cloudy sky. The lighting is natural and soft, with a warm, vibrant color grade and a hint of vintage film tones, enhancing the nostalgic, dreamy atmosphere. The shallow depth of field and editorial-style composition evoke a timeless, cinematic mood.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "output_format": "jpg",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-08T17:46:33.618Z",
+            "imageUrl": "/dev-mocks/ai-images/mock-9418c103f0784e81.jpg"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-08T17:46:33.618Z"
+      },
+      "taskResult": {
+        "taskId": "0646a4430370813528eb60027a7f16d3",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"16:9\\\",\\\"output_format\\\":\\\"jpg\\\",\\\"prompt\\\":\\\"cinematic, wide-angle portrait of her sitting in a {argument name=\\\\\\\"setting\\\\\\\" default=\\\\\\\"wildflower field\\\\\\\"} during the day. She leans slightly forward, extending one arm to hold a {argument name=\\\\\\\"flower type\\\\\\\" default=\\\\\\\"daisy\\\\\\\"} toward the camera, gently blurring the flower in the foreground. Her expression is soft and charming, with messy hair adding to his relaxed, effortless look. She wears a {argument name=\\\\\\\"outfit\\\\\\\" default=\\\\\\\"sky-blue sweater adorned with white cloud patterns\\\\\\\"} and light-wash denim jeans. The field around him is bursting with yellow wildflowers and daisies, set beneath a dramatic, partly cloudy sky. The lighting is natural and soft, with a warm, vibrant color grade and a hint of vintage film tones, enhancing the nostalgic, dreamy atmosphere. The shallow depth of field and editorial-style composition evoke a timeless, cinematic mood.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/mock-7aacc342ecc1e04e.jpg\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 20,
+        "completeTime": 1783532815584,
+        "createTime": 1783532793618,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-08T17:46:54.327Z",
+      "imageUrls": ["/dev-mocks/ai-images/mock-9418c103f0784e81.jpg"]
+    },
+    "image__text-to-image__kie__nano-banana-2__dc14525bef": {
+      "key": "image__text-to-image__kie__nano-banana-2__dc14525bef",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "cinematic, wide-angle portrait of her sitting in a {argument name=\"setting\" default=\"wildflower field\"} during the day. She leans slightly forward, extending one arm to hold a {argument name=\"flower type\" default=\"daisy\"} toward the camera, gently blurring the flower in the foreground. Her expression is soft and charming, with messy hair adding to his relaxed, effortless look. She wears a {argument name=\"outfit\" default=\"sky-blue sweater adorned with white cloud patterns\"} and light-wash denim jeans. The field around him is bursting with yellow wildflowers and daisies, set beneath a dramatic, partly cloudy sky. The lighting is natural and soft, with a warm, vibrant color grade and a hint of vintage film tones, enhancing the nostalgic, dreamy atmosphere. The shallow depth of field and editorial-style composition evoke a timeless, cinematic mood.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-08T17:49:16.029Z",
+            "imageUrl": "/dev-mocks/ai-images/mock-f9bb7067a3054d10.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-08T17:49:16.029Z"
+      },
+      "taskResult": {
+        "taskId": "82e63a86b3d3313fcfc14573792c40eb",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"cinematic, wide-angle portrait of her sitting in a {argument name=\\\\\\\"setting\\\\\\\" default=\\\\\\\"wildflower field\\\\\\\"} during the day. She leans slightly forward, extending one arm to hold a {argument name=\\\\\\\"flower type\\\\\\\" default=\\\\\\\"daisy\\\\\\\"} toward the camera, gently blurring the flower in the foreground. Her expression is soft and charming, with messy hair adding to his relaxed, effortless look. She wears a {argument name=\\\\\\\"outfit\\\\\\\" default=\\\\\\\"sky-blue sweater adorned with white cloud patterns\\\\\\\"} and light-wash denim jeans. The field around him is bursting with yellow wildflowers and daisies, set beneath a dramatic, partly cloudy sky. The lighting is natural and soft, with a warm, vibrant color grade and a hint of vintage film tones, enhancing the nostalgic, dreamy atmosphere. The shallow depth of field and editorial-style composition evoke a timeless, cinematic mood.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/mock-800e29177b69f422.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 115,
+        "completeTime": 1783533072524,
+        "createTime": 1783532956029,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-08T17:51:10.875Z",
+      "imageUrls": ["/dev-mocks/ai-images/mock-f9bb7067a3054d10.png"]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__72424aef64": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__72424aef64",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "Ultra-realistic editorial fashion portrait captured from an ultra-low-angle worm's-eye view, with the camera placed on the ground and pointing straight upward toward the subject. A stylish young woman leans over the camera with both hands reaching toward the lens, her oversized hands creating dramatic forced perspective. She has a soft smile, a relaxed expression, and short, messy wavy bob hair naturally blowing in the wind. She wears minimal makeup, delicate gold jewelry, an {argument name=\"sweater style\" default=\"oversized chunky cream cable-knit sweater\"} with voluminous sleeves, and {argument name=\"trousers\" default=\"high-waisted mustard corduroy trousers\"}.\n\nThe background features a {argument name=\"sky\" default=\"bright, clear blue sky\"} with the sun positioned directly behind her head, creating strong golden backlighting, a cinematic rim light around her hair, natural lens flare rings, rainbow optical flare, a glowing sun halo, subtle atmospheric haze, and a dreamy ambiance.\n\nShot with a 24mm ultra-wide lens at f/2.0, featuring shallow depth of field with the hands slightly out of focus while the face remains tack-sharp. Cinematic composition, Kodak Portra 400 color grading, warm golden-hour tones, natural skin texture, editorial magazine photography, high dynamic range, premium fashion campaign aesthetic, ultra-detailed, photorealistic, 8K.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T03:28:36.538Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__72424aef64-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T03:28:36.538Z"
+      },
+      "taskResult": {
+        "taskId": "637db319dc59bea5eb41643434f249fb",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"auto\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Ultra-realistic editorial fashion portrait captured from an ultra-low-angle worm's-eye view, with the camera placed on the ground and pointing straight upward toward the subject. A stylish young woman leans over the camera with both hands reaching toward the lens, her oversized hands creating dramatic forced perspective. She has a soft smile, a relaxed expression, and short, messy wavy bob hair naturally blowing in the wind. She wears minimal makeup, delicate gold jewelry, an {argument name=\\\\\\\"sweater style\\\\\\\" default=\\\\\\\"oversized chunky cream cable-knit sweater\\\\\\\"} with voluminous sleeves, and {argument name=\\\\\\\"trousers\\\\\\\" default=\\\\\\\"high-waisted mustard corduroy trousers\\\\\\\"}.\\\\n\\\\nThe background features a {argument name=\\\\\\\"sky\\\\\\\" default=\\\\\\\"bright, clear blue sky\\\\\\\"} with the sun positioned directly behind her head, creating strong golden backlighting, a cinematic rim light around her hair, natural lens flare rings, rainbow optical flare, a glowing sun halo, subtle atmospheric haze, and a dreamy ambiance.\\\\n\\\\nShot with a 24mm ultra-wide lens at f/2.0, featuring shallow depth of field with the hands slightly out of focus while the face remains tack-sharp. Cinematic composition, Kodak Portra 400 color grading, warm golden-hour tones, natural skin texture, editorial magazine photography, high dynamic range, premium fashion campaign aesthetic, ultra-detailed, photorealistic, 8K.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__72424aef64-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 57,
+        "completeTime": 1783740585174,
+        "createTime": 1783740516538,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-11T03:34:28.621Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__72424aef64-1.png"
+      ]
+    },
+    "image__text-to-image__kie__nano-banana-2__9c8b21607a": {
+      "key": "image__text-to-image__kie__nano-banana-2__9c8b21607a",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "A cinematic close-up portrait of a {argument name=\"subject\" default=\"young East Asian woman\"} with long slightly messy black hair falling across her face, porcelain skin, soft pink lips, and deep expressive eyes. She gazes directly into the camera with a {argument name=\"expression\" default=\"calm, melancholic\"} expression. Dramatic low-key lighting illuminates only parts of her face, creating strong contrast against a dark shadowy background. Subtle strands of hair move gently as if touched by a breeze, adding a natural and emotional feel. Moody atmosphere, minimalist composition, soft skin texture, delicate facial details, editorial beauty photography, subtle grain, muted colors, intimate and mysterious mood, ultra-realistic, high detail, captured like an artistic film still.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T17:17:52.785Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__9c8b21607a-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T17:17:52.785Z"
+      },
+      "taskResult": {
+        "taskId": "51c8f731b25b79d22c59fe3c7c1bf46c",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"16:9\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"A cinematic close-up portrait of a {argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"young East Asian woman\\\\\\\"} with long slightly messy black hair falling across her face, porcelain skin, soft pink lips, and deep expressive eyes. She gazes directly into the camera with a {argument name=\\\\\\\"expression\\\\\\\" default=\\\\\\\"calm, melancholic\\\\\\\"} expression. Dramatic low-key lighting illuminates only parts of her face, creating strong contrast against a dark shadowy background. Subtle strands of hair move gently as if touched by a breeze, adding a natural and emotional feel. Moody atmosphere, minimalist composition, soft skin texture, delicate facial details, editorial beauty photography, subtle grain, muted colors, intimate and mysterious mood, ultra-realistic, high detail, captured like an artistic film still.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/mock-a0525bfe13b21609.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 23,
+        "completeTime": 1783703897350,
+        "createTime": 1783703872785,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-10T17:18:37.800Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__9c8b21607a-1.png"
+      ]
+    },
+    "image__text-to-image__kie__nano-banana-2__077e2d52dc": {
+      "key": "image__text-to-image__kie__nano-banana-2__077e2d52dc",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "A cinematic close-up portrait of a {argument name=\"subject\" default=\"young East Asian woman\"} with long slightly messy black hair falling across her face, porcelain skin, soft pink lips, and deep expressive eyes. She gazes directly into the camera with a {argument name=\"expression\" default=\"calm, melancholic\"} expression. Dramatic low-key lighting illuminates only parts of her face, creating strong contrast against a dark shadowy background. Subtle strands of hair move gently as if touched by a breeze, adding a natural and emotional feel. Moody atmosphere, minimalist composition, soft skin texture, delicate facial details, editorial beauty photography, subtle grain, muted colors, intimate and mysterious mood, ultra-realistic, high detail, captured like an artistic film still.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T17:40:29.817Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__077e2d52dc-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T17:40:29.817Z"
+      },
+      "taskResult": {
+        "taskId": "f98f80ec87cab52c0fbd9a18ea98d77c",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"A cinematic close-up portrait of a {argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"young East Asian woman\\\\\\\"} with long slightly messy black hair falling across her face, porcelain skin, soft pink lips, and deep expressive eyes. She gazes directly into the camera with a {argument name=\\\\\\\"expression\\\\\\\" default=\\\\\\\"calm, melancholic\\\\\\\"} expression. Dramatic low-key lighting illuminates only parts of her face, creating strong contrast against a dark shadowy background. Subtle strands of hair move gently as if touched by a breeze, adding a natural and emotional feel. Moody atmosphere, minimalist composition, soft skin texture, delicate facial details, editorial beauty photography, subtle grain, muted colors, intimate and mysterious mood, ultra-realistic, high detail, captured like an artistic film still.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__077e2d52dc-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 42,
+        "completeTime": 1783705273734,
+        "createTime": 1783705229817,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-10T17:41:34.736Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__077e2d52dc-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__ceeef49adb": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__ceeef49adb",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "{\"type\": \"Nahaufnahme-Fotografie\",\"subject\": \"{argument name=\"subject\" default=\"Eine fiktive Ausweiskarte, die von einer Hand gehalten wird\"}\",\"card_content\": {\"header_text\": \"MUSTERREPUBLIK / AUSWEISKARTE / SAMPLE ID CARD\",\"logo\": \"Ein blaues Symbolfeld oben links mit dem Länderkürzel 'MR'\",\"portrait\": {\"appearance\": \"Junge Frau mit langen, glatten blonden Haaren und Mittelscheitel\",\"facial_features\": \"Helle Haut mit deutlich sichtbaren natürlichen Sommersprossen auf Nase und Wangen, neutraler Gesichtsausdruck, haselgrüne Augen mit geradem Blick nach vorn\",\"clothing\": \"Schwarzes Oberteil mit sichtbarem Ausschnitt\",\"accessories\": \"Kleine silberne Ohrstecker an den Ohrläppchen\"},\"text_data\": {\"surname\": \"MUSTERNAME\",\"given_name\": \"{argument name=\"given name\" default=\"ERIKA\"}\",\"birth_date\": \"{argument name=\"birth date\" default=\"07.11.1998\"}\",\"birth_place\": \"BERLIN\",\"expiry_date\": \"01.12.2030\"},\"surface_texture\": \"Glänzende laminierte Oberfläche mit sichtbaren holografischen Sicherheitsmustern und Guilloche-Linien über Porträt und Text\"},\"foreground_hand\": {\"position\": \"Hält die untere rechte Ecke der Karte\",\"skin_tone\": \"Hell\",\"fingernail\": \"Sichtbarer Daumen mit langem, mandelförmigem Fingernagel, lackiert in glänzendem Bordeauxrot oder Dunkelrot\"},\"background\": \"Schlichte, einfarbig weiße Oberfläche\",\"lighting\": \"Weiches, gleichmäßiges Innenlicht mit leichten Reflexionen auf der Kartenoberfläche und dem glänzenden Nagellack\",\"framing\": \"Vertikale Nahaufnahme aus der Vogelperspektive, vollständig auf die Karte und den Daumen fokussiert\"}",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T18:29:07.130Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__ceeef49adb-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T18:29:07.130Z"
+      },
+      "taskResult": {
+        "taskId": "ca38cbcb209ec3b789cd7c12fc84c609",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"auto\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"{\\\\\\\"type\\\\\\\": \\\\\\\"Nahaufnahme-Fotografie\\\\\\\",\\\\\\\"subject\\\\\\\": \\\\\\\"{argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"Eine fiktive Ausweiskarte, die von einer Hand gehalten wird\\\\\\\"}\\\\\\\",\\\\\\\"card_content\\\\\\\": {\\\\\\\"header_text\\\\\\\": \\\\\\\"MUSTERREPUBLIK / AUSWEISKARTE / SAMPLE ID CARD\\\\\\\",\\\\\\\"logo\\\\\\\": \\\\\\\"Ein blaues Symbolfeld oben links mit dem Länderkürzel 'MR'\\\\\\\",\\\\\\\"portrait\\\\\\\": {\\\\\\\"appearance\\\\\\\": \\\\\\\"Junge Frau mit langen, glatten blonden Haaren und Mittelscheitel\\\\\\\",\\\\\\\"facial_features\\\\\\\": \\\\\\\"Helle Haut mit deutlich sichtbaren natürlichen Sommersprossen auf Nase und Wangen, neutraler Gesichtsausdruck, haselgrüne Augen mit geradem Blick nach vorn\\\\\\\",\\\\\\\"clothing\\\\\\\": \\\\\\\"Schwarzes Oberteil mit sichtbarem Ausschnitt\\\\\\\",\\\\\\\"accessories\\\\\\\": \\\\\\\"Kleine silberne Ohrstecker an den Ohrläppchen\\\\\\\"},\\\\\\\"text_data\\\\\\\": {\\\\\\\"surname\\\\\\\": \\\\\\\"MUSTERNAME\\\\\\\",\\\\\\\"given_name\\\\\\\": \\\\\\\"{argument name=\\\\\\\"given name\\\\\\\" default=\\\\\\\"ERIKA\\\\\\\"}\\\\\\\",\\\\\\\"birth_date\\\\\\\": \\\\\\\"{argument name=\\\\\\\"birth date\\\\\\\" default=\\\\\\\"07.11.1998\\\\\\\"}\\\\\\\",\\\\\\\"birth_place\\\\\\\": \\\\\\\"BERLIN\\\\\\\",\\\\\\\"expiry_date\\\\\\\": \\\\\\\"01.12.2030\\\\\\\"},\\\\\\\"surface_texture\\\\\\\": \\\\\\\"Glänzende laminierte Oberfläche mit sichtbaren holografischen Sicherheitsmustern und Guilloche-Linien über Porträt und Text\\\\\\\"},\\\\\\\"foreground_hand\\\\\\\": {\\\\\\\"position\\\\\\\": \\\\\\\"Hält die untere rechte Ecke der Karte\\\\\\\",\\\\\\\"skin_tone\\\\\\\": \\\\\\\"Hell\\\\\\\",\\\\\\\"fingernail\\\\\\\": \\\\\\\"Sichtbarer Daumen mit langem, mandelförmigem Fingernagel, lackiert in glänzendem Bordeauxrot oder Dunkelrot\\\\\\\"},\\\\\\\"background\\\\\\\": \\\\\\\"Schlichte, einfarbig weiße Oberfläche\\\\\\\",\\\\\\\"lighting\\\\\\\": \\\\\\\"Weiches, gleichmäßiges Innenlicht mit leichten Reflexionen auf der Kartenoberfläche und dem glänzenden Nagellack\\\\\\\",\\\\\\\"framing\\\\\\\": \\\\\\\"Vertikale Nahaufnahme aus der Vogelperspektive, vollständig auf die Karte und den Daumen fokussiert\\\\\\\"}\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__ceeef49adb-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 56,
+        "completeTime": 1783708205847,
+        "createTime": 1783708147130,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-10T18:30:04.440Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__ceeef49adb-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__c14978b859": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__c14978b859",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "{\"type\": \"Nahaufnahme-Fotografie\",\"subject\": \"{argument name=\"subject\" default=\"Eine fiktive Ausweiskarte, die von einer Hand gehalten wird\"}\",\"card_content\": {\"header_text\": \"MUSTERREPUBLIK / AUSWEISKARTE / SAMPLE ID CARD\",\"logo\": \"Ein blaues Symbolfeld oben links mit dem Länderkürzel 'MR'\",\"portrait\": {\"appearance\": \"Junge Frau mit langen, glatten blonden Haaren und Mittelscheitel\",\"facial_features\": \"Helle Haut mit deutlich sichtbaren natürlichen Sommersprossen auf Nase und Wangen, neutraler Gesichtsausdruck, haselgrüne Augen mit geradem Blick nach vorn\",\"clothing\": \"Schwarzes Oberteil mit sichtbarem Ausschnitt\",\"accessories\": \"Kleine silberne Ohrstecker an den Ohrläppchen\"},\"text_data\": {\"surname\": \"MUSTERNAME\",\"given_name\": \"{argument name=\"given name\" default=\"ERIKA\"}\",\"birth_date\": \"{argument name=\"birth date\" default=\"07.11.1998\"}\",\"birth_place\": \"BERLIN\",\"expiry_date\": \"01.12.2030\"},\"surface_texture\": \"Glänzende laminierte Oberfläche mit sichtbaren holografischen Sicherheitsmustern und Guilloche-Linien über Porträt und Text\"},\"foreground_hand\": {\"position\": \"Hält die untere rechte Ecke der Karte\",\"skin_tone\": \"Hell\",\"fingernail\": \"Sichtbarer Daumen mit langem, mandelförmigem Fingernagel, lackiert in glänzendem Bordeauxrot oder Dunkelrot\"},\"background\": \"Schlichte, einfarbig weiße Oberfläche\",\"lighting\": \"Weiches, gleichmäßiges Innenlicht mit leichten Reflexionen auf der Kartenoberfläche und dem glänzenden Nagellack\",\"framing\": \"Vertikale Nahaufnahme aus der Vogelperspektive, vollständig auf die Karte und den Daumen fokussiert\"}",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T18:30:31.693Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__c14978b859-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T18:30:31.693Z"
+      },
+      "taskResult": {
+        "taskId": "1c5ad0c334b819f4cb8ec5dd21714a5c",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"{\\\\\\\"type\\\\\\\": \\\\\\\"Nahaufnahme-Fotografie\\\\\\\",\\\\\\\"subject\\\\\\\": \\\\\\\"{argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"Eine fiktive Ausweiskarte, die von einer Hand gehalten wird\\\\\\\"}\\\\\\\",\\\\\\\"card_content\\\\\\\": {\\\\\\\"header_text\\\\\\\": \\\\\\\"MUSTERREPUBLIK / AUSWEISKARTE / SAMPLE ID CARD\\\\\\\",\\\\\\\"logo\\\\\\\": \\\\\\\"Ein blaues Symbolfeld oben links mit dem Länderkürzel 'MR'\\\\\\\",\\\\\\\"portrait\\\\\\\": {\\\\\\\"appearance\\\\\\\": \\\\\\\"Junge Frau mit langen, glatten blonden Haaren und Mittelscheitel\\\\\\\",\\\\\\\"facial_features\\\\\\\": \\\\\\\"Helle Haut mit deutlich sichtbaren natürlichen Sommersprossen auf Nase und Wangen, neutraler Gesichtsausdruck, haselgrüne Augen mit geradem Blick nach vorn\\\\\\\",\\\\\\\"clothing\\\\\\\": \\\\\\\"Schwarzes Oberteil mit sichtbarem Ausschnitt\\\\\\\",\\\\\\\"accessories\\\\\\\": \\\\\\\"Kleine silberne Ohrstecker an den Ohrläppchen\\\\\\\"},\\\\\\\"text_data\\\\\\\": {\\\\\\\"surname\\\\\\\": \\\\\\\"MUSTERNAME\\\\\\\",\\\\\\\"given_name\\\\\\\": \\\\\\\"{argument name=\\\\\\\"given name\\\\\\\" default=\\\\\\\"ERIKA\\\\\\\"}\\\\\\\",\\\\\\\"birth_date\\\\\\\": \\\\\\\"{argument name=\\\\\\\"birth date\\\\\\\" default=\\\\\\\"07.11.1998\\\\\\\"}\\\\\\\",\\\\\\\"birth_place\\\\\\\": \\\\\\\"BERLIN\\\\\\\",\\\\\\\"expiry_date\\\\\\\": \\\\\\\"01.12.2030\\\\\\\"},\\\\\\\"surface_texture\\\\\\\": \\\\\\\"Glänzende laminierte Oberfläche mit sichtbaren holografischen Sicherheitsmustern und Guilloche-Linien über Porträt und Text\\\\\\\"},\\\\\\\"foreground_hand\\\\\\\": {\\\\\\\"position\\\\\\\": \\\\\\\"Hält die untere rechte Ecke der Karte\\\\\\\",\\\\\\\"skin_tone\\\\\\\": \\\\\\\"Hell\\\\\\\",\\\\\\\"fingernail\\\\\\\": \\\\\\\"Sichtbarer Daumen mit langem, mandelförmigem Fingernagel, lackiert in glänzendem Bordeauxrot oder Dunkelrot\\\\\\\"},\\\\\\\"background\\\\\\\": \\\\\\\"Schlichte, einfarbig weiße Oberfläche\\\\\\\",\\\\\\\"lighting\\\\\\\": \\\\\\\"Weiches, gleichmäßiges Innenlicht mit leichten Reflexionen auf der Kartenoberfläche und dem glänzenden Nagellack\\\\\\\",\\\\\\\"framing\\\\\\\": \\\\\\\"Vertikale Nahaufnahme aus der Vogelperspektive, vollständig auf die Karte und den Daumen fokussiert\\\\\\\"}\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__c14978b859-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 69,
+        "completeTime": 1783708310348,
+        "createTime": 1783708231693,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-10T18:31:49.206Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__c14978b859-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__9d5530013a": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__9d5530013a",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "An ultra-premium luxury fashion editorial portrait of a beautiful {argument name=\"subject\" default=\"young East Asian woman\"} with long, naturally wavy black hair and flawless natural makeup, walking confidently toward the camera with a calm, powerful CEO-like presence. She wears an elegant ivory silk satin button-up blouse with soft natural folds, tucked into high-waisted tailored black wide-leg trousers, paired with black pointed-toe leather heels. One hand rests casually inside the trouser pocket while the other hand loosely holds a pair of luxury black sunglasses. She wears minimal refined gold jewelry including a delicate necklace, small earrings, a luxury gold wristwatch, and a subtle bracelet.\nBackground: A seamless premium studio backdrop featuring a {argument name=\"background color\" default=\"deep emerald green fading into dark forest green\"} with a perfectly smooth gradient. Behind the subject is a large soft warm golden circular spotlight creating beautiful depth and luxury separation. The polished studio floor has a very subtle cinematic reflection without appearing glossy.\nPose: Walking naturally toward the camera with crossed strides, shoulders relaxed, spine perfectly straight, chin slightly raised, confident posture, elegant runway-inspired movement, natural arm swing, luxurious body language, eyes looking directly into the lens with a composed editorial expression.\nLighting: Premium Vogue-style three-point studio lighting with a large soft diffused key light, warm golden rim light outlining the hair and shoulders, subtle fill light preserving realistic shadows, cinematic HDR lighting, soft highlight roll-off, realistic reflections on the satin fabric, rich contrast, luxury commercial photography lighting.\nCamera: Full-body portrait, eye-level angle, 85mm full-frame lens, f/2.2 aperture, shallow depth of field, razor-sharp focus on the eyes and face, realistic optical perspective, premium fashion campaign composition.\nColor Grading: Luxury editorial color grading with deep emerald greens, warm golden highlights, rich blacks, natural ivory fabric tones, balanced skin tones, soft bloom, HDR dynamic range, subtle filmic contrast, premium {argument name=\"brand style\" default=\"Vogue, Zara, Ralph Lauren and COS\"} campaign aesthetic.\nQuality: Hyper-realistic, photorealistic, ultra-detailed skin texture, natural hair strands, realistic fabric physics, luxury commercial fashion photography, editorial masterpiece, magazine cover quality, 8K ultra-HD, award-winning fashion campaign, clean composition, no text, no watermark.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T19:17:10.289Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__9d5530013a-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T19:17:10.289Z"
+      },
+      "taskResult": {
+        "taskId": "8a618d63f74a7bbbd7d63ff0bdf2f8dd",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"auto\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"An ultra-premium luxury fashion editorial portrait of a beautiful {argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"young East Asian woman\\\\\\\"} with long, naturally wavy black hair and flawless natural makeup, walking confidently toward the camera with a calm, powerful CEO-like presence. She wears an elegant ivory silk satin button-up blouse with soft natural folds, tucked into high-waisted tailored black wide-leg trousers, paired with black pointed-toe leather heels. One hand rests casually inside the trouser pocket while the other hand loosely holds a pair of luxury black sunglasses. She wears minimal refined gold jewelry including a delicate necklace, small earrings, a luxury gold wristwatch, and a subtle bracelet.\\\\nBackground: A seamless premium studio backdrop featuring a {argument name=\\\\\\\"background color\\\\\\\" default=\\\\\\\"deep emerald green fading into dark forest green\\\\\\\"} with a perfectly smooth gradient. Behind the subject is a large soft warm golden circular spotlight creating beautiful depth and luxury separation. The polished studio floor has a very subtle cinematic reflection without appearing glossy.\\\\nPose: Walking naturally toward the camera with crossed strides, shoulders relaxed, spine perfectly straight, chin slightly raised, confident posture, elegant runway-inspired movement, natural arm swing, luxurious body language, eyes looking directly into the lens with a composed editorial expression.\\\\nLighting: Premium Vogue-style three-point studio lighting with a large soft diffused key light, warm golden rim light outlining the hair and shoulders, subtle fill light preserving realistic shadows, cinematic HDR lighting, soft highlight roll-off, realistic reflections on the satin fabric, rich contrast, luxury commercial photography lighting.\\\\nCamera: Full-body portrait, eye-level angle, 85mm full-frame lens, f/2.2 aperture, shallow depth of field, razor-sharp focus on the eyes and face, realistic optical perspective, premium fashion campaign composition.\\\\nColor Grading: Luxury editorial color grading with deep emerald greens, warm golden highlights, rich blacks, natural ivory fabric tones, balanced skin tones, soft bloom, HDR dynamic range, subtle filmic contrast, premium {argument name=\\\\\\\"brand style\\\\\\\" default=\\\\\\\"Vogue, Zara, Ralph Lauren and COS\\\\\\\"} campaign aesthetic.\\\\nQuality: Hyper-realistic, photorealistic, ultra-detailed skin texture, natural hair strands, realistic fabric physics, luxury commercial fashion photography, editorial masterpiece, magazine cover quality, 8K ultra-HD, award-winning fashion campaign, clean composition, no text, no watermark.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__9d5530013a-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 57,
+        "completeTime": 1783711089262,
+        "createTime": 1783711030289,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-10T19:18:07.498Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__9d5530013a-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__7ac6aba1cc": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__7ac6aba1cc",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "An ultra-premium luxury fashion editorial portrait of a beautiful {argument name=\"subject\" default=\"young East Asian woman\"} with long, naturally wavy black hair and flawless natural makeup, walking confidently toward the camera with a calm, powerful CEO-like presence. She wears an elegant ivory silk satin button-up blouse with soft natural folds, tucked into high-waisted tailored black wide-leg trousers, paired with black pointed-toe leather heels. One hand rests casually inside the trouser pocket while the other hand loosely holds a pair of luxury black sunglasses. She wears minimal refined gold jewelry including a delicate necklace, small earrings, a luxury gold wristwatch, and a subtle bracelet.Background: A seamless premium studio backdrop featuring a {argument name=\"background color\" default=\"deep emerald green fading into dark forest green\"} with a perfectly smooth gradient. Behind the subject is a large soft warm golden circular spotlight creating beautiful depth and luxury separation. The polished studio floor has a very subtle cinematic reflection without appearing glossy.Pose: Walking naturally toward the camera with crossed strides, shoulders relaxed, spine perfectly straight, chin slightly raised, confident posture, elegant runway-inspired movement, natural arm swing, luxurious body language, eyes looking directly into the lens with a composed editorial expression.Lighting: Premium Vogue-style three-point studio lighting with a large soft diffused key light, warm golden rim light outlining the hair and shoulders, subtle fill light preserving realistic shadows, cinematic HDR lighting, soft highlight roll-off, realistic reflections on the satin fabric, rich contrast, luxury commercial photography lighting.Camera: Full-body portrait, eye-level angle, 85mm full-frame lens, f/2.2 aperture, shallow depth of field, razor-sharp focus on the eyes and face, realistic optical perspective, premium fashion campaign composition.Color Grading: Luxury editorial color grading with deep emerald greens, warm golden highlights, rich blacks, natural ivory fabric tones, balanced skin tones, soft bloom, HDR dynamic range, subtle filmic contrast, premium {argument name=\"brand style\" default=\"Vogue, Zara, Ralph Lauren and COS\"} campaign aesthetic.Quality: Hyper-realistic, photorealistic, ultra-detailed skin texture, natural hair strands, realistic fabric physics, luxury commercial fashion photography, editorial masterpiece, magazine cover quality, 8K ultra-HD, award-winning fashion campaign, clean composition, no text, no watermark.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T19:18:33.683Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__7ac6aba1cc-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T19:18:33.683Z"
+      },
+      "taskResult": {
+        "taskId": "e7e1e4c1257bb2941ecf235305ae15e5",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"An ultra-premium luxury fashion editorial portrait of a beautiful {argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"young East Asian woman\\\\\\\"} with long, naturally wavy black hair and flawless natural makeup, walking confidently toward the camera with a calm, powerful CEO-like presence. She wears an elegant ivory silk satin button-up blouse with soft natural folds, tucked into high-waisted tailored black wide-leg trousers, paired with black pointed-toe leather heels. One hand rests casually inside the trouser pocket while the other hand loosely holds a pair of luxury black sunglasses. She wears minimal refined gold jewelry including a delicate necklace, small earrings, a luxury gold wristwatch, and a subtle bracelet.Background: A seamless premium studio backdrop featuring a {argument name=\\\\\\\"background color\\\\\\\" default=\\\\\\\"deep emerald green fading into dark forest green\\\\\\\"} with a perfectly smooth gradient. Behind the subject is a large soft warm golden circular spotlight creating beautiful depth and luxury separation. The polished studio floor has a very subtle cinematic reflection without appearing glossy.Pose: Walking naturally toward the camera with crossed strides, shoulders relaxed, spine perfectly straight, chin slightly raised, confident posture, elegant runway-inspired movement, natural arm swing, luxurious body language, eyes looking directly into the lens with a composed editorial expression.Lighting: Premium Vogue-style three-point studio lighting with a large soft diffused key light, warm golden rim light outlining the hair and shoulders, subtle fill light preserving realistic shadows, cinematic HDR lighting, soft highlight roll-off, realistic reflections on the satin fabric, rich contrast, luxury commercial photography lighting.Camera: Full-body portrait, eye-level angle, 85mm full-frame lens, f/2.2 aperture, shallow depth of field, razor-sharp focus on the eyes and face, realistic optical perspective, premium fashion campaign composition.Color Grading: Luxury editorial color grading with deep emerald greens, warm golden highlights, rich blacks, natural ivory fabric tones, balanced skin tones, soft bloom, HDR dynamic range, subtle filmic contrast, premium {argument name=\\\\\\\"brand style\\\\\\\" default=\\\\\\\"Vogue, Zara, Ralph Lauren and COS\\\\\\\"} campaign aesthetic.Quality: Hyper-realistic, photorealistic, ultra-detailed skin texture, natural hair strands, realistic fabric physics, luxury commercial fashion photography, editorial masterpiece, magazine cover quality, 8K ultra-HD, award-winning fashion campaign, clean composition, no text, no watermark.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__7ac6aba1cc-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 67,
+        "completeTime": 1783711183595,
+        "createTime": 1783711113683,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-10T19:19:53.003Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__7ac6aba1cc-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__72211f5b23": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__72211f5b23",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "Goal: Create a polished anime fashion character reference sheet for {argument name=\"character name\" default=\"BIWA\"}, a quiet wanderer with an obsidian-braid visual signature, calm and distant mood, and a minimal yet high-impact silhouette.\n\nCanvas: Wide horizontal 16:9 character sheet on a warm off-white paper background, elegant editorial layout, lots of negative space, thin gray divider lines, handwritten annotation labels mixed with refined serif typography.\n\nMain subject: Center-left full-body hero render of a slender young woman in a dark avant-garde outfit. She has {argument name=\"hair color\" default=\"jet black\"} very long hair with blunt bangs covering her eyes, one thick braid falling down the front, pale skin, tiny red eyes barely visible beneath the fringe, and delicate dangling earrings. Her expression is detached and unreadable. Outfit: black cropped halter top, extremely wide black high-waisted hakama-like trousers with layered belts and straps, long black fabric panels, dark shoes mostly hidden, and an oversized off-white coat shrugged off the shoulders with voluminous sculptural sleeves. Use soft cinematic lighting, clean shadows, painterly semi-real anime rendering, fashion concept-art finish.\n\nTop-left identity text: Large serif title “{argument name=\"character name\" default=\"BIWA\"}”. Under it include three small profile lines: “ROLE  Wanderer”; “CORE MOOD  Calm · Distant · Unshakable”; “VISUAL SIGNATURE  Obsidian braid, veiled gaze, minimal presence — maximum impact.”\n\nLeft studies: Include exactly 3 black silhouette studies labeled “silhouette study”, showing front, three-quarter/front, and side/back variations of the same long skirt-like outfit and bulky sleeves. Below that include exactly 4 bust expression studies labeled “expression study”: Neutral, Watchful, Cold, Soft. Each bust has nearly identical covered eyes and subtle mouth changes, with the front braid visible.\n\nRight pose sheet: Include exactly 8 smaller full-body or pose views arranged around the main figure. Label them: 1 neutral front standing, 2 back view showing the long braid down the spine and oversized coat, 3 profile view, 4 seated on the floor with fabric pooled around her, 5 leaning forward/downcast, 6 crouching low with hands near the ground, 7 top view looking down at her hair and shoulders, 8 low angle standing with coat and wide trousers emphasized.\n\nBottom detail strip: Include exactly 5 close-up detail panels labeled: veiled gaze, obsidian braid, coat fabric, belt & layers, earrings. The panels should show cropped close-ups of the eyes under bangs, the black braid texture, crumpled off-white sleeve folds, layered black belts/waist construction, and delicate dangling earrings.\n\nVisual style: High-end character design board, Japanese/anime-inspired fashion concept art, muted monochrome palette of black, charcoal, ivory, pale skin, and tiny red accents; precise but soft painterly rendering; elegant handwritten labels; no clutter, no watermark.\n\nConstraints: Keep all text legible and placed like a professional downloadable character sheet. Use exactly 1 main hero render, 3 silhouette studies, 4 expression busts, 8 pose views, and 5 detail close-ups. Maintain the character’s long black braid, veiled eyes, oversized off-white coat, black cropped top, and wide black trousers in every view.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T19:39:05.189Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__72211f5b23-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T19:39:05.189Z"
+      },
+      "taskResult": {
+        "taskId": "e0a6ed7a179f90607ada9df3185ac74e",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"auto\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Goal: Create a polished anime fashion character reference sheet for {argument name=\\\\\\\"character name\\\\\\\" default=\\\\\\\"BIWA\\\\\\\"}, a quiet wanderer with an obsidian-braid visual signature, calm and distant mood, and a minimal yet high-impact silhouette.\\\\n\\\\nCanvas: Wide horizontal 16:9 character sheet on a warm off-white paper background, elegant editorial layout, lots of negative space, thin gray divider lines, handwritten annotation labels mixed with refined serif typography.\\\\n\\\\nMain subject: Center-left full-body hero render of a slender young woman in a dark avant-garde outfit. She has {argument name=\\\\\\\"hair color\\\\\\\" default=\\\\\\\"jet black\\\\\\\"} very long hair with blunt bangs covering her eyes, one thick braid falling down the front, pale skin, tiny red eyes barely visible beneath the fringe, and delicate dangling earrings. Her expression is detached and unreadable. Outfit: black cropped halter top, extremely wide black high-waisted hakama-like trousers with layered belts and straps, long black fabric panels, dark shoes mostly hidden, and an oversized off-white coat shrugged off the shoulders with voluminous sculptural sleeves. Use soft cinematic lighting, clean shadows, painterly semi-real anime rendering, fashion concept-art finish.\\\\n\\\\nTop-left identity text: Large serif title “{argument name=\\\\\\\"character name\\\\\\\" default=\\\\\\\"BIWA\\\\\\\"}”. Under it include three small profile lines: “ROLE  Wanderer”; “CORE MOOD  Calm · Distant · Unshakable”; “VISUAL SIGNATURE  Obsidian braid, veiled gaze, minimal presence — maximum impact.”\\\\n\\\\nLeft studies: Include exactly 3 black silhouette studies labeled “silhouette study”, showing front, three-quarter/front, and side/back variations of the same long skirt-like outfit and bulky sleeves. Below that include exactly 4 bust expression studies labeled “expression study”: Neutral, Watchful, Cold, Soft. Each bust has nearly identical covered eyes and subtle mouth changes, with the front braid visible.\\\\n\\\\nRight pose sheet: Include exactly 8 smaller full-body or pose views arranged around the main figure. Label them: 1 neutral front standing, 2 back view showing the long braid down the spine and oversized coat, 3 profile view, 4 seated on the floor with fabric pooled around her, 5 leaning forward/downcast, 6 crouching low with hands near the ground, 7 top view looking down at her hair and shoulders, 8 low angle standing with coat and wide trousers emphasized.\\\\n\\\\nBottom detail strip: Include exactly 5 close-up detail panels labeled: veiled gaze, obsidian braid, coat fabric, belt & layers, earrings. The panels should show cropped close-ups of the eyes under bangs, the black braid texture, crumpled off-white sleeve folds, layered black belts/waist construction, and delicate dangling earrings.\\\\n\\\\nVisual style: High-end character design board, Japanese/anime-inspired fashion concept art, muted monochrome palette of black, charcoal, ivory, pale skin, and tiny red accents; precise but soft painterly rendering; elegant handwritten labels; no clutter, no watermark.\\\\n\\\\nConstraints: Keep all text legible and placed like a professional downloadable character sheet. Use exactly 1 main hero render, 3 silhouette studies, 4 expression busts, 8 pose views, and 5 detail close-ups. Maintain the character’s long black braid, veiled eyes, oversized off-white coat, black cropped top, and wide black trousers in every view.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__72211f5b23-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 68,
+        "completeTime": 1783712415502,
+        "createTime": 1783712345189,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-10T19:40:13.356Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__72211f5b23-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__19f2b9f7c3": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__19f2b9f7c3",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "Create a {argument name=\"aspect ratio\" default=\"16:9\"} full-bleed editorial action poster for {argument name=\"brand name\" default=\"Brand Name\"}. The brand’s visual identity follows these must-visible traits: a bright outdoor photograph with a clear open sky dominating a large portion of the frame; enormous warm-cream extra-condensed block letters cropped by the canvas and sitting behind the main subject; one oversized action figure cutting diagonally across the layout and breaking through the text layer; a low or close wide-angle camera angle that makes the foreground feel physically imposing; secondary text, large numerals, or stacked words in cream placed along bottom and side edges; compact white editorial microcopy in short tight clusters anchored to strong grid positions; one vivid accent color concentrated on the hero product or outfit while the environment stays sky-blue and neutral; hard midday sunlight with crisp shadows and high-contrast edges; a layered structure alternating between flat graphic type and real photography; minimal ornament — only small marks, rules, or separators; a dense, kinetic layout with the action dominant, type second, and microcopy third.\n\nScene: {argument name=\"subject\" default=\"an athlete\"} is {SUBJECT_ACTION} with {PRODUCT_OR_PROP} in {LOCATION}, surrounded by {BACKGROUND_ELEMENTS}.\n\nCamera & Composition: Low or close wide-angle outdoors, oversized foreground scale, decisive frozen motion, one strong diagonal, subject cropped by at least one canvas edge.\n\nTypography: Place massive warm-cream ultra-condensed block sans lettering reading {MAIN_TEXT} behind the subject, filling over half the canvas, cropped by the frame and partially hidden by the action. Add compact white microcopy reading {SECONDARY_TEXT} in tight editorial blocks. Include a small generic {ACCENT_SYMBOL} mark and bottom information clusters in cream.\n\nWardrobe: {WARDROBE_STYLE}. Brand colors: saturated sky-blue or cyan dominant, warm cream type, crisp white microcopy, deep shadows, one vivid accent on the hero prop or wardrobe.\n\nLighting & Finish: Hard midday sun, crisp shadows, high-contrast commercial photo realism, slight print-grain texture. No illustration, 3D rendering, real logos, or watermarks.\n\nAvoid: {SOURCE_CONTENT_TO_AVOID}. Also exclude: real brand logos, watermarks, QR codes, comic or halftone effects, 3D renders, dark studio scenes, muted palettes, or a tiny distant subject.\n\nGenerate as a 4K ultra-high-resolution raster image.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "auto",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-10T19:41:05.606Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__19f2b9f7c3-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-10T19:41:05.606Z"
+      },
+      "taskResult": {
+        "taskId": "2babcb9dfb9e22590eeb3e59a20b39dd",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"auto\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Create a {argument name=\\\\\\\"aspect ratio\\\\\\\" default=\\\\\\\"16:9\\\\\\\"} full-bleed editorial action poster for {argument name=\\\\\\\"brand name\\\\\\\" default=\\\\\\\"Brand Name\\\\\\\"}. The brand’s visual identity follows these must-visible traits: a bright outdoor photograph with a clear open sky dominating a large portion of the frame; enormous warm-cream extra-condensed block letters cropped by the canvas and sitting behind the main subject; one oversized action figure cutting diagonally across the layout and breaking through the text layer; a low or close wide-angle camera angle that makes the foreground feel physically imposing; secondary text, large numerals, or stacked words in cream placed along bottom and side edges; compact white editorial microcopy in short tight clusters anchored to strong grid positions; one vivid accent color concentrated on the hero product or outfit while the environment stays sky-blue and neutral; hard midday sunlight with crisp shadows and high-contrast edges; a layered structure alternating between flat graphic type and real photography; minimal ornament — only small marks, rules, or separators; a dense, kinetic layout with the action dominant, type second, and microcopy third.\\\\n\\\\nScene: {argument name=\\\\\\\"subject\\\\\\\" default=\\\\\\\"an athlete\\\\\\\"} is {SUBJECT_ACTION} with {PRODUCT_OR_PROP} in {LOCATION}, surrounded by {BACKGROUND_ELEMENTS}.\\\\n\\\\nCamera & Composition: Low or close wide-angle outdoors, oversized foreground scale, decisive frozen motion, one strong diagonal, subject cropped by at least one canvas edge.\\\\n\\\\nTypography: Place massive warm-cream ultra-condensed block sans lettering reading {MAIN_TEXT} behind the subject, filling over half the canvas, cropped by the frame and partially hidden by the action. Add compact white microcopy reading {SECONDARY_TEXT} in tight editorial blocks. Include a small generic {ACCENT_SYMBOL} mark and bottom information clusters in cream.\\\\n\\\\nWardrobe: {WARDROBE_STYLE}. Brand colors: saturated sky-blue or cyan dominant, warm cream type, crisp white microcopy, deep shadows, one vivid accent on the hero prop or wardrobe.\\\\n\\\\nLighting & Finish: Hard midday sun, crisp shadows, high-contrast commercial photo realism, slight print-grain texture. No illustration, 3D rendering, real logos, or watermarks.\\\\n\\\\nAvoid: {SOURCE_CONTENT_TO_AVOID}. Also exclude: real brand logos, watermarks, QR codes, comic or halftone effects, 3D renders, dark studio scenes, muted palettes, or a tiny distant subject.\\\\n\\\\nGenerate as a 4K ultra-high-resolution raster image.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__19f2b9f7c3-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 103,
+        "completeTime": 1783712570231,
+        "createTime": 1783712465606,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-10T19:42:50.749Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__19f2b9f7c3-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__f27137eb5e": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__f27137eb5e",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "{\n\"type\": \"image_generation_prompt\",\n\"style\": \"photorealistic cinematic street photography, documentary aesthetic\",\n\"resolution\": \"ultra-high resolution\",\n\"identity_preservation\": {\n\"use_reference_image\": true,\n\"alter_face\": false,\n\"strict_identity_lock\": true,\n\"notes\": \"Use the uploaded reference image as the compositional base. Replace the central character with the woman from the reference image, preserving exact facial structure, skin texture, lighting direction, shadows, depth of field, angle, and emotional expression. No distortions, no artifacts, no skin tone mismatch.\"\n},\n\"subject\": {\n\"gender\": \"female\",\n\"appearance\": {\n\"hair\": \"bald (as in the original composition)\",\n\"age\": \"adult\",\n\"expression\": \"calm, introspective, emotionally neutral\",\n\"skin\": \"realistic texture with natural pores and tones\"\n},\n\"pose\": {\n\"position\": \"standing still in the center of a busy urban crosswalk\",\n\"action\": \"gently smelling a flower held near the face\",\n\"posture\": \"upright, relaxed, perfectly static\"\n},\n\"wardrobe\": {\n\"outerwear\": \"dark minimalist blazer\",\n\"top\": \"black shirt\"\n}\n},\n\"environment\": {\n\"location\": \"busy urban pedestrian crosswalk\",\n\"atmosphere\": \"metropolitan street scene\",\n\"crowd\": {\n\"behavior\": \"people moving rapidly around the subject\",\n\"effect\": \"motion blur from long exposure\"\n}\n},\n\"lighting\": {\n\"type\": \"natural daylight\",\n\"conditions\": \"overcast sky\",\n\"quality\": \"soft, diffused light\",\n\"effects\": [\n\"realistic skin tones\",\n\"no artificial highlights\",\n\"natural shadows\"\n]\n},\n\"cinematic_effects\": {\n\"long_exposure\": true,\n\"subject_clarity\": \"central subject perfectly sharp\",\n\"surroundings\": \"crowd blurred with motion\",\n\"mood\": \"isolation and stillness amid chaos\"\n},\n\"color_grading\": {\n\"palette\": [\n\"cool grays\",\n\"muted browns\",\n\"soft blacks\"\n],\n\"saturation\": \"desaturated\",\n\"style\": \"professional cinematic grading\"\n},\n\"camera\": {\n\"lens_look\": \"85mm\",\n\"depth_of_field\": \"shallow\",\n\"grain\": \"realistic film grain\",\n\"perspective\": \"identical to original reference image\"\n},\n\"quality_constraints\": [\n\"no facial deformation\",\n\"no AI artifacts\",\n\"no artificial lighting effects\",\n\"perfect facial integration\",\n\"consistent shadows and perspective\"\n],\n\"output_goal\": \"Create a photorealistic, cinematic street photograph featuring a woman standing still in a busy crosswalk, smelling a flower, with long-exposure motion blur around her, preserving the exact realism, lighting, depth, and emotional tone of the original reference image.\"\n}",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T02:39:46.190Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__f27137eb5e-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T02:39:46.190Z"
+      },
+      "taskResult": {
+        "taskId": "636430773050d8335892443a1d4cb53d",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"16:9\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"{\\\\n\\\\\\\"type\\\\\\\": \\\\\\\"image_generation_prompt\\\\\\\",\\\\n\\\\\\\"style\\\\\\\": \\\\\\\"photorealistic cinematic street photography, documentary aesthetic\\\\\\\",\\\\n\\\\\\\"resolution\\\\\\\": \\\\\\\"ultra-high resolution\\\\\\\",\\\\n\\\\\\\"identity_preservation\\\\\\\": {\\\\n\\\\\\\"use_reference_image\\\\\\\": true,\\\\n\\\\\\\"alter_face\\\\\\\": false,\\\\n\\\\\\\"strict_identity_lock\\\\\\\": true,\\\\n\\\\\\\"notes\\\\\\\": \\\\\\\"Use the uploaded reference image as the compositional base. Replace the central character with the woman from the reference image, preserving exact facial structure, skin texture, lighting direction, shadows, depth of field, angle, and emotional expression. No distortions, no artifacts, no skin tone mismatch.\\\\\\\"\\\\n},\\\\n\\\\\\\"subject\\\\\\\": {\\\\n\\\\\\\"gender\\\\\\\": \\\\\\\"female\\\\\\\",\\\\n\\\\\\\"appearance\\\\\\\": {\\\\n\\\\\\\"hair\\\\\\\": \\\\\\\"bald (as in the original composition)\\\\\\\",\\\\n\\\\\\\"age\\\\\\\": \\\\\\\"adult\\\\\\\",\\\\n\\\\\\\"expression\\\\\\\": \\\\\\\"calm, introspective, emotionally neutral\\\\\\\",\\\\n\\\\\\\"skin\\\\\\\": \\\\\\\"realistic texture with natural pores and tones\\\\\\\"\\\\n},\\\\n\\\\\\\"pose\\\\\\\": {\\\\n\\\\\\\"position\\\\\\\": \\\\\\\"standing still in the center of a busy urban crosswalk\\\\\\\",\\\\n\\\\\\\"action\\\\\\\": \\\\\\\"gently smelling a flower held near the face\\\\\\\",\\\\n\\\\\\\"posture\\\\\\\": \\\\\\\"upright, relaxed, perfectly static\\\\\\\"\\\\n},\\\\n\\\\\\\"wardrobe\\\\\\\": {\\\\n\\\\\\\"outerwear\\\\\\\": \\\\\\\"dark minimalist blazer\\\\\\\",\\\\n\\\\\\\"top\\\\\\\": \\\\\\\"black shirt\\\\\\\"\\\\n}\\\\n},\\\\n\\\\\\\"environment\\\\\\\": {\\\\n\\\\\\\"location\\\\\\\": \\\\\\\"busy urban pedestrian crosswalk\\\\\\\",\\\\n\\\\\\\"atmosphere\\\\\\\": \\\\\\\"metropolitan street scene\\\\\\\",\\\\n\\\\\\\"crowd\\\\\\\": {\\\\n\\\\\\\"behavior\\\\\\\": \\\\\\\"people moving rapidly around the subject\\\\\\\",\\\\n\\\\\\\"effect\\\\\\\": \\\\\\\"motion blur from long exposure\\\\\\\"\\\\n}\\\\n},\\\\n\\\\\\\"lighting\\\\\\\": {\\\\n\\\\\\\"type\\\\\\\": \\\\\\\"natural daylight\\\\\\\",\\\\n\\\\\\\"conditions\\\\\\\": \\\\\\\"overcast sky\\\\\\\",\\\\n\\\\\\\"quality\\\\\\\": \\\\\\\"soft, diffused light\\\\\\\",\\\\n\\\\\\\"effects\\\\\\\": [\\\\n\\\\\\\"realistic skin tones\\\\\\\",\\\\n\\\\\\\"no artificial highlights\\\\\\\",\\\\n\\\\\\\"natural shadows\\\\\\\"\\\\n]\\\\n},\\\\n\\\\\\\"cinematic_effects\\\\\\\": {\\\\n\\\\\\\"long_exposure\\\\\\\": true,\\\\n\\\\\\\"subject_clarity\\\\\\\": \\\\\\\"central subject perfectly sharp\\\\\\\",\\\\n\\\\\\\"surroundings\\\\\\\": \\\\\\\"crowd blurred with motion\\\\\\\",\\\\n\\\\\\\"mood\\\\\\\": \\\\\\\"isolation and stillness amid chaos\\\\\\\"\\\\n},\\\\n\\\\\\\"color_grading\\\\\\\": {\\\\n\\\\\\\"palette\\\\\\\": [\\\\n\\\\\\\"cool grays\\\\\\\",\\\\n\\\\\\\"muted browns\\\\\\\",\\\\n\\\\\\\"soft blacks\\\\\\\"\\\\n],\\\\n\\\\\\\"saturation\\\\\\\": \\\\\\\"desaturated\\\\\\\",\\\\n\\\\\\\"style\\\\\\\": \\\\\\\"professional cinematic grading\\\\\\\"\\\\n},\\\\n\\\\\\\"camera\\\\\\\": {\\\\n\\\\\\\"lens_look\\\\\\\": \\\\\\\"85mm\\\\\\\",\\\\n\\\\\\\"depth_of_field\\\\\\\": \\\\\\\"shallow\\\\\\\",\\\\n\\\\\\\"grain\\\\\\\": \\\\\\\"realistic film grain\\\\\\\",\\\\n\\\\\\\"perspective\\\\\\\": \\\\\\\"identical to original reference image\\\\\\\"\\\\n},\\\\n\\\\\\\"quality_constraints\\\\\\\": [\\\\n\\\\\\\"no facial deformation\\\\\\\",\\\\n\\\\\\\"no AI artifacts\\\\\\\",\\\\n\\\\\\\"no artificial lighting effects\\\\\\\",\\\\n\\\\\\\"perfect facial integration\\\\\\\",\\\\n\\\\\\\"consistent shadows and perspective\\\\\\\"\\\\n],\\\\n\\\\\\\"output_goal\\\\\\\": \\\\\\\"Create a photorealistic, cinematic street photograph featuring a woman standing still in a busy crosswalk, smelling a flower, with long-exposure motion blur around her, preserving the exact realism, lighting, depth, and emotional tone of the original reference image.\\\\\\\"\\\\n}\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__f27137eb5e-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 101,
+        "completeTime": 1783737702139,
+        "createTime": 1783737586190,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-11T02:41:40.694Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__f27137eb5e-1.png"
+      ]
+    },
+    "image__text-to-image__kie__gpt-image-2-text-to-image__93c5f70b05": {
+      "key": "image__text-to-image__kie__gpt-image-2-text-to-image__93c5f70b05",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "gpt-image-2-text-to-image",
+      "prompt": "Here's the updated prompt — same surreal coastal Mediterranean composition and dreamy mood, now featuring a young man instead of a boy:\n\nSurreal cinematic portrait photograph, shot on medium-format film camera (Mamiya 7 II or Pentax 67) with 80mm lens, Kodak Portra 400 film, soft natural Mediterranean afternoon daylight, dreamy painterly color grade with cool ocean blue background and warm earthy skin tones, surrealist documentary aesthetic, Ryan McGinley meets Slim Aarons coastal-dreamlike mood.\nA close-up surreal portrait of a young European man in his mid-twenties, captured from behind and slightly to the side at a three-quarter back angle. He's positioned just at the water's edge of a calm Mediterranean sea or coastal harbor, with the soft out-of-focus turquoise-blue ocean filling the entire background of the frame as a smooth painterly gradient.\nHe has wet sun-bleached light golden-brown hair, slightly tousled and damp from swimming, individual strands sticking together in wet clumps that fall messily around his ears, the back of his neck, and along his temples. The hair has natural sun-kissed highlights and a slightly grown-out cut showing recent ocean swimming. A glimpse of his face in profile is visible on the right side of the frame — a sharp masculine cheekbone with light freckles and faint stubble along his jawline, the corner of one closed or downcast eye with thick natural lashes, the bridge of his straight nose, the corner of full lips slightly parted in a quiet contemplative expression. His skin is sun-tanned warm honey-bronze with subtle red flush from the summer sun, a small earring or stud catching the light at his earlobe. Just his cheek, jawline, ear, and the upper part of his bare muscular shoulders are visible at the bottom edge of the frame, with small water droplets still clinging to his neck and the curve of his shoulder. A delicate thin gold chain necklace is just visible around his neck.\nDraped dramatically across the top of his head and tumbling down the side of his face is a freshly caught raw octopus — a real cephalopod with a soft pinkish-coral mantle (the bulbous head) sitting balanced on top of his hair like an absurd surreal hat, and multiple long muscular tentacles cascading downward in organic spiral curves. The tentacles are a beautiful gradient of warm amber, peachy-pink, and deep umber-brown tones, the underside revealing rows of perfect circular pale-cream suction cups in tidy lines descending each tentacle. One tentacle drapes down across his cheek and curls toward his jaw line, ending in a small graceful curl near his chin. Another wraps around the side of his head past his ear. The octopus's skin has a wet glossy iridescent sheen catching the soft light, with slight tonal variations of mottled brown spots and pinkish patches. The texture appears organic, soft, slightly translucent in highlights. The whole creature looks freshly caught — natural colors not yet fully faded, still glistening with seawater.\nThe background is the calm Mediterranean ocean — a vast soft gradient of pale azure-blue at the horizon transitioning into deeper teal-blue closer to the camera, gentle ripples and small wavelets visible but heavily blurred from the shallow depth of field, suggesting a calm bay or harbor. Tiny bright specular highlights sparkle on the distant water surface from the afternoon sun. No horizon line visible, no boats, no distractions — just pure painterly water filling the entire frame as a clean backdrop.\nComposition: vertical 4:5 portrait orientation, the man's head positioned slightly off-center toward the right of the frame using rule-of-thirds, the octopus draped dramatically over his head extending into the upper portion of the frame and cascading down across the right edge with its tentacle curling around his face. The wet hair, octopus, and visible cheek/jaw of the man fill the right two-thirds of the frame as the focal subject, the soft blurred ocean background fills the left third as breathing negative space. Close intimate framing brings extreme detail to the texture of both the octopus skin, the wet hair, the stubble, and the human skin. Slight back-angle perspective showing more of the back of his head than his face — emphasizing mystery and surrealism over identification.\nLighting: soft natural overhead-and-slightly-left Mediterranean afternoon daylight, gentle directional but diffused, creating soft highlights on the octopus's wet glossy skin, illuminating the rows of suction cups with delicate shadow detail, catching the wet strands of his hair with subtle rim-light, gently highlighting the contours of his masculine jawline and cheekbone. No harsh shadows — quiet quality of light that feels like a slightly overcast sunny day or open shade by the water. Ambient soft blue fill from the reflective ocean below adds a cool tonal balance against the warm tones of the octopus and skin.\nColor palette: cool azure-teal ocean blue background, warm peachy-coral and amber-brown octopus tones, pale cream suction cups, sun-bleached golden-brown wet hair, warm honey-tanned skin tones, glistening highlights of seawater, soft umber and dusky pink mottling on the octopus skin, subtle iridescent sheen, gold chain accent at the neck. Painterly medium-format film grain, soft Portra color rendering with natural saturation, gentle highlight roll-off, subtle warm-cool color contrast between the cool blue background and the warm organic tones of the subject, dreamy surrealist coastal aesthetic — feels like a fine-art editorial spread about Mediterranean fishing culture or a surreal moment captured on a summer day in Greece, Italy, or Portugal. Reminiscent of editorial photography by Cass Bird, Petra Collins, and Sicily-shot fashion editorials that play with surreal natural elements as styling.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T04:08:17.606Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__93c5f70b05-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T04:08:17.606Z"
+      },
+      "taskResult": {
+        "taskId": "f8a5cdd57e1a55b64dea008c7bf58117",
+        "model": "gpt-image-2-text-to-image",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"16:9\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Here's the updated prompt — same surreal coastal Mediterranean composition and dreamy mood, now featuring a young man instead of a boy:\\\\n\\\\nSurreal cinematic portrait photograph, shot on medium-format film camera (Mamiya 7 II or Pentax 67) with 80mm lens, Kodak Portra 400 film, soft natural Mediterranean afternoon daylight, dreamy painterly color grade with cool ocean blue background and warm earthy skin tones, surrealist documentary aesthetic, Ryan McGinley meets Slim Aarons coastal-dreamlike mood.\\\\nA close-up surreal portrait of a young European man in his mid-twenties, captured from behind and slightly to the side at a three-quarter back angle. He's positioned just at the water's edge of a calm Mediterranean sea or coastal harbor, with the soft out-of-focus turquoise-blue ocean filling the entire background of the frame as a smooth painterly gradient.\\\\nHe has wet sun-bleached light golden-brown hair, slightly tousled and damp from swimming, individual strands sticking together in wet clumps that fall messily around his ears, the back of his neck, and along his temples. The hair has natural sun-kissed highlights and a slightly grown-out cut showing recent ocean swimming. A glimpse of his face in profile is visible on the right side of the frame — a sharp masculine cheekbone with light freckles and faint stubble along his jawline, the corner of one closed or downcast eye with thick natural lashes, the bridge of his straight nose, the corner of full lips slightly parted in a quiet contemplative expression. His skin is sun-tanned warm honey-bronze with subtle red flush from the summer sun, a small earring or stud catching the light at his earlobe. Just his cheek, jawline, ear, and the upper part of his bare muscular shoulders are visible at the bottom edge of the frame, with small water droplets still clinging to his neck and the curve of his shoulder. A delicate thin gold chain necklace is just visible around his neck.\\\\nDraped dramatically across the top of his head and tumbling down the side of his face is a freshly caught raw octopus — a real cephalopod with a soft pinkish-coral mantle (the bulbous head) sitting balanced on top of his hair like an absurd surreal hat, and multiple long muscular tentacles cascading downward in organic spiral curves. The tentacles are a beautiful gradient of warm amber, peachy-pink, and deep umber-brown tones, the underside revealing rows of perfect circular pale-cream suction cups in tidy lines descending each tentacle. One tentacle drapes down across his cheek and curls toward his jaw line, ending in a small graceful curl near his chin. Another wraps around the side of his head past his ear. The octopus's skin has a wet glossy iridescent sheen catching the soft light, with slight tonal variations of mottled brown spots and pinkish patches. The texture appears organic, soft, slightly translucent in highlights. The whole creature looks freshly caught — natural colors not yet fully faded, still glistening with seawater.\\\\nThe background is the calm Mediterranean ocean — a vast soft gradient of pale azure-blue at the horizon transitioning into deeper teal-blue closer to the camera, gentle ripples and small wavelets visible but heavily blurred from the shallow depth of field, suggesting a calm bay or harbor. Tiny bright specular highlights sparkle on the distant water surface from the afternoon sun. No horizon line visible, no boats, no distractions — just pure painterly water filling the entire frame as a clean backdrop.\\\\nComposition: vertical 4:5 portrait orientation, the man's head positioned slightly off-center toward the right of the frame using rule-of-thirds, the octopus draped dramatically over his head extending into the upper portion of the frame and cascading down across the right edge with its tentacle curling around his face. The wet hair, octopus, and visible cheek/jaw of the man fill the right two-thirds of the frame as the focal subject, the soft blurred ocean background fills the left third as breathing negative space. Close intimate framing brings extreme detail to the texture of both the octopus skin, the wet hair, the stubble, and the human skin. Slight back-angle perspective showing more of the back of his head than his face — emphasizing mystery and surrealism over identification.\\\\nLighting: soft natural overhead-and-slightly-left Mediterranean afternoon daylight, gentle directional but diffused, creating soft highlights on the octopus's wet glossy skin, illuminating the rows of suction cups with delicate shadow detail, catching the wet strands of his hair with subtle rim-light, gently highlighting the contours of his masculine jawline and cheekbone. No harsh shadows — quiet quality of light that feels like a slightly overcast sunny day or open shade by the water. Ambient soft blue fill from the reflective ocean below adds a cool tonal balance against the warm tones of the octopus and skin.\\\\nColor palette: cool azure-teal ocean blue background, warm peachy-coral and amber-brown octopus tones, pale cream suction cups, sun-bleached golden-brown wet hair, warm honey-tanned skin tones, glistening highlights of seawater, soft umber and dusky pink mottling on the octopus skin, subtle iridescent sheen, gold chain accent at the neck. Painterly medium-format film grain, soft Portra color rendering with natural saturation, gentle highlight roll-off, subtle warm-cool color contrast between the cool blue background and the warm organic tones of the subject, dreamy surrealist coastal aesthetic — feels like a fine-art editorial spread about Mediterranean fishing culture or a surreal moment captured on a summer day in Greece, Italy, or Portugal. Reminiscent of editorial photography by Cass Bird, Petra Collins, and Sicily-shot fashion editorials that play with surreal natural elements as styling.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"gpt-image-2-text-to-image\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__93c5f70b05-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 46,
+        "completeTime": 1783742946532,
+        "createTime": 1783742897606,
+        "creditsConsumed": 5
+      },
+      "savedAt": "2026-07-11T04:09:29.243Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__gpt-image-2-text-to-image__93c5f70b05-1.png"
+      ]
+    },
+    "image__text-to-image__kie__nano-banana-pro__2ac6bc927b": {
+      "key": "image__text-to-image__kie__nano-banana-pro__2ac6bc927b",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-pro",
+      "prompt": "Documentary National Geographic editorial portrait photograph, shot on 35mm film (Nikon FM2 with 105mm f/2.5 lens, Kodachrome 64). Dignified cultural portrait of a young boy captured in a peaceful rural home in Central Asia, classic humanist photojournalism tradition.\n\nHero subject: a young boy approximately 10-12 years old, warm olive-tan skin, healthy and well-cared-for, alert intelligent confident expression. He is photographed from a slight three-quarter angle — his body turned about 30 degrees to the left while his head is turned back toward the camera, making gentle direct eye contact with the viewer. His look is present, curious, grounded — the look of a loved child secure in his family and culture. Absolutely NOT suffering, not traumatized, not a refugee — a proud cultural portrait of a boy from a thriving traditional community.\n\nEyes (critical focal point): remarkable pale blue-grey eyes with complex layered color — soft icy blue at the outer iris edge, transitioning to warmer grey-blue near the pupil, with subtle amber flecks around the pupil creating natural depth. Radial iris fibers rendered in detail, bright clean catchlights from soft window light, clean healthy whites, long natural dark lashes framing the pale eyes for striking contrast against his olive skin.\n\nHair (now fully visible — key difference): thick tousled chestnut-brown hair with natural waves, slightly long and unruly in the way of boys who play outside, partially windswept, a few strands falling across the forehead and temples, sun-lightened lighter strands at the tips suggesting time spent outdoors. The hair is ENTIRELY visible — no headwrap, no scarf on the head, head completely uncovered. This is a key visual choice distinguishing this portrait.\n\nFace and skin: healthy olive-tan complexion with warm undertones, clean smooth child's skin with faint peach fuzz along the jawline, a scattering of small sun freckles across the bridge of the nose and cheekbones, slightly flushed healthy cheeks from outdoor life, full unchapped lips in a composed neutral position, dark thick natural eyebrows, a small mole or beauty mark near one cheek adding individual character.\n\nExpression: serious but warm, quiet confidence, adult-like composure in a young face, the faintest hint of a knowing almost-smile at one corner of the mouth (very subtle) — not the same solemn stoicism of the famous green-eyed portrait, but something more playful and alive, as if he is about to speak or laugh.\n\nAttire (major change from typical frame): NO headwrap or scarf covering the head. Instead, a richly woven mustard-ochre yellow-gold textile draped loosely only over his shoulders like a shawl, the fabric featuring subtle traditional geometric embroidery in orange and cream thread, authentic handmade weave, warm golden tones catching light. Underneath, a cream-white collared shirt or tunic visible at the neck. A small leather and silver amulet cord around his neck.\n\nCultural object (new addition — breaks the composition's resemblance to the reference): in his hands, held naturally at chest level in front of him (but NOT covering his face), he holds a small traditional stringed instrument — a handmade wooden dutar or rubab with a carved body, aged warm wood, tuned silver-wire strings catching the light. His fingers rest lightly on the strings as if he was just playing and paused to look at the camera. This adds narrative richness and visually distinguishes the portrait completely from any famous reference.\n\nBackground: a deep rich blue painted wall — a warm saturated cobalt-blue to lapis-lazuli blue, the color of ancient frescoes in Central Asian madrasas, with natural subtle texture of old painted plaster, soft tonal variation showing it's a real hand-painted wall not digital backdrop, gentle organic brush marks visible, maybe a faint hint of a decorative motif in slightly darker blue just barely visible in the corner (traditional Islamic geometric pattern suggested but not prominent). A peaceful well-maintained interior suggesting a village home or community space.\n\nComposition: 2:3 vertical portrait orientation, head-and-upper-chest framing showing the shawl on shoulders and the instrument at chest level, the boy positioned on the LEFT third of the frame (not centered like the famous reference), giving generous negative space of blue wall on the right side, rule-of-thirds placing the eyes on the upper-third horizontal line and the face on the left-third vertical line, three-quarter body angle creating dynamic asymmetry very different from straight-on symmetry. Shallow depth of field with tack-sharp focus on the eyes and gentle fall-off on shoulders and instrument.\n\nLighting: soft natural window light from camera-right at a 45-degree angle (REVERSED from the famous reference which was lit from the left), creating gentle directional modeling with shadow falling on the LEFT side of his face and nose, preserving detail in both highlights and shadows, subtle bounce fill from the opposite side, clean bright catchlights in the eyes. This light reversal is another subtle but significant visual distinction.\n\nColor grading: warm humanist palette distinct from the famous green-red pairing — deep cobalt-lapis blue background as one color pole, mustard-ochre gold shawl as the opposing warm pole (creating complementary blue-orange contrast, which is DIFFERENT from the red-green contrast of the reference), warm olive skin tones, pale blue-grey eyes as unexpected echo of the background blue, warm chestnut hair tones, aged wood brown of the instrument for additional warmth, rich Kodachrome 64 film saturation, preserved shadow detail, subtle halation, classic organic grain, matte cinematic finish, timeless documentary quality.\n\nShot on Nikon FM2 with 105mm f/2.5 Ai-S lens at f/4, natural window light from right side, 1/125s handheld, Kodachrome 64. Steve McCurry × Yousuf Karsh × Irving Penn × Rania Matar documentary portrait tradition, National Geographic editorial aesthetic, Magnum Photos humanist quality, dignified respectful cultural photography, ultra-detailed realistic skin and eye rendering, timeless portrait, absolutely authentic and original composition distinct from any famous reference photograph.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T04:39:46.271Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-pro__2ac6bc927b-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T04:39:46.271Z"
+      },
+      "taskResult": {
+        "taskId": "956fcc3c078a7d26aaf6b21644d6cbaf",
+        "model": "nano-banana-pro",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Documentary National Geographic editorial portrait photograph, shot on 35mm film (Nikon FM2 with 105mm f/2.5 lens, Kodachrome 64). Dignified cultural portrait of a young boy captured in a peaceful rural home in Central Asia, classic humanist photojournalism tradition.\\\\n\\\\nHero subject: a young boy approximately 10-12 years old, warm olive-tan skin, healthy and well-cared-for, alert intelligent confident expression. He is photographed from a slight three-quarter angle — his body turned about 30 degrees to the left while his head is turned back toward the camera, making gentle direct eye contact with the viewer. His look is present, curious, grounded — the look of a loved child secure in his family and culture. Absolutely NOT suffering, not traumatized, not a refugee — a proud cultural portrait of a boy from a thriving traditional community.\\\\n\\\\nEyes (critical focal point): remarkable pale blue-grey eyes with complex layered color — soft icy blue at the outer iris edge, transitioning to warmer grey-blue near the pupil, with subtle amber flecks around the pupil creating natural depth. Radial iris fibers rendered in detail, bright clean catchlights from soft window light, clean healthy whites, long natural dark lashes framing the pale eyes for striking contrast against his olive skin.\\\\n\\\\nHair (now fully visible — key difference): thick tousled chestnut-brown hair with natural waves, slightly long and unruly in the way of boys who play outside, partially windswept, a few strands falling across the forehead and temples, sun-lightened lighter strands at the tips suggesting time spent outdoors. The hair is ENTIRELY visible — no headwrap, no scarf on the head, head completely uncovered. This is a key visual choice distinguishing this portrait.\\\\n\\\\nFace and skin: healthy olive-tan complexion with warm undertones, clean smooth child's skin with faint peach fuzz along the jawline, a scattering of small sun freckles across the bridge of the nose and cheekbones, slightly flushed healthy cheeks from outdoor life, full unchapped lips in a composed neutral position, dark thick natural eyebrows, a small mole or beauty mark near one cheek adding individual character.\\\\n\\\\nExpression: serious but warm, quiet confidence, adult-like composure in a young face, the faintest hint of a knowing almost-smile at one corner of the mouth (very subtle) — not the same solemn stoicism of the famous green-eyed portrait, but something more playful and alive, as if he is about to speak or laugh.\\\\n\\\\nAttire (major change from typical frame): NO headwrap or scarf covering the head. Instead, a richly woven mustard-ochre yellow-gold textile draped loosely only over his shoulders like a shawl, the fabric featuring subtle traditional geometric embroidery in orange and cream thread, authentic handmade weave, warm golden tones catching light. Underneath, a cream-white collared shirt or tunic visible at the neck. A small leather and silver amulet cord around his neck.\\\\n\\\\nCultural object (new addition — breaks the composition's resemblance to the reference): in his hands, held naturally at chest level in front of him (but NOT covering his face), he holds a small traditional stringed instrument — a handmade wooden dutar or rubab with a carved body, aged warm wood, tuned silver-wire strings catching the light. His fingers rest lightly on the strings as if he was just playing and paused to look at the camera. This adds narrative richness and visually distinguishes the portrait completely from any famous reference.\\\\n\\\\nBackground: a deep rich blue painted wall — a warm saturated cobalt-blue to lapis-lazuli blue, the color of ancient frescoes in Central Asian madrasas, with natural subtle texture of old painted plaster, soft tonal variation showing it's a real hand-painted wall not digital backdrop, gentle organic brush marks visible, maybe a faint hint of a decorative motif in slightly darker blue just barely visible in the corner (traditional Islamic geometric pattern suggested but not prominent). A peaceful well-maintained interior suggesting a village home or community space.\\\\n\\\\nComposition: 2:3 vertical portrait orientation, head-and-upper-chest framing showing the shawl on shoulders and the instrument at chest level, the boy positioned on the LEFT third of the frame (not centered like the famous reference), giving generous negative space of blue wall on the right side, rule-of-thirds placing the eyes on the upper-third horizontal line and the face on the left-third vertical line, three-quarter body angle creating dynamic asymmetry very different from straight-on symmetry. Shallow depth of field with tack-sharp focus on the eyes and gentle fall-off on shoulders and instrument.\\\\n\\\\nLighting: soft natural window light from camera-right at a 45-degree angle (REVERSED from the famous reference which was lit from the left), creating gentle directional modeling with shadow falling on the LEFT side of his face and nose, preserving detail in both highlights and shadows, subtle bounce fill from the opposite side, clean bright catchlights in the eyes. This light reversal is another subtle but significant visual distinction.\\\\n\\\\nColor grading: warm humanist palette distinct from the famous green-red pairing — deep cobalt-lapis blue background as one color pole, mustard-ochre gold shawl as the opposing warm pole (creating complementary blue-orange contrast, which is DIFFERENT from the red-green contrast of the reference), warm olive skin tones, pale blue-grey eyes as unexpected echo of the background blue, warm chestnut hair tones, aged wood brown of the instrument for additional warmth, rich Kodachrome 64 film saturation, preserved shadow detail, subtle halation, classic organic grain, matte cinematic finish, timeless documentary quality.\\\\n\\\\nShot on Nikon FM2 with 105mm f/2.5 Ai-S lens at f/4, natural window light from right side, 1/125s handheld, Kodachrome 64. Steve McCurry × Yousuf Karsh × Irving Penn × Rania Matar documentary portrait tradition, National Geographic editorial aesthetic, Magnum Photos humanist quality, dignified respectful cultural photography, ultra-detailed realistic skin and eye rendering, timeless portrait, absolutely authentic and original composition distinct from any famous reference photograph.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-pro\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-pro__2ac6bc927b-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 74,
+        "completeTime": 1783744863551,
+        "createTime": 1783744786271,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-11T04:41:03.111Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-pro__2ac6bc927b-1.png"
+      ]
+    },
+    "image__text-to-image__kie__nano-banana-2__e850ac7d68": {
+      "key": "image__text-to-image__kie__nano-banana-2__e850ac7d68",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "Here's a detailed photo prompt that captures the underwater cinematic feel, light, color, and composition of this image:\n\nCinematic underwater photograph, captured with a professional underwater housing on a full-frame mirrorless camera (Sony A7 IV with Nauticam housing), wide-angle 16-35mm lens, natural sunlight as the only light source, deep saturated ocean color grade, photorealistic clarity.\nA lone freediver glides horizontally just beneath the surface of a deep open ocean, captured from below at a slight upward angle. The diver is positioned in the upper-right third of the frame, body angled diagonally, fully immersed in the water with the surface skimming along their back. They wear a sleek matte-black neoprene full-body wetsuit that absorbs the light, slim black freediving mask covering the eyes, a black snorkel mouthpiece bitten between their lips, and long blue-and-black carbon-fiber freediving fins extending behind them, mid-kick, propelling them forward through the water. Their hair is slicked back and wet, hands tucked streamlined along their sides. Tiny silver air bubbles trail from the snorkel in a delicate stream.\nThe water surface above is the dominant texture of the upper third — rippling glassy waves catching the bright overhead sun, creating a shifting pattern of bright sparkling highlights and reflective silver patches like liquid mercury, with darker blue troughs between them. Caustic light beams and shimmering reflections dance across the diver's wetsuit and fins. The surface acts as a textured ceiling.\nBelow and around the diver, the water descends into deep gradient blue — from a bright cobalt-cyan near the surface fading into a rich navy and indigo blackness in the lower depths. Soft volumetric god-rays of sunlight pierce diagonally through the water from above, scattering down into the deep, illuminating tiny suspended particles like underwater stardust. The infinite depth disappears into shadow at the bottom of the frame.\nComposition: vertical 4:5 portrait orientation, the diver placed off-center using rule-of-thirds in the upper-right area, leaving vast negative space of deep blue water in the lower-left to convey isolation and scale, the rippling silver-blue surface filling the top of the frame. Color palette: deep cobalt blue, navy indigo, silver-white surface highlights, matte black wetsuit, slate-blue caustics, hints of warm flesh tone on the diver's face. Naturalistic ambient lighting only — no artificial strobes. Sharp focus on the diver, soft natural water-particle haze in the deeper background, subtle film-like grain, slight cool color cast. Editorial nature/adventure photography aesthetic, National Geographic and Patagonia campaign mood.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium"
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T05:08:03.998Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__e850ac7d68-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T05:08:03.998Z"
+      },
+      "taskResult": {
+        "taskId": "57c24f9cda50eac9ba0dc2ecd7995c61",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Here's a detailed photo prompt that captures the underwater cinematic feel, light, color, and composition of this image:\\\\n\\\\nCinematic underwater photograph, captured with a professional underwater housing on a full-frame mirrorless camera (Sony A7 IV with Nauticam housing), wide-angle 16-35mm lens, natural sunlight as the only light source, deep saturated ocean color grade, photorealistic clarity.\\\\nA lone freediver glides horizontally just beneath the surface of a deep open ocean, captured from below at a slight upward angle. The diver is positioned in the upper-right third of the frame, body angled diagonally, fully immersed in the water with the surface skimming along their back. They wear a sleek matte-black neoprene full-body wetsuit that absorbs the light, slim black freediving mask covering the eyes, a black snorkel mouthpiece bitten between their lips, and long blue-and-black carbon-fiber freediving fins extending behind them, mid-kick, propelling them forward through the water. Their hair is slicked back and wet, hands tucked streamlined along their sides. Tiny silver air bubbles trail from the snorkel in a delicate stream.\\\\nThe water surface above is the dominant texture of the upper third — rippling glassy waves catching the bright overhead sun, creating a shifting pattern of bright sparkling highlights and reflective silver patches like liquid mercury, with darker blue troughs between them. Caustic light beams and shimmering reflections dance across the diver's wetsuit and fins. The surface acts as a textured ceiling.\\\\nBelow and around the diver, the water descends into deep gradient blue — from a bright cobalt-cyan near the surface fading into a rich navy and indigo blackness in the lower depths. Soft volumetric god-rays of sunlight pierce diagonally through the water from above, scattering down into the deep, illuminating tiny suspended particles like underwater stardust. The infinite depth disappears into shadow at the bottom of the frame.\\\\nComposition: vertical 4:5 portrait orientation, the diver placed off-center using rule-of-thirds in the upper-right area, leaving vast negative space of deep blue water in the lower-left to convey isolation and scale, the rippling silver-blue surface filling the top of the frame. Color palette: deep cobalt blue, navy indigo, silver-white surface highlights, matte black wetsuit, slate-blue caustics, hints of warm flesh tone on the diver's face. Naturalistic ambient lighting only — no artificial strobes. Sharp focus on the diver, soft natural water-particle haze in the deeper background, subtle film-like grain, slight cool color cast. Editorial nature/adventure photography aesthetic, National Geographic and Patagonia campaign mood.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__e850ac7d68-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 23,
+        "completeTime": 1783746509417,
+        "createTime": 1783746483998,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-11T05:08:30.807Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__e850ac7d68-1.png"
+      ]
+    },
+    "image__text-to-image__kie__nano-banana-2__f0e3d699c5": {
+      "key": "image__text-to-image__kie__nano-banana-2__f0e3d699c5",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "Here's a detailed photo prompt that captures the same lighting, color palette, and editorial composition — adapted for a male model on a New York City street:\n\nEditorial fashion campaign photograph, cinematic film aesthetic, shot on medium format film camera (Pentax 67 or Mamiya 7), Kodak Portra 800 grain, painterly natural daylight at golden hour, dreamy nostalgic color grade with soft warm highlights and rich cool blue sky.\nA young East Asian man in his early twenties stands centered in front of a large hand-rolled canvas backdrop placed in the middle of an empty New York City street. The backdrop is a tall vertical scroll of buttery cream-yellow fabric printed with intricate ornamental damask-style symmetrical patterns in pale gold — vines, paisleys, decorative borders running along the edges — the canvas hangs from above and rolls forward onto the ground beneath his feet, framing him like a portable studio dropped into the real world.\nHe stands frontal to camera in a relaxed confident pose, hands tucked into the pockets of his pants, feet planted shoulder-width apart. He wears a vintage-style oversized cropped red Nike varsity cardigan with a small white GPT block-text logo on the chest, layered over a black turtleneck, paired with wide-leg black GPT sweatpants with a small embroidered logo at the thigh, and burgundy-and-cream NO NAME sneakers. A dark olive-green wool beret tilted slightly on his head, two long jet-black braids falling forward over his shoulders down to his chest, calm direct gaze into the lens, soft natural skin texture, no smile.\nBackground environment visible at the edges of the canvas backdrop: an empty New York street at golden hour — the warm reddish-brown asphalt of the road stretches behind and beneath him with painted white lane lines visible on the ground, low concrete street barriers and weathered metal warehouse walls flank the scene at frame edges, the deep cool cobalt-blue late-afternoon sky stretches overhead with a few wispy soft white clouds. The lighting is even directional natural sunlight from camera-left, casting a soft long shadow of the figure to his right, warm golden hour glow softening the canvas backdrop, no harsh contrast.\nCentered symmetrical composition, full-body shot, model perfectly framed by the canvas scroll behind him, deep saturated cobalt sky filling the upper third, warm cream-and-gold backdrop filling the middle third with the figure as the focal point, asphalt street and white lane lines anchoring the bottom third. Color palette: cobalt blue sky, buttery cream-gold canvas, deep tomato red jacket, jet black, burgundy red sneaker accents, terracotta-red asphalt. Subtle film grain, slight warm color cast, painterly soft focus on background elements with sharp focus on the model. Editorial sportswear campaign aesthetic, vintage 90s magazine spread feeling, Wong Kar-wai meets Tyler Mitchell mood.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "1:1",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium",
+        "_batch_output_count": 2
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T09:50:19.375Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__f0e3d699c5-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T09:50:19.375Z"
+      },
+      "taskResult": {
+        "taskId": "d59b313a62e1d432c197e397b20223db",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"1:1\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Here's a detailed photo prompt that captures the same lighting, color palette, and editorial composition — adapted for a male model on a New York City street:\\\\n\\\\nEditorial fashion campaign photograph, cinematic film aesthetic, shot on medium format film camera (Pentax 67 or Mamiya 7), Kodak Portra 800 grain, painterly natural daylight at golden hour, dreamy nostalgic color grade with soft warm highlights and rich cool blue sky.\\\\nA young East Asian man in his early twenties stands centered in front of a large hand-rolled canvas backdrop placed in the middle of an empty New York City street. The backdrop is a tall vertical scroll of buttery cream-yellow fabric printed with intricate ornamental damask-style symmetrical patterns in pale gold — vines, paisleys, decorative borders running along the edges — the canvas hangs from above and rolls forward onto the ground beneath his feet, framing him like a portable studio dropped into the real world.\\\\nHe stands frontal to camera in a relaxed confident pose, hands tucked into the pockets of his pants, feet planted shoulder-width apart. He wears a vintage-style oversized cropped red Nike varsity cardigan with a small white GPT block-text logo on the chest, layered over a black turtleneck, paired with wide-leg black GPT sweatpants with a small embroidered logo at the thigh, and burgundy-and-cream NO NAME sneakers. A dark olive-green wool beret tilted slightly on his head, two long jet-black braids falling forward over his shoulders down to his chest, calm direct gaze into the lens, soft natural skin texture, no smile.\\\\nBackground environment visible at the edges of the canvas backdrop: an empty New York street at golden hour — the warm reddish-brown asphalt of the road stretches behind and beneath him with painted white lane lines visible on the ground, low concrete street barriers and weathered metal warehouse walls flank the scene at frame edges, the deep cool cobalt-blue late-afternoon sky stretches overhead with a few wispy soft white clouds. The lighting is even directional natural sunlight from camera-left, casting a soft long shadow of the figure to his right, warm golden hour glow softening the canvas backdrop, no harsh contrast.\\\\nCentered symmetrical composition, full-body shot, model perfectly framed by the canvas scroll behind him, deep saturated cobalt sky filling the upper third, warm cream-and-gold backdrop filling the middle third with the figure as the focal point, asphalt street and white lane lines anchoring the bottom third. Color palette: cobalt blue sky, buttery cream-gold canvas, deep tomato red jacket, jet black, burgundy red sneaker accents, terracotta-red asphalt. Subtle film grain, slight warm color cast, painterly soft focus on background elements with sharp focus on the model. Editorial sportswear campaign aesthetic, vintage 90s magazine spread feeling, Wong Kar-wai meets Tyler Mitchell mood.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__f0e3d699c5-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 19,
+        "completeTime": 1783763459288,
+        "createTime": 1783763419375,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-11T09:51:02.354Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__f0e3d699c5-1.png"
+      ]
+    },
+    "image__text-to-image__kie__nano-banana-2__301b9fa78c": {
+      "key": "image__text-to-image__kie__nano-banana-2__301b9fa78c",
+      "mediaType": "image",
+      "scene": "text-to-image",
+      "provider": "kie",
+      "model": "nano-banana-2",
+      "prompt": "Vertical advertising poster with a surreal playful concept, photorealistic rendering. The entire composition is shot from a first-person POV from inside a cardboard moving box looking straight up — the viewer sees the inside walls of the box converging toward a bright square opening at the top.\n\nCanvas: Vertical 3:4 portrait poster.\n\nForeground / framing (fills ~70% of the image): The interior of an opened kraft-brown cardboard moving box, seen from the bottom looking up. The four inner walls of the box recede in strong one-point perspective toward the center-top of the frame, creating a natural vignette that guides the eye upward. The cardboard has realistic texture — visible corrugation, slight scuff marks, shipping creases, authentic warm kraft-paper tones. The inner flaps are fully opened outward so the square \"window\" at the top is clean and unobstructed. Subtle soft shadow along the inner corners of the box. The bottom edge of the frame shows the inside floor of the box, slightly out of focus.\n\nSky opening (top of the composition, ~30% of the image): A bright, clear midday sky visible through the opening — soft pale cerulean-blue with a few fluffy cumulus clouds drifting across. Natural sunlight streams down into the box, subtly brightening the upper edges of the cardboard walls.\n\nSubjects (peeking down into the box from above, filling the sky opening): Two curious dairy cows framing the top opening — one on the left, one on the right — peering downward into the box with big gentle eyes. Both are Holstein cows (the classic black-and-white dairy breed):\n\nLeft cow: Head tilted slightly, one ear perked up, one floppy. Big glossy dark eyes with long lashes. Pink muzzle visible, mouth slightly open as if mid-chew. Black and white patchy fur, visible fine hair detail. Looking directly down into the box at the viewer with a curious, almost questioning expression.\n\nRight cow: Head angled the other direction, slightly closer to the camera so her pink nose is prominent in the frame. Warm pink nostrils, soft breath visible. Wide innocent eyes, friendly expression. Black and white markings, one ear tag visible (generic yellow, no brand).\n\nBoth cows are photographed with the same bright natural daylight as the sky. The perspective makes them appear enormous, like they've discovered something in a box much larger than themselves. Their heads lean in from outside the frame of the box opening, creating a playful \"what's in here?\" moment. Shallow depth of field keeps the cows sharp and the cardboard slightly softer.\n\nMain headline (bottom of poster, large bold sans-serif, deep charcoal-black): Horizontally aligned, slightly left-weighted, in a modern grotesk sans-serif: \"OUT OF / THE BOX.\" Clean confident typography, all caps, tight leading between the two lines.\n\nSub-headline (directly below the main headline, smaller, medium-weight sans-serif, muted grey): Two-line supporting copy, center-aligned: \"Fresh milk, straight from the farm. / No middlemen, no long shelf lives, no surprises.\"\n\nBottom-right corner: Small clean brand logo lockup — a minimalist circular glyph containing a stylized milk-drop or simple cow silhouette, next to the brand wordmark in bold clean sans: \"PASTURE & CO.\" (placeholder fictional brand name).\n\nBelow the logo, a small tracked uppercase line: \"FIND US IN STORES · PASTUREANDCO.FARM\".\n\nBottom-left corner: A small minimalist info block in tracked uppercase sans-serif, charcoal text on kraft background:\n\"DELIVERED FRESH\nEVERY MORNING\n— SINCE 2022\"\nNext to it, a tiny line-icon illustration of a milk bottle with a small sunrise motif behind it.\n\nVery bottom edge (thin strip, tiny tracked uppercase sans): \"FARM-TO-BOTTLE DAIRY · COW-TO-CUSTOMER · EST. 2022\".\n\nPalette: warm kraft-brown cardboard (#B8916B), bright cerulean sky (#A8C8E4), soft cumulus cloud white, natural black-and-white Holstein markings, pink muzzles, deep charcoal typography (#1A1A1A), muted grey support text (#6B6B6B).\n\n\nTypography: bold modern grotesk sans-serif for headline (like Neue Haas Grotesk Bold, Söhne Bold, or Inter Black), medium-weight sans for sub-copy, tracked uppercase sans for meta.\n\nMood: clever, playful, wholesome, fresh, trustworthy, farm-direct.\n\nFinish: crisp commercial photography, bright natural daylight, subtle photographic texture, polished advertising quality. Shutterstock / Cannes Lion-quality dairy advertisement poster, 4k vertical.",
+      "options": {
+        "_credit_resolution": "2K",
+        "aspect_ratio": "16:9",
+        "resolution": "2K",
+        "output_format": "png",
+        "nsfw_checker": false,
+        "quality": "medium",
+        "_batch_output_count": 2
+      },
+      "taskInfo": {
+        "images": [
+          {
+            "id": "",
+            "createTime": "2026-07-11T11:24:35.761Z",
+            "imageUrl": "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__301b9fa78c-1.png"
+          }
+        ],
+        "status": "success",
+        "errorCode": null,
+        "errorMessage": null,
+        "createTime": "2026-07-11T11:24:35.761Z"
+      },
+      "taskResult": {
+        "taskId": "74921c07d03f09e3459c8e38119bdee8",
+        "model": "nano-banana-2",
+        "state": "success",
+        "param": "{\"input\":\"{\\\"aspect_ratio\\\":\\\"16:9\\\",\\\"output_format\\\":\\\"png\\\",\\\"prompt\\\":\\\"Vertical advertising poster with a surreal playful concept, photorealistic rendering. The entire composition is shot from a first-person POV from inside a cardboard moving box looking straight up — the viewer sees the inside walls of the box converging toward a bright square opening at the top.\\\\n\\\\nCanvas: Vertical 3:4 portrait poster.\\\\n\\\\nForeground / framing (fills ~70% of the image): The interior of an opened kraft-brown cardboard moving box, seen from the bottom looking up. The four inner walls of the box recede in strong one-point perspective toward the center-top of the frame, creating a natural vignette that guides the eye upward. The cardboard has realistic texture — visible corrugation, slight scuff marks, shipping creases, authentic warm kraft-paper tones. The inner flaps are fully opened outward so the square \\\\\\\"window\\\\\\\" at the top is clean and unobstructed. Subtle soft shadow along the inner corners of the box. The bottom edge of the frame shows the inside floor of the box, slightly out of focus.\\\\n\\\\nSky opening (top of the composition, ~30% of the image): A bright, clear midday sky visible through the opening — soft pale cerulean-blue with a few fluffy cumulus clouds drifting across. Natural sunlight streams down into the box, subtly brightening the upper edges of the cardboard walls.\\\\n\\\\nSubjects (peeking down into the box from above, filling the sky opening): Two curious dairy cows framing the top opening — one on the left, one on the right — peering downward into the box with big gentle eyes. Both are Holstein cows (the classic black-and-white dairy breed):\\\\n\\\\nLeft cow: Head tilted slightly, one ear perked up, one floppy. Big glossy dark eyes with long lashes. Pink muzzle visible, mouth slightly open as if mid-chew. Black and white patchy fur, visible fine hair detail. Looking directly down into the box at the viewer with a curious, almost questioning expression.\\\\n\\\\nRight cow: Head angled the other direction, slightly closer to the camera so her pink nose is prominent in the frame. Warm pink nostrils, soft breath visible. Wide innocent eyes, friendly expression. Black and white markings, one ear tag visible (generic yellow, no brand).\\\\n\\\\nBoth cows are photographed with the same bright natural daylight as the sky. The perspective makes them appear enormous, like they've discovered something in a box much larger than themselves. Their heads lean in from outside the frame of the box opening, creating a playful \\\\\\\"what's in here?\\\\\\\" moment. Shallow depth of field keeps the cows sharp and the cardboard slightly softer.\\\\n\\\\nMain headline (bottom of poster, large bold sans-serif, deep charcoal-black): Horizontally aligned, slightly left-weighted, in a modern grotesk sans-serif: \\\\\\\"OUT OF / THE BOX.\\\\\\\" Clean confident typography, all caps, tight leading between the two lines.\\\\n\\\\nSub-headline (directly below the main headline, smaller, medium-weight sans-serif, muted grey): Two-line supporting copy, center-aligned: \\\\\\\"Fresh milk, straight from the farm. / No middlemen, no long shelf lives, no surprises.\\\\\\\"\\\\n\\\\nBottom-right corner: Small clean brand logo lockup — a minimalist circular glyph containing a stylized milk-drop or simple cow silhouette, next to the brand wordmark in bold clean sans: \\\\\\\"PASTURE & CO.\\\\\\\" (placeholder fictional brand name).\\\\n\\\\nBelow the logo, a small tracked uppercase line: \\\\\\\"FIND US IN STORES · PASTUREANDCO.FARM\\\\\\\".\\\\n\\\\nBottom-left corner: A small minimalist info block in tracked uppercase sans-serif, charcoal text on kraft background:\\\\n\\\\\\\"DELIVERED FRESH\\\\nEVERY MORNING\\\\n— SINCE 2022\\\\\\\"\\\\nNext to it, a tiny line-icon illustration of a milk bottle with a small sunrise motif behind it.\\\\n\\\\nVery bottom edge (thin strip, tiny tracked uppercase sans): \\\\\\\"FARM-TO-BOTTLE DAIRY · COW-TO-CUSTOMER · EST. 2022\\\\\\\".\\\\n\\\\nPalette: warm kraft-brown cardboard (#B8916B), bright cerulean sky (#A8C8E4), soft cumulus cloud white, natural black-and-white Holstein markings, pink muzzles, deep charcoal typography (#1A1A1A), muted grey support text (#6B6B6B).\\\\n\\\\n\\\\nTypography: bold modern grotesk sans-serif for headline (like Neue Haas Grotesk Bold, Söhne Bold, or Inter Black), medium-weight sans for sub-copy, tracked uppercase sans for meta.\\\\n\\\\nMood: clever, playful, wholesome, fresh, trustworthy, farm-direct.\\\\n\\\\nFinish: crisp commercial photography, bright natural daylight, subtle photographic texture, polished advertising quality. Shutterstock / Cannes Lion-quality dairy advertisement poster, 4k vertical.\\\",\\\"resolution\\\":\\\"2K\\\",\\\"nsfw_checker\\\":false,\\\"quality\\\":\\\"medium\\\"}\",\"callBackUrl\":\"http://localhost:3000/api/ai/notify/kie\",\"model\":\"nano-banana-2\"}",
+        "resultJson": "{\"resultUrls\":[\"/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__301b9fa78c-1.png\"]}",
+        "failCode": null,
+        "failMsg": null,
+        "costTime": 17,
+        "completeTime": 1783769096054,
+        "createTime": 1783769075761,
+        "creditsConsumed": 8
+      },
+      "savedAt": "2026-07-11T11:25:22.635Z",
+      "imageUrls": [
+        "/dev-mocks/ai-images/image__text-to-image__kie__nano-banana-2__301b9fa78c-1.png"
+      ]
+    }
+  }
+}

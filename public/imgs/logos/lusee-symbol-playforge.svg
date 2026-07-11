@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee symbol option playforge</title>
+  <desc id="desc">An abstract play triangle forged from creative particles for video generation.</desc>
+  <defs>
+    <linearGradient id="playforge-bg" x1="62" x2="450" y1="76" y2="436" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10051E"/>
+      <stop offset="0.54" stop-color="#070707"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="playforge-mark" x1="146" x2="386" y1="130" y2="382" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F97316"/>
+      <stop offset="0.42" stop-color="#EC4899"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+    <filter id="playforge-glow" x="-40%" y="-40%" width="180%" height="180%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#EC4899" flood-opacity="0.32"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="14" flood-color="#F97316" flood-opacity="0.24"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="116" fill="url(#playforge-bg)"/>
+  <path d="M180 154c0-24 27-38 47-24l151 104c19 13 19 41 0 54L227 392c-20 14-47 0-47-24V154Z" fill="url(#playforge-mark)" filter="url(#playforge-glow)"/>
+  <path d="M215 202v108c0 9 10 15 18 10l78-54c7-5 7-15 0-20l-78-54c-8-5-18 1-18 10Z" fill="#FFFFFF" opacity="0.92"/>
+  <circle cx="147" cy="173" r="13" fill="#22D3EE"/>
+  <circle cx="357" cy="143" r="10" fill="#FDE68A"/>
+  <circle cx="368" cy="371" r="16" fill="#A78BFA"/>
+</svg>

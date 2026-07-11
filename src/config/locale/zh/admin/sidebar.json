@@ -1,0 +1,158 @@
+{
+  "header": {
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 512,
+        "height": 512
+      },
+      "url": "/shiponce"
+    },
+    "show_trigger": false
+  },
+  "main_navs": [
+    {
+      "title": "系统",
+      "items": [
+        {
+          "title": "用户与权限",
+          "icon": "User",
+          "is_expand": true,
+          "children": [
+            {
+              "title": "用户",
+              "url": "/shiponce/users",
+              "icon": "User"
+            },
+            {
+              "title": "角色",
+              "url": "/shiponce/roles",
+              "icon": "Users"
+            },
+            {
+              "title": "权限",
+              "url": "/shiponce/permissions",
+              "icon": "ShieldCheck"
+            }
+          ]
+        },
+        {
+          "title": "页面与内容",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "分类",
+              "icon": "Folder",
+              "url": "/shiponce/categories"
+            },
+            {
+              "title": "文章",
+              "icon": "FileText",
+              "url": "/shiponce/posts"
+            }
+          ]
+        },
+        {
+          "title": "支付与点数",
+          "icon": "DollarSign",
+          "children": [
+            {
+              "title": "支付记录",
+              "url": "/shiponce/payments",
+              "icon": "DollarSign"
+            },
+            {
+              "title": "订阅管理",
+              "url": "/shiponce/subscriptions",
+              "icon": "CreditCard"
+            },
+            {
+              "title": "点数",
+              "url": "/shiponce/credits",
+              "icon": "Coins"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "业务",
+      "items": [
+        {
+          "title": "AI 任务",
+          "url": "/shiponce/ai-tasks",
+          "icon": "Brain"
+        }
+      ]
+    }
+  ],
+  "bottom_nav": {
+    "items": [
+      {
+        "title": "设置",
+        "url": "/shiponce/settings/general",
+        "icon": "Settings"
+      }
+    ]
+  },
+  "user": {
+    "nav": {
+      "items": [
+        {
+          "title": "个人资料",
+          "url": "/settings/profile",
+          "icon": "User",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_email": false,
+    "show_signout": true,
+    "signout_callback": "/"
+  },
+  "sign": {
+    "sign_in_title": "登录",
+    "sign_out_title": "退出"
+  },
+  "footer": {
+    "nav": {
+      "items": [
+        {
+          "title": "首页",
+          "url": "/",
+          "icon": "Home",
+          "target": "_blank"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/your-app-name",
+          "icon": "Github",
+          "target": "_blank"
+        },
+        {
+          "title": "Twitter",
+          "url": "https://twitter.com/your-app-name",
+          "icon": "RiTwitterXFill",
+          "target": "_blank"
+        },
+        {
+          "title": "Discord",
+          "url": "https://discord.gg/your-app-name",
+          "icon": "RiDiscordFill",
+          "target": "_blank"
+        },
+        {
+          "title": "邮箱",
+          "url": "mailto:support@your-domain.com",
+          "icon": "Mail",
+          "target": "_blank"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": false
+  },
+  "variant": "sidebar"
+}

@@ -1,0 +1,53 @@
+---
+title: 部署
+---
+
+## 部署到 Vercel
+
+使用 Vercel 是部署 YourAppName 最简单的方式：
+
+1. 将代码推送到 GitHub 仓库
+2. 在 Vercel 中连接该仓库
+3. 在 Vercel 控制面板中设置环境变量
+4. 部署！
+
+## Docker 部署
+
+你也可以使用 Docker 进行部署：
+
+```dockerfile
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/.output ./
+EXPOSE 3000
+CMD ["node", "server/index.mjs"]
+```
+
+构建并运行：
+
+```bash
+docker build -t your-app .
+docker run -p 3000:3000 --env-file .env your-app
+```
+
+## 数据库迁移
+
+在部署到生产环境之前，运行数据库迁移：
+
+```bash
+npm run db:migrate
+```
+
+## 性能优化
+
+- 为静态资源启用 CDN 缓存
+- 使用数据库连接池
+- 为 API 响应配置合适的缓存头
+- 使用托管服务商的工具监控服务器资源

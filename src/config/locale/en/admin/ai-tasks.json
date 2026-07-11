@@ -1,0 +1,66 @@
+{
+  "fields": {
+    "task_id": "Task ID",
+    "media_type": "Media Type",
+    "provider": "Provider",
+    "model": "Model",
+    "prompt": "Prompt",
+    "options": "Options",
+    "user": "User",
+    "status": "Status",
+    "cost_credits": "Cost Credits",
+    "result": "Result",
+    "created_at": "Created At",
+    "action": "Action",
+    "scene": "Scene"
+  },
+  "list": {
+    "title": "AI Tasks",
+    "crumbs": {
+      "admin": "Admin",
+      "ai-tasks": "AI Tasks"
+    },
+    "tabs": {
+      "all": "All",
+      "music": "Music",
+      "image": "Image",
+      "video": "Video",
+      "audio": "Audio",
+      "text": "Text"
+    },
+    "buttons": {
+      "view": "View Task",
+      "refresh": "Refresh Task"
+    },
+    "filters": {
+      "all": "All",
+      "status": "Status",
+      "user": "User",
+      "user_placeholder": "Email, name, or user ID",
+      "created_range": "Created time",
+      "created_from": "Start time",
+      "created_to": "End time",
+      "any_time": "Any time",
+      "last_24_hours": "Last 24 hours",
+      "last_3_days": "Last 3 days",
+      "last_7_days": "Last 7 days",
+      "last_30_days": "Last 30 days",
+      "apply_time": "Apply time",
+      "clear_time": "Clear time",
+      "click_start_date": "Click a start date",
+      "click_end_date": "Click an end date",
+      "weekdays": "Sun,Mon,Tue,Wed,Thu,Fri,Sat",
+      "apply": "Apply filters",
+      "reset": "Reset"
+    },
+    "empty_message": "No tasks found"
+  },
+  "details": {
+    "title": "Generation results",
+    "view_results": "View results",
+    "provider_requests": "Provider requests",
+    "request": "Request",
+    "request_logs": "Request logs",
+    "open_full_size": "Open full size"
+  }
+}

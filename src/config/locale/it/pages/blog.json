@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Blog",
+    "description": "Leggi le ultime funzionalità, soluzioni e aggiornamenti del prodotto."
+  },
+  "page": {
+    "title": "blog Shipani",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Blog",
+        "description": "Leggi le ultime funzionalità, soluzioni e aggiornamenti del prodotto."
+      }
+    }
+  },
+  "messages": {
+    "all": "Tutto",
+    "no_content": "Nessun contenuto",
+    "crumb": "Blog",
+    "toc": "Sommario"
+  }
+}

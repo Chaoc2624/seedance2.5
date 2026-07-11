@@ -1,0 +1,41 @@
+{
+  "title": "設定",
+  "nav": {
+    "items": [
+      {
+        "title": "個人資料",
+        "url": "/settings/profile",
+        "icon": "User"
+      },
+      {
+        "title": "帳單",
+        "url": "/settings/billing",
+        "icon": "CreditCard"
+      },
+      {
+        "title": "付款記錄",
+        "url": "/settings/payments",
+        "icon": "DollarSign"
+      },
+      {
+        "title": "點數",
+        "url": "/settings/credits",
+        "icon": "Coins"
+      }
+    ]
+  },
+  "top_nav": {
+    "items": [
+      {
+        "title": "活動紀錄",
+        "url": "/activity",
+        "icon": "Activity"
+      },
+      {
+        "title": "設定",
+        "url": "/settings",
+        "icon": "Settings"
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "Todo",
+    "image": "Imagenes",
+    "video": "Videos",
+    "audio": "Audio",
+    "favorites": "Favoritos"
+  },
+  "status": {
+    "success": "Completado",
+    "failed": "Fallido",
+    "partial_failed": "Completado parcialmente",
+    "processing": "Generando",
+    "queued": "En cola"
+  },
+  "scene": {
+    "image_to_image": "Imagen a imagen",
+    "text_to_image": "Texto a imagen",
+    "image_to_video": "Imagen a video",
+    "video_to_video": "Video a video",
+    "text_to_video": "Texto a video"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} estara disponible pronto.",
+    "share_copied": "Enlace compartido copiado.",
+    "copy_failed": "No se pudo copiar. Intentalo de nuevo.",
+    "sign_in_required": "Inicia sesion antes de generar.",
+    "model_unavailable": "Este modelo no esta disponible. Elige otro modelo y vuelve a intentarlo.",
+    "all_failed": "La generacion fallo. Consulta la tarjeta de tarea.",
+    "partial_submission_failed": "{count} resultados fallaron. Las tareas restantes se enviaron.",
+    "generation_failed": "La generacion fallo: {message}"
+  },
+  "timeline": {
+    "video": "Video",
+    "images": "Imagenes {completed}/{total}",
+    "slot_failed": "La generacion fallo",
+    "queued_waiting": "En cola. Esperando procesamiento.",
+    "generating": "Generando {completed}/{total}",
+    "retry_load": "No se pudo cargar el historial. Reintentar",
+    "edit_prompt": "Editar prompt",
+    "regenerate": "Recrear"
+  },
+  "actions": {
+    "fullscreen": "Abrir vista previa",
+    "download": "Descargar",
+    "share": "Compartir",
+    "favorite": "Favorito",
+    "unfavorite": "Quitar de favoritos",
+    "image_to_video": "Imagen a video",
+    "image_to_image": "Imagen a imagen",
+    "ai_restore": "Restauracion IA",
+    "enhance": "Mejorar",
+    "more": "Mas",
+    "remove_background": "Quitar fondo",
+    "erase_object": "Borrar objeto",
+    "outpaint": "Ampliar imagen",
+    "ai_background": "Fondo IA"
+  },
+  "preview": {
+    "title": "Vista previa del resultado",
+    "description": "Ve el resultado y continua con descarga, compartir, favoritos o edicion.",
+    "close": "Cerrar vista previa",
+    "prompt": "PROMPT",
+    "copy": "Copiar",
+    "copied": "Copiado",
+    "information": "INFORMACION",
+    "type": "Tipo",
+    "status": "Estado",
+    "image": "Imagen",
+    "video": "Video",
+    "recreate": "Recrear",
+    "edit": "Editar"
+  },
+  "empty": {
+    "favorites_title": "Aun no hay favoritos",
+    "favorites_description": "Pasa el cursor sobre un resultado y selecciona el corazon para anadirlo aqui.",
+    "default_title": "Inicia una nueva generacion",
+    "default_description": "Tu generacion aparecera en esta linea de tiempo y se mostrara aqui cuando este lista."
+  },
+  "skeleton": {
+    "history_loading": "Cargando historial de generaciones",
+    "history_loading_more": "Cargando mas historial de generaciones",
+    "processing": "El modelo esta procesando tu solicitud.",
+    "progress": "Progreso de generacion {progress}%"
+  },
+  "prompt": {
+    "fallback": "Generacion sin titulo",
+    "copy": "Copiar",
+    "copied": "Prompt copiado.",
+    "collapse": "Contraer",
+    "expand": "Expandir"
+  }
+}

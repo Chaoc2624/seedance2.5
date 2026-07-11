@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "KI-Musikgenerator",
+    "description": "Erstaunliche Musik mit KI erstellen"
+  },
+  "page": {
+    "title": "KI-Musikgenerator",
+    "description": "Erstaunliche Musik mit KI erstellen"
+  },
+  "generator": {
+    "title": "Musikgenerator",
+    "prompt": "Prompt",
+    "prompt_placeholder": "Eine Liebesgeschichte von Romeo und Julia",
+    "generate": "Musik generieren",
+    "loading": "Wird geladen...",
+    "generating": "Wird generiert...",
+    "sign_in_to_generate": "Anmelden zum Generieren von Musik",
+    "credits_cost": "{credits} Guthaben Kosten",
+    "credits_remaining": "{credits} Guthaben verbleibend",
+    "buy_credits": "Guthaben kaufen",
+    "generation_progress": "Generierungsfortschritt",
+    "time_cost": "Dies kann bis zu 2-3 Minuten dauern...",
+    "generated_song": "Generierter Song",
+    "ready_to_play": "Bereit zum Abspielen",
+    "audio_generating": "Audio wird generiert...",
+    "generating_song": "Song wird generiert...",
+    "waiting_generation": "Bitte warten Sie, waehrend wir Ihr Meisterwerk erstellen",
+    "no_song_generated": "Kein Song generiert",
+    "downloading": "Wird heruntergeladen...",
+    "download_success": "Download erfolgreich abgeschlossen",
+    "download_failed": "Audio-Download fehlgeschlagen",
+    "form": {
+      "custom_mode": "Benutzerdefinierter Modus",
+      "title": "Titel",
+      "title_placeholder": "The Sound of Silence",
+      "style": "Musikstil",
+      "style_placeholder": "indie, electronic, synths, 120bpm, distorted",
+      "instrumental": "Instrumental",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Ein Country-Folk-Song ueber die Liebe",
+      "model": "Modell",
+      "lyrics": "Liedtext",
+      "lyrics_placeholder": "Schreiben Sie Ihren eigenen Liedtext, zwei Strophen (8 Zeilen) fuer das beste Ergebnis"
+    }
+  }
+}

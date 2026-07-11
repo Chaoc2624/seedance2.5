@@ -1,0 +1,46 @@
+[    3005ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3001/node_modules/.vite/deps/react-dom_client.js?v=967f5f39:14337
+[    3007ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3001/node_modules/.vite/deps/i18next.js?v=967f5f39:1525
+[    3080ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[    3080ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[    3371ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3001/@vite/client:509
+[    5075ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[    5075ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[   44049ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3001/node_modules/.vite/deps/react-dom_client.js?v=967f5f39:14337
+[   44053ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3001/node_modules/.vite/deps/i18next.js?v=967f5f39:1525
+[   44091ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3001/@vite/client:509
+[   46556ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[   46556ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[   46563ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[   46563ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  110785ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3001/node_modules/.vite/deps/react-dom_client.js?v=967f5f39:14337
+[  110788ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3001/node_modules/.vite/deps/i18next.js?v=967f5f39:1525
+[  111243ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3001/@vite/client:509
+[  112410ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[  112410ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  112882ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[  112882ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  131917ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3001/node_modules/.vite/deps/react-dom_client.js?v=967f5f39:14337
+[  131919ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3001/node_modules/.vite/deps/i18next.js?v=967f5f39:1525
+[  131954ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3001/@vite/client:509
+[  132007ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[  132007ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  133975ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[  133975ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  137776ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3001/node_modules/.vite/deps/react-dom_client.js?v=967f5f39:14337
+[  137778ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3001/node_modules/.vite/deps/i18next.js?v=967f5f39:1525
+[  137833ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3001/@vite/client:509
+[  137923ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[  137924ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  139860ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[  139860ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  161432ms] [LOG] [vite] server connection lost. Polling for restart... @ http://127.0.0.1:3001/@vite/client:968
+[18959862ms] [ERROR] Failed to load resource: net::ERR_CONNECTION_REFUSED @ http://localhost:3000/api/auth/get-session:0
+[19861776ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[19861776ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[21316059ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3001/node_modules/.vite/deps/react-dom_client.js?v=9fff3dfe:14337
+[21316065ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3001/node_modules/.vite/deps/i18next.js?v=9fff3dfe:1525
+[21320730ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[21320730ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[21320748ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3001' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3001/:0
+[21320748ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[21320842ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3001/@vite/client:509

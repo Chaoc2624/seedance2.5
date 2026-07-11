@@ -1,0 +1,26 @@
+import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ReactNode, useEffect } from 'react';
+
+import { useLocale } from '@/core/i18n/hooks';
+
+export function ThemeProvider({ children }: { children: ReactNode }) {
+  const locale = useLocale();
+
+  useEffect(() => {
+    if (typeof document !== 'undefined' && locale) {
+      document.documentElement.lang = locale;
+    }
+  }, [locale]);
+
+  return (
+    <NextThemesProvider
+      attribute="class"
+      defaultTheme="dark"
+      forcedTheme="dark"
+      enableSystem={false}
+      disableTransitionOnChange
+    >
+      {children}
+    </NextThemesProvider>
+  );
+}

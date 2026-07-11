@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "KI-Bildgenerator",
+    "description": "Bilder mit KI-Modellen erstellen, Text-zu-Bild und Bild-zu-Bild werden unterstuetzt."
+  },
+  "page": {
+    "title": "KI-Bildgenerator",
+    "description": "Bilder mit KI-Modellen erstellen, Text-zu-Bild und Bild-zu-Bild werden unterstuetzt."
+  },
+  "generator": {
+    "title": "Bildgenerator",
+    "description": "Bilder mit KI-Modellen erstellen, Text-zu-Bild und Bild-zu-Bild werden unterstuetzt.",
+    "tabs": {
+      "text-to-image": "Text zu Bild",
+      "image-to-image": "Bild zu Bild"
+    },
+    "form": {
+      "provider": "Anbieter",
+      "model": "Modell",
+      "select_provider": "Anbieter auswaehlen",
+      "select_model": "Modell auswaehlen",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Beschreiben Sie die Details des Bildes, wie Farbe, Form, Textur usw.",
+      "reference_image": "Referenzbild",
+      "reference_image_placeholder": "Referenzbilder hochladen, mehrere Bilder werden unterstuetzt",
+      "some_images_failed_to_upload": "Einige Bilder konnten nicht hochgeladen werden, bitte loeschen und erneut hochladen",
+      "prompt_too_long": "Prompt ist zu lang, bitte kuerzen Sie den Inhalt"
+    },
+    "generate": "Bilder generieren",
+    "checking_account": "Konto wird geprueft...",
+    "loading": "Wird geladen...",
+    "generating": "Wird generiert...",
+    "sign_in_to_generate": "Anmelden zum Generieren von Bildern",
+    "credits_cost": "Kostet {credits} Guthaben",
+    "credits_remaining": "Verbleibend {credits} Guthaben",
+    "buy_credits": "Guthaben kaufen",
+    "progress": "Fortschritt",
+    "generated_images": "Bildvorschau",
+    "ready_to_generate": "Bereit zum Generieren",
+    "ready_for_generating": "Bereit zur Generierung",
+    "no_images_generated": "Keine Bilder generiert"
+  }
+}

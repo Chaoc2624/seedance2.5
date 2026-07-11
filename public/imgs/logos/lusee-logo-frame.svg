@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee logo option frame</title>
+  <desc id="desc">A rounded film frame around an L monogram for video-first AI creation.</desc>
+  <defs>
+    <linearGradient id="lusee-frame-bg" x1="66" x2="446" y1="70" y2="442" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0B1020"/>
+      <stop offset="0.5" stop-color="#020617"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="lusee-frame-border" x1="108" x2="408" y1="88" y2="424" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#06B6D4"/>
+      <stop offset="0.5" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#F97316"/>
+    </linearGradient>
+    <filter id="lusee-frame-glow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="18" stdDeviation="26" flood-color="#2563EB" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="92" fill="url(#lusee-frame-bg)"/>
+  <rect x="116" y="116" width="280" height="280" rx="48" fill="none" stroke="url(#lusee-frame-border)" stroke-width="22" filter="url(#lusee-frame-glow)"/>
+  <path d="M168 160h38M306 160h38M168 352h38M306 352h38" stroke="#E5E7EB" stroke-width="16" stroke-linecap="round" opacity="0.42"/>
+  <path d="M204 168v150c0 10 8 18 18 18h98" fill="none" stroke="#FFFFFF" stroke-width="42" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M344 240l48 28-48 28v-56Z" fill="#F97316"/>
+</svg>

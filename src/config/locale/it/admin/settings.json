@@ -1,0 +1,48 @@
+{
+  "groups": {
+    "email_auth": "Aut. e-mail",
+    "google_auth": "Aut. Google",
+    "github_auth": "Aut. Github",
+    "basic_payment": "Pagamento di base",
+    "stripe": "Banda",
+    "creem": "Credere",
+    "paypal": "PayPal",
+    "resend": "Invia nuovamente",
+    "r2": "Cloudflare R2",
+    "s3": "AWS S3",
+    "openrouter": "OpenRouter",
+    "replicate": "Replicare",
+    "fal": "Fal",
+    "google_analytics": "Google Analytics",
+    "clarity": "Chiarezza",
+    "plausible": "Plausible",
+    "adsense": "Adsense",
+    "affonso": "Affonso",
+    "promotekit": "PromuoviKit",
+    "credit": "Credito",
+    "appinfo": "Informazioni sull'app",
+    "user_role": "Ruolo utente"
+  },
+  "edit": {
+    "title": "Impostazioni",
+    "crumbs": {
+      "admin": "Ammin",
+      "settings": "Impostazioni"
+    },
+    "tabs": {
+      "general": "Generale",
+      "auth": "Aut",
+      "payment": "Pagamento",
+      "credit": "Credito",
+      "email": "E-mail",
+      "storage": "Magazzinaggio",
+      "ai": "AI",
+      "analytics": "Analitica",
+      "ads": "Annunci",
+      "affiliate": "Affiliato"
+    },
+    "buttons": {
+      "submit": "Salva"
+    }
+  }
+}

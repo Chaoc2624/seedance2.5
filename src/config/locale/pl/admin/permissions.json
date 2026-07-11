@@ -1,0 +1,19 @@
+{
+  "fields": {
+    "id": "ID",
+    "code": "Kod",
+    "title": "Tytuł",
+    "resource": "Ratunek",
+    "action": "Działanie",
+    "description": "Opis",
+    "created_at": "Utworzono o godz",
+    "updated_at": "Zaktualizowano o godz"
+  },
+  "list": {
+    "title": "Uprawnienia",
+    "crumbs": {
+      "admin": "Administrator",
+      "permissions": "Uprawnienia"
+    }
+  }
+}

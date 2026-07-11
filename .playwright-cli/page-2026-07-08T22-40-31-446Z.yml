@@ -1,0 +1,592 @@
+- generic [ref=f1e2]:
+  - complementary [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - generic [ref=f1e5]:
+        - link "Mevico AI" [ref=f1e6] [cursor=pointer]:
+          - /url: /
+          - img "Mevico AI" [ref=f1e7]
+        - button "Collapse sidebar" [ref=f1e8] [cursor=pointer]:
+          - img [ref=f1e9]
+      - navigation [ref=f1e12]:
+        - generic [ref=f1e14]:
+          - link "Home" [ref=f1e15] [cursor=pointer]:
+            - /url: /
+            - img [ref=f1e16]
+            - generic [ref=f1e19]: Home
+          - link "Generate" [ref=f1e20] [cursor=pointer]:
+            - /url: /create
+            - img [ref=f1e21]
+            - generic [ref=f1e24]: Generate
+          - link "Pricing" [ref=f1e25] [cursor=pointer]:
+            - /url: /pricing
+            - img [ref=f1e26]
+            - generic [ref=f1e28]: Pricing
+          - link "Blog" [ref=f1e29] [cursor=pointer]:
+            - /url: /blog
+            - img [ref=f1e30]
+            - generic [ref=f1e32]: Blog
+        - generic [ref=f1e33]:
+          - paragraph [ref=f1e34]: Tools
+          - generic [ref=f1e35]:
+            - link "Video Generate" [ref=f1e36] [cursor=pointer]:
+              - /url: /ai/video-generator
+              - img [ref=f1e37]
+              - generic [ref=f1e40]: Video Generate
+            - button "Open Video Generate tool menu" [ref=f1e41] [cursor=pointer]:
+              - img [ref=f1e42]
+          - generic [ref=f1e44]:
+            - link "Image Generate" [ref=f1e45] [cursor=pointer]:
+              - /url: /ai/image-generator
+              - img [ref=f1e46]
+              - generic [ref=f1e50]: Image Generate
+            - button "Open Image Generate tool menu" [ref=f1e51] [cursor=pointer]:
+              - img [ref=f1e52]
+      - button "Settings" [ref=f1e56] [cursor=pointer]:
+        - img [ref=f1e57]
+  - banner [ref=f1e60]:
+    - generic [ref=f1e61]:
+      - link "Upgrade" [ref=f1e62] [cursor=pointer]:
+        - /url: /pricing
+      - button "🇺🇸 English" [disabled]:
+        - generic: 🇺🇸
+        - generic: English
+      - button "Notifications" [ref=f1e63] [cursor=pointer]:
+        - img [ref=f1e64]
+      - img [ref=f1e68]
+  - main [ref=f1e71]:
+    - generic [ref=f1e73]:
+      - paragraph [ref=f1e74]: Mevico AI creative workspace for Seedance 2.0 video generate, GPT Image 2 image generate, and Nano Banana visual edits.
+      - heading "Mevico AI Video Generate and Image Generate" [level=1] [ref=f1e75]
+      - paragraph [ref=f1e76]: Create videos and images in Mevico AI with Seedance 2.0, Nano Banana, nanobanana, and GPT Image 2 from one prompt-first studio.
+      - generic [ref=f1e78]:
+        - tablist "Creation type" [ref=f1e79]:
+          - tab "Video" [selected] [ref=f1e80] [cursor=pointer]:
+            - img [ref=f1e81]
+            - text: Video
+          - tab "Image" [ref=f1e84] [cursor=pointer]:
+            - img [ref=f1e85]
+            - text: Image
+        - generic [ref=f1e90]:
+          - generic [ref=f1e91]:
+            - button "Media" [ref=f1e94] [cursor=pointer]:
+              - img [ref=f1e97]
+            - generic [ref=f1e98]:
+              - generic [ref=f1e99]: Describe what you want to create
+              - textbox "Describe what you want to create Describe what you want to create" [ref=f1e100]:
+                - /placeholder: Enter your idea to generate...
+          - generic [ref=f1e101]:
+            - button "Text/Image to Video" [ref=f1e104] [cursor=pointer]:
+              - generic [ref=f1e105]:
+                - img [ref=f1e106]
+                - generic [ref=f1e110]: Text/Image to Video
+              - img [ref=f1e111]
+            - button "Seedance · Seedance 2.0 Audio" [ref=f1e114] [cursor=pointer]:
+              - generic [ref=f1e115]:
+                - generic [ref=f1e117]: Seedance · Seedance 2.0
+                - generic [ref=f1e119]: Audio
+              - img [ref=f1e120]
+            - button "Open generation settings" [ref=f1e123] [cursor=pointer]:
+              - generic "Video length" [ref=f1e125]:
+                - img [ref=f1e126]
+                - generic [ref=f1e129]: 5s
+              - generic "Resolution" [ref=f1e132]:
+                - img [ref=f1e133]
+                - generic [ref=f1e135]: 1080p
+              - generic "Aspect ratio" [ref=f1e138]:
+                - img [ref=f1e139]
+                - generic [ref=f1e141]: 16:9
+            - button "Generate for 90 credits" [ref=f1e142] [cursor=pointer]:
+              - img [ref=f1e143]
+              - generic [ref=f1e146]: Generate
+              - generic [ref=f1e147]: "90"
+              - img [ref=f1e148]
+          - button "Generate for 90 credits":
+            - img
+            - text: Generate
+            - generic: "90"
+            - img
+    - generic [ref=f1e150]:
+      - heading "What's new" [level=2] [ref=f1e151]
+      - generic [ref=f1e152]:
+        - link "Mevico AI Film Studio Cinematic scenes Mevico AI Film Studio" [ref=f1e153] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Mevico AI Film Studio" [ref=f1e154]
+          - generic [ref=f1e156]:
+            - paragraph [ref=f1e157]: Cinematic scenes
+            - heading "Mevico AI Film Studio" [level=3] [ref=f1e158]
+        - link "Magic Text Poster campaigns Magic Text" [ref=f1e159] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Magic Text" [ref=f1e160]
+          - generic [ref=f1e162]:
+            - paragraph [ref=f1e163]: Poster campaigns
+            - heading "Magic Text" [level=3] [ref=f1e164]
+        - link "Mevico AI Audio Voice and music Mevico AI Audio" [ref=f1e165] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Mevico AI Audio" [ref=f1e166]
+          - generic [ref=f1e168]:
+            - paragraph [ref=f1e169]: Voice and music
+            - heading "Mevico AI Audio" [level=3] [ref=f1e170]
+        - link "Mevico AI GPT Image 2 Next-gen image model Mevico AI GPT Image 2" [ref=f1e171] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Mevico AI GPT Image 2" [ref=f1e172]
+          - generic [ref=f1e174]:
+            - paragraph [ref=f1e175]: Next-gen image model
+            - heading "Mevico AI GPT Image 2" [level=3] [ref=f1e176]
+    - generic [ref=f1e179]:
+      - generic [ref=f1e180]:
+        - generic [ref=f1e181]:
+          - generic [ref=f1e182]:
+            - img [ref=f1e183]
+            - text: Video effects
+          - paragraph [ref=f1e186]: "2026"
+          - heading "Mevico AI Seedance 2.0" [level=2] [ref=f1e187]
+          - paragraph [ref=f1e188]: Browse 19 Mevico AI motion references from R2. Open any clip in a focused preview, or move straight into Video Generate with Seedance 2.0.
+        - generic [ref=f1e189]:
+          - button "View all" [ref=f1e190] [cursor=pointer]:
+            - text: View all
+            - img [ref=f1e191]
+          - link "Generate" [ref=f1e193] [cursor=pointer]:
+            - /url: /ai/video-generator
+            - text: Generate
+            - img [ref=f1e194]
+      - generic [ref=f1e198]:
+        - button "Preview Forest butterfly chase" [ref=f1e199] [cursor=pointer]:
+          - generic [ref=f1e201]:
+            - generic [ref=f1e202]:
+              - generic [ref=f1e203]:
+                - img [ref=f1e204]
+                - text: Wildlife
+              - heading "Forest butterfly chase" [level=3] [ref=f1e206]
+            - generic [ref=f1e207]: "01"
+        - button "Preview Cybernetic escape" [ref=f1e208] [cursor=pointer]:
+          - generic [ref=f1e210]:
+            - generic [ref=f1e211]:
+              - generic [ref=f1e212]:
+                - img [ref=f1e213]
+                - text: Action
+              - heading "Cybernetic escape" [level=3] [ref=f1e215]
+            - generic [ref=f1e216]: "02"
+        - button "Preview High-speed city hit" [ref=f1e217] [cursor=pointer]:
+          - generic [ref=f1e219]:
+            - generic [ref=f1e220]:
+              - generic [ref=f1e221]:
+                - img [ref=f1e222]
+                - text: Cinematic
+              - heading "High-speed city hit" [level=3] [ref=f1e224]
+            - generic [ref=f1e225]: "03"
+        - button "Preview Festival stage rush" [ref=f1e226] [cursor=pointer]:
+          - generic [ref=f1e228]:
+            - generic [ref=f1e229]:
+              - generic [ref=f1e230]:
+                - img [ref=f1e231]
+                - text: Music
+              - heading "Festival stage rush" [level=3] [ref=f1e233]
+            - generic [ref=f1e234]: "04"
+        - button "Preview Office takedown" [ref=f1e235] [cursor=pointer]:
+          - generic [ref=f1e237]:
+            - generic [ref=f1e238]:
+              - generic [ref=f1e239]:
+                - img [ref=f1e240]
+                - text: Fight
+              - heading "Office takedown" [level=3] [ref=f1e242]
+            - generic [ref=f1e243]: "05"
+        - button "Preview Road chase impact" [ref=f1e244] [cursor=pointer]:
+          - generic [ref=f1e246]:
+            - generic [ref=f1e247]:
+              - generic [ref=f1e248]:
+                - img [ref=f1e249]
+                - text: Vehicle
+              - heading "Road chase impact" [level=3] [ref=f1e251]
+            - generic [ref=f1e252]: "06"
+        - button "Preview Anime cyborg sprint" [ref=f1e253] [cursor=pointer]:
+          - generic [ref=f1e255]:
+            - generic [ref=f1e256]:
+              - generic [ref=f1e257]:
+                - img [ref=f1e258]
+                - text: Anime
+              - heading "Anime cyborg sprint" [level=3] [ref=f1e260]
+            - generic [ref=f1e261]: "07"
+        - button "Preview Hallway fight scene" [ref=f1e262] [cursor=pointer]:
+          - generic [ref=f1e264]:
+            - generic [ref=f1e265]:
+              - generic [ref=f1e266]:
+                - img [ref=f1e267]
+                - text: Fight
+              - heading "Hallway fight scene" [level=3] [ref=f1e269]
+            - generic [ref=f1e270]: "08"
+        - button "Preview Ancient library POV" [ref=f1e271] [cursor=pointer]:
+          - generic [ref=f1e273]:
+            - generic [ref=f1e274]:
+              - generic [ref=f1e275]:
+                - img [ref=f1e276]
+                - text: Surreal
+              - heading "Ancient library POV" [level=3] [ref=f1e278]
+            - generic [ref=f1e279]: "09"
+        - button "Preview Handheld street panic" [ref=f1e280] [cursor=pointer]:
+          - generic [ref=f1e282]:
+            - generic [ref=f1e283]:
+              - generic [ref=f1e284]:
+                - img [ref=f1e285]
+                - text: Phone
+              - heading "Handheld street panic" [level=3] [ref=f1e287]
+            - generic [ref=f1e288]: "10"
+        - button "Preview Edo smoke creature" [ref=f1e289] [cursor=pointer]:
+          - generic [ref=f1e291]:
+            - generic [ref=f1e292]:
+              - generic [ref=f1e293]:
+                - img [ref=f1e294]
+                - text: Fantasy
+              - heading "Edo smoke creature" [level=3] [ref=f1e296]
+            - generic [ref=f1e297]: "11"
+        - button "Preview Griffin transformation" [ref=f1e298] [cursor=pointer]:
+          - generic [ref=f1e300]:
+            - generic [ref=f1e301]:
+              - generic [ref=f1e302]:
+                - img [ref=f1e303]
+                - text: Myth
+              - heading "Griffin transformation" [level=3] [ref=f1e305]
+            - generic [ref=f1e306]: "12"
+        - button "Preview Western train stunt" [ref=f1e307] [cursor=pointer]:
+          - generic [ref=f1e309]:
+            - generic [ref=f1e310]:
+              - generic [ref=f1e311]:
+                - img [ref=f1e312]
+                - text: Western
+              - heading "Western train stunt" [level=3] [ref=f1e314]
+            - generic [ref=f1e315]: "13"
+        - button "Preview Walking forest mystery" [ref=f1e316] [cursor=pointer]:
+          - generic [ref=f1e318]:
+            - generic [ref=f1e319]:
+              - generic [ref=f1e320]:
+                - img [ref=f1e321]
+                - text: Nature
+              - heading "Walking forest mystery" [level=3] [ref=f1e323]
+            - generic [ref=f1e324]: "14"
+        - button "Preview Planetary defense" [ref=f1e325] [cursor=pointer]:
+          - generic [ref=f1e327]:
+            - generic [ref=f1e328]:
+              - generic [ref=f1e329]:
+                - img [ref=f1e330]
+                - text: Sci-fi
+              - heading "Planetary defense" [level=3] [ref=f1e332]
+            - generic [ref=f1e333]: "15"
+        - button "Preview Autumn Paris vlog" [ref=f1e334] [cursor=pointer]:
+          - generic [ref=f1e336]:
+            - generic [ref=f1e337]:
+              - generic [ref=f1e338]:
+                - img [ref=f1e339]
+                - text: Vlog
+              - heading "Autumn Paris vlog" [level=3] [ref=f1e341]
+            - generic [ref=f1e342]: "16"
+        - button "Preview City anomaly footage" [ref=f1e343] [cursor=pointer]:
+          - generic [ref=f1e345]:
+            - generic [ref=f1e346]:
+              - generic [ref=f1e347]:
+                - img [ref=f1e348]
+                - text: Found footage
+              - heading "City anomaly footage" [level=3] [ref=f1e350]
+            - generic [ref=f1e351]: "17"
+        - button "Preview World cup anime climax" [ref=f1e352] [cursor=pointer]:
+          - generic [ref=f1e354]:
+            - generic [ref=f1e355]:
+              - generic [ref=f1e356]:
+                - img [ref=f1e357]
+                - text: Sports
+              - heading "World cup anime climax" [level=3] [ref=f1e359]
+            - generic [ref=f1e360]: "18"
+        - button "Preview Street racing sequence" [ref=f1e361] [cursor=pointer]:
+          - generic [ref=f1e363]:
+            - generic [ref=f1e364]:
+              - generic [ref=f1e365]:
+                - img [ref=f1e366]
+                - text: Racing
+              - heading "Street racing sequence" [level=3] [ref=f1e368]
+            - generic [ref=f1e369]: "19"
+    - generic [ref=f1e371]:
+      - link "Model console Mevico AI models for Video Generate and Image Generate Launch Seedance 2.0, GPT Image 2, Nano Banana, and nanobanana workflows from one compact Mevico AI creative console. Open launcher" [ref=f1e372] [cursor=pointer]:
+        - /url: /ai/image-generator
+        - generic [ref=f1e373]:
+          - generic [ref=f1e374]:
+            - paragraph [ref=f1e375]: Model console
+            - heading "Mevico AI models for Video Generate and Image Generate" [level=2] [ref=f1e376]
+            - paragraph [ref=f1e377]: Launch Seedance 2.0, GPT Image 2, Nano Banana, and nanobanana workflows from one compact Mevico AI creative console.
+          - generic [ref=f1e378]:
+            - text: Open launcher
+            - img [ref=f1e379]
+      - generic [ref=f1e383]:
+        - link "Seedance 2.0 Video Seedance 2.0 Mevico AI Video Generate for cinematic clips" [ref=f1e384] [cursor=pointer]:
+          - /url: /ai/video-generator
+          - img "Seedance 2.0" [ref=f1e385]
+          - generic [ref=f1e387]:
+            - generic [ref=f1e388]: Video
+            - generic [ref=f1e389]:
+              - heading "Seedance 2.0" [level=3] [ref=f1e390]
+              - paragraph [ref=f1e391]: Mevico AI Video Generate for cinematic clips
+        - link "Kling Motion Trending Kling Motion Character movement and camera control" [ref=f1e392] [cursor=pointer]:
+          - /url: /ai/video-generator
+          - img "Kling Motion" [ref=f1e393]
+          - generic [ref=f1e395]:
+            - generic [ref=f1e396]: Trending
+            - generic [ref=f1e397]:
+              - heading "Kling Motion" [level=3] [ref=f1e398]
+              - paragraph [ref=f1e399]: Character movement and camera control
+        - link "GPT Image 2 Image GPT Image 2 Mevico AI Image Generate with crisp text" [ref=f1e400] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "GPT Image 2" [ref=f1e401]
+          - generic [ref=f1e403]:
+            - generic [ref=f1e404]: Image
+            - generic [ref=f1e405]:
+              - heading "GPT Image 2" [level=3] [ref=f1e406]
+              - paragraph [ref=f1e407]: Mevico AI Image Generate with crisp text
+        - link "Nano Banana New Nano Banana nanobanana image edits and remixing" [ref=f1e408] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Nano Banana" [ref=f1e409]
+          - generic [ref=f1e411]:
+            - generic [ref=f1e412]: New
+            - generic [ref=f1e413]:
+              - heading "Nano Banana" [level=3] [ref=f1e414]
+              - paragraph [ref=f1e415]: nanobanana image edits and remixing
+        - link "Film Studio Studio Film Studio Build scenes, boards, and sequences" [ref=f1e416] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Film Studio" [ref=f1e417]
+          - generic [ref=f1e419]:
+            - generic [ref=f1e420]: Studio
+            - generic [ref=f1e421]:
+              - heading "Film Studio" [level=3] [ref=f1e422]
+              - paragraph [ref=f1e423]: Build scenes, boards, and sequences
+        - link "Marketing Studio Brand Marketing Studio Product visuals and campaign assets" [ref=f1e424] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - img "Marketing Studio" [ref=f1e425]
+          - generic [ref=f1e427]:
+            - generic [ref=f1e428]: Brand
+            - generic [ref=f1e429]:
+              - heading "Marketing Studio" [level=3] [ref=f1e430]
+              - paragraph [ref=f1e431]: Product visuals and campaign assets
+    - generic [ref=f1e432]:
+      - generic [ref=f1e433]:
+        - link "Mevico AI GPT Image 2" [ref=f1e434] [cursor=pointer]:
+          - /url: /ai/image-generator
+          - text: Mevico AI GPT Image 2
+          - img [ref=f1e435]
+        - paragraph [ref=f1e438]: Image Generate for 4K visuals with near-perfect text rendering, ad layouts, fashion posters, product pages, and surreal crops.
+      - generic [ref=f1e439]:
+        - button "Cinematic crosswalk portrait generated with GPT Image 2" [ref=f1e440] [cursor=pointer]:
+          - img "Cinematic crosswalk portrait generated with GPT Image 2" [ref=f1e441]
+        - button "Tanabata morning portrait generated with GPT Image 2" [ref=f1e442] [cursor=pointer]:
+          - img "Tanabata morning portrait generated with GPT Image 2" [ref=f1e443]
+        - button "Parisian fashion bicycle portrait generated with GPT Image 2" [ref=f1e444] [cursor=pointer]:
+          - img "Parisian fashion bicycle portrait generated with GPT Image 2" [ref=f1e445]
+        - button "Soft afternoon indoor portrait generated with GPT Image 2" [ref=f1e446] [cursor=pointer]:
+          - img "Soft afternoon indoor portrait generated with GPT Image 2" [ref=f1e447]
+        - button "Anime martial arts battle generated with GPT Image 2" [ref=f1e448] [cursor=pointer]:
+          - img "Anime martial arts battle generated with GPT Image 2" [ref=f1e449]
+        - button "BIWA anime character sheet generated with GPT Image 2" [ref=f1e450] [cursor=pointer]:
+          - img "BIWA anime character sheet generated with GPT Image 2" [ref=f1e451]
+        - button "Five-slice emotional fashion portrait generated with GPT Image 2" [ref=f1e452] [cursor=pointer]:
+          - img "Five-slice emotional fashion portrait generated with GPT Image 2" [ref=f1e453]
+        - button "Tanabata manga page generated with GPT Image 2" [ref=f1e454] [cursor=pointer]:
+          - img "Tanabata manga page generated with GPT Image 2" [ref=f1e455]
+        - button "Retro Y2K computer workspace portrait generated with GPT Image 2" [ref=f1e456] [cursor=pointer]:
+          - img "Retro Y2K computer workspace portrait generated with GPT Image 2" [ref=f1e457]
+        - button "Worm's-eye editorial fashion portrait generated with GPT Image 2" [ref=f1e458] [cursor=pointer]:
+          - img "Worm's-eye editorial fashion portrait generated with GPT Image 2" [ref=f1e459]
+        - button "Cinematic city running poster generated with GPT Image 2" [ref=f1e460] [cursor=pointer]:
+          - img "Cinematic city running poster generated with GPT Image 2" [ref=f1e461]
+        - button "Layered editorial action poster generated with GPT Image 2" [ref=f1e462] [cursor=pointer]:
+          - img "Layered editorial action poster generated with GPT Image 2" [ref=f1e463]
+        - button "Selective color street photography generated with GPT Image 2" [ref=f1e464] [cursor=pointer]:
+          - img "Selective color street photography generated with GPT Image 2" [ref=f1e465]
+        - button "Korean phone photo strip generated with GPT Image 2" [ref=f1e466] [cursor=pointer]:
+          - img "Korean phone photo strip generated with GPT Image 2" [ref=f1e467]
+        - button "Japanese design magazine poster generated with GPT Image 2" [ref=f1e468] [cursor=pointer]:
+          - img "Japanese design magazine poster generated with GPT Image 2" [ref=f1e469]
+        - button "Bold commercial poster generated with GPT Image 2" [ref=f1e470] [cursor=pointer]:
+          - img "Bold commercial poster generated with GPT Image 2" [ref=f1e471]
+        - button "Editorial product campaign generated with GPT Image 2" [ref=f1e472] [cursor=pointer]:
+          - img "Editorial product campaign generated with GPT Image 2" [ref=f1e473]
+        - button "Luxury fashion editorial portrait generated with GPT Image 2" [ref=f1e474] [cursor=pointer]:
+          - img "Luxury fashion editorial portrait generated with GPT Image 2" [ref=f1e475]
+        - button "Cinematic character portrait generated with GPT Image 2" [ref=f1e476] [cursor=pointer]:
+          - img "Cinematic character portrait generated with GPT Image 2" [ref=f1e477]
+        - button "Fantasy whimsical downtown aerial view generated with GPT Image 2" [ref=f1e478] [cursor=pointer]:
+          - img "Fantasy whimsical downtown aerial view generated with GPT Image 2" [ref=f1e479]
+        - button "High-detail cinematic image generated with GPT Image 2" [ref=f1e480] [cursor=pointer]:
+          - img "High-detail cinematic image generated with GPT Image 2" [ref=f1e481]
+        - button "Identity card macro photo generated with GPT Image 2" [ref=f1e482] [cursor=pointer]:
+          - img "Identity card macro photo generated with GPT Image 2" [ref=f1e483]
+      - link "Open GPT Image 2" [ref=f1e485] [cursor=pointer]:
+        - /url: /ai/image-generator
+        - text: Open GPT Image 2
+        - img [ref=f1e486]
+    - generic [ref=f1e492]:
+      - generic [ref=f1e493]:
+        - img [ref=f1e494]
+        - heading "Explore Mevico AI creative themes" [level=2] [ref=f1e497]
+        - paragraph [ref=f1e498]: "Jump into Mevico AI topics creators are using now: Seedance 2.0 camera controls, Video Generate formats, Image Generate references, and GPT Image 2 commercial edits."
+      - generic [ref=f1e499]:
+        - link "Mevico AI" [ref=f1e500] [cursor=pointer]:
+          - /url: /ai
+        - link "Video Generate" [ref=f1e501] [cursor=pointer]:
+          - /url: /ai
+        - link "Image Generate" [ref=f1e502] [cursor=pointer]:
+          - /url: /ai
+        - link "Seedance 2.0" [ref=f1e503] [cursor=pointer]:
+          - /url: /ai
+        - link "nanobanana" [ref=f1e504] [cursor=pointer]:
+          - /url: /ai
+        - link "GPT Image 2" [ref=f1e505] [cursor=pointer]:
+          - /url: /ai
+        - link "Cinema Studio" [ref=f1e506] [cursor=pointer]:
+          - /url: /ai
+        - link "Nano Banana" [ref=f1e507] [cursor=pointer]:
+          - /url: /ai
+        - link "Kling camera control" [ref=f1e508] [cursor=pointer]:
+          - /url: /ai
+        - link "GPT Image" [ref=f1e509] [cursor=pointer]:
+          - /url: /ai
+        - link "Product placement" [ref=f1e510] [cursor=pointer]:
+          - /url: /ai
+        - link "Fashion studio" [ref=f1e511] [cursor=pointer]:
+          - /url: /ai
+        - link "AI influencer" [ref=f1e512] [cursor=pointer]:
+          - /url: /ai
+        - link "Visual effects" [ref=f1e513] [cursor=pointer]:
+          - /url: /ai
+        - link "Commercial ads" [ref=f1e514] [cursor=pointer]:
+          - /url: /ai
+        - link "Shorts Studio" [ref=f1e515] [cursor=pointer]:
+          - /url: /ai
+        - link "Multi reference" [ref=f1e516] [cursor=pointer]:
+          - /url: /ai
+        - link "Upscale" [ref=f1e517] [cursor=pointer]:
+          - /url: /ai
+        - link "Image to video" [ref=f1e518] [cursor=pointer]:
+          - /url: /ai
+        - link "Viral presets" [ref=f1e519] [cursor=pointer]:
+          - /url: /ai
+        - link "Sora clips" [ref=f1e520] [cursor=pointer]:
+          - /url: /ai
+        - link "Flux Kontext" [ref=f1e521] [cursor=pointer]:
+          - /url: /ai
+        - link "Seedance Pro" [ref=f1e522] [cursor=pointer]:
+          - /url: /ai
+    - generic [ref=f1e524]:
+      - generic [ref=f1e525]:
+        - heading "Mevico AI FAQ for video and image generation" [level=2] [ref=f1e526]
+        - paragraph [ref=f1e527]: Clear answers about Mevico AI, Seedance 2.0 video workflows, Nano Banana, nanobanana, GPT Image 2, Video Generate, and Image Generate.
+      - generic [ref=f1e528]:
+        - heading "What is Mevico AI?" [level=3] [ref=f1e530]:
+          - button "What is Mevico AI?" [ref=f1e531] [cursor=pointer]:
+            - text: What is Mevico AI?
+            - img
+        - heading "How does Mevico AI help with Video Generate?" [level=3] [ref=f1e533]:
+          - button "How does Mevico AI help with Video Generate?" [ref=f1e534] [cursor=pointer]:
+            - text: How does Mevico AI help with Video Generate?
+            - img
+        - heading "Can I use Seedance 2.0 in Mevico AI?" [level=3] [ref=f1e536]:
+          - button "Can I use Seedance 2.0 in Mevico AI?" [ref=f1e537] [cursor=pointer]:
+            - text: Can I use Seedance 2.0 in Mevico AI?
+            - img
+        - heading "Does Mevico AI support Image Generate?" [level=3] [ref=f1e539]:
+          - button "Does Mevico AI support Image Generate?" [ref=f1e540] [cursor=pointer]:
+            - text: Does Mevico AI support Image Generate?
+            - img
+        - heading "What is Nano Banana in Mevico AI?" [level=3] [ref=f1e542]:
+          - button "What is Nano Banana in Mevico AI?" [ref=f1e543] [cursor=pointer]:
+            - text: What is Nano Banana in Mevico AI?
+            - img
+        - heading "Can I turn images into videos with Mevico AI?" [level=3] [ref=f1e545]:
+          - button "Can I turn images into videos with Mevico AI?" [ref=f1e546] [cursor=pointer]:
+            - text: Can I turn images into videos with Mevico AI?
+            - img
+    - generic [ref=f1e548]:
+      - generic [ref=f1e549]:
+        - link "Mevico AI" [ref=f1e550] [cursor=pointer]:
+          - /url: /
+          - generic [ref=f1e551]: Mevico AI
+        - generic [ref=f1e552]:
+          - generic [ref=f1e553]:
+            - paragraph [ref=f1e554]: Create
+            - link "Video Generate" [ref=f1e555] [cursor=pointer]:
+              - /url: /ai/video-generator
+            - link "Image Generate" [ref=f1e556] [cursor=pointer]:
+              - /url: /ai/image-generator
+            - link "Showcases" [ref=f1e557] [cursor=pointer]:
+              - /url: /ai/image-generator
+            - link "Pricing" [ref=f1e558] [cursor=pointer]:
+              - /url: /pricing
+          - generic [ref=f1e559]:
+            - paragraph [ref=f1e560]: Explore
+            - link "Seedance 2.0" [ref=f1e561] [cursor=pointer]:
+              - /url: /ai/video-generator
+            - link "Nano Banana" [ref=f1e562] [cursor=pointer]:
+              - /url: /ai/image-generator
+            - link "GPT Image 2" [ref=f1e563] [cursor=pointer]:
+              - /url: /ai/image-generator
+            - link "Blog" [ref=f1e564] [cursor=pointer]:
+              - /url: /blog
+          - generic [ref=f1e565]:
+            - paragraph [ref=f1e566]: Company
+            - link "About Us" [ref=f1e567] [cursor=pointer]:
+              - /url: /about-us
+            - link "Privacy Policy" [ref=f1e568] [cursor=pointer]:
+              - /url: /privacy-policy
+            - link "Terms of Service" [ref=f1e569] [cursor=pointer]:
+              - /url: /terms-of-service
+      - generic [ref=f1e570]:
+        - paragraph [ref=f1e571]: Languages
+        - generic [ref=f1e572]:
+          - link "🇺🇸 English" [ref=f1e573] [cursor=pointer]:
+            - /url: /
+            - generic [ref=f1e574]: 🇺🇸
+            - generic [ref=f1e575]: English
+          - link "🇩🇪 Deutsch" [ref=f1e576] [cursor=pointer]:
+            - /url: /de
+            - generic [ref=f1e577]: 🇩🇪
+            - generic [ref=f1e578]: Deutsch
+          - link "🇫🇷 Français" [ref=f1e579] [cursor=pointer]:
+            - /url: /fr
+            - generic [ref=f1e580]: 🇫🇷
+            - generic [ref=f1e581]: Français
+          - link "🇪🇸 Español" [ref=f1e582] [cursor=pointer]:
+            - /url: /es
+            - generic [ref=f1e583]: 🇪🇸
+            - generic [ref=f1e584]: Español
+          - link "🇮🇹 Italiano" [ref=f1e585] [cursor=pointer]:
+            - /url: /it
+            - generic [ref=f1e586]: 🇮🇹
+            - generic [ref=f1e587]: Italiano
+          - link "🇵🇱 Polski" [ref=f1e588] [cursor=pointer]:
+            - /url: /pl
+            - generic [ref=f1e589]: 🇵🇱
+            - generic [ref=f1e590]: Polski
+          - link "🇰🇷 한국어" [ref=f1e591] [cursor=pointer]:
+            - /url: /ko
+            - generic [ref=f1e592]: 🇰🇷
+            - generic [ref=f1e593]: 한국어
+          - link "🇯🇵 日本語" [ref=f1e594] [cursor=pointer]:
+            - /url: /ja
+            - generic [ref=f1e595]: 🇯🇵
+            - generic [ref=f1e596]: 日本語
+          - link "🇭🇰 繁體中文" [ref=f1e597] [cursor=pointer]:
+            - /url: /zh-hant
+            - generic [ref=f1e598]: 🇭🇰
+            - generic [ref=f1e599]: 繁體中文
+      - generic [ref=f1e600]: Mevico AI
+      - paragraph [ref=f1e601]: 2026 All rights reserved.
+  - generic [ref=f1e604]:
+    - tablist:
+      - tab [selected]:
+        - img
+        - generic: Video
+      - tab:
+        - img
+        - generic: Image
+    - generic [ref=f1e605]:
+      - generic [ref=f1e606]:
+        - generic [ref=f1e607]: Describe what you want to create
+        - textbox "Enter your idea to generate..." [ref=f1e608]
+      - button "Generate" [ref=f1e609] [cursor=pointer]:
+        - img [ref=f1e610]
+        - text: Generate
+        - generic: "90"

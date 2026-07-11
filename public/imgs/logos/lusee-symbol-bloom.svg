@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee symbol option bloom</title>
+  <desc id="desc">A generative bloom made of layered petals and pixels.</desc>
+  <defs>
+    <linearGradient id="bloom-bg" x1="64" x2="448" y1="64" y2="448" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#09090B"/>
+      <stop offset="0.48" stop-color="#111827"/>
+      <stop offset="1" stop-color="#312E81"/>
+    </linearGradient>
+    <linearGradient id="bloom-petal" x1="128" x2="384" y1="128" y2="384" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F0ABFC"/>
+      <stop offset="0.5" stop-color="#60A5FA"/>
+      <stop offset="1" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="bloom-glow" x="-35%" y="-35%" width="170%" height="170%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#A78BFA" flood-opacity="0.34"/>
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#22D3EE" flood-opacity="0.18"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="108" fill="url(#bloom-bg)"/>
+  <g filter="url(#bloom-glow)">
+    <path d="M256 104c42 40 52 88 0 137-52-49-42-97 0-137Z" fill="url(#bloom-petal)"/>
+    <path d="M408 256c-40 42-88 52-137 0 49-52 97-42 137 0Z" fill="url(#bloom-petal)" opacity="0.86"/>
+    <path d="M256 408c-42-40-52-88 0-137 52 49 42 97 0 137Z" fill="url(#bloom-petal)" opacity="0.72"/>
+    <path d="M104 256c40-42 88-52 137 0-49 52-97 42-137 0Z" fill="url(#bloom-petal)" opacity="0.6"/>
+  </g>
+  <circle cx="256" cy="256" r="48" fill="#FFFFFF"/>
+  <circle cx="256" cy="256" r="20" fill="#111827"/>
+  <rect x="356" y="135" width="28" height="28" rx="8" fill="#FDE68A"/>
+  <rect x="122" y="344" width="24" height="24" rx="7" fill="#22D3EE"/>
+</svg>

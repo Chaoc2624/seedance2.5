@@ -1,0 +1,45 @@
+{
+  "fields": {
+    "task_id": "Identyfikator zadania",
+    "media_type": "Typ nośnika",
+    "provider": "Dostawca",
+    "model": "Model",
+    "prompt": "Podpowiedź",
+    "options": "Opcje",
+    "user": "Użytkownik",
+    "status": "Status",
+    "cost_credits": "Kredyty kosztowe",
+    "result": "Wynik",
+    "created_at": "Utworzono o godz",
+    "action": "Działanie",
+    "scene": "Scena"
+  },
+  "list": {
+    "title": "Zadania AI",
+    "crumbs": {
+      "admin": "Administrator",
+      "ai-tasks": "Zadania AI"
+    },
+    "tabs": {
+      "all": "Wszystko",
+      "music": "Muzyka",
+      "image": "Obraz",
+      "video": "Wideo",
+      "audio": "Audio",
+      "text": "Tekst"
+    },
+    "buttons": {
+      "view": "Wyświetl zadanie",
+      "refresh": "Odśwież zadanie"
+    },
+    "empty_message": "Nie znaleziono żadnych zadań"
+  },
+  "details": {
+    "title": "Wyniki generowania",
+    "view_results": "Zobacz wyniki",
+    "provider_requests": "Żądania dostawcy",
+    "request": "Żądanie",
+    "request_logs": "Dzienniki żądań",
+    "open_full_size": "Otwórz w pełnym rozmiarze"
+  }
+}

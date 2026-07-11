@@ -1,0 +1,58 @@
+---
+title: 认证系统
+---
+
+## 概述
+
+YourAppName 使用 Better Auth 进行认证，提供安全灵活的认证系统，支持多种登录方式。
+
+## 支持的登录方式
+
+- **邮箱和密码** — 传统的邮箱/密码登录，支持邮箱验证
+- **Google OAuth** — 使用 Google 账号登录
+- **GitHub OAuth** — 使用 GitHub 账号登录
+
+## 配置
+
+在环境变量中配置你的认证提供者：
+
+```env
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+```
+
+## 会话管理
+
+会话由 Better Auth 自动管理。每个会话包含：
+
+- 用户 ID 和个人信息
+- 会话过期时间戳
+- 用于无缝重新认证的刷新令牌
+
+## 路由保护
+
+使用 `useSession` Hook 来保护需要认证的路由：
+
+```tsx
+import { useSession } from '@/hooks/use-session';
+
+function ProtectedPage() {
+  const { session, isLoading } = useSession();
+
+  if (isLoading) return <Loading />;
+  if (!session) return <Redirect to="/sign-in" />;
+
+  return <div>欢迎，{session.user.name}！</div>;
+}
+```
+
+## 基于角色的访问控制
+
+YourAppName 支持基于角色的访问控制，内置两种角色：
+
+- **user** — 所有注册用户的默认角色
+- **admin** — 管理面板的管理员访问权限
+
+管理员可以通过管理面板管理用户、查看分析数据和配置系统设置。

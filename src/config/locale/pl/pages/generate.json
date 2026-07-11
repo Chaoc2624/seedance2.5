@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "Wszystko",
+    "image": "Obrazy",
+    "video": "Wideo",
+    "audio": "Audio",
+    "favorites": "Ulubione"
+  },
+  "status": {
+    "success": "Ukonczono",
+    "failed": "Niepowodzenie",
+    "partial_failed": "Czesciowo ukonczono",
+    "processing": "Generowanie",
+    "queued": "W kolejce"
+  },
+  "scene": {
+    "image_to_image": "Obraz na obraz",
+    "text_to_image": "Tekst na obraz",
+    "image_to_video": "Obraz na wideo",
+    "video_to_video": "Wideo na wideo",
+    "text_to_video": "Tekst na wideo"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} bedzie dostepne wkrotce.",
+    "share_copied": "Skopiowano link do udostepniania.",
+    "copy_failed": "Nie udalo sie skopiowac. Sprobuj ponownie.",
+    "sign_in_required": "Zaloguj sie przed generowaniem.",
+    "model_unavailable": "Ten model jest niedostepny. Wybierz inny model i sprobuj ponownie.",
+    "all_failed": "Generowanie nie powiodlo sie. Sprawdz szczegoly na karcie zadania.",
+    "partial_submission_failed": "{count} wynikow nie powiodlo sie. Pozostale zadania zostaly wyslane.",
+    "generation_failed": "Generowanie nie powiodlo sie: {message}"
+  },
+  "timeline": {
+    "video": "Wideo",
+    "images": "Obrazy {completed}/{total}",
+    "slot_failed": "Generowanie nie powiodlo sie",
+    "queued_waiting": "W kolejce. Oczekiwanie na przetworzenie.",
+    "generating": "Generowanie {completed}/{total}",
+    "retry_load": "Nie udalo sie wczytac historii. Sprobuj ponownie",
+    "edit_prompt": "Edytuj prompt",
+    "regenerate": "Utworz ponownie"
+  },
+  "actions": {
+    "fullscreen": "Otworz podglad",
+    "download": "Pobierz",
+    "share": "Udostepnij",
+    "favorite": "Dodaj do ulubionych",
+    "unfavorite": "Usun z ulubionych",
+    "image_to_video": "Obraz na wideo",
+    "image_to_image": "Obraz na obraz",
+    "ai_restore": "Przywracanie AI",
+    "enhance": "Ulepsz",
+    "more": "Wiecej",
+    "remove_background": "Usun tlo",
+    "erase_object": "Usun obiekt",
+    "outpaint": "Rozszerz obraz",
+    "ai_background": "Tlo AI"
+  },
+  "preview": {
+    "title": "Podglad wyniku",
+    "description": "Zobacz wynik i przejdz do pobierania, udostepniania, ulubionych lub edycji.",
+    "close": "Zamknij podglad",
+    "prompt": "PROMPT",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano",
+    "information": "INFORMACJE",
+    "type": "Typ",
+    "status": "Stan",
+    "image": "Obraz",
+    "video": "Wideo",
+    "recreate": "Utworz ponownie",
+    "edit": "Edytuj"
+  },
+  "empty": {
+    "favorites_title": "Brak ulubionych",
+    "favorites_description": "Najedz na wynik i wybierz serce, aby dodac go tutaj.",
+    "default_title": "Rozpocznij nowe generowanie",
+    "default_description": "Twoje generowanie pojawi sie na tej osi czasu i zostanie wyswietlone tutaj, gdy bedzie gotowe."
+  },
+  "skeleton": {
+    "history_loading": "Wczytywanie historii generowania",
+    "history_loading_more": "Wczytywanie dalszej historii generowania",
+    "processing": "Model przetwarza Twoje zadanie.",
+    "progress": "Postep generowania {progress}%"
+  },
+  "prompt": {
+    "fallback": "Generowanie bez nazwy",
+    "copy": "Kopiuj",
+    "copied": "Skopiowano prompt.",
+    "collapse": "Zwin",
+    "expand": "Rozwin"
+  }
+}

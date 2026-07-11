@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Seedance 2.5 favicon</title>
+  <desc id="desc">The compact Seedance 2.5 motion-path logo.</desc>
+  <rect width="64" height="64" rx="14" fill="#2563EB"/>
+  <path d="M46 19c-3-5-8-7-15-7h-5c-7 0-12 3-12 9s5 9 12 9h11c7 0 12 4 12 10s-5 11-13 11h-7c-7 0-12-2-16-7" fill="none" stroke="#F8FAFC" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

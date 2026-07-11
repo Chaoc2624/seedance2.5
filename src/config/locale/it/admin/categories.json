@@ -1,0 +1,52 @@
+{
+  "fields": {
+    "slug": "Lumaca",
+    "title": "Titolo",
+    "description": "Descrizione",
+    "status": "Stato",
+    "created_at": "Creato a",
+    "updated_at": "Aggiornato a"
+  },
+  "list": {
+    "title": "Categorie",
+    "crumbs": {
+      "admin": "Ammin",
+      "categories": "Categorie"
+    },
+    "buttons": {
+      "add": "Aggiungi categoria",
+      "edit": "Modifica categoria",
+      "view": "Visualizza categoria",
+      "delete": "Elimina categoria"
+    },
+    "tabs": {
+      "all": "Tutto",
+      "published": "Pubblicata",
+      "pending": "In attesa di",
+      "draft": "Bozza",
+      "archived": "Archiviata"
+    }
+  },
+  "add": {
+    "title": "Aggiungi categoria",
+    "crumbs": {
+      "admin": "Ammin",
+      "categories": "Categorie",
+      "add": "Aggiungi categoria"
+    },
+    "buttons": {
+      "submit": "Aggiungi categoria"
+    }
+  },
+  "edit": {
+    "title": "Modifica categoria",
+    "crumbs": {
+      "admin": "Ammin",
+      "categories": "Categorie",
+      "edit": "Modifica categoria"
+    },
+    "buttons": {
+      "submit": "Modifica categoria"
+    }
+  }
+}

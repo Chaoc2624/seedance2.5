@@ -1,0 +1,473 @@
+{
+  "groups": {
+    "email_auth": "邮箱验证",
+    "google_auth": "Google 验证",
+    "github_auth": "GitHub 验证",
+    "basic_payment": "基础支付",
+    "stripe": "Stripe",
+    "creem": "Creem",
+    "paypal": "PayPal",
+    "resend": "Resend",
+    "r2": "Cloudflare R2",
+    "s3": "AWS S3",
+    "openrouter": "OpenRouter",
+    "replicate": "Replicate",
+    "fal": "Fal",
+    "gemini": "Gemini",
+    "kie": "Kie",
+    "ai_access": "AI 访问控制",
+    "ai_model_catalog": "AI 模型目录",
+    "google_analytics": "Google Analytics",
+    "clarity": "Clarity",
+    "plausible": "Plausible",
+    "bing_webmaster": "Bing Webmaster",
+    "adsense": "Adsense",
+    "google_funding_choices": "Google Funding Choices",
+    "affonso": "Affonso",
+    "promotekit": "PromoteKit",
+    "credit": "点数",
+    "appinfo": "应用信息",
+    "user_role": "用户角色"
+  },
+  "descriptions": {
+    "appinfo": "自定义应用信息。",
+    "user_role": "配置新用户的默认角色。",
+    "credit": "配置初始点数和每日免费点数。",
+    "ai_access": "配置付费 AI 功能的访问规则。",
+    "ai_model_catalog": "配置生成器可见的图片模型、供应商映射、展示信息和点数消耗。",
+    "email_auth": "配置邮箱登录与邮箱验证。",
+    "google_auth": "配置 Google 登录。",
+    "github_auth": "配置 GitHub 登录。",
+    "basic_payment": "配置基础支付选项。",
+    "stripe": "配置 <a href=\"https://stripe.com\" class=\"text-primary\" target=\"_blank\">Stripe</a> 设置。",
+    "creem": "配置 <a href=\"https://www.creem.io\" class=\"text-primary\" target=\"_blank\">Creem</a> 设置。",
+    "paypal": "配置 PayPal 设置。",
+    "google_analytics": "配置 <a href=\"https://analytics.google.com/\" class=\"text-primary\" target=\"_blank\">Google Analytics</a> 设置。",
+    "clarity": "配置 <a href=\"https://clarity.microsoft.com/\" class=\"text-primary\" target=\"_blank\">Clarity</a> 设置。",
+    "plausible": "配置 <a href=\"https://plausible.io/\" class=\"text-primary\" target=\"_blank\">Plausible</a> 设置。",
+    "bing_webmaster": "配置 Bing Webmaster 验证设置。",
+    "resend": "配置 Resend 邮件设置。",
+    "r2": "配置 Cloudflare R2 存储设置。",
+    "openrouter": "配置 OpenRouter。",
+    "replicate": "配置 Replicate。",
+    "fal": "配置 Fal。",
+    "gemini": "配置 Gemini。",
+    "kie": "配置 Kie。",
+    "adsense": "配置 Adsense 设置。",
+    "google_funding_choices": "配置 Google Funding Choices 设置。",
+    "affonso": "配置 <a href=\"https://affonso.io?atp=shiponce\" class=\"text-primary\" target=\"_blank\">Affonso</a> 设置。",
+    "promotekit": "配置 <a href=\"https://www.promotekit.com?via=shiponce\" class=\"text-primary\" target=\"_blank\">PromoteKit</a> 设置。"
+  },
+  "settings": {
+    "app_name": {
+      "title": "应用名称"
+    },
+    "app_description": {
+      "title": "应用描述",
+      "placeholder": "Seedance 2.5 是用于图片、视频和语音创作的 AI 创意套件。"
+    },
+    "app_logo": {
+      "title": "应用 Logo"
+    },
+    "app_preview_image": {
+      "title": "应用预览图"
+    },
+    "initial_role_enabled": {
+      "title": "启用初始角色",
+      "tip": "是否为新用户分配初始角色。"
+    },
+    "initial_role_name": {
+      "title": "初始角色",
+      "tip": "新用户的初始角色。",
+      "options": {
+        "viewer": "访客",
+        "editor": "编辑者",
+        "admin": "管理员",
+        "super_admin": "超级管理员"
+      }
+    },
+    "initial_credits_enabled": {
+      "title": "启用初始点数",
+      "tip": "是否为新用户发放初始点数。"
+    },
+    "initial_credits_amount": {
+      "title": "初始点数数量",
+      "tip": "发放给新用户的初始点数数量。"
+    },
+    "initial_credits_valid_days": {
+      "title": "初始点数有效天数",
+      "tip": "初始点数会在多少天后过期。"
+    },
+    "initial_credits_description": {
+      "title": "初始点数说明",
+      "placeholder": "免费试用初始点数",
+      "tip": "初始点数的说明文字。"
+    },
+    "daily_credits_enabled": {
+      "title": "启用每日点数",
+      "tip": "是否每天按用户、设备或 IP 发放一次免费点数。"
+    },
+    "daily_credits_amount": {
+      "title": "每日点数数量",
+      "tip": "每天发放的免费点数数量。"
+    },
+    "daily_credits_valid_days": {
+      "title": "每日点数有效天数",
+      "tip": "每日免费点数会在多少天后过期。"
+    },
+    "daily_credits_description": {
+      "title": "每日点数说明",
+      "placeholder": "每日免费点数",
+      "tip": "每日免费点数的说明文字。"
+    },
+    "daily_credits_blocked_countries": {
+      "title": "禁用每日点数的国家/地区",
+      "tip": "用英文逗号分隔不发放每日免费点数的国家/地区代码。"
+    },
+    "email_auth_enabled": {
+      "title": "启用"
+    },
+    "email_verification_enabled": {
+      "title": "要求邮箱验证",
+      "tip": "要求用户登录前先验证邮箱。需要先配置邮件服务商，例如 Resend。"
+    },
+    "google_auth_enabled": {
+      "title": "启用登录"
+    },
+    "google_one_tap_enabled": {
+      "title": "启用 One Tap"
+    },
+    "google_client_id": {
+      "title": "Google Client ID"
+    },
+    "google_client_secret": {
+      "title": "Google Client Secret"
+    },
+    "github_auth_enabled": {
+      "title": "启用登录"
+    },
+    "github_client_id": {
+      "title": "GitHub Client ID"
+    },
+    "github_client_secret": {
+      "title": "GitHub Client Secret"
+    },
+    "select_payment_enabled": {
+      "title": "启用支付方式选择",
+      "tip": "允许用户选择支付方式；关闭后会使用默认支付供应商。"
+    },
+    "pay_as_you_go_enabled": {
+      "title": "显示按量付费",
+      "tip": "在公开价格页显示一次性购买点数套餐。"
+    },
+    "default_payment_provider": {
+      "title": "默认支付供应商",
+      "tip": "选择默认使用的支付供应商。"
+    },
+    "stripe_enabled": {
+      "title": "启用 Stripe"
+    },
+    "stripe_publishable_key": {
+      "title": "Stripe Publishable Key"
+    },
+    "stripe_secret_key": {
+      "title": "Stripe Secret Key"
+    },
+    "stripe_signing_secret": {
+      "title": "Stripe Signing Secret",
+      "tip": "Stripe Signing Secret 用于验证来自 Stripe 的 Webhook 通知。"
+    },
+    "stripe_payment_methods": {
+      "title": "Stripe 支付方式",
+      "tip": "未设置时，仅启用银行卡支付。",
+      "options": {
+        "card": "银行卡",
+        "wechat_pay": "微信支付",
+        "alipay": "支付宝"
+      }
+    },
+    "stripe_promotion_codes": {
+      "title": "Stripe 优惠码",
+      "tip": "将价格表中的 product_id 映射到 Stripe 中创建的 <a href=\"https://dashboard.stripe.com/coupons\" class=\"text-primary\" target=\"_blank\">promotion_code</a>。必须是有效的 JSON 对象。"
+    },
+    "stripe_allow_promotion_codes": {
+      "title": "允许 Stripe 优惠码",
+      "tip": "是否允许用户输入自定义优惠码。仅在未提供预设优惠码时生效。"
+    },
+    "creem_enabled": {
+      "title": "启用 Creem"
+    },
+    "creem_environment": {
+      "title": "Creem 环境"
+    },
+    "environment": {
+      "options": {
+        "sandbox": "沙盒",
+        "production": "生产环境"
+      }
+    },
+    "creem_api_key": {
+      "title": "Creem API Key"
+    },
+    "creem_signing_secret": {
+      "title": "Creem Signing Secret",
+      "tip": "Creem Signing Secret 用于验证来自 Creem 的 Webhook 通知。"
+    },
+    "creem_product_ids": {
+      "title": "Creem 产品 ID 映射",
+      "tip": "键来自 src/config/locale/en/pages/pricing.json 中的 product_id，值是在 <a href=\"https://www.creem.io/dashboard/products\" class=\"text-primary\" target=\"_blank\">Creem Products</a> 复制的 payment_product_id。必须是有效的 JSON 对象。"
+    },
+    "paypal_enabled": {
+      "title": "启用 PayPal"
+    },
+    "paypal_environment": {
+      "title": "PayPal 环境"
+    },
+    "paypal_client_id": {
+      "title": "PayPal Client ID"
+    },
+    "paypal_client_secret": {
+      "title": "PayPal Client Secret"
+    },
+    "paypal_webhook_id": {
+      "title": "PayPal Webhook ID",
+      "tip": "PayPal Webhook ID 用于验证来自 PayPal 的 Webhook 通知。可在 PayPal Developer Dashboard > Webhooks 中找到。"
+    },
+    "google_analytics_id": {
+      "title": "Google Analytics ID"
+    },
+    "google_search_console_id": {
+      "title": "Google Search Console ID"
+    },
+    "clarity_id": {
+      "title": "Clarity ID"
+    },
+    "plausible_script_id": {
+      "title": "Plausible ID",
+      "tip": "使用 Plausible 代码片段中的 pa-xxxx ID。"
+    },
+    "bing_webmaster_verification_id": {
+      "title": "Bing Webmaster ID"
+    },
+    "bing_indexnow_key": {
+      "title": "Bing IndexNow Key",
+      "tip": "构建时会生成 public/<key>.txt，文件内容为该密钥。"
+    },
+    "resend_api_key": {
+      "title": "Resend API Key"
+    },
+    "resend_sender_email": {
+      "title": "Resend 发件邮箱"
+    },
+    "r2_access_key": {
+      "title": "Cloudflare Access Key"
+    },
+    "r2_secret_key": {
+      "title": "Cloudflare Secret Key"
+    },
+    "r2_bucket_name": {
+      "title": "存储桶名称"
+    },
+    "r2_upload_path": {
+      "title": "上传路径",
+      "tip": "文件上传路径。留空则使用默认上传路径。例如：uploads/foo/bar。"
+    },
+    "r2_endpoint": {
+      "title": "端点",
+      "tip": "留空则使用默认 R2 端点。"
+    },
+    "r2_domain": {
+      "title": "域名"
+    },
+    "openrouter_api_key": {
+      "title": "OpenRouter API Key"
+    },
+    "openrouter_base_url": {
+      "title": "OpenRouter Base URL",
+      "tip": "可填写任意兼容 OpenAI 的 API 地址；留空则使用默认 OpenRouter API 地址。"
+    },
+    "replicate_api_token": {
+      "title": "Replicate API Token"
+    },
+    "replicate_custom_storage": {
+      "title": "Replicate 自定义存储",
+      "tip": "使用自定义存储保存 Replicate 生成的文件。"
+    },
+    "fal_api_key": {
+      "title": "Fal API Key",
+      "tip": "Fal API Key 用于访问 Fal API。"
+    },
+    "fal_custom_storage": {
+      "title": "Fal 自定义存储",
+      "tip": "使用自定义存储保存 Fal 生成的文件。"
+    },
+    "gemini_api_key": {
+      "title": "Gemini API Key",
+      "tip": "Google Gemini API Key。"
+    },
+    "kie_api_key": {
+      "title": "Kie API Key",
+      "tip": "Kie API Key 用于访问 Kie API。"
+    },
+    "kie_custom_storage": {
+      "title": "Kie 自定义存储",
+      "tip": "使用自定义存储保存 Kie 生成的文件。"
+    },
+    "pro_feature_plan_names": {
+      "title": "Pro 功能套餐名称",
+      "tip": "用英文逗号分隔允许使用 Pro 专属 AI 功能的有效订阅套餐名或产品 ID，例如 4K 输出。"
+    },
+    "ai_image_model_catalog": {
+      "title": "图片模型目录",
+      "tip": "生成器和服务端点数计算使用的可编辑 JSON。建议优先使用 AI 设置页上方的可视化编辑器。"
+    },
+    "adsense_code": {
+      "title": "Adsense 代码"
+    },
+    "google_funding_choices_id": {
+      "title": "Funding Choices ID"
+    },
+    "affonso_enabled": {
+      "title": "启用 Affonso"
+    },
+    "affonso_id": {
+      "title": "Affonso ID",
+      "tip": "Affonso Program ID"
+    },
+    "affonso_cookie_duration": {
+      "title": "Affonso Cookie 有效期",
+      "tip": "Affonso Cookie 有效天数，默认 30 天。"
+    },
+    "promotekit_enabled": {
+      "title": "启用 PromoteKit"
+    },
+    "promotekit_id": {
+      "title": "PromoteKit ID",
+      "tip": "PromoteKit Program ID"
+    }
+  },
+  "ai_model_catalog": {
+    "title": "AI 模型目录",
+    "description": "控制哪些图片模型出现在生成器里、每个模型使用哪个供应商，以及各模式消耗多少点数。",
+    "enabled_count": "已启用 {count} 个",
+    "provider_count": "{count} 个供应商",
+    "runtime_notice": "保存后会通过运行时设置生效，不需要重新部署前端。",
+    "defaults": "恢复默认",
+    "add_model": "添加模型",
+    "save_catalog": "保存目录",
+    "saving": "保存中...",
+    "enabled": "已启用",
+    "disabled": "已停用",
+    "default_model": "默认",
+    "drag_to_sort": "拖动排序",
+    "expand": "展开",
+    "collapse": "收起",
+    "actions": {
+      "upload_logo": "上传 Logo"
+    },
+    "fields": {
+      "display_name": "显示名称",
+      "provider": "供应商",
+      "provider_model_id": "供应商模型 ID",
+      "description": "说明",
+      "display_tags": "展示标签",
+      "modes": "支持模式",
+      "mode_model_id": "模型 ID",
+      "mode_model_hint": "每个模式可以配置自己的供应商模型 ID。",
+      "text_to_image_credits": "文生图点数",
+      "image_to_image_credits": "图生图点数",
+      "ultra4k_credits": "4K 总点数",
+      "icon_text": "图标文字",
+      "logo_url": "Logo 地址",
+      "badge": "标签",
+      "badge_tone": "标签样式"
+    },
+    "scenes": {
+      "text_to_image": "文生图",
+      "image_to_image": "图生图"
+    },
+    "tones": {
+      "quality": "质量",
+      "multi": "多能力",
+      "speed": "速度",
+      "neutral": "默认"
+    },
+    "placeholders": {
+      "provider": "供应商",
+      "provider_model_id": "provider/model-id",
+      "uses_mode_cost": "沿用模式点数",
+      "icon_text": "AI",
+      "logo_url": "/imgs/logos/model.svg",
+      "badge": "高质量",
+      "display_tags": "Multi-modal, High quality",
+      "tone": "样式",
+      "new_model": "新模型",
+      "untitled": "未命名模型",
+      "provider_fallback": "供应商",
+      "model_fallback": "模型 ID"
+    },
+    "messages": {
+      "saved": "AI 模型目录已保存",
+      "save_failed": "AI 模型目录保存失败",
+      "no_changes": "没有需要保存的更改",
+      "logo_uploaded": "Logo 已上传",
+      "logo_upload_failed": "Logo 上传失败",
+      "logo_upload_invalid": "请上传图片文件"
+    },
+    "validation": {
+      "provider_required": "第 {row} 个模型：必须填写供应商",
+      "model_required": "第 {row} 个模型：必须填写供应商模型 ID",
+      "label_required": "第 {row} 个模型：必须填写显示名称",
+      "scene_required": "第 {row} 个模型：至少选择一种模式",
+      "text_credits_required": "第 {row} 个模型：必须填写文生图点数",
+      "image_credits_required": "第 {row} 个模型：必须填写图生图点数",
+      "unique_required": "第 {row} 个模型：供应商、模型 ID 和模式组合不能重复"
+    }
+  },
+  "edit": {
+    "title": "设置",
+    "crumbs": {
+      "admin": "管理",
+      "settings": "设置"
+    },
+    "tabs": {
+      "general": "一般",
+      "auth": "验证",
+      "payment": "支付",
+      "credit": "点数",
+      "email": "邮箱",
+      "storage": "存储空间",
+      "ai": "AI",
+      "analytics": "分析",
+      "ads": "广告",
+      "affiliate": "联盟营销"
+    },
+    "buttons": {
+      "submit": "保存"
+    },
+    "status": {
+      "defined_names": "已定义：{names}",
+      "undefined": "未定义",
+      "name_separator": "、"
+    },
+    "summary": {
+      "configured": "已设置",
+      "enabled": "已启用",
+      "disabled": "已停用"
+    }
+  },
+  "upload": {
+    "labels": {
+      "upload": "上传",
+      "max_size": "最大 {size}MB",
+      "uploading": "上传中...",
+      "failed": "失败",
+      "replace_image": "上传新图片替换当前图片",
+      "remove_image": "移除图片",
+      "upload_failed": "上传失败",
+      "only_images": "仅支持图片文件",
+      "not_image": "“{name}” 不是图片文件",
+      "size_exceeded": "“{name}” 超过 {size}MB 限制"
+    }
+  }
+}

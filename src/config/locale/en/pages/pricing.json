@@ -1,0 +1,413 @@
+{
+  "metadata": {
+    "title": "Pricing",
+    "description": "Pay once. Build unlimited projects."
+  },
+  "page": {
+    "title": "GPT Image 2 Pricing",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "Pay once. Build unlimited projects.",
+        "description": "Choose credits, monthly, or annual — switch any time.",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "Pay as you go"
+          },
+          {
+            "name": "monthly",
+            "title": "Monthly",
+            "is_featured": true
+          },
+          {
+            "name": "yearly",
+            "title": "Annually"
+          }
+        ],
+        "items": [
+          {
+            "title": "Starter",
+            "description": "For solo creators trying things on.",
+            "features_title": "Includes",
+            "features": [
+              "200 generations",
+              "Up to 2K resolution",
+              "PNG / JPG export",
+              "Standard queue",
+              "Credits never expire"
+            ],
+            "interval": "one-time",
+            "amount": 1200,
+            "currency": "USD",
+            "price": "$12",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Pay once. Credits never expire.",
+            "button": {
+              "title": "Choose Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-credits",
+            "product_name": "GPT Image 2 Starter Credits",
+            "credits": 200,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Pro",
+            "description": "For working creatives shipping every week.",
+            "label": "Popular",
+            "features_title": "Everything in Starter, plus",
+            "features": [
+              "1,500 generations",
+              "Native 4K resolution",
+              "Reference-guided editing",
+              "8-panel composition",
+              "Priority queue"
+            ],
+            "interval": "one-time",
+            "amount": 3200,
+            "currency": "USD",
+            "price": "$32",
+            "original_price": "$38",
+            "unit": "",
+            "is_featured": true,
+            "tip": "Pay once. Credits never expire.",
+            "button": {
+              "title": "Choose Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-credits",
+            "product_name": "GPT Image 2 Pro Credits",
+            "credits": 1500,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Ultra",
+            "description": "For teams with brand systems to protect.",
+            "features_title": "Everything in Pro, plus",
+            "features": [
+              "6,000 generations",
+              "Shared brand references",
+              "Team workspace + roles",
+              "SSO + audit log",
+              "Dedicated support"
+            ],
+            "interval": "one-time",
+            "amount": 9600,
+            "currency": "USD",
+            "price": "$96",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "Pay once. Credits never expire.",
+            "button": {
+              "title": "Choose Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-credits",
+            "product_name": "GPT Image 2 Ultra Credits",
+            "credits": 6000,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Starter",
+            "description": "For solo creators trying things on.",
+            "features_title": "Includes",
+            "features": [
+              "200 generations / month",
+              "Up to 2K resolution",
+              "PNG / JPG export",
+              "Standard support"
+            ],
+            "interval": "month",
+            "amount": 1500,
+            "currency": "USD",
+            "price": "$15",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "Renews monthly. Cancel any time.",
+            "button": {
+              "title": "Choose Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-monthly",
+            "product_name": "GPT Image 2 Starter Monthly",
+            "credits": 200,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "For working creatives shipping every week.",
+            "label": "Popular",
+            "features_title": "Everything in Starter, plus",
+            "features": [
+              "1,500 generations / month",
+              "Native 4K resolution",
+              "Reference-guided editing",
+              "8-panel composition",
+              "Priority queue"
+            ],
+            "interval": "month",
+            "amount": 2900,
+            "currency": "USD",
+            "price": "$29",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": true,
+            "tip": "Renews monthly. Cancel any time.",
+            "button": {
+              "title": "Choose Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-monthly",
+            "product_name": "GPT Image 2 Pro Monthly",
+            "credits": 1500,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "For teams with brand systems to protect.",
+            "features_title": "Everything in Pro, plus",
+            "features": [
+              "6,000 generations / month",
+              "Shared brand references",
+              "Team workspace + roles",
+              "SSO + audit log",
+              "Dedicated support"
+            ],
+            "interval": "month",
+            "amount": 13900,
+            "currency": "USD",
+            "price": "$139",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "Renews monthly. Cancel any time.",
+            "button": {
+              "title": "Choose Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-monthly",
+            "product_name": "GPT Image 2 Ultra Monthly",
+            "credits": 6000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Ultra"
+          },
+          {
+            "title": "Starter",
+            "description": "For solo creators trying things on.",
+            "features_title": "Includes",
+            "features": [
+              "200 generations / month",
+              "Up to 2K resolution",
+              "PNG / JPG export",
+              "Standard support"
+            ],
+            "interval": "year",
+            "amount": 12000,
+            "currency": "USD",
+            "price": "$120",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Choose Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-yearly",
+            "product_name": "GPT Image 2 Starter Annually",
+            "credits": 2400,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "For working creatives shipping every week.",
+            "label": "Popular",
+            "features_title": "Everything in Starter, plus",
+            "features": [
+              "1,500 generations / month",
+              "Native 4K resolution",
+              "Reference-guided editing",
+              "8-panel composition",
+              "Priority queue"
+            ],
+            "interval": "year",
+            "amount": 17400,
+            "currency": "USD",
+            "price": "$174",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": true,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Choose Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-yearly",
+            "product_name": "GPT Image 2 Pro Annually",
+            "credits": 18000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "For teams with brand systems to protect.",
+            "features_title": "Everything in Pro, plus",
+            "features": [
+              "6,000 generations / month",
+              "Shared brand references",
+              "Team workspace + roles",
+              "SSO + audit log",
+              "Dedicated support"
+            ],
+            "interval": "year",
+            "amount": 129900,
+            "currency": "USD",
+            "price": "$1,299",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "Choose Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-yearly",
+            "product_name": "GPT Image 2 Ultra Annually",
+            "credits": 72000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Ultra"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "Current Plan",
+    "processing": "Opening checkout",
+    "checkout_failed": "Checkout could not start",
+    "value_label": "Membership and credits",
+    "membership_title": "Your current access",
+    "credits_label": "Available credits",
+    "renews_label": "Renews on",
+    "access_label": "Access level",
+    "credits_access": "Credit-based image access",
+    "manage_billing": "Manage billing",
+    "choose_plan": "Choose",
+    "buy_credits": "Buy credits",
+    "credits_pack": "{credits} credits added to your balance",
+    "credits_per_period": "{credits} credits per {interval}",
+    "credits_never_expire": "Credits never expire",
+    "image_creation": "Image creation and editing",
+    "image_two_k": "Image output up to 2K",
+    "four_k": "4K image output",
+    "video_music": "Video and music creation",
+    "outputs_active": "Up to {outputs} outputs and {active} active tasks",
+    "annual_save": "Save up to {percent}%",
+    "paywall": {
+      "title": "Upgrade required",
+      "close": "Close upgrade options",
+      "processing": "Opening checkout",
+      "checkout_failed": "Checkout could not start",
+      "current_plan": "Current plan",
+      "choose_plan": "Choose",
+      "buy_credits": "Buy credits",
+      "view_pricing": "View full pricing",
+      "load_error": "Plans could not be loaded. Open the full pricing page to continue.",
+      "annual_save": "Save up to {percent}%",
+      "credits": "credits",
+      "credits_per_period": "credits per billing period",
+      "credits_never_expire": "One-time credits never expire",
+      "image_creation": "Image creation and editing",
+      "two_k": "Image output up to 2K",
+      "reference_editing": "Reference image editing",
+      "four_k": "4K image output",
+      "video_music": "Video and music creation",
+      "video": "Video creation",
+      "music": "Music creation",
+      "active_tasks": "Up to {count} active generations",
+      "ultra_capacity": "Up to four outputs and active tasks",
+      "groups": {
+        "day": "Daily",
+        "monthly": "Monthly",
+        "yearly": "Annual",
+        "one-time": "Credit packs"
+      },
+      "reasons": {
+        "4k": "4K image output is available with a Pro or Ultra membership.",
+        "video": "Video creation is available with a Pro or Ultra membership.",
+        "music": "Music creation is available with a Pro or Ultra membership.",
+        "capacity": "Your active-generation limit is reached. Choose a plan with more capacity or wait for a task to finish.",
+        "credits": "Your available credits are not enough for this generation. Add credits or choose a membership plan."
+      }
+    },
+    "comparison": {
+      "title": "Compare capabilities",
+      "description": "Choose the plan that matches how often you create and which media workflows you need.",
+      "show_more": "Show full comparison",
+      "show_less": "Collapse comparison",
+      "credits": "Credits included",
+      "outputs": "Outputs per request",
+      "active_tasks": "Active generations",
+      "image_creation": "Image workflows",
+      "reference_editing": "Reference image editing",
+      "four_k": "4K image output",
+      "video": "Video creation",
+      "music": "Music creation",
+      "included": "Included",
+      "unavailable": "Not included"
+    },
+    "faq": {
+      "id": "pricing-faq",
+      "title": "Pricing questions",
+      "description": "Clear limits, plain billing terms, and no hidden access changes.",
+      "items": [
+        {
+          "question": "What is the difference between credits and membership?",
+          "answer": "Credits pay for each generation. A recurring membership adds the media, resolution, batch, and active-task access shown in the comparison."
+        },
+        {
+          "question": "What can I create on each membership?",
+          "answer": "Starter covers image workflows up to 2K. Pro and Ultra unlock 4K images, video, and music. Ultra allows up to four outputs and four active tasks."
+        },
+        {
+          "question": "What happens if I reach a plan limit?",
+          "answer": "Existing work remains available. Start fewer outputs, wait for an active generation to finish, or choose a plan with more capacity."
+        },
+        {
+          "question": "Can I cancel a monthly or annual membership?",
+          "answer": "Yes. You can manage or cancel a recurring membership from Billing. Your existing access stays active until the current billing period ends."
+        },
+        {
+          "question": "Do unused credits expire?",
+          "answer": "One-time credit packs do not expire. Recurring membership credits follow the active billing period shown in your account."
+        }
+      ]
+    }
+  }
+}

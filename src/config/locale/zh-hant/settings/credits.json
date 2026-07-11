@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "交易編號",
+    "description": "描述",
+    "type": "類型",
+    "scene": "場景",
+    "credits": "點數",
+    "expires_at": "到期時間",
+    "created_at": "建立時間",
+    "action": "操作"
+  },
+  "list": {
+    "title": "點數記錄",
+    "tabs": {
+      "all": "全部",
+      "grant": "發放",
+      "consume": "消耗"
+    }
+  },
+  "view": {
+    "title": "點數餘額",
+    "description": "點數可用於 AI 生成與其他付費操作。",
+    "never_expires": "永不過期",
+    "soonest_expiring": "最早到期：<date>{date}</date> 到期，剩餘 <credits>{credits}</credits> 點",
+    "no_expiring_credits": "沒有即將到期的點數",
+    "buttons": {
+      "purchase": "購買點數"
+    }
+  },
+  "types": {
+    "grant": "發放",
+    "consume": "消耗"
+  }
+}

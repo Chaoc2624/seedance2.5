@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Prezentacje",
+    "description": "Niesamowite projekty zbudowane za pomocą Seedance 2.5"
+  },
+  "page": {
+    "title": "Prezentacje",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Startupy AI SaaS zbudowane za pomocą Seedance 2.5",
+        "description": "Łatwy w użyciu i szybki w wysyłce.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "Showcase promptów GPT Image 2",
+      "description": "Przeglądaj przykłady promptów GPT Image 2, wygenerowane wyniki i struktury do ponownego użycia."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "Showcase promptów GPT Image 2",
+      "description": "Biblioteka promptów wielokrotnego użytku z wygenerowanymi wynikami. Otwórz kartę, aby wysłać prompt do generatora.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "Showcase GPT Image 2",
+        "preview": "Podgląd",
+        "preview_aria": "Podgląd {title}",
+        "dialog_description": "Duży podgląd wygenerowanego obrazu showcase.",
+        "prompt": "Prompt",
+        "use_prompt": "Użyj tego promptu",
+        "view_more": "Zobacz więcej showcase",
+        "all": "Wszystkie"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "Plakat widoku rozstrzelonego gogli VR",
+          "description": "Generuje high-tech diagram rozstrzelony gogli VR ze szczegółowymi opisami komponentów i tekstem promocyjnym."
+        },
+        "13983": {
+          "title": "Slajd objaśniający Momotaro w stylu hybrydowym",
+          "description": "Łączy prostą, ciepłą estetykę ilustracji Irasutoya z wysoką gęstością informacji charakterystyczną dla japońskich slajdów rządowych."
+        },
+        "16624": {
+          "title": "Japoński materiał magazynowy na Dzień Słonia",
+          "description": "Generuje dopracowaną japońską stronę magazynową o Dniu Słonia, idealną do sezonowych grafik, layoutów lifestyle lub edukacyjnej sztuki zoo."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "功能特色",
+          "url": "/#features",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "定價方案",
+          "url": "/pricing",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "AI",
+          "icon": "RiRobot2Line",
+          "children": [
+            {
+              "title": "AI 影片產生器",
+              "description": "使用 AI 產生影片",
+              "url": "/video-generator",
+              "icon": "RiVideoLine"
+            }
+          ]
+        },
+        {
+          "title": "內容",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "部落格",
+              "description": "閱讀部落格文章",
+              "url": "/blog",
+              "icon": "Newspaper"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "帳單",
+          "url": "/settings/billing",
+          "icon": "CreditCard"
+        },
+        {
+          "title": "活動紀錄",
+          "url": "/activity",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true,
+    "topbanner": {
+      "text": ""
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Seedance 2.5",
+      "description": "Seedance 2.5 是一個 AI 創作工作區，可用於影片生成、模型比較與以提示詞為核心的製作流程。",
+      "logo": {
+        "src": "/seedance-lockup.svg",
+        "alt": "Seedance 2.5",
+        "width": 224,
+        "height": 48,
+        "className": "h-9 w-auto max-w-40 object-contain"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "創作",
+          "children": [
+            {
+              "title": "影片生成",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "價格方案",
+              "url": "/pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "探索",
+          "children": [
+            {
+              "title": "Seedance 2.5",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "部落格",
+              "url": "/blog",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "公司",
+          "children": [
+            {
+              "title": "關於我們",
+              "url": "/about-us",
+              "target": "_self"
+            },
+            {
+              "title": "隱私權政策",
+              "url": "/privacy-policy",
+              "target": "_self"
+            },
+            {
+              "title": "服務條款",
+              "url": "/terms-of-service",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": []
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "隱私權政策",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "服務條款",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true,
+    "show_social": false
+  }
+}

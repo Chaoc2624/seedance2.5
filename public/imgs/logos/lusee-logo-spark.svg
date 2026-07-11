@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee logo option spark</title>
+  <desc id="desc">A minimal L mark with a generated spark for fast creative tools.</desc>
+  <defs>
+    <linearGradient id="lusee-spark-bg" x1="76" x2="436" y1="76" y2="436" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FAFAFA"/>
+      <stop offset="1" stop-color="#E4E4E7"/>
+    </linearGradient>
+    <linearGradient id="lusee-spark-mark" x1="146" x2="376" y1="138" y2="378" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#111827"/>
+      <stop offset="0.55" stop-color="#3F3F46"/>
+      <stop offset="1" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="lusee-spark-accent" x1="308" x2="408" y1="102" y2="220" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F472B6"/>
+      <stop offset="1" stop-color="#8B5CF6"/>
+    </linearGradient>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="102" fill="url(#lusee-spark-bg)"/>
+  <path d="M174 132v210c0 14 11 25 25 25h138" fill="none" stroke="url(#lusee-spark-mark)" stroke-width="54" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M351 104l17 50 50 17-50 17-17 50-17-50-50-17 50-17 17-50Z" fill="url(#lusee-spark-accent)"/>
+  <circle cx="306" cy="348" r="14" fill="#06B6D4"/>
+</svg>

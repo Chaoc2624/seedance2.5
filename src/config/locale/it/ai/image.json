@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Generatore di immagini AI",
+    "description": "Genera immagini con modelli AI, supporta testo in immagine e immagine in immagine."
+  },
+  "page": {
+    "title": "Generatore di immagini AI",
+    "description": "Genera immagini con modelli AI, supporta testo in immagine e immagine in immagine."
+  },
+  "generator": {
+    "title": "Generatore di immagini",
+    "description": "Genera immagini con modelli AI, supporta testo in immagine e immagine in immagine.",
+    "tabs": {
+      "text-to-image": "Testo in immagine",
+      "image-to-image": "Immagine in immagine"
+    },
+    "form": {
+      "provider": "Fornitrice",
+      "model": "Modella",
+      "select_provider": "Seleziona Fornitore",
+      "select_model": "Seleziona modello",
+      "prompt": "Richiesta",
+      "prompt_placeholder": "Descrivi i dettagli dell'immagine, come colore, forma, trama, ecc.",
+      "reference_image": "Immagine di riferimento",
+      "reference_image_placeholder": "Carica immagini di riferimento, supporta più immagini",
+      "some_images_failed_to_upload": "Impossibile caricare alcune immagini, eliminale e ricaricale",
+      "prompt_too_long": "La richiesta è troppo lunga, elimina parte del contenuto"
+    },
+    "generate": "Genera immagini",
+    "checking_account": "Conto corrente...",
+    "loading": "Caricamento...",
+    "generating": "Generazione...",
+    "sign_in_to_generate": "Accedi per generare l'immagine",
+    "credits_cost": "Costo {credits} crediti",
+    "credits_remaining": "Crediti {credits} rimanenti",
+    "buy_credits": "Acquista crediti",
+    "progress": "Progressi",
+    "generated_images": "Anteprima dell'immagine",
+    "ready_to_generate": "Pronto per generare",
+    "ready_for_generating": "Pronto per la generazione",
+    "no_images_generated": "Nessuna immagine generata"
+  }
+}

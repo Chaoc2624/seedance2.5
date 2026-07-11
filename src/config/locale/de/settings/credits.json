@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "Transaktionsnr.",
+    "description": "Beschreibung",
+    "type": "Typ",
+    "scene": "Szene",
+    "credits": "Guthaben",
+    "expires_at": "Laeuft ab am",
+    "created_at": "Erstellt am",
+    "action": "Aktion"
+  },
+  "list": {
+    "title": "Guthaben-Verlauf",
+    "tabs": {
+      "all": "Alle",
+      "grant": "Gewaehrt",
+      "consume": "Verbraucht"
+    }
+  },
+  "view": {
+    "title": "Guthabenstand",
+    "description": "Guthaben wird fuer KI-Generierung und andere kostenpflichtige Aktionen verwendet.",
+    "never_expires": "Laeuft nie ab",
+    "soonest_expiring": "Naechster Ablauf: <credits>{credits}</credits> Guthaben am <date>{date}</date>",
+    "no_expiring_credits": "Kein Guthaben laeuft ab",
+    "buttons": {
+      "purchase": "Guthaben kaufen"
+    }
+  },
+  "types": {
+    "grant": "Gewaehrt",
+    "consume": "Verbraucht"
+  }
+}

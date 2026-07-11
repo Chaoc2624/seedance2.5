@@ -1,0 +1,32 @@
+{
+  "fields": {
+    "email": "Correo electronico",
+    "password": "Contrasena",
+    "new_password": "Nueva contrasena",
+    "confirm_password": "Confirmar contrasena"
+  },
+  "reset_password": {
+    "title": "Restablecer contrasena",
+    "description": "Restablecer tu contrasena",
+    "tip": "Te enviaremos un correo electronico para restablecer tu contrasena.",
+    "crumbs": {
+      "settings": "Configuracion",
+      "security": "Seguridad"
+    },
+    "buttons": {
+      "submit": "Guardar"
+    }
+  },
+  "delete_account": {
+    "title": "Eliminar cuenta",
+    "description": "Eliminar tu cuenta",
+    "tip": "Estas seguro de que deseas eliminar tu cuenta? Esta accion no se puede deshacer.",
+    "crumbs": {
+      "settings": "Configuracion",
+      "security": "Seguridad"
+    },
+    "buttons": {
+      "submit": "Eliminar"
+    }
+  }
+}

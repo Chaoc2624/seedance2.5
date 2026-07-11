@@ -1,0 +1,60 @@
+{
+  "fields": {
+    "slug": "Slug",
+    "title": "Titulo",
+    "description": "Descripcion",
+    "image": "Imagen",
+    "content": "Contenido",
+    "categories": "Categorias",
+    "tags": "Etiquetas",
+    "author_name": "Nombre del autor",
+    "author_role": "Rol del autor",
+    "author_image": "Imagen del autor",
+    "status": "Estado",
+    "created_at": "Creado el",
+    "updated_at": "Actualizado el",
+    "deleted_at": "Eliminado el"
+  },
+  "list": {
+    "title": "Publicaciones",
+    "crumbs": {
+      "admin": "Admin",
+      "posts": "Publicaciones"
+    },
+    "buttons": {
+      "add": "Agregar publicacion",
+      "edit": "Editar publicacion",
+      "view": "Ver publicacion",
+      "delete": "Eliminar publicacion"
+    },
+    "tabs": {
+      "all": "Todas",
+      "published": "Publicadas",
+      "pending": "Pendientes",
+      "draft": "Borrador",
+      "archived": "Archivadas"
+    }
+  },
+  "add": {
+    "title": "Agregar publicacion",
+    "crumbs": {
+      "admin": "Admin",
+      "posts": "Publicaciones",
+      "add": "Agregar publicacion"
+    },
+    "buttons": {
+      "submit": "Agregar publicacion"
+    }
+  },
+  "edit": {
+    "title": "Editar publicacion",
+    "crumbs": {
+      "admin": "Admin",
+      "posts": "Publicaciones",
+      "edit": "Editar publicacion"
+    },
+    "buttons": {
+      "submit": "Editar publicacion"
+    }
+  }
+}

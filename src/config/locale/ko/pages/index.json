@@ -1,0 +1,408 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "logos",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Seedance 2.5 동영상 생성과 이미지 생성",
+        "description": "Seedance 2.5, Nano Banana, nanobanana, GPT Image 2로 프롬프트 중심 제작을 한 곳에서 진행하세요.",
+        "tip": "지금 만들기",
+        "highlight_text": "AI 기반",
+        "announcement": {
+          "badge": "신규",
+          "title": "Seedance 2.5가 동영상과 이미지 워크플로를 지원합니다",
+          "url": "/pricing"
+        },
+        "avatars_tip": "크리에이터들이 캠페인 비주얼, 숏폼 영상, 모델 실험에 Seedance 2.5를 사용합니다.",
+        "buttons": [
+          {
+            "icon": "Zap",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "default",
+            "title": "시작하기"
+          },
+          {
+            "icon": "BookOpenText",
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "title": "무료로 사용해 보기"
+          }
+        ],
+        "show_avatars": true,
+        "show_award": false,
+        "image": {
+          "src": "/imgs/features/admin.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        },
+        "image_invert": {
+          "src": "/imgs/features/admin-dark.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        }
+      },
+      "logos": {
+        "id": "logos",
+        "title": "AI 크리에이터, 스튜디오, 성장팀을 위한 워크스페이스",
+        "items": [
+          {
+            "title": "TanStack",
+            "image": {
+              "src": "/imgs/logos/tanstack.svg",
+              "alt": "TanStack"
+            }
+          },
+          {
+            "title": "React",
+            "image": {
+              "src": "/imgs/logos/react.svg",
+              "alt": "React"
+            }
+          },
+          {
+            "title": "TailwindCSS",
+            "image": {
+              "src": "/imgs/logos/tailwindcss.svg",
+              "alt": "TailwindCSS"
+            }
+          },
+          {
+            "title": "Shadcn/UI",
+            "image": {
+              "src": "/imgs/logos/shadcn.svg",
+              "alt": "Shadcn/UI"
+            }
+          },
+          {
+            "title": "Vercel",
+            "image": {
+              "src": "/imgs/logos/vercel.svg",
+              "alt": "Vercel"
+            }
+          },
+          {
+            "title": "Supabase",
+            "image": {
+              "src": "/imgs/logos/supabase.svg",
+              "alt": "Supabase"
+            }
+          }
+        ]
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "Seedance 2.5로 제작하기",
+        "description": "Seedance 2.5는 동영상 생성, 이미지 생성, 모델 선택, 프롬프트 워크플로를 하나의 집중된 크리에이티브 공간으로 모읍니다.",
+        "items": [
+          {
+            "title": "프롬프트 중심 제작",
+            "description": "동영상 생성 워크스페이스",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "동영상 생성 워크스페이스",
+            "description": "이미지 생성 및 편집",
+            "icon": "RiDatabase2Line",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "이미지 생성 및 편집",
+            "description": "모델 비교",
+            "icon": "RiCloudyFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "모델 비교",
+            "description": "레퍼런스 기반 워크플로",
+            "icon": "RiRobot2Line",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "introduce"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/landing-page.png",
+          "alt": "introduce"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "Seedance 2.5를 선택하는 이유",
+        "description": "아이디어에서 이미지와 동영상까지 더 빠르게 이동할 수 있도록 실용적인 제작 컨트롤을 제공합니다.",
+        "items": [
+          {
+            "title": "프롬프트 중심 제작",
+            "description": "동영상 생성 워크스페이스",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "동영상 생성 워크스페이스",
+            "description": "이미지 생성 및 편집",
+            "icon": "RiClapperboardAiLine",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "이미지 생성 및 편집",
+            "description": "모델 비교",
+            "icon": "RiCodeFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "benefits"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "Seedance 2.5 워크플로",
+        "description": "프롬프트로 시작하고, 비주얼을 다듬고, 모델을 비교하며, 레퍼런스를 제작용 에셋으로 전환하세요.",
+        "items": [
+          {
+            "title": "프롬프트 중심 제작",
+            "description": "동영상 생성 워크스페이스",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "동영상 생성 워크스페이스",
+            "description": "이미지 생성 및 편집",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "이미지 생성 및 편집",
+            "description": "모델 비교",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "모델 비교",
+            "description": "레퍼런스 기반 워크플로",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "usage"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "Seedance 2.5 기능",
+        "description": "AI 이미지와 동영상 제작에 필요한 도구를 모았습니다.",
+        "items": [
+          {
+            "title": "프롬프트 중심 제작",
+            "description": "동영상 생성 워크스페이스",
+            "icon": "RiNextjsFill"
+          },
+          {
+            "title": "동영상 생성 워크스페이스",
+            "description": "이미지 생성 및 편집",
+            "icon": "RiKey2Fill"
+          },
+          {
+            "title": "이미지 생성 및 편집",
+            "description": "모델 비교",
+            "icon": "RiDatabase2Line"
+          },
+          {
+            "title": "모델 비교",
+            "description": "레퍼런스 기반 워크플로",
+            "icon": "RiCloudy2Fill"
+          },
+          {
+            "title": "레퍼런스 기반 워크플로",
+            "description": "상업용 크리에이티브 출력",
+            "icon": "RiBarChart2Line"
+          },
+          {
+            "title": "상업용 크리에이티브 출력",
+            "description": "프롬프트 중심 제작",
+            "icon": "RiRobot2Line"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Seedance 2.5 워크플로 지표",
+        "description": "실제 제작 흐름과 크리에이티브 요구에서 나온 신호입니다.",
+        "items": [
+          {
+            "title": "10K+",
+            "description": "AI 동영상 및 이미지 생성에 Seedance 2.5를 사용하는 전문가 수입니다."
+          },
+          {
+            "title": "98%",
+            "description": "최근 사용자 설문을 기반으로 한 만족도입니다."
+          },
+          {
+            "title": "500+",
+            "description": "AI 도구로 사용자당 매월 절약한 시간입니다."
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "크리에이터의 이야기",
+        "description": "팀은 Seedance 2.5로 콘셉트를 탐색하고, 결과를 비교하고, 프롬프트에서 게시까지 더 빠르게 움직입니다.",
+        "items": [
+          {
+            "name": "최민준",
+            "role": "전문 사진작가",
+            "quote": "Seedance 2.5 덕분에 셀 수 없이 많은 시간을 아꼈습니다. AI 업스케일링은 작업 방식을 완전히 바꿔 주었습니다.",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "최민준"
+            }
+          },
+          {
+            "name": "이하린",
+            "role": "크리에이티브 디렉터",
+            "quote": "Seedance 2.5 덕분에 우리 팀은 반복 작업보다 창의적인 결정에 더 집중할 수 있습니다.",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "이하린"
+            }
+          },
+          {
+            "name": "박서연",
+            "role": "에이전시 대표",
+            "quote": "Seedance 2.5의 일괄 처리는 촉박한 마감 일정에서 정말 큰 도움이 됩니다.",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "박서연"
+            }
+          },
+          {
+            "name": "정우진",
+            "role": "사진작가",
+            "quote": "스타일 변환 기능 덕분에 인물 작업의 완성도가 한 단계 높아졌습니다.",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "정우진"
+            }
+          },
+          {
+            "name": "한소윤",
+            "role": "그래픽 디자이너",
+            "quote": "Seedance 2.5의 사용하기 쉬운 인터페이스 덕분에 AI 동영상과 이미지 생성이 훨씬 간단해졌습니다.",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "한소윤"
+            }
+          },
+          {
+            "name": "김도윤",
+            "role": "프리랜서 사진작가",
+            "quote": "이제 Seedance 2.5의 AI 도구 없이는 제 작업 흐름을 상상하기 어렵습니다.",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "김도윤"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "자주 묻는 질문",
+        "description": "Seedance 2.5 동영상 및 이미지 생성에 대한 답변입니다.",
+        "items": [
+          {
+            "question": "Seedance 2.5는 무엇인가요?",
+            "answer": "Seedance 2.5는 동영상 생성, 이미지 생성, 프롬프트 기반 제작을 위한 AI 크리에이티브 워크스페이스입니다."
+          },
+          {
+            "question": "어떤 모델을 지원하나요?",
+            "answer": "Seedance 2.5, GPT Image 2, Nano Banana, nanobanana 및 지원 제공자의 워크플로를 중심으로 사용할 수 있습니다."
+          },
+          {
+            "question": "이미지로 동영상을 만들 수 있나요?",
+            "answer": "네. 프롬프트나 참조 이미지에서 시작해 이미지-투-비디오 워크플로로 이동할 수 있습니다."
+          },
+          {
+            "question": "생성 이미지를 편집할 수 있나요?",
+            "answer": "네. 포스터, 제품 비주얼, 광고, 콘셉트 제작을 위한 이미지 생성과 편집을 지원합니다."
+          },
+          {
+            "question": "최신 브라우저가 필요한가요?",
+            "answer": "네. 참조 파일 업로드와 결과 미리보기를 위해 최신 브라우저와 안정적인 네트워크를 권장합니다."
+          },
+          {
+            "question": "상업적으로 사용할 수 있나요?",
+            "answer": "상업적 사용은 선택한 모델, 플랜, 제공자 약관에 따라 달라집니다. 게시 전 라이선스를 확인하세요."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Seedance 2.5로 제작하기",
+        "description": "현대 크리에이티브 팀을 위한 프롬프트 중심 워크플로로 동영상과 이미지를 생성하세요.",
+        "buttons": [
+          {
+            "url": "/pricing",
+            "target": "_self",
+            "icon": "Zap",
+            "title": "시작하기"
+          },
+          {
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "icon": "BookOpenText",
+            "title": "자세히 보기"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    },
+    "title": "Seedance 2.5 동영상 생성과 이미지 생성",
+    "description": "Seedance 2.5, Nano Banana, nanobanana, GPT Image 2로 프롬프트 중심 제작을 한 곳에서 진행하세요."
+  }
+}

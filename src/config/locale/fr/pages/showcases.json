@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Vitrines",
+    "description": "Projets remarquables construits avec Seedance 2.5"
+  },
+  "page": {
+    "title": "Vitrines",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Startups SaaS IA construites avec Seedance 2.5",
+        "description": "Facile à utiliser et rapide à déployer.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "Showcase de prompts GPT Image 2",
+      "description": "Parcourez des exemples de prompts GPT Image 2, leurs rendus et des structures réutilisables."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "Showcase de prompts GPT Image 2",
+      "description": "Une bibliothèque dense de prompts réutilisables associés à leurs rendus. Ouvrez une carte pour envoyer le prompt dans le générateur.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "Showcase GPT Image 2",
+        "preview": "Aperçu",
+        "preview_aria": "Aperçu de {title}",
+        "dialog_description": "Aperçu grand format de l’image générée.",
+        "prompt": "Prompt",
+        "use_prompt": "Utiliser ce prompt",
+        "view_more": "Voir plus de showcases",
+        "all": "Tous"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "Poster en vue éclatée de casque VR",
+          "description": "Génère un schéma high-tech en vue éclatée d’un casque VR avec appels de composants détaillés et texte promotionnel."
+        },
+        "13983": {
+          "title": "Slide explicatif Momotaro en style hybride",
+          "description": "Associe l’esthétique simple et chaleureuse d’Irasutoya à la forte densité d’information des slides gouvernementaux japonais."
+        },
+        "16624": {
+          "title": "Article magazine japonais pour la Journée de l’éléphant",
+          "description": "Génère une page magazine éditoriale japonaise soignée sur la Journée de l’éléphant, idéale pour un dossier saisonnier, une mise en page lifestyle ou un visuel éducatif de zoo."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

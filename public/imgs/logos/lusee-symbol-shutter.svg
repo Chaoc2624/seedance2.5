@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">Lusee symbol option shutter</title>
+  <desc id="desc">A six-blade aperture symbol for AI image and video generation.</desc>
+  <defs>
+    <linearGradient id="shutter-bg" x1="70" x2="442" y1="62" y2="450" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#030712"/>
+      <stop offset="0.55" stop-color="#09090B"/>
+      <stop offset="1" stop-color="#172554"/>
+    </linearGradient>
+    <linearGradient id="shutter-blade-a" x1="132" x2="380" y1="112" y2="404" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#67E8F9"/>
+      <stop offset="0.52" stop-color="#A78BFA"/>
+      <stop offset="1" stop-color="#F0ABFC"/>
+    </linearGradient>
+    <filter id="shutter-shadow" x="-30%" y="-30%" width="160%" height="160%" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="20" stdDeviation="28" flood-color="#3B82F6" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+  <rect x="48" y="48" width="416" height="416" rx="104" fill="url(#shutter-bg)"/>
+  <g filter="url(#shutter-shadow)">
+    <path d="M255 102l84 94-48 36-112-57c17-43 44-68 76-73Z" fill="url(#shutter-blade-a)"/>
+    <path d="M359 152l-8 126-58-8-44-118c42-19 80-19 110 0Z" fill="#C084FC"/>
+    <path d="M405 268l-108 65-24-53 63-109c38 24 61 57 69 97Z" fill="#22D3EE"/>
+    <path d="M257 410l-84-94 48-36 112 57c-17 43-44 68-76 73Z" fill="#60A5FA"/>
+    <path d="M153 360l8-126 58 8 44 118c-42 19-80 19-110 0Z" fill="#A78BFA"/>
+    <path d="M107 244l108-65 24 53-63 109c-38-24-61-57-69-97Z" fill="#F472B6"/>
+  </g>
+  <circle cx="256" cy="256" r="54" fill="#050713" stroke="#F8FAFC" stroke-width="10"/>
+  <circle cx="256" cy="256" r="18" fill="#F8FAFC"/>
+</svg>

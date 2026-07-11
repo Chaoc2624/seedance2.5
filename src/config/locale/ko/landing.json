@@ -1,0 +1,150 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "홈",
+          "url": "/",
+          "target": "_self"
+        },
+        {
+          "title": "동영상 생성",
+          "url": "/video-generator",
+          "target": "_self"
+        },
+        {
+          "title": "요금제",
+          "url": "/pricing",
+          "target": "_self"
+        },
+        {
+          "title": "블로그",
+          "url": "/blog",
+          "target": "_self"
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "결제",
+          "url": "/settings/billing",
+          "icon": "CreditCard"
+        },
+        {
+          "title": "활동",
+          "url": "/activity",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true,
+    "topbanner": {
+      "text": ""
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Seedance 2.5",
+      "description": "Seedance 2.5는 동영상 생성, 이미지 생성, 모델 비교, 프롬프트 중심 제작 워크플로를 위한 AI 크리에이티브 워크스페이스입니다.",
+      "logo": {
+        "src": "/seedance-lockup.svg",
+        "alt": "Seedance 2.5",
+        "width": 224,
+        "height": 48,
+        "className": "h-9 w-auto max-w-40 object-contain"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "제작",
+          "children": [
+            {
+              "title": "동영상 생성",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "요금제",
+              "url": "/pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "탐색",
+          "children": [
+            {
+              "title": "Seedance 2.5",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "블로그",
+              "url": "/blog",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "회사",
+          "children": [
+            {
+              "title": "회사 소개",
+              "url": "/about-us",
+              "target": "_self"
+            },
+            {
+              "title": "개인정보 처리방침",
+              "url": "/privacy-policy",
+              "target": "_self"
+            },
+            {
+              "title": "서비스 약관",
+              "url": "/terms-of-service",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": []
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "개인정보 처리방침",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "서비스 약관",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true,
+    "show_social": false
+  }
+}

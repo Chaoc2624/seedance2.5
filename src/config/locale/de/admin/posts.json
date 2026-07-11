@@ -1,0 +1,60 @@
+{
+  "fields": {
+    "slug": "Slug",
+    "title": "Titel",
+    "description": "Beschreibung",
+    "image": "Bild",
+    "content": "Inhalt",
+    "categories": "Kategorien",
+    "tags": "Tags",
+    "author_name": "Autorenname",
+    "author_role": "Autorenrolle",
+    "author_image": "Autorenbild",
+    "status": "Status",
+    "created_at": "Erstellt am",
+    "updated_at": "Aktualisiert am",
+    "deleted_at": "Geloescht am"
+  },
+  "list": {
+    "title": "Beitraege",
+    "crumbs": {
+      "admin": "Admin",
+      "posts": "Beitraege"
+    },
+    "buttons": {
+      "add": "Beitrag hinzufuegen",
+      "edit": "Beitrag bearbeiten",
+      "view": "Beitrag anzeigen",
+      "delete": "Beitrag loeschen"
+    },
+    "tabs": {
+      "all": "Alle",
+      "published": "Veroeffentlicht",
+      "pending": "Ausstehend",
+      "draft": "Entwurf",
+      "archived": "Archiviert"
+    }
+  },
+  "add": {
+    "title": "Beitrag hinzufuegen",
+    "crumbs": {
+      "admin": "Admin",
+      "posts": "Beitraege",
+      "add": "Beitrag hinzufuegen"
+    },
+    "buttons": {
+      "submit": "Beitrag hinzufuegen"
+    }
+  },
+  "edit": {
+    "title": "Beitrag bearbeiten",
+    "crumbs": {
+      "admin": "Admin",
+      "posts": "Beitraege",
+      "edit": "Beitrag bearbeiten"
+    },
+    "buttons": {
+      "submit": "Beitrag bearbeiten"
+    }
+  }
+}

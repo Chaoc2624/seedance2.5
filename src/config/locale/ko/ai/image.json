@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "GPT Image 2 - AI 이미지 생성기",
+    "description": "GPT Image 2, Nano Banana Pro, Seedream, Flux, Gemini 3 Pro로 이미지를 생성하고 편집하세요."
+  },
+  "page": {
+    "title": "GPT Image 2 - AI 이미지 생성기",
+    "description": "하나의 프롬프트 박스에서 주요 AI 이미지 모델을 사용하고 참조 이미지로 편집하세요."
+  },
+  "generator": {
+    "title": "이미지 생성기",
+    "description": "텍스트-투-이미지와 이미지-투-이미지를 지원하는 AI 이미지 생성 도구입니다.",
+    "tabs": {
+      "text-to-image": "텍스트로 이미지",
+      "image-to-image": "이미지로 이미지"
+    },
+    "form": {
+      "provider": "제공자",
+      "model": "AI 모델",
+      "select_provider": "제공자 선택",
+      "select_model": "모델 선택",
+      "required_badge": "필수",
+      "prompt": "프롬프트",
+      "prompt_placeholder": "색상, 형태, 질감 등 이미지 세부 사항을 설명하세요.",
+      "prompt_required_hint": "생성을 시작하려면 프롬프트를 입력하세요.",
+      "reference_image": "이미지",
+      "reference_image_placeholder": "참조 이미지를 업로드하세요. 여러 장을 지원합니다.",
+      "reference_image_required_hint": "계속하려면 참조 이미지를 하나 이상 업로드하세요.",
+      "some_images_failed_to_upload": "일부 이미지 업로드에 실패했습니다. 삭제 후 다시 업로드하세요.",
+      "prompt_too_long": "프롬프트가 너무 깁니다. 일부 내용을 줄여 주세요.",
+      "resolution": "해상도",
+      "quality": "품질",
+      "output_format": "출력 형식",
+      "aspect_ratio": "화면 비율",
+      "credits_suffix": "크레딧"
+    },
+    "preview": {
+      "ready_title": "생성 준비 완료",
+      "ready_description_image": "이미지를 업로드하고 편집 내용을 설명하세요",
+      "ready_description_text": "생성하고 싶은 이미지를 설명하세요",
+      "generating_title": "이미지를 생성하는 중..."
+    },
+    "generate": "이미지 생성",
+    "checking_account": "계정 확인 중...",
+    "loading": "불러오는 중...",
+    "generating": "생성 중...",
+    "sign_in_to_generate": "이미지를 생성하려면 로그인하세요",
+    "credits_cost": "{credits} 크레딧 사용",
+    "credits_remaining": "남은 크레딧 {credits}",
+    "buy_credits": "크레딧 구매",
+    "progress": "진행률",
+    "generated_images": "이미지 미리보기",
+    "ready_to_generate": "생성 준비 완료",
+    "ready_for_generating": "생성 준비 완료",
+    "no_images_generated": "생성된 이미지 없음"
+  }
+}

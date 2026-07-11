@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Showcases",
+    "description": "Awesome projects built with Seedance 2.5"
+  },
+  "page": {
+    "title": "Showcases",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "AI SaaS Startups built with Seedance 2.5",
+        "description": "Easy to use and fast to ship.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "GPT Image 2 Prompt Showcase",
+      "description": "Browse GPT Image 2 prompt examples, generated results, and reusable prompt structures."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "GPT Image 2 prompt showcase",
+      "description": "A dense library of reusable prompts paired with generated outputs. Open any card to send that prompt straight into the generator.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "GPT Image 2 Showcase",
+        "preview": "Preview",
+        "preview_aria": "Preview {title}",
+        "dialog_description": "Full size preview of the generated showcase image.",
+        "prompt": "Prompt",
+        "use_prompt": "Use this prompt",
+        "view_more": "View more showcase",
+        "all": "All"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "VR Headset Exploded View Poster",
+          "description": "Generates a high-tech exploded view diagram of a VR headset with detailed component callouts and promotional text."
+        },
+        "13983": {
+          "title": "Momotaro Explainer Slide in Hybrid Style",
+          "description": "A prompt that combines the simple, warm aesthetic of Irasutoya illustrations with the high-information density characteristic of Japanese government slides."
+        },
+        "16624": {
+          "title": "Japanese Elephant Day Magazine Feature",
+          "description": "This prompt generates a polished Japanese editorial-style magazine page about Elephant Day, ideal for seasonal feature graphics, lifestyle spreads, or educational zoo-themed art."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

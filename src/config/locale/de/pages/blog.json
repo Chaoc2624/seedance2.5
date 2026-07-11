@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "title": "Blog",
+    "description": "Lesen Sie die neuesten Produktfunktionen, Loesungen und Updates."
+  },
+  "page": {
+    "title": "Seedance 2.5 Blog",
+    "sections": {
+      "blog": {
+        "id": "blog",
+        "title": "Blog",
+        "description": "Lesen Sie die neuesten Produktfunktionen, Loesungen und Updates."
+      }
+    }
+  },
+  "messages": {
+    "all": "Alle",
+    "no_content": "Kein Inhalt",
+    "crumb": "Blog",
+    "toc": "Inhaltsverzeichnis"
+  }
+}

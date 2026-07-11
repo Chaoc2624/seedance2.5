@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Generator muzyki AI",
+    "description": "Twórz niesamowitą muzykę dzięki sztucznej inteligencji"
+  },
+  "page": {
+    "title": "Generator muzyki AI",
+    "description": "Twórz niesamowitą muzykę dzięki sztucznej inteligencji"
+  },
+  "generator": {
+    "title": "Generator muzyki",
+    "prompt": "Podpowiedź",
+    "prompt_placeholder": "Historia miłosna Romea i Julii",
+    "generate": "Generuj muzykę",
+    "loading": "Załadunek...",
+    "generating": "Generowanie...",
+    "sign_in_to_generate": "Zaloguj się, aby generować muzykę",
+    "credits_cost": "{credits} koszt kredytów",
+    "credits_remaining": "Pozostało {credits} kredytów",
+    "buy_credits": "Kup Kredyty",
+    "generation_progress": "Postęp pokoleń",
+    "time_cost": "Może to zająć do 2-3 minut...",
+    "generated_song": "Wygenerowany utwór",
+    "ready_to_play": "Gotowy do gry",
+    "audio_generating": "Generowanie dźwięku...",
+    "generating_song": "Generowanie utworu...",
+    "waiting_generation": "Poczekaj, aż stworzymy Twoje arcydzieło",
+    "no_song_generated": "Nie wygenerowano żadnego utworu",
+    "downloading": "Ściąganie...",
+    "download_success": "Pobieranie zakończone pomyślnie",
+    "download_failed": "Nie udało się pobrać dźwięku",
+    "form": {
+      "custom_mode": "Tryb niestandardowy",
+      "title": "Tytuł",
+      "title_placeholder": "Dźwięk Ciszy",
+      "style": "Styl muzyki",
+      "style_placeholder": "indie, elektronika, syntezatory, 120 bpm, przesterowane",
+      "instrumental": "Instrumentalny",
+      "prompt": "Podpowiedź",
+      "prompt_placeholder": "Ludowa piosenka country o miłości",
+      "model": "Model",
+      "lyrics": "Teksty",
+      "lyrics_placeholder": "Napisz własny tekst, dwa wersety (8 linijek), aby uzyskać najlepszy efekt"
+    }
+  }
+}

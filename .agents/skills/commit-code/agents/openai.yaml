@@ -1,0 +1,4 @@
+interface:
+  display_name: 'Commit Code'
+  short_description: 'Inspect changes, validate, and create detailed Chinese commits'
+  default_prompt: 'Use $commit-code to inspect repository changes, validate them, and create a detailed Chinese commit.'

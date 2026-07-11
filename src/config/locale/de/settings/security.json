@@ -1,0 +1,32 @@
+{
+  "fields": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "new_password": "Neues Passwort",
+    "confirm_password": "Passwort bestaetigen"
+  },
+  "reset_password": {
+    "title": "Passwort zuruecksetzen",
+    "description": "Ihr Passwort zuruecksetzen",
+    "tip": "Wir senden Ihnen eine E-Mail zum Zuruecksetzen Ihres Passworts.",
+    "crumbs": {
+      "settings": "Einstellungen",
+      "security": "Sicherheit"
+    },
+    "buttons": {
+      "submit": "Speichern"
+    }
+  },
+  "delete_account": {
+    "title": "Konto loeschen",
+    "description": "Ihr Konto loeschen",
+    "tip": "Sind Sie sicher, dass Sie Ihr Konto loeschen moechten? Diese Aktion kann nicht rueckgaengig gemacht werden.",
+    "crumbs": {
+      "settings": "Einstellungen",
+      "security": "Sicherheit"
+    },
+    "buttons": {
+      "submit": "Loeschen"
+    }
+  }
+}

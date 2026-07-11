@@ -1,0 +1,164 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Caracteristicas",
+          "url": "/#features",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "Precios",
+          "url": "/pricing",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "IA",
+          "icon": "RiRobot2Line",
+          "children": [
+            {
+              "title": "Generador de videos IA",
+              "description": "Usa IA para generar videos",
+              "url": "/video-generator",
+              "icon": "RiVideoLine"
+            }
+          ]
+        },
+        {
+          "title": "Contenido",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "Blog",
+              "description": "Leer publicaciones del blog",
+              "url": "/blog",
+              "icon": "Newspaper"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "Facturacion",
+          "url": "/settings/billing",
+          "icon": "CreditCard"
+        },
+        {
+          "title": "Actividad",
+          "url": "/activity",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true,
+    "topbanner": {
+      "text": ""
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Seedance 2.5",
+      "description": "Seedance 2.5 es un espacio creativo de IA para generar videos, crear imagenes, comparar modelos y trabajar con flujos guiados por prompts.",
+      "logo": {
+        "src": "/seedance-lockup.svg",
+        "alt": "Seedance 2.5",
+        "width": 224,
+        "height": 48,
+        "className": "h-9 w-auto max-w-40 object-contain"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "Crear",
+          "children": [
+            {
+              "title": "Generar video",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "Precios",
+              "url": "/pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Explorar",
+          "children": [
+            {
+              "title": "Seedance 2.5",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "Blog",
+              "url": "/blog",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "Empresa",
+          "children": [
+            {
+              "title": "Sobre nosotros",
+              "url": "/about-us",
+              "target": "_self"
+            },
+            {
+              "title": "Privacidad",
+              "url": "/privacy-policy",
+              "target": "_self"
+            },
+            {
+              "title": "Terminos",
+              "url": "/terms-of-service",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": []
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "Privacidad",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "Terminos",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true,
+    "show_social": false
+  }
+}

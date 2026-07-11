@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Generator wideo AI",
+    "description": "Generuj filmy za pomocą modeli AI, obsługuj zamianę tekstu na wideo, obrazu na wideo i wideo na wideo."
+  },
+  "page": {
+    "title": "Generator wideo AI",
+    "description": "Generuj filmy za pomocą modeli AI, obsługuj zamianę tekstu na wideo, obrazu na wideo i wideo na wideo."
+  },
+  "generator": {
+    "title": "Generator wideo",
+    "description": "Generuj filmy za pomocą modeli AI, obsługuj zamianę tekstu na wideo, obrazu na wideo i wideo na wideo.",
+    "tabs": {
+      "text-to-video": "Tekst na wideo",
+      "image-to-video": "Obraz do wideo",
+      "video-to-video": "Wideo na wideo"
+    },
+    "form": {
+      "provider": "Dostawca",
+      "model": "Model",
+      "select_provider": "Wybierz dostawcę",
+      "select_model": "Wybierz Model",
+      "prompt": "Podpowiedź",
+      "prompt_placeholder": "Opisz treść wideo, taką jak scena, akcja, styl itp.",
+      "reference_image": "Obraz referencyjny",
+      "reference_image_placeholder": "Prześlij obraz referencyjny do generowania wideo",
+      "reference_video": "Adres URL filmu referencyjnego",
+      "reference_video_placeholder": "Wpisz adres URL filmu referencyjnego",
+      "some_images_failed_to_upload": "Nie udało się przesłać obrazu. Usuń go i prześlij ponownie",
+      "prompt_too_long": "Monit jest za długi. Usuń część treści"
+    },
+    "generate": "Wygeneruj wideo",
+    "checking_account": "Rachunek bieżący...",
+    "loading": "Załadunek...",
+    "generating": "Generowanie...",
+    "sign_in_to_generate": "Zaloguj się, aby wygenerować wideo",
+    "credits_cost": "Koszt {credits} kredytów",
+    "credits_remaining": "Pozostałe {credits} kredytów",
+    "buy_credits": "Kup Kredyty",
+    "progress": "Postęp",
+    "generated_videos": "Podgląd wideo",
+    "ready_to_generate": "Gotowy do wygenerowania",
+    "ready_for_generating": "Gotowy do generowania",
+    "no_videos_generated": "Nie wygenerowano żadnych filmów"
+  }
+}

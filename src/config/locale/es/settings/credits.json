@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "N.o de transaccion",
+    "description": "Descripcion",
+    "type": "Tipo",
+    "scene": "Escena",
+    "credits": "Creditos",
+    "expires_at": "Expira el",
+    "created_at": "Creado el",
+    "action": "Accion"
+  },
+  "list": {
+    "title": "Registros de creditos",
+    "tabs": {
+      "all": "Todos",
+      "grant": "Otorgados",
+      "consume": "Consumidos"
+    }
+  },
+  "view": {
+    "title": "Saldo de creditos",
+    "description": "Los creditos se usan para generacion de IA y otras acciones de pago.",
+    "never_expires": "Nunca expira",
+    "soonest_expiring": "Proximo vencimiento: <credits>{credits}</credits> creditos el <date>{date}</date>",
+    "no_expiring_credits": "No hay creditos por vencer",
+    "buttons": {
+      "purchase": "Comprar creditos"
+    }
+  },
+  "types": {
+    "grant": "Otorgados",
+    "consume": "Consumidos"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "取引番号",
+    "description": "説明",
+    "type": "種別",
+    "scene": "シーン",
+    "credits": "クレジット",
+    "expires_at": "有効期限",
+    "created_at": "作成日時",
+    "action": "アクション"
+  },
+  "list": {
+    "title": "クレジット履歴",
+    "tabs": {
+      "all": "すべて",
+      "grant": "付与",
+      "consume": "消費"
+    }
+  },
+  "view": {
+    "title": "クレジット残高",
+    "description": "クレジットはAI生成やその他の有料操作に使用されます。",
+    "never_expires": "期限なし",
+    "soonest_expiring": "最短の有効期限: <date>{date}</date> に <credits>{credits}</credits> クレジット",
+    "no_expiring_credits": "期限切れ予定のクレジットはありません",
+    "buttons": {
+      "purchase": "クレジットを購入"
+    }
+  },
+  "types": {
+    "grant": "付与",
+    "consume": "消費"
+  }
+}

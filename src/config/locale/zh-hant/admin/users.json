@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "姓名",
+    "avatar": "頭像",
+    "email": "電子郵件",
+    "email_verified": "電子郵件已驗證",
+    "remaining_credits": "剩餘點數",
+    "created_at": "建立時間",
+    "actions": "操作",
+    "roles": "角色",
+    "ip": "IP",
+    "locale": "語言",
+    "utm_source": "UTM 來源"
+  },
+  "list": {
+    "title": "使用者",
+    "crumbs": {
+      "admin": "管理",
+      "users": "使用者"
+    },
+    "buttons": {
+      "add": "新增使用者",
+      "edit": "編輯使用者",
+      "view": "查看使用者",
+      "delete": "刪除使用者",
+      "edit_roles": "編輯角色",
+      "grant_credits": "發放點數"
+    },
+    "search": {
+      "email": {
+        "title": "電子郵件",
+        "placeholder": "電子郵件"
+      }
+    }
+  },
+  "edit": {
+    "title": "編輯使用者",
+    "crumbs": {
+      "admin": "管理",
+      "users": "使用者",
+      "edit": "編輯"
+    },
+    "buttons": {
+      "submit": "更新"
+    }
+  },
+  "edit_roles": {
+    "title": "編輯角色",
+    "crumbs": {
+      "admin": "管理",
+      "users": "使用者",
+      "edit_roles": "編輯角色"
+    },
+    "buttons": {
+      "submit": "更新"
+    }
+  },
+  "grant_credits": {
+    "title": "發放點數",
+    "crumbs": {
+      "admin": "管理",
+      "users": "使用者",
+      "grant_credits": "發放點數"
+    },
+    "buttons": {
+      "submit": "發放"
+    },
+    "fields": {
+      "credits": "點數數量",
+      "valid_days": "點數有效天數",
+      "valid_days_tip": "0 表示永不過期",
+      "description": "點數發放說明",
+      "description_placeholder": "管理員發放點數"
+    }
+  }
+}

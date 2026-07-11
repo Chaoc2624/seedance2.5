@@ -1,0 +1,61 @@
+---
+title: Payments
+---
+
+## Overview
+
+YourAppName integrates with Stripe for payment processing, supporting both one-time purchases and recurring subscriptions.
+
+## Setting Up Stripe
+
+1. Create a Stripe account at [stripe.com](https://stripe.com)
+2. Get your API keys from the Stripe Dashboard
+3. Set the environment variables:
+
+```env
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=pk_test_...
+```
+
+## Pricing Plans
+
+Configure your pricing plans in `src/config/pricing.ts`:
+
+```typescript
+export const plans = [
+  {
+    name: 'Free',
+    price: 0,
+    features: ['5 AI tasks per day', 'Basic support'],
+  },
+  {
+    name: 'Pro',
+    price: 19,
+    interval: 'month',
+    features: ['Unlimited AI tasks', 'Priority support', 'Custom branding'],
+  },
+  {
+    name: 'Enterprise',
+    price: 99,
+    interval: 'month',
+    features: ['Everything in Pro', 'Dedicated support', 'SLA guarantee', 'Custom integrations'],
+  },
+];
+```
+
+## Webhook Handling
+
+Stripe webhooks are handled automatically via the `/api/payment/callback` endpoint. Supported events include:
+
+- `checkout.session.completed` — Subscription created
+- `invoice.payment_succeeded` — Recurring payment processed
+- `customer.subscription.deleted` — Subscription cancelled
+
+## Testing Payments
+
+Use Stripe test cards for development:
+
+- **Success**: `4242 4242 4242 4242`
+- **Decline**: `4000 0000 0000 0002`
+- **3D Secure**: `4000 0025 0000 3155`

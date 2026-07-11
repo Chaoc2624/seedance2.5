@@ -1,0 +1,53 @@
+{
+  "fields": {
+    "order_no": "Ordine n",
+    "user": "Utente",
+    "amount": "Quantità",
+    "product": "Prodotto",
+    "description": "Descrizione",
+    "type": "Tipa",
+    "provider": "Fornitrice",
+    "created_at": "Creato a",
+    "status": "Stato",
+    "action": "Azione"
+  },
+  "list": {
+    "title": "Pagamenti",
+    "crumbs": {
+      "admin": "Ammin",
+      "payments": "Pagamenti"
+    },
+    "tabs": {
+      "all": "Tutto",
+      "subscription": "Sottoscrizione",
+      "one-time": "Una volta"
+    },
+    "filters": {
+      "status": {
+        "title": "Stato",
+        "options": {
+          "all": "Tutto",
+          "paid": "Pagata",
+          "created": "Creata",
+          "failed": "Fallito"
+        }
+      },
+      "provider": {
+        "title": "Fornitrice",
+        "options": {
+          "all": "Tutto",
+          "stripe": "Banda",
+          "creem": "Credere",
+          "lemonsqueezy": "Spremuta di limone",
+          "paypal": "PayPal"
+        }
+      }
+    },
+    "search": {
+      "order_no": {
+        "title": "Ordine n",
+        "placeholder": "Ordine n"
+      }
+    }
+  }
+}

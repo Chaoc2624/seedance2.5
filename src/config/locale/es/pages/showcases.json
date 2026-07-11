@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Ejemplos",
+    "description": "Proyectos increibles construidos con Seedance 2.5"
+  },
+  "page": {
+    "title": "Ejemplos",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Startups de IA SaaS construidas con Seedance 2.5",
+        "description": "Facil de usar y rapido de lanzar.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "Showcase de prompts de GPT Image 2",
+      "description": "Explora ejemplos de prompts de GPT Image 2, resultados generados y estructuras reutilizables."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "Showcase de prompts de GPT Image 2",
+      "description": "Una biblioteca densa de prompts reutilizables junto a sus resultados. Abre cualquier tarjeta para enviar ese prompt al generador.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "Showcase GPT Image 2",
+        "preview": "Vista previa",
+        "preview_aria": "Vista previa de {title}",
+        "dialog_description": "Vista previa grande de la imagen generada.",
+        "prompt": "Prompt",
+        "use_prompt": "Usar este prompt",
+        "view_more": "Ver más showcases",
+        "all": "Todo"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "Póster de vista explotada de visor VR",
+          "description": "Genera un diagrama high-tech de vista explotada de un visor VR con llamadas de componentes detalladas y texto promocional."
+        },
+        "13983": {
+          "title": "Diapositiva explicativa de Momotaro en estilo híbrido",
+          "description": "Combina la estética simple y cálida de Irasutoya con la alta densidad informativa típica de las diapositivas gubernamentales japonesas."
+        },
+        "16624": {
+          "title": "Especial de revista japonesa sobre el Día del Elefante",
+          "description": "Genera una página editorial japonesa pulida sobre el Día del Elefante, ideal para gráficos de temporada, spreads lifestyle o arte educativo con temática de zoológico."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

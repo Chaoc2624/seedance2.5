@@ -1,0 +1,93 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "semi": true,
+  "singleQuote": true,
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "es5",
+  "printWidth": 80,
+  "arrowParens": "always",
+  "endOfLine": "lf",
+  "bracketSpacing": true,
+  "jsxSingleQuote": false,
+  "sortImports": {
+    "internalPattern": ["@/"],
+    "newlinesBetween": true,
+    "ignoreCase": true,
+    "customGroups": [
+      {
+        "groupName": "core",
+        "elementNamePattern": ["@/core/**"]
+      },
+      {
+        "groupName": "config",
+        "elementNamePattern": ["@/config/**"]
+      },
+      {
+        "groupName": "extensions",
+        "elementNamePattern": ["@/extensions/**"]
+      },
+      {
+        "groupName": "shared",
+        "elementNamePattern": ["@/shared/**"]
+      },
+      {
+        "groupName": "themes",
+        "elementNamePattern": ["@/themes/**"]
+      }
+    ],
+    "groups": [
+      "builtin",
+      "external",
+      {
+        "newlinesBetween": true
+      },
+      "core",
+      "config",
+      "extensions",
+      "shared",
+      "themes",
+      "internal",
+      {
+        "newlinesBetween": true
+      },
+      ["parent", "sibling", "index"],
+      "style",
+      "unknown"
+    ]
+  },
+  "sortTailwindcss": {
+    "stylesheet": "./src/config/style/global.css",
+    "functions": ["cn", "clsx", "cva"]
+  },
+  "sortPackageJson": false,
+  "ignorePatterns": [
+    "node_modules",
+    ".agents/skills/ui-ux-pro-max-skill",
+    ".agents/skills/ui-ux-pro-max-skill/**",
+    "pnpm-lock.yaml",
+    "package-lock.json",
+    "yarn.lock",
+    ".next",
+    "out",
+    "dist",
+    "build",
+    ".vercel",
+    ".turbo",
+    ".cache",
+    "*.log",
+    ".env",
+    ".env.*",
+    "!.env.example",
+    "*.db",
+    "*.sqlite",
+    "*.sqlite3",
+    "*.d.ts",
+    "!src/**/*.d.ts",
+    "public",
+    "coverage",
+    ".DS_Store",
+    "src/shared/components",
+    "src/routeTree.gen.ts"
+  ]
+}

@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "All",
+    "image": "Images",
+    "video": "Videos",
+    "audio": "Audio",
+    "favorites": "Favorites"
+  },
+  "status": {
+    "success": "Complete",
+    "failed": "Failed",
+    "partial_failed": "Partially complete",
+    "processing": "Generating",
+    "queued": "Queued"
+  },
+  "scene": {
+    "image_to_image": "Image to Image",
+    "text_to_image": "Text to Image",
+    "image_to_video": "Image to Video",
+    "video_to_video": "Video to Video",
+    "text_to_video": "Text to Video"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} is coming soon.",
+    "share_copied": "Share link copied.",
+    "copy_failed": "Couldn't copy. Please try again.",
+    "sign_in_required": "Sign in before generating.",
+    "model_unavailable": "This model is unavailable. Choose another model and try again.",
+    "all_failed": "Generation failed. Check the task card for details.",
+    "partial_submission_failed": "{count} outputs failed. The remaining tasks were submitted.",
+    "generation_failed": "Generation failed: {message}"
+  },
+  "timeline": {
+    "video": "Video",
+    "images": "Images {completed}/{total}",
+    "slot_failed": "Generation failed",
+    "queued_waiting": "Queued. Waiting to process.",
+    "generating": "Generating {completed}/{total}",
+    "retry_load": "Couldn't load history. Retry",
+    "edit_prompt": "Edit prompt",
+    "regenerate": "Recreate"
+  },
+  "actions": {
+    "fullscreen": "Open preview",
+    "download": "Download",
+    "share": "Share",
+    "favorite": "Favorite",
+    "unfavorite": "Remove from favorites",
+    "image_to_video": "Image to Video",
+    "image_to_image": "Image to Image",
+    "ai_restore": "AI Restore",
+    "enhance": "Enhance",
+    "more": "More",
+    "remove_background": "Remove background",
+    "erase_object": "Erase object",
+    "outpaint": "Outpaint",
+    "ai_background": "AI Background"
+  },
+  "preview": {
+    "title": "Generated result preview",
+    "description": "View the generated result and continue with download, sharing, favorites, or editing.",
+    "close": "Close preview",
+    "prompt": "PROMPT",
+    "copy": "Copy",
+    "copied": "Copied",
+    "information": "INFORMATION",
+    "type": "Type",
+    "status": "Status",
+    "image": "Image",
+    "video": "Video",
+    "recreate": "Recreate",
+    "edit": "Edit"
+  },
+  "empty": {
+    "favorites_title": "No favorites yet",
+    "favorites_description": "Hover a result and select the heart to add it here.",
+    "default_title": "Start a new generation",
+    "default_description": "Your generation will appear in this timeline and display here when it is ready."
+  },
+  "skeleton": {
+    "history_loading": "Loading generation history",
+    "history_loading_more": "Loading more generation history",
+    "processing": "The model is processing your request.",
+    "progress": "Generation progress {progress}%"
+  },
+  "prompt": {
+    "fallback": "Untitled generation",
+    "copy": "Copy",
+    "copied": "Prompt copied.",
+    "collapse": "Collapse",
+    "expand": "Expand"
+  }
+}

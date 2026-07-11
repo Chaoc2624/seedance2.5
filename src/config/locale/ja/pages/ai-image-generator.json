@@ -1,0 +1,334 @@
+{
+  "page": {
+    "show_sections": ["hero", "showcase", "faq", "cta"],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "GPT Image 2 と GPT Image 1.5 の画像生成",
+        "description": "GPT Image 2 と GPT Image 1.5 を使って、テキストから生成したり、アップロードした参照画像を編集したりできます。すべて同じランディングワークフロー内で完結します。",
+        "highlight_text": "GPT Image",
+        "announcement": {
+          "badge": "GPT Image",
+          "title": "1 つのワークスペースで GPT Image 2 と GPT Image 1.5 を比較",
+          "url": "/#showcase"
+        }
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "GPT Image 2 – 2026 年 4 月リリース、OpenAI のフラッグシップ画像モデル",
+        "description": "GPT Image 2 はネイティブ 4K、99% のタイポグラフィ精度、内蔵推論で Image Arena リーダーボードを首位に。1 本のプロンプトでアイデアから本番品質のビジュアルまで、すべてを揃えます。",
+        "items": [
+          {
+            "title": "標準でフォトリアル",
+            "description": "スタジオ品質のライティング・スキン・テクスチャをそのまま出力。スタイル指示は不要。",
+            "icon": "Sparkles",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "標準でフォトリアル"
+            }
+          },
+          {
+            "title": "リファレンス連携の編集",
+            "description": "画像をアップロードして変更点を伝えるだけ。GPT Image 2 はキャラクター、ブランド、タイポグラフィを反復のたびに保ちます。",
+            "icon": "ImageUp",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "リファレンス連携の編集"
+            }
+          },
+          {
+            "title": "ネイティブ 4K 出力",
+            "description": "あらゆるアスペクト比で最大 4K レンダリング。キャンペーン品質、印刷対応、ヒーロービジュアルにも十分なディテール。",
+            "icon": "Maximize",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "ネイティブ 4K 出力"
+            }
+          },
+          {
+            "title": "描く前に考える",
+            "description": "GPT Image 2 は構図を計画し、タイポグラフィを確認し、生成中に Web を検索することもできます。ネイティブ推論を備えた最初の画像モデル。",
+            "icon": "Brain",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "描く前に考える"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/gpt-image-2-overview.png",
+          "alt": "GPT Image 2 overview infographic"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "クリエイターが GPT Image 2 を選ぶ理由",
+        "description": "GPT Image 2 が画像スタック全体を置き換えると得られるもの。",
+        "items": [
+          {
+            "title": "本番ドラフトのためのよりシャープなタイポグラフィ",
+            "description": "GPT Image 2 はポスター、UI モックアップ、インフォグラフィック、多言語レイアウト（日本語・韓国語・中国語・ヒンディー語・ベンガル語を含む）でテキストレンダリングを底上げし、初回生成からほとんどのコピーがクリーンに収まります。",
+            "icon": "CaseSensitive",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-1.png",
+              "alt": "GPT Image 2 のタイポグラフィ・レンダリング"
+            }
+          },
+          {
+            "title": "パネル間で一貫したキャラクターの方向性",
+            "description": "1 本の GPT Image 2 プロンプトから関連する最大 8 フレームを生成。アイデンティティ、ブランドカラー、構図はパネル間で近い状態を保ち、ストーリーボードやキャンペーンセット、リファレンス起点の反復に向きます。",
+            "icon": "Users",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-2.png",
+              "alt": "GPT Image 2 のマルチパネル一貫性"
+            }
+          },
+          {
+            "title": "トークン課金で素早いドラフト",
+            "description": "低品質ドラフトで素早く反復し、確度が出てから中・高品質のレンダーにコミット。GPT Image 2 はレンダーごとのトークンベース課金で、ユーザー単位の月額は不要。",
+            "icon": "Zap",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-3.png",
+              "alt": "GPT Image 2 のトークンベース課金"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "アイデアから画像へ、4 つのステップ",
+        "description": "GPT Image 2 は素早いアイデア出しから最終納品まで、あらゆる制作プロセスにフィットします。",
+        "items": [
+          {
+            "title": "記述する",
+            "description": "欲しいものを書く。リファレンスを足し、比率を決め、PNG か JPG を選ぶ。",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "記述する"
+            }
+          },
+          {
+            "title": "生成する",
+            "description": "GPT Image 2 は描く前に考えます。構図を計画し、テキストを確認し、1 分以内に完成画像を返します。",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "生成する"
+            }
+          },
+          {
+            "title": "仕上げる",
+            "description": "自然言語の指示で反復編集。背景の差し替え、テキスト追加、ディテールの調整も自在。",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "仕上げる"
+            }
+          },
+          {
+            "title": "書き出す",
+            "description": "1K / 2K / 4K でダウンロード。キャンペーン、プロダクト、デック、ソーシャル、どこにでも。",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "書き出す"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "GPT Image 2 にできること",
+        "description": "1 つのプロンプトボックスから使える、生成と編集のツールセットがどんどん拡張中。",
+        "items": [
+          {
+            "title": "テキストから画像",
+            "description": "プロンプトからオリジナルを生成 – ポスター、プロダクト、ポートレート、イラストまで、標準でフォトリアルなディテール。",
+            "icon": "Type"
+          },
+          {
+            "title": "画像から画像",
+            "description": "リファレンスをアップロードし、編集内容を伝えるだけ。キャラクター、ブランド、構図は反復のたびに整合。",
+            "icon": "ImageUp"
+          },
+          {
+            "title": "比率と解像度",
+            "description": "1:1、16:9、9:16、4:3、3:4 ほか、最大 4K まで原寸出力。印刷・キャンペーン品質に対応。",
+            "icon": "Ratio"
+          },
+          {
+            "title": "画像内テキスト",
+            "description": "生成画像内のタイポグラフィ精度 99%。メニュー、ポスター、インフォグラフィック、UI 画面が 1 回目から正しく読めます。",
+            "icon": "CaseSensitive"
+          },
+          {
+            "title": "マルチパネル生成",
+            "description": "1 本のプロンプトから最大 8 枚の整合パネル。ストーリーボード、キャンペーンセット、漫画ページもキャラクターと色を統一。",
+            "icon": "Layers"
+          },
+          {
+            "title": "PNG / JPG エクスポート",
+            "description": "Web、印刷、ソーシャル向けに、ロスレス PNG または軽量 JPG で納品。",
+            "icon": "Download"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "GPT Image 2 を一目で",
+        "description": "OpenAI のトップランク画像モデルを支える数字。",
+        "items": [
+          {
+            "title": "99%",
+            "description": "標準ベンチマークでのタイポグラフィ精度。メニュー、インフォグラフィック、ポスターは 1 回目から正しく読めます。"
+          },
+          {
+            "title": "4K",
+            "description": "あらゆるアスペクト比でネイティブ解像度。標準で印刷・キャンペーン品質。"
+          },
+          {
+            "title": "< 60s",
+            "description": "プロンプトから完成画像までの典型的な生成時間。前世代のおよそ 2 倍速。"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "クリエイターが語る GPT Image 2",
+        "description": "GPT Image 2 でデザイナー、マーケター、インディー創業者がより速く出荷しています。",
+        "items": [
+          {
+            "name": "John Doe",
+            "role": "プロダクトデザイナー",
+            "quote": "GPT Image 2 でキャンペーン納期が半分に。プロンプト 1 本、モデル 1 つ – 完成アセットが数分で揃い、テキストもちゃんとしています。",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "John Doe"
+            }
+          },
+          {
+            "name": "Jane Smith",
+            "role": "クリエイティブディレクター",
+            "quote": "1 本のプロンプトで 8 枚の整合パネル？驚きです。GPT Image 2 はアイデンティティ、ライティング、ブランドカラーをフレーム間でしっかり保ちました。",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "Jane Smith"
+            }
+          },
+          {
+            "name": "Emily Johnson",
+            "role": "エージェンシー代表",
+            "quote": "3 つの画像ツールのサブスクを GPT Image 2 1 本に統合しても、不足は感じません。4K 出力は本当にキャンペーンに使えます。",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "Emily Johnson"
+            }
+          },
+          {
+            "name": "Michael Brown",
+            "role": "インディー創業者",
+            "quote": "ここでは画像内のテキスト描画が本当に動きます。ランディングのヒーローは午後ひとつで仕上がりました。",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "Michael Brown"
+            }
+          },
+          {
+            "name": "Sophia Lee",
+            "role": "ブランドデザイナー",
+            "quote": "リファレンス画像のアップロードを毎日使っています。編集を伝え、きれいなバリエーションを得て、次へ進む。",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "Sophia Lee"
+            }
+          },
+          {
+            "name": "David Wilson",
+            "role": "マーケティングリード",
+            "quote": "GPT Image 2 Pro の 4K 出力はキャンペーン即用。ヒーロービジュアルの外注をやめました。",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "David Wilson"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "GPT Image FAQ",
+        "description": "このランディングページで GPT Image 2 と GPT Image 1.5 がどう違うのかをすばやく確認できるガイドです。",
+        "items": [
+          {
+            "question": "ここで利用できる GPT Image モデルは？",
+            "answer": "このランディングページでは、GPT Image 2 の text-to-image、GPT Image 2 の image-to-image、GPT Image 1.5 の text-to-image、GPT Image 1.5 の image-to-image を利用できます。"
+          },
+          {
+            "question": "GPT Image 2 の違いは？",
+            "answer": "GPT Image 2 ではこのランディングページ上で解像度を選べるため、ワークフローに応じて 1K、2K、4K を切り替えられます。"
+          },
+          {
+            "question": "GPT Image 1.5 の違いは？",
+            "answer": "GPT Image 1.5 では解像度ではなく品質設定を使い、medium はバランス重視、high はより時間をかけて高精細に出力します。"
+          },
+          {
+            "question": "どちらのモデルも text-to-image と image-to-image に対応していますか？",
+            "answer": "はい。GPT Image 2 と GPT Image 1.5 はどちらも、プロンプトだけの生成と参照画像ベースの編集に対応しています。"
+          },
+          {
+            "question": "ここでの参照画像はどう使いますか？",
+            "answer": "image-to-image モードでは、まず 1 枚以上の画像をアップロードし、その後プロンプトとアスペクト比の設定で編集内容を指定します。"
+          },
+          {
+            "question": "どちらを選べばよいですか？",
+            "answer": "解像度を主にコントロールしたいなら GPT Image 2、medium と high のシンプルな品質切り替えを使いたいなら GPT Image 1.5 を選んでください。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "このランディングページで GPT Image 2 と GPT Image 1.5 を試す",
+        "description": "text-to-image と image-to-image を切り替え、解像度と品質の違いを比較しながら、ホームページから直接生成できます。",
+        "buttons": [
+          {
+            "url": "/#generator",
+            "target": "_self",
+            "icon": "Sparkles",
+            "title": "ジェネレーターを試す"
+          },
+          {
+            "url": "/#showcase",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Zap",
+            "title": "4 つの機能を見る"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "showcase": {
+        "id": "showcase",
+        "block": "prompt-showcase",
+        "title": "GPT Image 2 の 4 つの中核機能",
+        "description": "この 4 つの例は、GPT Image 2 が特に得意とする領域を示しています。高品質な商品広告、構造化されたビジュアル解説、一貫性のあるキャラクターシート、そしてスタイル豊かなアートディレクションです。",
+        "show_view_more": false,
+        "show_filters": false,
+        "labels": {
+          "all": "すべて",
+          "prompt": "プロンプト",
+          "use_prompt": "このプロンプトを使う"
+        }
+      },
+      "creatorFeedback": {
+        "id": "creator-feedback",
+        "block": "creator-feedback-wall",
+        "title": "クリエイターに支持されています",
+        "description": "アートディレクター、マーケター、創業者、コンテンツチームが GPT Image 2 を使って、コンセプトからキャンペーンまでの流れをより速く進めています。"
+      }
+    }
+  }
+}

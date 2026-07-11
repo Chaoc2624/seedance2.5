@@ -1,0 +1,66 @@
+{
+  "fields": {
+    "task_id": "任務 ID",
+    "media_type": "媒體類型",
+    "provider": "供應商",
+    "model": "模型",
+    "prompt": "提示詞",
+    "options": "選項",
+    "user": "使用者",
+    "status": "狀態",
+    "cost_credits": "消耗點數",
+    "result": "結果",
+    "created_at": "建立時間",
+    "action": "操作",
+    "scene": "場景"
+  },
+  "list": {
+    "title": "AI 任務",
+    "crumbs": {
+      "admin": "管理",
+      "ai-tasks": "AI 任務"
+    },
+    "tabs": {
+      "all": "全部",
+      "music": "音樂",
+      "image": "圖片",
+      "video": "影片",
+      "audio": "音訊",
+      "text": "文字"
+    },
+    "buttons": {
+      "view": "查看任務",
+      "refresh": "重新整理任務"
+    },
+    "filters": {
+      "all": "全部",
+      "status": "狀態",
+      "user": "使用者",
+      "user_placeholder": "信箱、姓名或使用者 ID",
+      "created_range": "建立時間",
+      "created_from": "開始時間",
+      "created_to": "結束時間",
+      "any_time": "不限時間",
+      "last_24_hours": "24 小時內",
+      "last_3_days": "3 天內",
+      "last_7_days": "7 天內",
+      "last_30_days": "30 天內",
+      "apply_time": "套用時間",
+      "clear_time": "清除時間",
+      "click_start_date": "點擊日曆選擇開始",
+      "click_end_date": "再次點擊選擇結束",
+      "weekdays": "日,一,二,三,四,五,六",
+      "apply": "套用篩選",
+      "reset": "重置"
+    },
+    "empty_message": "未找到任務"
+  },
+  "details": {
+    "title": "生成結果",
+    "view_results": "查看結果",
+    "provider_requests": "供應商請求",
+    "request": "請求",
+    "request_logs": "請求日誌",
+    "open_full_size": "開啟原圖"
+  }
+}

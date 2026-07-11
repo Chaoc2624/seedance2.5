@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "GPT Image 2 － AI 圖片產生器",
+    "description": "使用 GPT Image 2 生成與編輯圖片：Nano Banana Pro、Seedream、Flux、Gemini 3 Pro 整合在同一個提示框，支援文字轉圖片與圖片轉圖片。"
+  },
+  "page": {
+    "title": "GPT Image 2 － AI 圖片產生器",
+    "description": "一個提示框，所有頂級 AI 圖片模型。支援文字轉圖片、參考圖編輯，並可設定解析度、格式與比例。"
+  },
+  "generator": {
+    "title": "圖片產生器",
+    "description": "使用 AI 模型產生圖片，支援文字轉圖片和圖片轉圖片。",
+    "tabs": {
+      "text-to-image": "文字轉圖片",
+      "image-to-image": "圖片轉圖片"
+    },
+    "form": {
+      "provider": "供應商",
+      "model": "AI 模型",
+      "select_provider": "選擇供應商",
+      "select_model": "選擇模型",
+      "required_badge": "必填",
+      "prompt": "提示詞",
+      "prompt_placeholder": "描述圖片的細節，例如顏色、形狀、紋理等。",
+      "prompt_required_hint": "請先補上提示詞再開始產生。",
+      "reference_image": "參考圖片",
+      "reference_image_placeholder": "上傳參考圖片，支援多張圖片",
+      "reference_image_required_hint": "請至少上傳一張參考圖片後再繼續。",
+      "some_images_failed_to_upload": "部分圖片上傳失敗，請刪除後重新上傳",
+      "prompt_too_long": "提示詞過長，請刪除部分內容",
+      "resolution": "解析度",
+      "quality": "品質",
+      "output_format": "輸出格式",
+      "aspect_ratio": "圖片比例",
+      "credits_suffix": "點數"
+    },
+    "preview": {
+      "ready_title": "準備開始創作",
+      "ready_description_image": "上傳圖片並描述你想要的編輯效果",
+      "ready_description_text": "描述你想要產生的圖片",
+      "generating_title": "正在為你產生圖片..."
+    },
+    "generate": "產生圖片",
+    "checking_account": "正在檢查帳戶...",
+    "loading": "載入中...",
+    "generating": "產生中...",
+    "sign_in_to_generate": "登入以產生圖片",
+    "credits_cost": "消耗 {credits} 點數",
+    "credits_remaining": "剩餘 {credits} 點數",
+    "buy_credits": "購買點數",
+    "progress": "進度",
+    "generated_images": "圖片預覽",
+    "ready_to_generate": "準備產生",
+    "ready_for_generating": "準備產生中",
+    "no_images_generated": "尚未產生圖片"
+  }
+}

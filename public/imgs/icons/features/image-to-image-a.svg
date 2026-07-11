@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-label="Image to Image">
+  <title>Image to Image</title>
+  <rect x="2.5" y="5" width="8" height="8" rx="1.2"/>
+  <path d="M2.5 11l2-1.8a1 1 0 0 1 1.4 0l4.6 4.3"/>
+  <circle cx="8" cy="8" r="0.8" fill="currentColor" stroke="none"/>
+  <rect x="13.5" y="11" width="8" height="8" rx="1.2"/>
+  <path d="M13.5 17l2-1.8a1 1 0 0 1 1.4 0l4.6 4.3"/>
+  <circle cx="19" cy="14" r="0.8" fill="currentColor" stroke="none"/>
+  <path d="M11 10.5l2 1.5"/>
+</svg>

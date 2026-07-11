@@ -1,0 +1,1 @@
+/Users/hal0/Desktop/my_project/template/shiponce/.agents/skills/shiponce/SKILL.md

@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Seedance 2.5",
+    "description": "Seedance 2.5 es un espacio creativo de IA para generar videos, crear imagenes, comparar modelos y trabajar con flujos guiados por prompts."
+  },
+  "sign": {
+    "sign_in_title": "Iniciar sesion",
+    "sign_in_description": "Inicia sesion en tu cuenta",
+    "sign_up_title": "Registrarse",
+    "sign_up_description": "Crear una cuenta",
+    "email_title": "Correo electronico",
+    "email_placeholder": "Ingresa tu correo electronico aqui",
+    "password_title": "Contrasena",
+    "password_placeholder": "Ingresa tu contrasena aqui",
+    "forgot_password": "Olvidaste tu contrasena?",
+    "or": "O",
+    "continue": "Continuar",
+    "no_account": "No tienes una cuenta?",
+    "already_have_account": "Ya tienes una cuenta?",
+    "email_sign_in": "Iniciar sesion con correo electronico",
+    "google_sign_in_title": "Iniciar sesion con Google",
+    "github_sign_in_title": "Iniciar sesion con GitHub",
+    "close_title": "Cerrar",
+    "cancel_title": "Cancelar",
+    "sign_out_title": "Cerrar sesion",
+    "billing_title": "Facturacion",
+    "name_title": "Nombre",
+    "name_placeholder": "Ingresa tu nombre aqui",
+    "email_verification_hint": "Usa una direccion de correo electronico a la que puedas acceder. Debes verificar tu correo despues de registrarte.",
+    "admin_title": "Sistema de administracion",
+    "credits_title": "Creditos: {credits}",
+    "verify_email_sent": "Correo de verificacion enviado. Por favor revisa tu bandeja de entrada.",
+    "verify_email_required": "Por favor verifica tu direccion de correo electronico antes de iniciar sesion.",
+    "resend_verification": "Reenviar correo de verificacion",
+    "resend_verification_sent": "Correo de verificacion reenviado. Por favor revisa tu bandeja de entrada.",
+    "verify_email_page_title": "Revisa tu correo electronico",
+    "verify_email_page_description": "Para continuar, haz clic en el enlace enviado a",
+    "verify_email_continue": "Continuar",
+    "verify_email_tip": "Despues de verificar, haz clic en \"Continuar\".",
+    "verify_email_not_verified_yet": "Aun no verificado. Por favor haz clic en el enlace de tu correo primero.",
+    "verify_email_account_mismatch": "Sesion iniciada como {current}. Esta pagina esta esperando a {expected}.",
+    "resend_verification_countdown": "Reenviar correo de verificacion ({seconds}s)",
+    "resend_verification_wait": "Por favor espera {seconds}s antes de reenviar.",
+    "back_to_sign_in": "Volver a iniciar sesion"
+  },
+  "payment": {
+    "choose_payment_method": "Elegir metodo de pago",
+    "choose_payment_method_description": "",
+    "cancel_title": "Cancelar"
+  },
+  "locale_detector": {
+    "title": "Detectamos que el idioma de tu navegador es {locale}. Cambiar a este idioma?",
+    "switch_to": "Cambiar a {locale}"
+  }
+}

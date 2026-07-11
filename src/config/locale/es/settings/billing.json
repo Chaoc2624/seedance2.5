@@ -1,0 +1,59 @@
+{
+  "fields": {
+    "subscription_no": "N.o de suscripcion",
+    "interval": "Intervalo",
+    "provider": "Proveedor",
+    "current_period": "Periodo actual",
+    "plan": "Plan",
+    "status": "Estado",
+    "amount": "Monto",
+    "created_at": "Creado el",
+    "end_time": "Fecha de fin",
+    "action": "Accion"
+  },
+  "view": {
+    "title": "Plan actual",
+    "tip": "Tu suscripcion se renovara automaticamente el {date}",
+    "end_tip": "Tu suscripcion se cancelara automaticamente el {date}",
+    "no_subscription": "Sin plan",
+    "buttons": {
+      "adjust": "Ajustar plan",
+      "subscribe": "Suscribirse",
+      "manage": "Gestionar suscripcion",
+      "cancel": "Cancelar suscripcion"
+    }
+  },
+  "list": {
+    "title": "Historial de suscripciones",
+    "tabs": {
+      "all": "Todas",
+      "active": "Activa",
+      "pending_cancel": "Cancelacion pendiente",
+      "canceled": "Cancelada",
+      "trialing": "Periodo de prueba",
+      "paused": "Pausada",
+      "expired": "Expirada"
+    }
+  },
+  "cancel": {
+    "title": "Cancelar suscripcion",
+    "description": "Estas seguro de que deseas cancelar tu suscripcion?",
+    "fields": {
+      "subscription_no": "N.o de suscripcion",
+      "subscription_amount": "Monto de suscripcion",
+      "interval_cycle": "Ciclo de intervalo",
+      "subscription_created_at": "Suscripcion creada el",
+      "current_period": "Periodo actual",
+      "start_at": "Inicia el",
+      "end_at": "Finaliza el"
+    },
+    "crumbs": {
+      "settings": "Configuracion",
+      "billing": "Facturacion",
+      "cancel": "Cancelar suscripcion"
+    },
+    "buttons": {
+      "confirm_cancel": "Confirmar cancelacion"
+    }
+  }
+}

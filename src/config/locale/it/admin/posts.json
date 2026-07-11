@@ -1,0 +1,60 @@
+{
+  "fields": {
+    "slug": "Lumaca",
+    "title": "Titolo",
+    "description": "Descrizione",
+    "image": "Immagine",
+    "content": "Contenuto",
+    "categories": "Categorie",
+    "tags": "Tag",
+    "author_name": "Nome dell'autore",
+    "author_role": "Ruolo dell'autore",
+    "author_image": "Immagine dell'autore",
+    "status": "Stato",
+    "created_at": "Creato a",
+    "updated_at": "Aggiornato a",
+    "deleted_at": "Eliminato a"
+  },
+  "list": {
+    "title": "Messaggi",
+    "crumbs": {
+      "admin": "Ammin",
+      "posts": "Messaggi"
+    },
+    "buttons": {
+      "add": "Aggiungi messaggio",
+      "edit": "Modifica messaggio",
+      "view": "Visualizza messaggio",
+      "delete": "Elimina messaggio"
+    },
+    "tabs": {
+      "all": "Tutto",
+      "published": "Pubblicata",
+      "pending": "In attesa di",
+      "draft": "Bozza",
+      "archived": "Archiviata"
+    }
+  },
+  "add": {
+    "title": "Aggiungi messaggio",
+    "crumbs": {
+      "admin": "Ammin",
+      "posts": "Messaggi",
+      "add": "Aggiungi messaggio"
+    },
+    "buttons": {
+      "submit": "Aggiungi messaggio"
+    }
+  },
+  "edit": {
+    "title": "Modifica messaggio",
+    "crumbs": {
+      "admin": "Ammin",
+      "posts": "Messaggi",
+      "edit": "Modifica messaggio"
+    },
+    "buttons": {
+      "submit": "Modifica messaggio"
+    }
+  }
+}

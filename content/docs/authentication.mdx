@@ -1,0 +1,58 @@
+---
+title: Authentication
+---
+
+## Overview
+
+YourAppName uses Better Auth for authentication, providing a secure and flexible auth system with support for multiple providers.
+
+## Supported Providers
+
+- **Email & Password** — Traditional email/password login with verification
+- **Google OAuth** — Sign in with Google accounts
+- **GitHub OAuth** — Sign in with GitHub accounts
+
+## Configuration
+
+Set up your auth providers in the environment variables:
+
+```env
+GOOGLE_CLIENT_ID=your-google-client-id
+GOOGLE_CLIENT_SECRET=your-google-client-secret
+GITHUB_CLIENT_ID=your-github-client-id
+GITHUB_CLIENT_SECRET=your-github-client-secret
+```
+
+## Session Management
+
+Sessions are automatically managed by Better Auth. Each session includes:
+
+- User ID and profile information
+- Session expiration timestamp
+- Refresh token for seamless re-authentication
+
+## Protecting Routes
+
+Use the `useSession` hook to protect routes that require authentication:
+
+```tsx
+import { useSession } from '@/hooks/use-session';
+
+function ProtectedPage() {
+  const { session, isLoading } = useSession();
+
+  if (isLoading) return <Loading />;
+  if (!session) return <Redirect to="/sign-in" />;
+
+  return <div>Welcome, {session.user.name}!</div>;
+}
+```
+
+## Role-Based Access Control
+
+YourAppName supports role-based access with two built-in roles:
+
+- **user** — Default role for all registered users
+- **admin** — Administrative access to the dashboard
+
+Admins can manage users, view analytics, and configure system settings through the admin panel.

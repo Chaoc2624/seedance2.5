@@ -1,0 +1,413 @@
+{
+  "metadata": {
+    "title": "定價方案",
+    "description": "一次付費，無限創作。"
+  },
+  "page": {
+    "title": "GPT Image 2 定價",
+    "sections": {
+      "pricing": {
+        "id": "pricing",
+        "title": "一次付費，無限創作。",
+        "description": "選擇點數、月付或年付，隨時可切換。",
+        "groups": [
+          {
+            "name": "one-time",
+            "title": "用多少付多少"
+          },
+          {
+            "name": "monthly",
+            "title": "月付",
+            "is_featured": true
+          },
+          {
+            "name": "yearly",
+            "title": "年付"
+          }
+        ],
+        "items": [
+          {
+            "title": "Starter",
+            "description": "適合想嘗試的個人創作者。",
+            "features_title": "包含項目",
+            "features": [
+              "200 次生成",
+              "最高 2K 解析度",
+              "PNG / JPG 匯出",
+              "標準佇列",
+              "點數永不過期"
+            ],
+            "interval": "one-time",
+            "amount": 1200,
+            "currency": "USD",
+            "price": "$12",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "一次付費。點數永不過期。",
+            "button": {
+              "title": "選擇 Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-credits",
+            "product_name": "GPT Image 2 Starter Credits",
+            "credits": 200,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Pro",
+            "description": "適合每週交付的專業創作者。",
+            "label": "熱門",
+            "features_title": "包含 Starter 全部，加上",
+            "features": [
+              "1,500 次生成",
+              "原生 4K 解析度",
+              "參考圖引導編輯",
+              "8 格圖像構圖",
+              "優先佇列"
+            ],
+            "interval": "one-time",
+            "amount": 3200,
+            "currency": "USD",
+            "price": "$32",
+            "original_price": "$38",
+            "unit": "",
+            "is_featured": true,
+            "tip": "一次付費。點數永不過期。",
+            "button": {
+              "title": "選擇 Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-credits",
+            "product_name": "GPT Image 2 Pro Credits",
+            "credits": 1500,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Ultra",
+            "description": "適合需保護品牌系統的團隊。",
+            "features_title": "包含 Pro 全部，加上",
+            "features": [
+              "6,000 次生成",
+              "共享品牌參考",
+              "團隊工作空間 + 角色",
+              "SSO + 稽核紀錄",
+              "專屬支援"
+            ],
+            "interval": "one-time",
+            "amount": 9600,
+            "currency": "USD",
+            "price": "$96",
+            "original_price": "",
+            "unit": "",
+            "is_featured": false,
+            "tip": "一次付費。點數永不過期。",
+            "button": {
+              "title": "選擇 Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-credits",
+            "product_name": "GPT Image 2 Ultra Credits",
+            "credits": 6000,
+            "valid_days": 36500,
+            "group": "one-time"
+          },
+          {
+            "title": "Starter",
+            "description": "適合想嘗試的個人創作者。",
+            "features_title": "包含項目",
+            "features": [
+              "每月 200 次生成",
+              "最高 2K 解析度",
+              "PNG / JPG 匯出",
+              "標準支援"
+            ],
+            "interval": "month",
+            "amount": 1500,
+            "currency": "USD",
+            "price": "$15",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "每月續訂，可隨時取消。",
+            "button": {
+              "title": "選擇 Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-monthly",
+            "product_name": "GPT Image 2 Starter Monthly",
+            "credits": 200,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "適合每週交付的專業創作者。",
+            "label": "熱門",
+            "features_title": "包含 Starter 全部，加上",
+            "features": [
+              "每月 1,500 次生成",
+              "原生 4K 解析度",
+              "參考圖引導編輯",
+              "8 格圖像構圖",
+              "優先佇列"
+            ],
+            "interval": "month",
+            "amount": 2900,
+            "currency": "USD",
+            "price": "$29",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": true,
+            "tip": "每月續訂，可隨時取消。",
+            "button": {
+              "title": "選擇 Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-monthly",
+            "product_name": "GPT Image 2 Pro Monthly",
+            "credits": 1500,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "適合需保護品牌系統的團隊。",
+            "features_title": "包含 Pro 全部，加上",
+            "features": [
+              "每月 6,000 次生成",
+              "共享品牌參考",
+              "團隊工作空間 + 角色",
+              "SSO + 稽核紀錄",
+              "專屬支援"
+            ],
+            "interval": "month",
+            "amount": 13900,
+            "currency": "USD",
+            "price": "$139",
+            "original_price": "",
+            "unit": "/ month",
+            "is_featured": false,
+            "tip": "每月續訂，可隨時取消。",
+            "button": {
+              "title": "選擇 Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-monthly",
+            "product_name": "GPT Image 2 Ultra Monthly",
+            "credits": 6000,
+            "valid_days": 30,
+            "group": "monthly",
+            "plan_name": "Ultra"
+          },
+          {
+            "title": "Starter",
+            "description": "適合想嘗試的個人創作者。",
+            "features_title": "包含項目",
+            "features": [
+              "每月 200 次生成",
+              "最高 2K 解析度",
+              "PNG / JPG 匯出",
+              "標準支援"
+            ],
+            "interval": "year",
+            "amount": 12000,
+            "currency": "USD",
+            "price": "$120",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "選擇 Starter",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "starter-yearly",
+            "product_name": "GPT Image 2 Starter Annually",
+            "credits": 2400,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Starter"
+          },
+          {
+            "title": "Pro",
+            "description": "適合每週交付的專業創作者。",
+            "label": "熱門",
+            "features_title": "包含 Starter 全部，加上",
+            "features": [
+              "每月 1,500 次生成",
+              "原生 4K 解析度",
+              "參考圖引導編輯",
+              "8 格圖像構圖",
+              "優先佇列"
+            ],
+            "interval": "year",
+            "amount": 17400,
+            "currency": "USD",
+            "price": "$174",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": true,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "選擇 Pro",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "pro-yearly",
+            "product_name": "GPT Image 2 Pro Annually",
+            "credits": 18000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Pro"
+          },
+          {
+            "title": "Ultra",
+            "description": "適合需保護品牌系統的團隊。",
+            "features_title": "包含 Pro 全部，加上",
+            "features": [
+              "每月 6,000 次生成",
+              "共享品牌參考",
+              "團隊工作空間 + 角色",
+              "SSO + 稽核紀錄",
+              "專屬支援"
+            ],
+            "interval": "year",
+            "amount": 129900,
+            "currency": "USD",
+            "price": "$1,299",
+            "original_price": "",
+            "unit": "/ year",
+            "is_featured": false,
+            "tip": "Billed annually.",
+            "button": {
+              "title": "選擇 Ultra",
+              "url": "/#pricing",
+              "icon": "Zap"
+            },
+            "product_id": "studio-yearly",
+            "product_name": "GPT Image 2 Ultra Annually",
+            "credits": 72000,
+            "valid_days": 365,
+            "group": "yearly",
+            "plan_name": "Ultra"
+          }
+        ]
+      }
+    }
+  },
+  "messages": {
+    "current_plan": "目前方案",
+    "processing": "正在前往結帳",
+    "checkout_failed": "無法開始結帳",
+    "value_label": "會員與點數",
+    "membership_title": "目前可用權益",
+    "credits_label": "可用點數",
+    "renews_label": "續訂日期",
+    "access_label": "目前權益",
+    "credits_access": "以點數使用圖片生成",
+    "manage_billing": "管理帳單",
+    "choose_plan": "選擇",
+    "buy_credits": "購買點數",
+    "credits_pack": "{credits} 點已加入帳戶餘額",
+    "credits_per_period": "每 {interval} {credits} 點",
+    "credits_never_expire": "點數永不過期",
+    "image_creation": "圖片生成與編修",
+    "image_two_k": "最高 2K 圖片輸出",
+    "four_k": "4K 圖片輸出",
+    "video_music": "影片與音樂生成",
+    "outputs_active": "每次最多 {outputs} 個輸出，同時 {active} 個生成任務",
+    "annual_save": "最高省 {percent}%",
+    "paywall": {
+      "title": "需要升級方案",
+      "close": "關閉升級方案",
+      "processing": "正在開啟結帳頁",
+      "checkout_failed": "無法啟動結帳",
+      "current_plan": "目前方案",
+      "choose_plan": "選擇",
+      "buy_credits": "購買點數",
+      "view_pricing": "查看完整定價",
+      "load_error": "無法載入方案。請前往完整定價頁繼續。",
+      "annual_save": "最高省 {percent}%",
+      "credits": "點數",
+      "credits_per_period": "點數 / 計費週期",
+      "credits_never_expire": "一次性點數永不過期",
+      "image_creation": "圖片創作與編輯",
+      "two_k": "最高 2K 圖片輸出",
+      "reference_editing": "參考圖片編輯",
+      "four_k": "4K 圖片輸出",
+      "video_music": "影片與音樂創作",
+      "video": "影片創作",
+      "music": "音樂創作",
+      "active_tasks": "最多同時 {count} 個生成任務",
+      "ultra_capacity": "每次最多四個輸出，並可同時執行四個任務",
+      "groups": {
+        "day": "日付",
+        "monthly": "月付",
+        "yearly": "年付",
+        "one-time": "點數包"
+      },
+      "reasons": {
+        "4k": "4K 圖片輸出需要 Pro 或 Ultra 會員。",
+        "video": "影片創作需要 Pro 或 Ultra 會員。",
+        "music": "音樂創作需要 Pro 或 Ultra 會員。",
+        "capacity": "已達同時生成上限。請選擇容量更高的方案，或等待任務完成。",
+        "credits": "現有點數不足以完成這次生成。可加購點數或選擇會員方案。"
+      }
+    },
+    "comparison": {
+      "title": "比較方案能力",
+      "description": "依照你的創作頻率與需要的媒體工作流程，選擇合適的方案。",
+      "show_more": "展開完整比較",
+      "show_less": "收起比較",
+      "credits": "包含點數",
+      "outputs": "每次請求輸出數",
+      "active_tasks": "同時生成任務",
+      "image_creation": "圖片工作流程",
+      "reference_editing": "參考圖編修",
+      "four_k": "4K 圖片輸出",
+      "video": "影片生成",
+      "music": "音樂生成",
+      "included": "已包含",
+      "unavailable": "未包含"
+    },
+    "faq": {
+      "id": "pricing-faq",
+      "title": "方案常見問題",
+      "description": "清楚說明額度、計費與權益，沒有隱藏的存取限制。",
+      "items": [
+        {
+          "question": "點數與會員方案有什麼不同？",
+          "answer": "點數用來支付每次生成。定期會員則提供比較表中列出的媒體類型、解析度、批次輸出與同時任務權益。"
+        },
+        {
+          "question": "各會員方案可以生成什麼？",
+          "answer": "Starter 可使用最高 2K 的圖片工作流程。Pro 與 Ultra 解鎖 4K 圖片、影片與音樂。Ultra 每次可輸出最多四個結果，並可同時執行四個任務。"
+        },
+        {
+          "question": "達到方案限制時會發生什麼？",
+          "answer": "既有作品仍會保留。你可以減少一次輸出的數量、等待目前任務完成，或選擇容量更高的方案。"
+        },
+        {
+          "question": "月付或年付會員可以取消嗎？",
+          "answer": "可以。你可以在帳單頁面管理或取消定期會員。目前計費週期結束前，原有權益仍會保留。"
+        },
+        {
+          "question": "未使用的點數會過期嗎？",
+          "answer": "一次購買的點數包不會過期。定期會員點數會依照帳戶顯示的有效計費週期計算。"
+        }
+      ]
+    }
+  }
+}

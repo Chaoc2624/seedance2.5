@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "Tout",
+    "image": "Images",
+    "video": "Videos",
+    "audio": "Audio",
+    "favorites": "Favoris"
+  },
+  "status": {
+    "success": "Termine",
+    "failed": "Echoue",
+    "partial_failed": "Partiellement termine",
+    "processing": "Generation",
+    "queued": "En attente"
+  },
+  "scene": {
+    "image_to_image": "Image vers image",
+    "text_to_image": "Texte vers image",
+    "image_to_video": "Image vers video",
+    "video_to_video": "Video vers video",
+    "text_to_video": "Texte vers video"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} sera bientot disponible.",
+    "share_copied": "Lien de partage copie.",
+    "copy_failed": "Copie impossible. Reessayez.",
+    "sign_in_required": "Connectez-vous avant de generer.",
+    "model_unavailable": "Ce modele n est pas disponible. Choisissez un autre modele et reessayez.",
+    "all_failed": "La generation a echoue. Consultez la carte de tache.",
+    "partial_submission_failed": "{count} sorties ont echoue. Les autres taches ont ete envoyees.",
+    "generation_failed": "La generation a echoue : {message}"
+  },
+  "timeline": {
+    "video": "Video",
+    "images": "Images {completed}/{total}",
+    "slot_failed": "La generation a echoue",
+    "queued_waiting": "En attente de traitement.",
+    "generating": "Generation {completed}/{total}",
+    "retry_load": "Impossible de charger l historique. Reessayer",
+    "edit_prompt": "Modifier le prompt",
+    "regenerate": "Recreer"
+  },
+  "actions": {
+    "fullscreen": "Ouvrir l apercu",
+    "download": "Telecharger",
+    "share": "Partager",
+    "favorite": "Ajouter aux favoris",
+    "unfavorite": "Retirer des favoris",
+    "image_to_video": "Image vers video",
+    "image_to_image": "Image vers image",
+    "ai_restore": "Restauration IA",
+    "enhance": "Ameliorer",
+    "more": "Plus",
+    "remove_background": "Supprimer l arriere-plan",
+    "erase_object": "Effacer l objet",
+    "outpaint": "Etendre l image",
+    "ai_background": "Arriere-plan IA"
+  },
+  "preview": {
+    "title": "Apercu du resultat",
+    "description": "Consultez le resultat et continuez avec le telechargement, le partage, les favoris ou la modification.",
+    "close": "Fermer l apercu",
+    "prompt": "PROMPT",
+    "copy": "Copier",
+    "copied": "Copie",
+    "information": "INFORMATIONS",
+    "type": "Type",
+    "status": "Statut",
+    "image": "Image",
+    "video": "Video",
+    "recreate": "Recreer",
+    "edit": "Modifier"
+  },
+  "empty": {
+    "favorites_title": "Aucun favori",
+    "favorites_description": "Survolez un resultat et choisissez le coeur pour l ajouter ici.",
+    "default_title": "Commencer une nouvelle generation",
+    "default_description": "Votre generation apparaitra dans cette chronologie et sera affichee ici lorsqu elle sera prete."
+  },
+  "skeleton": {
+    "history_loading": "Chargement de l historique des generations",
+    "history_loading_more": "Chargement de davantage d historique",
+    "processing": "Le modele traite votre demande.",
+    "progress": "Progression de la generation {progress}%"
+  },
+  "prompt": {
+    "fallback": "Generation sans titre",
+    "copy": "Copier",
+    "copied": "Prompt copie.",
+    "collapse": "Reduire",
+    "expand": "Developper"
+  }
+}

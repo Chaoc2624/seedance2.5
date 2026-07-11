@@ -1,0 +1,334 @@
+{
+  "page": {
+    "show_sections": ["hero", "showcase", "faq", "cta"],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Generazione di immagini con GPT Image 2 e GPT Image 1.5",
+        "description": "Genera da testo o modifica riferimenti caricati con GPT Image 2 e GPT Image 1.5, tutto nello stesso workflow di questa landing page.",
+        "highlight_text": "GPT Image",
+        "announcement": {
+          "badge": "GPT Image",
+          "title": "Confronta GPT Image 2 e GPT Image 1.5 in un unico workspace",
+          "url": "/#showcase"
+        }
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "GPT Image 2 – il modello di punta di OpenAI per le immagini, rilasciato ad aprile 2026",
+        "description": "GPT Image 2 guida la classifica Image Arena con output 4K nativo, 99% di accuratezza tipografica e ragionamento integrato. Tutto ciò che serve per passare dall'idea al visual pronto alla produzione in un solo prompt.",
+        "items": [
+          {
+            "title": "Fotorealistico di base",
+            "description": "Luce, pelle e texture di qualità studio, senza prompt di stile.",
+            "icon": "Sparkles",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "Fotorealistico di base"
+            }
+          },
+          {
+            "title": "Modifica guidata da riferimento",
+            "description": "Carica un'immagine e descrivi la modifica. GPT Image 2 mantiene personaggio, brand e tipografia coerenti in ogni iterazione.",
+            "icon": "ImageUp",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "Modifica guidata da riferimento"
+            }
+          },
+          {
+            "title": "Output 4K nativo",
+            "description": "Render fino a 4K in qualsiasi formato: pronto per la stampa, qualità campagna, abbastanza dettagliato per i hero visuals.",
+            "icon": "Maximize",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "Output 4K nativo"
+            }
+          },
+          {
+            "title": "Pensa prima di disegnare",
+            "description": "GPT Image 2 pianifica la composizione, controlla la tipografia e può cercare sul web durante la generazione: il primo modello di immagini con ragionamento nativo.",
+            "icon": "Brain",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "Pensa prima di disegnare"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/gpt-image-2-overview.png",
+          "alt": "GPT Image 2 overview infographic"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "Perché i creatori scelgono GPT Image 2",
+        "description": "Cosa ottieni quando GPT Image 2 sostituisce l'intero stack di immagini.",
+        "items": [
+          {
+            "title": "Tipografia più nitida per i draft di produzione",
+            "description": "GPT Image 2 alza il livello del rendering del testo su poster, mockup di UI, infografiche e layout multilingua – inclusi giapponese, coreano, cinese, hindi e bengalese – così la maggior parte del copy esce pulita già alla prima generazione.",
+            "icon": "CaseSensitive",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-1.png",
+              "alt": "Rendering tipografico di GPT Image 2"
+            }
+          },
+          {
+            "title": "Direzione del personaggio coerente tra i pannelli",
+            "description": "Genera fino a 8 frame correlati da un singolo prompt GPT Image 2. Identità, colori del brand e composizione restano vicini tra un pannello e l'altro: pensato per storyboard, set di campagna e iterazione guidata da reference.",
+            "icon": "Users",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-2.png",
+              "alt": "Coerenza multi-pannello di GPT Image 2"
+            }
+          },
+          {
+            "title": "Draft veloci con prezzi a token",
+            "description": "Itera con draft rapidi in bassa qualità, poi passa a render in qualità media o alta. GPT Image 2 fattura per render con prezzi a token – nessun abbonamento per utente.",
+            "icon": "Zap",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-3.png",
+              "alt": "Prezzi a token di GPT Image 2"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "Dall'idea all'immagine in quattro passi",
+        "description": "GPT Image 2 si adatta a qualsiasi processo creativo, dall'ideazione rapida alla consegna finale.",
+        "items": [
+          {
+            "title": "Descrivi",
+            "description": "Scrivi cosa vuoi. Aggiungi riferimenti, scegli formato e PNG o JPG.",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "Descrivi"
+            }
+          },
+          {
+            "title": "Genera",
+            "description": "GPT Image 2 pensa prima di disegnare: pianifica la composizione, controlla il testo e produce un'immagine finale in meno di un minuto.",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "Genera"
+            }
+          },
+          {
+            "title": "Affina",
+            "description": "Itera con modifiche in linguaggio naturale. Cambia lo sfondo, aggiungi testo o ritocca i dettagli.",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "Affina"
+            }
+          },
+          {
+            "title": "Esporta",
+            "description": "Scarica in 1K / 2K / 4K. Usalo in campagne, prodotti, deck, social: ovunque serva.",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "Esporta"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "Tutto ciò che GPT Image 2 può fare",
+        "description": "Un toolkit in crescita per generazione e modifica, tutto da un'unica casella prompt.",
+        "items": [
+          {
+            "title": "Da testo a immagine",
+            "description": "Crea originali da un prompt: poster, prodotti, ritratti, illustrazioni, con dettaglio fotorealistico già di base.",
+            "icon": "Type"
+          },
+          {
+            "title": "Da immagine a immagine",
+            "description": "Carica un riferimento e descrivi la modifica. Personaggio, brand e composizione restano coerenti in ogni iterazione.",
+            "icon": "ImageUp"
+          },
+          {
+            "title": "Formato e risoluzione",
+            "description": "1:1, 16:9, 9:16, 4:3, 3:4 e altro – nativo fino a 4K per lavori pronti per stampa e campagna.",
+            "icon": "Ratio"
+          },
+          {
+            "title": "Testo nell'immagine",
+            "description": "99% di accuratezza tipografica all'interno delle immagini generate: menù, poster, infografiche e schermate UI leggibili al primo colpo.",
+            "icon": "CaseSensitive"
+          },
+          {
+            "title": "Generazione multi-panel",
+            "description": "Fino a otto pannelli coerenti da un singolo prompt: storyboard, set di campagna e tavole manga con personaggi e colori coerenti.",
+            "icon": "Layers"
+          },
+          {
+            "title": "Esportazione PNG e JPG",
+            "description": "Consegna i finali in PNG senza perdita o JPG leggero per web, stampa e social.",
+            "icon": "Download"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "GPT Image 2 in sintesi",
+        "description": "I numeri dietro il modello di immagini con il punteggio più alto di OpenAI.",
+        "items": [
+          {
+            "title": "99%",
+            "description": "Accuratezza tipografica sui benchmark standard: menù, infografiche e poster leggibili al primo colpo."
+          },
+          {
+            "title": "4K",
+            "description": "Risoluzione nativa in qualsiasi formato: pronta per stampa e qualità campagna, già di base."
+          },
+          {
+            "title": "< 60s",
+            "description": "Tempo tipico di generazione, dal prompt all'immagine finale, circa 2× più veloce del predecessore."
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "Cosa dicono i creatori di GPT Image 2",
+        "description": "Designer, marketer e fondatori indie consegnano più velocemente con GPT Image 2.",
+        "items": [
+          {
+            "name": "John Doe",
+            "role": "Product designer",
+            "quote": "GPT Image 2 ha dimezzato i tempi di consegna delle campagne. Un prompt, un modello: asset finali in pochi minuti, con il testo scritto correttamente.",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "John Doe"
+            }
+          },
+          {
+            "name": "Jane Smith",
+            "role": "Direttrice creativa",
+            "quote": "Otto pannelli coerenti da un singolo prompt? Incredibile. GPT Image 2 ha mantenuto identità, luce e colori del brand su tutta la serie.",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "Jane Smith"
+            }
+          },
+          {
+            "name": "Emily Johnson",
+            "role": "Titolare di agenzia",
+            "quote": "Abbiamo ridotto tre abbonamenti per strumenti immagine al solo GPT Image 2 e non ci manca nulla. L'output 4K è davvero pronto per la campagna.",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "Emily Johnson"
+            }
+          },
+          {
+            "name": "Michael Brown",
+            "role": "Fondatore indie",
+            "quote": "Il rendering del testo nelle immagini qui funziona davvero. Il nostro hero della landing era pronto in un pomeriggio.",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "Michael Brown"
+            }
+          },
+          {
+            "name": "Sophia Lee",
+            "role": "Brand designer",
+            "quote": "Uso il caricamento dei riferimenti tutti i giorni. Descrivi la modifica, ottieni una variazione pulita, vai avanti.",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "Sophia Lee"
+            }
+          },
+          {
+            "name": "David Wilson",
+            "role": "Responsabile marketing",
+            "quote": "L'output 4K di GPT Image 2 Pro è pronto per le campagne. Abbiamo smesso di esternalizzare i hero visual.",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "David Wilson"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "FAQ di GPT Image",
+        "description": "Una guida rapida a ciò che cambia tra GPT Image 2 e GPT Image 1.5 in questa landing page.",
+        "items": [
+          {
+            "question": "Quali modelli GPT Image sono disponibili qui?",
+            "answer": "Questa landing page supporta GPT Image 2 text-to-image, GPT Image 2 image-to-image, GPT Image 1.5 text-to-image e GPT Image 1.5 image-to-image."
+          },
+          {
+            "question": "Che cosa cambia in GPT Image 2?",
+            "answer": "GPT Image 2 espone controlli di risoluzione su questa landing page, così puoi scegliere 1K, 2K o 4K in base al workflow."
+          },
+          {
+            "question": "Che cosa cambia in GPT Image 1.5?",
+            "answer": "GPT Image 1.5 usa un’impostazione di qualità invece della risoluzione in questa landing page, con medium per un output bilanciato e high per risultati più lenti ma più dettagliati."
+          },
+          {
+            "question": "Entrambi i modelli supportano text-to-image e image-to-image?",
+            "answer": "Sì. Sia GPT Image 2 sia GPT Image 1.5 supportano la generazione da solo prompt e l’editing guidato da riferimenti."
+          },
+          {
+            "question": "Come funzionano qui le immagini di riferimento?",
+            "answer": "In modalità image-to-image carichi prima una o più immagini e poi guidi la modifica con un prompt più i controlli del rapporto d’aspetto."
+          },
+          {
+            "question": "Come dovrei scegliere tra i due?",
+            "answer": "Scegli GPT Image 2 se la risoluzione è il controllo che ti interessa di più. Scegli GPT Image 1.5 se preferisci un selettore di qualità più semplice tra medium e high."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Prova GPT Image 2 e GPT Image 1.5 direttamente su questa landing page",
+        "description": "Passa da text-to-image a image-to-image, confronta i controlli di risoluzione e qualità e genera direttamente dalla homepage.",
+        "buttons": [
+          {
+            "url": "/#generator",
+            "target": "_self",
+            "icon": "Sparkles",
+            "title": "Prova il generatore"
+          },
+          {
+            "url": "/#showcase",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Zap",
+            "title": "Esplora le 4 capacità"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "showcase": {
+        "id": "showcase",
+        "block": "prompt-showcase",
+        "title": "Quattro capacità chiave di GPT Image 2",
+        "description": "Questi quattro esempi mostrano ciò in cui GPT Image 2 eccelle: visual di prodotto premium, explainers visivi strutturati, character sheet coerenti e art direction ricca di stile.",
+        "show_view_more": false,
+        "show_filters": false,
+        "labels": {
+          "all": "Tutti",
+          "prompt": "Prompt",
+          "use_prompt": "Usa questo prompt"
+        }
+      },
+      "creatorFeedback": {
+        "id": "creator-feedback",
+        "block": "creator-feedback-wall",
+        "title": "Amato dai creator",
+        "description": "Art director, marketer, founder e content team usano GPT Image 2 per passare più rapidamente dal concept alla campagna."
+      }
+    }
+  }
+}

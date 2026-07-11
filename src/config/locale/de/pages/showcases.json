@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "Showcases",
+    "description": "Grossartige Projekte, erstellt mit Seedance 2.5"
+  },
+  "page": {
+    "title": "Showcases",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "KI-SaaS-Startups erstellt mit Seedance 2.5",
+        "description": "Einfach zu bedienen und schnell zu starten.",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "GPT Image 2 Prompt Showcase",
+      "description": "Durchsuche GPT Image 2 Prompt-Beispiele, generierte Ergebnisse und wiederverwendbare Prompt-Strukturen."
+    },
+    "section": {
+      "id": "showcase",
+      "title": "GPT Image 2 Prompt Showcase",
+      "description": "Eine dichte Bibliothek wiederverwendbarer Prompts mit generierten Ergebnissen. Öffne eine Karte, um den Prompt direkt in den Generator zu senden.",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "GPT Image 2 Showcase",
+        "preview": "Vorschau",
+        "preview_aria": "Vorschau für {title}",
+        "dialog_description": "Große Vorschau des generierten Showcase-Bildes.",
+        "prompt": "Prompt",
+        "use_prompt": "Diesen Prompt verwenden",
+        "view_more": "Mehr Showcases ansehen",
+        "all": "Alle"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "VR-Headset-Poster mit Explosionsansicht",
+          "description": "Erzeugt eine Hightech-Explosionsgrafik eines VR-Headsets mit detaillierten Bauteilhinweisen und Werbetext."
+        },
+        "13983": {
+          "title": "Momotaro-Erklärfolie im Hybridstil",
+          "description": "Kombiniert die einfache, warme Irasutoya-Ästhetik mit der hohen Informationsdichte japanischer Behördenfolien."
+        },
+        "16624": {
+          "title": "Japanisches Elefantentag-Magazinfeature",
+          "description": "Erzeugt eine polierte japanische Editorial-Magazinseite zum Elefantentag, geeignet für Saisonfeatures, Lifestyle-Spreads oder pädagogische Zoo-Kunst."
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

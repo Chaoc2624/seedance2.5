@@ -1,0 +1,34 @@
+{
+  "fields": {
+    "transaction_no": "Transaction No",
+    "description": "Description",
+    "type": "Type",
+    "scene": "Scene",
+    "credits": "Credits",
+    "expires_at": "Expires At",
+    "created_at": "Created At",
+    "action": "Action"
+  },
+  "list": {
+    "title": "Credits Records",
+    "tabs": {
+      "all": "All",
+      "grant": "Grant",
+      "consume": "Consume"
+    }
+  },
+  "view": {
+    "title": "Credits Balance",
+    "description": "Credits are used for AI generation and other paid actions.",
+    "never_expires": "Never expires",
+    "soonest_expiring": "Soonest expiry: <credits>{credits}</credits> credits on <date>{date}</date>",
+    "no_expiring_credits": "No credits are expiring",
+    "buttons": {
+      "purchase": "Purchase Credits"
+    }
+  },
+  "types": {
+    "grant": "Grant",
+    "consume": "Consume"
+  }
+}

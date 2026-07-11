@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /api/
+Disallow: /generate
+Disallow: /generate/
+Disallow: /settings
+Disallow: /settings/
+Disallow: /sign-in
+Disallow: /sign-up
+Disallow: /verify-email
+
+Sitemap: https://seedance-2-5.app/sitemap.xml

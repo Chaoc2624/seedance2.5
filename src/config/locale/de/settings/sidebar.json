@@ -1,0 +1,41 @@
+{
+  "title": "Einstellungen",
+  "nav": {
+    "items": [
+      {
+        "title": "Profil",
+        "url": "/settings/profile",
+        "icon": "User"
+      },
+      {
+        "title": "Abrechnung",
+        "url": "/settings/billing",
+        "icon": "CreditCard"
+      },
+      {
+        "title": "Zahlungen",
+        "url": "/settings/payments",
+        "icon": "DollarSign"
+      },
+      {
+        "title": "Guthaben",
+        "url": "/settings/credits",
+        "icon": "Coins"
+      }
+    ]
+  },
+  "top_nav": {
+    "items": [
+      {
+        "title": "Aktivitaet",
+        "url": "/activity",
+        "icon": "Activity"
+      },
+      {
+        "title": "Einstellungen",
+        "url": "/settings",
+        "icon": "Settings"
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "fields": {
+    "task_id": "ID attività",
+    "media_type": "Tipo di supporto",
+    "provider": "Fornitrice",
+    "model": "Modella",
+    "prompt": "Richiesta",
+    "options": "Opzioni",
+    "user": "Utente",
+    "status": "Stato",
+    "cost_credits": "Crediti di costo",
+    "result": "Risultato",
+    "created_at": "Creato a",
+    "action": "Azione",
+    "scene": "Scena"
+  },
+  "list": {
+    "title": "Compiti dell'intelligenza artificiale",
+    "crumbs": {
+      "admin": "Ammin",
+      "ai-tasks": "Compiti dell'intelligenza artificiale"
+    },
+    "tabs": {
+      "all": "Tutto",
+      "music": "Musica",
+      "image": "Immagine",
+      "video": "Video",
+      "audio": "Audio",
+      "text": "Testo"
+    },
+    "buttons": {
+      "view": "Visualizza attività",
+      "refresh": "Aggiorna attività"
+    },
+    "empty_message": "Nessuna attività trovata"
+  },
+  "details": {
+    "title": "Risultati della generazione",
+    "view_results": "Visualizza risultati",
+    "provider_requests": "Richieste al provider",
+    "request": "Richiesta",
+    "request_logs": "Log della richiesta",
+    "open_full_size": "Apri a dimensione intera"
+  }
+}

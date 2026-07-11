@@ -1,0 +1,52 @@
+{
+  "fields": {
+    "slug": "Ślimak",
+    "title": "Tytuł",
+    "description": "Opis",
+    "status": "Status",
+    "created_at": "Utworzono o godz",
+    "updated_at": "Zaktualizowano o godz"
+  },
+  "list": {
+    "title": "Kategorie",
+    "crumbs": {
+      "admin": "Administrator",
+      "categories": "Kategorie"
+    },
+    "buttons": {
+      "add": "Dodaj kategorię",
+      "edit": "Edytuj kategorię",
+      "view": "Zobacz kategorię",
+      "delete": "Usuń kategorię"
+    },
+    "tabs": {
+      "all": "Wszystko",
+      "published": "Opublikowany",
+      "pending": "Aż do",
+      "draft": "Projekt",
+      "archived": "Zarchiwizowane"
+    }
+  },
+  "add": {
+    "title": "Dodaj kategorię",
+    "crumbs": {
+      "admin": "Administrator",
+      "categories": "Kategorie",
+      "add": "Dodaj kategorię"
+    },
+    "buttons": {
+      "submit": "Dodaj kategorię"
+    }
+  },
+  "edit": {
+    "title": "Edytuj kategorię",
+    "crumbs": {
+      "admin": "Administrator",
+      "categories": "Kategorie",
+      "edit": "Edytuj kategorię"
+    },
+    "buttons": {
+      "submit": "Edytuj kategorię"
+    }
+  }
+}

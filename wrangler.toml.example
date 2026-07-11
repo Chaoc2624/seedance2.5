@@ -1,0 +1,66 @@
+name = "shiponce-tanstack"
+compatibility_date = "2026-04-17"
+compatibility_flags = ["nodejs_compat"]
+
+pages_build_output_dir = "dist"
+
+# Copy this file to wrangler.toml for local deployment config.
+# wrangler.toml is ignored by git in this template.
+#
+# Lite mode deploys to Cloudflare Pages:
+# bunx wrangler pages project create <project-name> --production-branch main --compatibility-date 2026-04-17 --compatibility-flags nodejs_compat
+# bun run build:cf:pages
+# bunx wrangler pages dev dist
+# bunx wrangler pages deploy dist --project-name <project-name> --branch main
+#
+# Full mode deploys to Cloudflare Workers:
+# bun run build:cf:worker
+# bunx wrangler dev --config .output/server/wrangler.json
+# bunx wrangler deploy --config .output/server/wrangler.json
+
+[vars]
+# app
+VITE_APP_URL = "https://<project-name>.pages.dev"
+VITE_APP_NAME = "shiponce"
+
+# theme
+VITE_THEME = "default"
+
+# appearance
+VITE_APPEARANCE = "system"
+
+# layout
+# top: horizontal header at the top
+# left: vertical sidebar header on desktop; top menu on mobile
+LAYOUT_HEADER_POSITION = "top"
+
+# blog
+# Lite/Pages should use "mdx" unless a database is configured intentionally.
+# Full/Worker can use "mdx-db" after DATABASE_URL is set.
+BLOG_STORAGE_MODE = "mdx"
+
+# database
+DATABASE_PROVIDER = "postgresql"
+DATABASE_URL = ""
+DB_SINGLETON_ENABLED = "true"
+DB_MAX_CONNECTIONS = "1"
+
+# auth secret
+# openssl rand -base64 32
+AUTH_SECRET = ""
+
+# Optional D1 binding for full mode.
+# [[d1_databases]]
+# binding = "DB"
+# database_name = ""
+# database_id = ""
+# migrations_dir = "src/config/db/migrations_d1"
+
+# Optional Hyperdrive binding for full mode PostgreSQL/MySQL connections.
+# [[hyperdrive]]
+# binding = "HYPERDRIVE"
+# id = ""
+# localConnectionString = ""
+
+[observability]
+enabled = true

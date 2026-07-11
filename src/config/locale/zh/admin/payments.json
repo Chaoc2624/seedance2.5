@@ -1,0 +1,53 @@
+{
+  "fields": {
+    "order_no": "订单编号",
+    "user": "用户",
+    "amount": "金额",
+    "product": "产品",
+    "description": "描述",
+    "type": "类型",
+    "provider": "供应商",
+    "created_at": "创建时间",
+    "status": "状态",
+    "action": "操作"
+  },
+  "list": {
+    "title": "支付记录",
+    "crumbs": {
+      "admin": "管理",
+      "payments": "支付记录"
+    },
+    "tabs": {
+      "all": "全部",
+      "subscription": "订阅",
+      "one-time": "一次性"
+    },
+    "filters": {
+      "status": {
+        "title": "状态",
+        "options": {
+          "all": "全部",
+          "paid": "已支付",
+          "created": "已创建",
+          "failed": "已失败"
+        }
+      },
+      "provider": {
+        "title": "供应商",
+        "options": {
+          "all": "全部",
+          "stripe": "Stripe",
+          "creem": "Creem",
+          "lemonsqueezy": "Lemonsqueezy",
+          "paypal": "Paypal"
+        }
+      }
+    },
+    "search": {
+      "order_no": {
+        "title": "订单编号",
+        "placeholder": "订单编号"
+      }
+    }
+  }
+}

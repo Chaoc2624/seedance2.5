@@ -1,0 +1,164 @@
+{
+  "header": {
+    "id": "header",
+    "brand": {
+      "title": "Seedance 2.5",
+      "logo": {
+        "src": "/logo.svg",
+        "alt": "Seedance 2.5",
+        "width": 100,
+        "height": 100
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "機能",
+          "url": "/#features",
+          "icon": "Sparkles"
+        },
+        {
+          "title": "料金プラン",
+          "url": "/pricing",
+          "icon": "DollarSign"
+        },
+        {
+          "title": "AI",
+          "icon": "RiRobot2Line",
+          "children": [
+            {
+              "title": "AI動画生成",
+              "description": "AIを使って動画を生成",
+              "url": "/video-generator",
+              "icon": "RiVideoLine"
+            }
+          ]
+        },
+        {
+          "title": "コンテンツ",
+          "icon": "FileText",
+          "children": [
+            {
+              "title": "ブログ",
+              "description": "ブログ記事を読む",
+              "url": "/blog",
+              "icon": "Newspaper"
+            }
+          ]
+        }
+      ]
+    },
+    "buttons": [],
+    "user_nav": {
+      "show_name": true,
+      "show_credits": true,
+      "show_sign_out": true,
+      "items": [
+        {
+          "title": "お支払い",
+          "url": "/settings/billing",
+          "icon": "CreditCard"
+        },
+        {
+          "title": "アクティビティ",
+          "url": "/activity",
+          "icon": "Activity"
+        }
+      ]
+    },
+    "show_sign": true,
+    "show_theme": true,
+    "show_locale": true,
+    "topbanner": {
+      "text": ""
+    }
+  },
+  "footer": {
+    "id": "footer",
+    "brand": {
+      "title": "Seedance 2.5",
+      "description": "Seedance 2.5 は、動画生成、画像生成、モデル比較、プロンプト中心の制作ワークフローをまとめた AI クリエイティブワークスペースです。",
+      "logo": {
+        "src": "/seedance-lockup.svg",
+        "alt": "Seedance 2.5",
+        "width": 224,
+        "height": 48,
+        "className": "h-9 w-auto max-w-40 object-contain"
+      },
+      "url": "/"
+    },
+    "nav": {
+      "items": [
+        {
+          "title": "作成",
+          "children": [
+            {
+              "title": "動画生成",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "料金",
+              "url": "/pricing",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "探索",
+          "children": [
+            {
+              "title": "Seedance 2.5",
+              "url": "/video-generator",
+              "target": "_self"
+            },
+            {
+              "title": "ブログ",
+              "url": "/blog",
+              "target": "_self"
+            }
+          ]
+        },
+        {
+          "title": "会社情報",
+          "children": [
+            {
+              "title": "私たちについて",
+              "url": "/about-us",
+              "target": "_self"
+            },
+            {
+              "title": "プライバシーポリシー",
+              "url": "/privacy-policy",
+              "target": "_self"
+            },
+            {
+              "title": "利用規約",
+              "url": "/terms-of-service",
+              "target": "_self"
+            }
+          ]
+        }
+      ]
+    },
+    "social": {
+      "items": []
+    },
+    "agreement": {
+      "items": [
+        {
+          "title": "プライバシーポリシー",
+          "url": "/privacy-policy"
+        },
+        {
+          "title": "利用規約",
+          "url": "/terms-of-service"
+        }
+      ]
+    },
+    "show_theme": true,
+    "show_locale": true,
+    "show_social": false
+  }
+}

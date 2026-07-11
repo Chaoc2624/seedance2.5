@@ -1,0 +1,27 @@
+{
+  "fields": {
+    "subscription_no": "订阅编号",
+    "user": "用户",
+    "amount": "金额",
+    "interval": "周期",
+    "provider": "供应商",
+    "created_at": "创建时间",
+    "current_period_start": "当前周期开始",
+    "current_period_end": "当前周期结束",
+    "status": "状态",
+    "description": "描述",
+    "action": "操作"
+  },
+  "list": {
+    "title": "订阅管理",
+    "crumbs": {
+      "admin": "管理",
+      "subscriptions": "订阅管理"
+    },
+    "tabs": {
+      "all": "全部",
+      "month": "月付",
+      "year": "年付"
+    }
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "Alle",
+    "image": "Bilder",
+    "video": "Videos",
+    "audio": "Audio",
+    "favorites": "Favoriten"
+  },
+  "status": {
+    "success": "Abgeschlossen",
+    "failed": "Fehlgeschlagen",
+    "partial_failed": "Teilweise abgeschlossen",
+    "processing": "Wird erstellt",
+    "queued": "In Warteschlange"
+  },
+  "scene": {
+    "image_to_image": "Bild zu Bild",
+    "text_to_image": "Text zu Bild",
+    "image_to_video": "Bild zu Video",
+    "video_to_video": "Video zu Video",
+    "text_to_video": "Text zu Video"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} ist bald verfügbar.",
+    "share_copied": "Freigabelink kopiert.",
+    "copy_failed": "Kopieren fehlgeschlagen. Bitte erneut versuchen.",
+    "sign_in_required": "Melde dich vor dem Erstellen an.",
+    "model_unavailable": "Dieses Modell ist nicht verfügbar. Wähle ein anderes Modell und versuche es erneut.",
+    "all_failed": "Erstellung fehlgeschlagen. Prüfe die Details auf der Aufgabenkarte.",
+    "partial_submission_failed": "{count} Ausgaben sind fehlgeschlagen. Die übrigen Aufgaben wurden übermittelt.",
+    "generation_failed": "Erstellung fehlgeschlagen: {message}"
+  },
+  "timeline": {
+    "video": "Video",
+    "images": "Bilder {completed}/{total}",
+    "slot_failed": "Erstellung fehlgeschlagen",
+    "queued_waiting": "In Warteschlange. Wartet auf Verarbeitung.",
+    "generating": "Wird erstellt {completed}/{total}",
+    "retry_load": "Verlauf konnte nicht geladen werden. Erneut versuchen",
+    "edit_prompt": "Prompt bearbeiten",
+    "regenerate": "Neu erstellen"
+  },
+  "actions": {
+    "fullscreen": "Vorschau öffnen",
+    "download": "Herunterladen",
+    "share": "Teilen",
+    "favorite": "Favorisieren",
+    "unfavorite": "Aus Favoriten entfernen",
+    "image_to_video": "Bild zu Video",
+    "image_to_image": "Bild zu Bild",
+    "ai_restore": "KI-Restaurierung",
+    "enhance": "Verbessern",
+    "more": "Mehr",
+    "remove_background": "Hintergrund entfernen",
+    "erase_object": "Objekt entfernen",
+    "outpaint": "Bild erweitern",
+    "ai_background": "KI-Hintergrund"
+  },
+  "preview": {
+    "title": "Vorschau des Ergebnisses",
+    "description": "Sieh das Ergebnis an und fahre mit Download, Teilen, Favoriten oder Bearbeitung fort.",
+    "close": "Vorschau schließen",
+    "prompt": "PROMPT",
+    "copy": "Kopieren",
+    "copied": "Kopiert",
+    "information": "INFORMATIONEN",
+    "type": "Typ",
+    "status": "Status",
+    "image": "Bild",
+    "video": "Video",
+    "recreate": "Neu erstellen",
+    "edit": "Bearbeiten"
+  },
+  "empty": {
+    "favorites_title": "Noch keine Favoriten",
+    "favorites_description": "Fahre über ein Ergebnis und wähle das Herz, um es hier hinzuzufügen.",
+    "default_title": "Neue Erstellung starten",
+    "default_description": "Deine Erstellung erscheint in dieser Zeitleiste und wird hier angezeigt, sobald sie bereit ist."
+  },
+  "skeleton": {
+    "history_loading": "Erstellungsverlauf wird geladen",
+    "history_loading_more": "Weiterer Erstellungsverlauf wird geladen",
+    "processing": "Das Modell verarbeitet deine Anfrage.",
+    "progress": "Erstellungsfortschritt {progress}%"
+  },
+  "prompt": {
+    "fallback": "Unbenannte Erstellung",
+    "copy": "Kopieren",
+    "copied": "Prompt kopiert.",
+    "collapse": "Einklappen",
+    "expand": "Ausklappen"
+  }
+}

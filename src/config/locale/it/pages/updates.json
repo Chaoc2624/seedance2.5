@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "Aggiorna registri",
+    "description": "Visualizza i registri degli aggiornamenti del prodotto, incluse le funzionalità e i miglioramenti più recenti."
+  },
+  "page": {
+    "sections": {
+      "updates": {
+        "id": "updates",
+        "title": "Aggiorna registri",
+        "description": "Visualizza i registri degli aggiornamenti del prodotto, incluse le funzionalità e i miglioramenti più recenti."
+      }
+    }
+  }
+}

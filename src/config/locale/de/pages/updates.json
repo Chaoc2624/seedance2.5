@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "Aktualisierungsprotokolle",
+    "description": "Sehen Sie Produktaktualisierungsprotokolle ein, einschliesslich neuester Funktionen und Verbesserungen."
+  },
+  "page": {
+    "sections": {
+      "updates": {
+        "id": "updates",
+        "title": "Aktualisierungsprotokolle",
+        "description": "Sehen Sie Produktaktualisierungsprotokolle ein, einschliesslich neuester Funktionen und Verbesserungen."
+      }
+    }
+  }
+}

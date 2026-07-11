@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "ショーケース",
+    "description": "Seedance 2.5で構築された素晴らしいプロジェクト"
+  },
+  "page": {
+    "title": "ショーケース",
+    "sections": {
+      "showcases": {
+        "id": "showcases",
+        "title": "Seedance 2.5で構築されたAI SaaSスタートアップ",
+        "description": "使いやすく、素早くリリース。",
+        "groups": [],
+        "items": []
+      }
+    }
+  },
+  "prompt_showcase": {
+    "metadata": {
+      "title": "GPT Image 2 プロンプトショーケース",
+      "description": "GPT Image 2 のプロンプト例、生成結果、再利用しやすい構造を閲覧できます。"
+    },
+    "section": {
+      "id": "showcase",
+      "title": "GPT Image 2 プロンプトショーケース",
+      "description": "再利用できるプロンプトと生成結果をまとめたライブラリです。カードを開くと、そのプロンプトを生成器へ送れます。",
+      "show_filters": false,
+      "labels": {
+        "eyebrow": "GPT Image 2 ショーケース",
+        "preview": "プレビュー",
+        "preview_aria": "{title} をプレビュー",
+        "dialog_description": "生成されたショーケース画像の大きなプレビュー。",
+        "prompt": "プロンプト",
+        "use_prompt": "このプロンプトを使う",
+        "view_more": "ショーケースをもっと見る",
+        "all": "すべて"
+      },
+      "card_translations": {
+        "13460": {
+          "title": "VRヘッドセット分解ビュー・ポスター",
+          "description": "VRヘッドセットの高精細な分解図を、部品注釈とプロモーション文付きで生成します。"
+        },
+        "13983": {
+          "title": "桃太郎解説スライド（ハイブリッドスタイル）",
+          "description": "いらすとや風の素朴で温かい雰囲気と、日本の官公庁スライドらしい高密度情報設計を組み合わせるプロンプトです。"
+        },
+        "16624": {
+          "title": "日本の「象の日」マガジン特集",
+          "description": "象の日をテーマにした日本の編集誌風ページを生成します。季節特集、ライフスタイル誌面、動物園向け教育アートに適しています。"
+        }
+      },
+      "show_view_more": false
+    }
+  }
+}

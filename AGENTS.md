@@ -1,0 +1,1 @@
+.agents/skills/shiponce/SKILL.md

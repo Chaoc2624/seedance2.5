@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "AI 影片產生器",
+    "description": "使用 AI 模型產生影片，支援文字轉影片、圖片轉影片和影片轉影片。"
+  },
+  "page": {
+    "title": "AI 影片產生器",
+    "description": "使用 AI 模型產生影片，支援文字轉影片、圖片轉影片和影片轉影片。"
+  },
+  "generator": {
+    "title": "影片產生器",
+    "description": "使用 AI 模型產生影片，支援文字轉影片、圖片轉影片和影片轉影片。",
+    "tabs": {
+      "text-to-video": "文字轉影片",
+      "image-to-video": "圖片轉影片",
+      "video-to-video": "影片轉影片"
+    },
+    "form": {
+      "provider": "供應商",
+      "model": "模型",
+      "select_provider": "選擇供應商",
+      "select_model": "選擇模型",
+      "prompt": "提示詞",
+      "prompt_placeholder": "描述影片內容，例如場景、動作、風格等。",
+      "reference_image": "參考圖片",
+      "reference_image_placeholder": "上傳用於影片產生的參考圖片",
+      "reference_video": "參考影片網址",
+      "reference_video_placeholder": "輸入參考影片的網址",
+      "some_images_failed_to_upload": "圖片上傳失敗，請刪除後重新上傳",
+      "prompt_too_long": "提示詞過長，請刪除部分內容"
+    },
+    "generate": "產生影片",
+    "checking_account": "正在檢查帳戶...",
+    "loading": "載入中...",
+    "generating": "產生中...",
+    "sign_in_to_generate": "登入以產生影片",
+    "credits_cost": "消耗 {credits} 點數",
+    "credits_remaining": "剩餘 {credits} 點數",
+    "buy_credits": "購買點數",
+    "progress": "進度",
+    "generated_videos": "影片預覽",
+    "ready_to_generate": "準備產生",
+    "ready_for_generating": "準備產生中",
+    "no_videos_generated": "尚未產生影片"
+  }
+}

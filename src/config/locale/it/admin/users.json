@@ -1,0 +1,77 @@
+{
+  "fields": {
+    "id": "ID",
+    "name": "Name",
+    "avatar": "Avatar",
+    "email": "E-mail",
+    "email_verified": "E-mail verificata",
+    "remaining_credits": "Crediti rimanenti",
+    "created_at": "Creato a",
+    "actions": "Azioni",
+    "roles": "Ruoli",
+    "ip": "IP",
+    "locale": "Locale",
+    "utm_source": "Fonte UTM"
+  },
+  "list": {
+    "title": "Utenti",
+    "crumbs": {
+      "admin": "Ammin",
+      "users": "Utenti"
+    },
+    "buttons": {
+      "add": "Aggiungi utente",
+      "edit": "Modifica utente",
+      "view": "Visualizza utente",
+      "delete": "Elimina utente",
+      "edit_roles": "Modifica ruoli",
+      "grant_credits": "Concedere crediti"
+    },
+    "search": {
+      "email": {
+        "title": "E-mail",
+        "placeholder": "E-mail"
+      }
+    }
+  },
+  "edit": {
+    "title": "Modifica utente",
+    "crumbs": {
+      "admin": "Ammin",
+      "users": "Utenti",
+      "edit": "Modificare"
+    },
+    "buttons": {
+      "submit": "Aggiornamento"
+    }
+  },
+  "edit_roles": {
+    "title": "Modifica ruoli",
+    "crumbs": {
+      "admin": "Ammin",
+      "users": "Utenti",
+      "edit_roles": "Modifica ruoli"
+    },
+    "buttons": {
+      "submit": "Aggiornamento"
+    }
+  },
+  "grant_credits": {
+    "title": "Concedere crediti",
+    "crumbs": {
+      "admin": "Ammin",
+      "users": "Utenti",
+      "grant_credits": "Concedere crediti"
+    },
+    "buttons": {
+      "submit": "Concessione"
+    },
+    "fields": {
+      "credits": "Importo crediti",
+      "valid_days": "Giorni validi per i crediti",
+      "valid_days_tip": "0 significa nessuna scadenza",
+      "description": "Descrizione concessione crediti",
+      "description_placeholder": "Crediti concessi dall'amministratore"
+    }
+  }
+}

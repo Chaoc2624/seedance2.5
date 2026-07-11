@@ -1,0 +1,18 @@
+{
+  "fields": {
+    "email": "E-mail",
+    "name": "Name",
+    "avatar": "Awatara"
+  },
+  "edit": {
+    "title": "Profil",
+    "description": "Zaktualizuj swój profil",
+    "crumbs": {
+      "settings": "Ustawienia",
+      "profile": "Profil"
+    },
+    "buttons": {
+      "submit": "Ratować"
+    }
+  }
+}

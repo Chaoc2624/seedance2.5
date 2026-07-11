@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Generador de videos IA",
+    "description": "Genera videos con modelos de IA, compatible con texto a video, imagen a video y video a video."
+  },
+  "page": {
+    "title": "Generador de videos IA",
+    "description": "Genera videos con modelos de IA, compatible con texto a video, imagen a video y video a video."
+  },
+  "generator": {
+    "title": "Generador de videos",
+    "description": "Genera videos con modelos de IA, compatible con texto a video, imagen a video y video a video.",
+    "tabs": {
+      "text-to-video": "Texto a video",
+      "image-to-video": "Imagen a video",
+      "video-to-video": "Video a video"
+    },
+    "form": {
+      "provider": "Proveedor",
+      "model": "Modelo",
+      "select_provider": "Seleccionar proveedor",
+      "select_model": "Seleccionar modelo",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Describe el contenido del video, como escena, accion, estilo, etc.",
+      "reference_image": "Imagen de referencia",
+      "reference_image_placeholder": "Sube una imagen de referencia para la generacion de video",
+      "reference_video": "URL del video de referencia",
+      "reference_video_placeholder": "Ingresa la URL del video de referencia",
+      "some_images_failed_to_upload": "La imagen no se pudo subir, por favor eliminala y vuelve a subirla",
+      "prompt_too_long": "El prompt es demasiado largo, por favor elimina algo de contenido"
+    },
+    "generate": "Generar video",
+    "checking_account": "Verificando cuenta...",
+    "loading": "Cargando...",
+    "generating": "Generando...",
+    "sign_in_to_generate": "Inicia sesion para generar video",
+    "credits_cost": "Costo de {credits} creditos",
+    "credits_remaining": "{credits} creditos restantes",
+    "buy_credits": "Comprar creditos",
+    "progress": "Progreso",
+    "generated_videos": "Vista previa de video",
+    "ready_to_generate": "Listo para generar",
+    "ready_for_generating": "Listo para generar",
+    "no_videos_generated": "No se generaron videos"
+  }
+}

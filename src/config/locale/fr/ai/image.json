@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "title": "Générateur d'images IA",
+    "description": "Générez des images avec des modèles IA, prise en charge du texte vers image et de l'image vers image."
+  },
+  "page": {
+    "title": "Générateur d'images IA",
+    "description": "Générez des images avec des modèles IA, prise en charge du texte vers image et de l'image vers image."
+  },
+  "generator": {
+    "title": "Générateur d'images",
+    "description": "Générez des images avec des modèles IA, prise en charge du texte vers image et de l'image vers image.",
+    "tabs": {
+      "text-to-image": "Texte vers image",
+      "image-to-image": "Image vers image"
+    },
+    "form": {
+      "provider": "Fournisseur",
+      "model": "Modèle",
+      "select_provider": "Sélectionner le fournisseur",
+      "select_model": "Sélectionner le modèle",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Décrivez les détails de l'image, tels que la couleur, la forme, la texture, etc.",
+      "reference_image": "Image de référence",
+      "reference_image_placeholder": "Téléchargez des images de référence, plusieurs images supportées",
+      "some_images_failed_to_upload": "Certaines images n'ont pas pu être téléchargées, veuillez les supprimer et les retélécharger",
+      "prompt_too_long": "Le prompt est trop long, veuillez supprimer du contenu"
+    },
+    "generate": "Générer des images",
+    "checking_account": "Vérification du compte...",
+    "loading": "Chargement...",
+    "generating": "Génération en cours...",
+    "sign_in_to_generate": "Connectez-vous pour générer une image",
+    "credits_cost": "Coût : {credits} crédits",
+    "credits_remaining": "{credits} crédits restants",
+    "buy_credits": "Acheter des crédits",
+    "progress": "Progression",
+    "generated_images": "Aperçu de l'image",
+    "ready_to_generate": "Prêt à générer",
+    "ready_for_generating": "Prêt pour la génération",
+    "no_images_generated": "Aucune image générée"
+  }
+}

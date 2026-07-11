@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "title": "Generatore video AI",
+    "description": "Genera video con modelli AI, supporta testo in video, immagine in video e video in video."
+  },
+  "page": {
+    "title": "Generatore video AI",
+    "description": "Genera video con modelli AI, supporta testo in video, immagine in video e video in video."
+  },
+  "generator": {
+    "title": "Generatore di video",
+    "description": "Genera video con modelli AI, supporta testo in video, immagine in video e video in video.",
+    "tabs": {
+      "text-to-video": "Testo in video",
+      "image-to-video": "Immagine in video",
+      "video-to-video": "Da video a video"
+    },
+    "form": {
+      "provider": "Fornitrice",
+      "model": "Modella",
+      "select_provider": "Seleziona Fornitore",
+      "select_model": "Seleziona modello",
+      "prompt": "Richiesta",
+      "prompt_placeholder": "Descrivi il contenuto del video, come scena, azione, stile, ecc.",
+      "reference_image": "Immagine di riferimento",
+      "reference_image_placeholder": "Carica un'immagine di riferimento per la generazione del video",
+      "reference_video": "URL del video di riferimento",
+      "reference_video_placeholder": "Inserisci l'URL del video di riferimento",
+      "some_images_failed_to_upload": "Impossibile caricare l'immagine, eliminala e ricaricala",
+      "prompt_too_long": "La richiesta è troppo lunga, elimina parte del contenuto"
+    },
+    "generate": "Genera video",
+    "checking_account": "Conto corrente...",
+    "loading": "Caricamento...",
+    "generating": "Generazione...",
+    "sign_in_to_generate": "Accedi per generare video",
+    "credits_cost": "Costo {credits} crediti",
+    "credits_remaining": "Crediti {credits} rimanenti",
+    "buy_credits": "Acquista crediti",
+    "progress": "Progressi",
+    "generated_videos": "Anteprima video",
+    "ready_to_generate": "Pronto per generare",
+    "ready_for_generating": "Pronto per la generazione",
+    "no_videos_generated": "Nessun video generato"
+  }
+}

@@ -1,0 +1,14 @@
+[    7096ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/node_modules/.vite/deps/react-dom_client.js?v=9fff3dfe:14337
+[    7100ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3000/node_modules/.vite/deps/i18next.js?v=9fff3dfe:1525
+[    7332ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3000/:0
+[    7332ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[    8579ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3000/@vite/client:509
+[    9337ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3000/:0
+[    9337ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  217873ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://127.0.0.1:3000/node_modules/.vite/deps/react-dom_client.js?v=9fff3dfe:14337
+[  217878ms] [INFO] 🌐 i18next is made possible by our own product, Locize — consider powering your project with managed localization (AI, CDN, integrations): https://locize.com 💙 @ http://127.0.0.1:3000/node_modules/.vite/deps/i18next.js?v=9fff3dfe:1525
+[  218353ms] [WARNING] Ignoring Event: localhost @ http://127.0.0.1:3000/@vite/client:509
+[  221181ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3000/:0
+[  221181ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0
+[  221197ms] [ERROR] Access to fetch at 'http://localhost:3000/api/auth/get-session' from origin 'http://127.0.0.1:3000' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://127.0.0.1:3000/:0
+[  221197ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:3000/api/auth/get-session:0

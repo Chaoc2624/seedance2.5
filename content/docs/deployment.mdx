@@ -1,0 +1,53 @@
+---
+title: Deployment
+---
+
+## Deploying to Vercel
+
+The easiest way to deploy YourAppName is through Vercel:
+
+1. Push your code to a GitHub repository
+2. Connect the repository to Vercel
+3. Set your environment variables in the Vercel dashboard
+4. Deploy!
+
+## Docker Deployment
+
+You can also deploy using Docker:
+
+```dockerfile
+FROM node:20-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci
+COPY . .
+RUN npm run build
+
+FROM node:20-alpine
+WORKDIR /app
+COPY --from=builder /app/.output ./
+EXPOSE 3000
+CMD ["node", "server/index.mjs"]
+```
+
+Build and run:
+
+```bash
+docker build -t your-app .
+docker run -p 3000:3000 --env-file .env your-app
+```
+
+## Database Migration
+
+Before deploying to production, run database migrations:
+
+```bash
+npm run db:migrate
+```
+
+## Performance Optimization
+
+- Enable CDN caching for static assets
+- Use connection pooling for database connections
+- Configure proper cache headers for API responses
+- Monitor server resources with your hosting provider's tools

@@ -1,0 +1,382 @@
+{
+  "page": {
+    "show_sections": ["hero", "showcase", "faq", "cta"],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "GPT Image 2 與 GPT Image 1.5 圖像生成",
+        "description": "用 GPT Image 2 與 GPT Image 1.5 從文字直接生成，或依據上傳的參考圖進行編修，全部都能在同一個 landing workflow 內完成。",
+        "highlight_text": "GPT Image",
+        "announcement": {
+          "badge": "GPT Image",
+          "title": "在同一個工作區比較 GPT Image 2 與 GPT Image 1.5",
+          "url": "/#showcase"
+        }
+      },
+      "logos": {
+        "id": "logos",
+        "title": "受到創作者、代理商與產品團隊的信賴",
+        "items": [
+          {
+            "title": "TanStack",
+            "image": {
+              "src": "/imgs/logos/tanstack.svg",
+              "alt": "TanStack"
+            }
+          },
+          {
+            "title": "React",
+            "image": {
+              "src": "/imgs/logos/react.svg",
+              "alt": "React"
+            }
+          },
+          {
+            "title": "TailwindCSS",
+            "image": {
+              "src": "/imgs/logos/tailwindcss.svg",
+              "alt": "TailwindCSS"
+            }
+          },
+          {
+            "title": "Shadcn/UI",
+            "image": {
+              "src": "/imgs/logos/shadcn.svg",
+              "alt": "Shadcn/UI"
+            }
+          },
+          {
+            "title": "Vercel",
+            "image": {
+              "src": "/imgs/logos/vercel.svg",
+              "alt": "Vercel"
+            }
+          },
+          {
+            "title": "Supabase",
+            "image": {
+              "src": "/imgs/logos/supabase.svg",
+              "alt": "Supabase"
+            }
+          }
+        ]
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "GPT Image 2 － 把所有頂級模型整合到同一個提示框",
+        "description": "GPT Image 2 將當前最強的圖片模型串接在同一個介面。從文字生圖、參考圖編輯到自然語言微調，不需要寫一行 API。",
+        "items": [
+          {
+            "title": "多模型路由",
+            "description": "一個下拉選單即可切換 Nano Banana Pro、Seedream、Flux 2、Gemini 3 Pro。",
+            "icon": "Type",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "多模型路由"
+            }
+          },
+          {
+            "title": "參考圖編輯",
+            "description": "上傳一張圖，用一句話描述要改的地方 － 人物、文字與風格都會保持一致。",
+            "icon": "Ratio",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "參考圖編輯"
+            }
+          },
+          {
+            "title": "4K 高畫質輸出",
+            "description": "使用 GPT Image 2 Pro 可輸出 4K，適合印刷、商品與行銷素材。",
+            "icon": "Maximize",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "4K 高畫質輸出"
+            }
+          },
+          {
+            "title": "自然語言控制",
+            "description": "直接描述比例、光線、氛圍或文字位置 － GPT Image 2 會像設計師一樣思考。",
+            "icon": "Download",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "自然語言控制"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/gpt-image-2-overview.png",
+          "alt": "GPT Image 2 overview infographic"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "創作者為什麼選 GPT Image 2",
+        "description": "當 GPT Image 2 取代你整套影像工具，你會得到的東西。",
+        "items": [
+          {
+            "title": "更銳利的文字渲染，直接拿去做交付稿",
+            "description": "GPT Image 2 在海報、UI mock、資訊圖、多語系版型（含日文、韓文、中文、印地文、孟加拉文）上的文字渲染明顯升級，多數情況下首次生成就能直接交付。",
+            "icon": "CaseSensitive",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-1.png",
+              "alt": "GPT Image 2 文字渲染"
+            }
+          },
+          {
+            "title": "跨 panel 的角色方向保持一致",
+            "description": "用一條 GPT Image 2 提示就能產出最多 8 張關聯畫面，角色方向、品牌色與構圖會在 panel 之間保持接近 — 適合分鏡、活動素材集，以及以參考圖驅動的反覆迭代。",
+            "icon": "Users",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-2.png",
+              "alt": "GPT Image 2 多 panel 一致性"
+            }
+          },
+          {
+            "title": "用 token 計費，草稿可以放心快試",
+            "description": "先用低品質草稿快速迭代，方向確定後再切到中或高品質出最終稿。GPT Image 2 以 token 計費、按次計算 — 沒有 per-seat 訂閱。",
+            "icon": "Zap",
+            "image": {
+              "src": "/imgs/features/gpt-image-2-benefit-3.png",
+              "alt": "GPT Image 2 token 計費"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "從靈感到成品，只需四步",
+        "description": "GPT Image 2 適合每一種創作流程 － 從快速發想到產出最終素材。",
+        "items": [
+          {
+            "title": "描述",
+            "description": "輸入你想要的畫面。加入參考圖、設定比例、選擇 PNG 或 JPG。",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "描述"
+            }
+          },
+          {
+            "title": "生成",
+            "description": "自動路由到最適合的模型 － Nano Banana Pro、Flux、Seedream 或 Gemini。",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "生成"
+            }
+          },
+          {
+            "title": "微調",
+            "description": "用自然語言反覆修改。換背景、加文字、調整細節都可以。",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "微調"
+            }
+          },
+          {
+            "title": "匯出",
+            "description": "下載 1K / 2K / 4K。社群、產品、簡報、廣告通用。",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "匯出"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "GPT Image 2 的完整能力",
+        "description": "一個提示框，串起所有生成與編輯能力，持續擴充中。",
+        "items": [
+          {
+            "title": "文字生圖",
+            "description": "用一段文字產出海報、商品圖、人物、插畫。",
+            "icon": "Type"
+          },
+          {
+            "title": "圖片生圖",
+            "description": "上傳參考圖、描述要改的地方，人物與構圖都會保持一致。",
+            "icon": "ImageUp"
+          },
+          {
+            "title": "比例與解析度",
+            "description": "支援 1:1、16:9、9:16、4:3、3:4 等比例，可輸出 1K／2K／4K。",
+            "icon": "Ratio"
+          },
+          {
+            "title": "畫面內文字",
+            "description": "直接在畫面中產出精準的文字，適合海報與廣告。",
+            "icon": "CaseSensitive"
+          },
+          {
+            "title": "多圖融合",
+            "description": "同時參考多張圖片，合併出主體一致的場景。",
+            "icon": "Layers"
+          },
+          {
+            "title": "PNG 與 JPG 匯出",
+            "description": "無損 PNG 或輕量 JPG 都可輸出，適用於網站、印刷與社群。",
+            "icon": "Download"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "GPT Image 2 數字一覽",
+        "description": "這些數字反映了一個為日常創作打造的平台。",
+        "items": [
+          {
+            "title": "10+ 模型",
+            "description": "Nano Banana Pro、Seedream、Flux、Gemini 3 都在同一個提示框後面。"
+          },
+          {
+            "title": "4K",
+            "description": "最高解析度，足以支援印刷與行銷級的素材輸出。"
+          },
+          {
+            "title": "< 60 秒",
+            "description": "從輸入提示詞到拿到完成圖的典型速度。"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "創作者怎麼看 GPT Image 2",
+        "description": "設計師、行銷人與獨立開發者，都因為同一個介面而出稿更快。",
+        "items": [
+          {
+            "name": "John Doe",
+            "role": "產品設計師",
+            "quote": "GPT Image 2 是第一個讓我能在 Nano Banana 和 Flux 之間自由切換的工具，整體製作時間直接砍半。",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "John Doe"
+            }
+          },
+          {
+            "name": "Jane Smith",
+            "role": "創意總監",
+            "quote": "想在 20 格分鏡裡維持角色一致？現在做得到。GPT Image 2 穩穩鎖住人物、光線與品牌色。",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "Jane Smith"
+            }
+          },
+          {
+            "name": "Emily Johnson",
+            "role": "公司負責人",
+            "quote": "換模型只需要一個點擊，我們把三個訂閱收斂成只用 GPT Image 2。",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "Emily Johnson"
+            }
+          },
+          {
+            "name": "Michael Brown",
+            "role": "獨立創業者",
+            "quote": "畫面內的文字終於能正確生成，我們的落地頁主視覺一個下午就完成了。",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "Michael Brown"
+            }
+          },
+          {
+            "name": "Sophia Lee",
+            "role": "品牌設計師",
+            "quote": "我每天都在用參考圖上傳功能 － 描述要改的地方，得到乾淨的變體，就這麼簡單。",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "Sophia Lee"
+            }
+          },
+          {
+            "name": "David Wilson",
+            "role": "行銷主管",
+            "quote": "GPT Image 2 Pro 的 4K 輸出真的可以直接上檔，我們不再需要外包主視覺。",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "David Wilson"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "GPT Image 常見問題",
+        "description": "快速了解這個 landing 上 GPT Image 2 與 GPT Image 1.5 的差異。",
+        "items": [
+          {
+            "question": "這裡提供哪些 GPT Image 模型？",
+            "answer": "這個 landing 支援 GPT Image 2 text-to-image、GPT Image 2 image-to-image、GPT Image 1.5 text-to-image，以及 GPT Image 1.5 image-to-image。"
+          },
+          {
+            "question": "GPT Image 2 有什麼不同？",
+            "answer": "GPT Image 2 在這個 landing 上提供解析度控制，因此你可以依照工作流程選擇 1K、2K 或 4K。"
+          },
+          {
+            "question": "GPT Image 1.5 有什麼不同？",
+            "answer": "GPT Image 1.5 在這個 landing 上使用品質設定而不是解析度，medium 適合平衡輸出，high 則更慢但細節更多。"
+          },
+          {
+            "question": "兩個模型都支援 text-to-image 與 image-to-image 嗎？",
+            "answer": "是的。GPT Image 2 與 GPT Image 1.5 都支援純 prompt 生成，以及以參考圖引導的編修流程。"
+          },
+          {
+            "question": "這裡的參考圖怎麼使用？",
+            "answer": "在 image-to-image 模式下，你會先上傳一張或多張圖片，再搭配 prompt 與長寬比控制來引導編修方向。"
+          },
+          {
+            "question": "我該怎麼選擇？",
+            "answer": "如果你最在意的是解析度控制，就選 GPT Image 2；如果你偏好在 medium 與 high 之間做更簡單的品質切換，就選 GPT Image 1.5。"
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "直接在這個 landing 試用 GPT Image 2 與 GPT Image 1.5",
+        "description": "切換 text-to-image 與 image-to-image，比較解析度與品質控制，並直接從首頁開始生成。",
+        "buttons": [
+          {
+            "url": "/#generator",
+            "target": "_self",
+            "icon": "Sparkles",
+            "title": "試試生成器"
+          },
+          {
+            "url": "/#showcase",
+            "target": "_self",
+            "variant": "outline",
+            "icon": "Zap",
+            "title": "探索 4 項核心能力"
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "showcase": {
+        "id": "showcase",
+        "block": "prompt-showcase",
+        "title": "GPT Image 2 的四項核心能力",
+        "description": "這四個範例展示了 GPT Image 2 特別擅長的方向：高質感產品廣告、結構清楚的視覺解說、一致性的角色設定表，以及風格鮮明的藝術指導。",
+        "show_view_more": false,
+        "show_filters": false,
+        "labels": {
+          "all": "全部",
+          "prompt": "提示詞",
+          "use_prompt": "使用此提示詞"
+        }
+      },
+      "creatorFeedback": {
+        "id": "creator-feedback",
+        "block": "creator-feedback-wall",
+        "title": "深受創作者喜愛",
+        "description": "藝術總監、行銷人員、創辦人與內容團隊都在使用 GPT Image 2，更快把概念推進到實際活動與成品。"
+      }
+    }
+  }
+}

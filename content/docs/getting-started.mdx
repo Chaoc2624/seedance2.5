@@ -1,0 +1,51 @@
+---
+title: Getting Started
+---
+
+## Installation
+
+To get started with YourAppName, you need to install the dependencies first.
+
+```bash
+git clone https://github.com/your-org/your-app.git
+cd your-app
+npm install
+```
+
+## Environment Setup
+
+Copy the `.env.example` file to `.env.local` and fill in the required values:
+
+```bash
+cp .env.example .env.local
+```
+
+### Required Environment Variables
+
+- `DATABASE_URL` — Your database connection string (PostgreSQL recommended)
+- `AUTH_SECRET` — A random secret for authentication sessions
+- `STRIPE_SECRET_KEY` — Your Stripe secret key for payment processing
+
+## Running the Development Server
+
+Start the development server with:
+
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:3000`.
+
+## Project Structure
+
+```
+├── src/
+│   ├── components/    # Reusable UI components
+│   ├── routes/        # TanStack Router file-based routes
+│   ├── core/          # Core business logic
+│   ├── config/        # App configuration
+│   └── contexts/      # React context providers
+├── content/
+│   └── docs/          # Documentation MDX files
+└── public/            # Static assets
+```

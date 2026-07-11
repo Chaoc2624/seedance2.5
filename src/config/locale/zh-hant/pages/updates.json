@@ -1,0 +1,15 @@
+{
+  "metadata": {
+    "title": "更新日誌",
+    "description": "查看產品更新日誌，包括最新功能和改進。"
+  },
+  "page": {
+    "sections": {
+      "updates": {
+        "id": "updates",
+        "title": "更新日誌",
+        "description": "查看產品更新日誌，包括最新功能和改進。"
+      }
+    }
+  }
+}

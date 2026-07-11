@@ -1,0 +1,93 @@
+{
+  "filter": {
+    "all": "全部",
+    "image": "圖片",
+    "video": "影片",
+    "audio": "音訊",
+    "favorites": "收藏"
+  },
+  "status": {
+    "success": "已完成",
+    "failed": "失敗",
+    "partial_failed": "部分完成",
+    "processing": "生成中",
+    "queued": "排隊中"
+  },
+  "scene": {
+    "image_to_image": "圖生圖",
+    "text_to_image": "文生圖",
+    "image_to_video": "圖生影片",
+    "video_to_video": "影片生影片",
+    "text_to_video": "文生影片"
+  },
+  "toast": {
+    "tool_coming_soon": "{tool} 即將推出。",
+    "share_copied": "分享連結已複製。",
+    "copy_failed": "複製失敗，請再試一次。",
+    "sign_in_required": "請先登入再開始生成。",
+    "model_unavailable": "目前無法使用此模型，請切換模型後再試一次。",
+    "all_failed": "生成失敗，請查看任務卡片中的詳細原因。",
+    "partial_submission_failed": "{count} 個輸出生成失敗，其餘任務已送出。",
+    "generation_failed": "生成失敗：{message}"
+  },
+  "timeline": {
+    "video": "影片",
+    "images": "圖片 {completed}/{total}",
+    "slot_failed": "生成失敗",
+    "queued_waiting": "已進入佇列，等待處理。",
+    "generating": "正在生成 {completed}/{total}",
+    "retry_load": "載入歷史失敗，點擊重試",
+    "edit_prompt": "重新輸入提示詞",
+    "regenerate": "重新生成"
+  },
+  "actions": {
+    "fullscreen": "開啟預覽",
+    "download": "下載",
+    "share": "分享",
+    "favorite": "收藏",
+    "unfavorite": "取消收藏",
+    "image_to_video": "圖生影片",
+    "image_to_image": "圖生圖",
+    "ai_restore": "AI 修復",
+    "enhance": "變超清",
+    "more": "更多",
+    "remove_background": "去除背景",
+    "erase_object": "擦除物體",
+    "outpaint": "擴圖",
+    "ai_background": "AI 背景"
+  },
+  "preview": {
+    "title": "生成結果預覽",
+    "description": "查看生成結果，並可繼續下載、分享、收藏或編輯。",
+    "close": "關閉預覽",
+    "prompt": "提示詞",
+    "copy": "複製",
+    "copied": "已複製",
+    "information": "資訊",
+    "type": "類型",
+    "status": "狀態",
+    "image": "圖片",
+    "video": "影片",
+    "recreate": "重新生成",
+    "edit": "編輯"
+  },
+  "empty": {
+    "favorites_title": "尚未有收藏內容",
+    "favorites_description": "將游標移到生成結果上，點擊愛心後就會顯示在這裡。",
+    "default_title": "開始一次新的生成",
+    "default_description": "生成任務會顯示在時間線中，完成後將直接展示結果。"
+  },
+  "skeleton": {
+    "history_loading": "正在載入創作記錄",
+    "history_loading_more": "正在載入更多創作記錄",
+    "processing": "模型正在處理你的創作請求。",
+    "progress": "生成進度 {progress}%"
+  },
+  "prompt": {
+    "fallback": "未命名生成任務",
+    "copy": "複製",
+    "copied": "提示詞已複製。",
+    "collapse": "收起",
+    "expand": "展開"
+  }
+}

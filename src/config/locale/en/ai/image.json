@@ -1,0 +1,57 @@
+{
+  "metadata": {
+    "title": "GPT Image 2 – AI Image Generator",
+    "description": "Generate and edit images with GPT Image 2. Nano Banana Pro, Seedream, Flux, and Gemini 3 Pro – all behind one prompt, with text-to-image and image-to-image modes."
+  },
+  "page": {
+    "title": "GPT Image 2 – AI Image Generator",
+    "description": "One prompt box, every major AI image model. Generate from text or edit from a reference – with resolution, format, and aspect ratio controls."
+  },
+  "generator": {
+    "title": "Image Generator",
+    "description": "Generate images with AI models, support text-to-image and image-to-image.",
+    "tabs": {
+      "text-to-image": "Text to Image",
+      "image-to-image": "Image to Image"
+    },
+    "form": {
+      "provider": "Provider",
+      "model": "AI Model",
+      "select_provider": "Select Provider",
+      "select_model": "Select Model",
+      "required_badge": "Required",
+      "prompt": "Prompt",
+      "prompt_placeholder": "Describe the details of the image, such as color, shape, texture, etc.",
+      "prompt_required_hint": "Add a prompt to start generating.",
+      "reference_image": "Images",
+      "reference_image_placeholder": "Upload reference images, support multiple images",
+      "reference_image_required_hint": "Upload at least one reference image to continue.",
+      "some_images_failed_to_upload": "Some images failed to upload, please delete them and re-upload",
+      "prompt_too_long": "Prompt is too long, please delete some content",
+      "resolution": "Resolution",
+      "quality": "Quality",
+      "output_format": "Output Format",
+      "aspect_ratio": "Aspect Ratio",
+      "credits_suffix": "credits"
+    },
+    "preview": {
+      "ready_title": "Ready to Create",
+      "ready_description_image": "Upload an image and describe your edits",
+      "ready_description_text": "Describe the image you want to generate",
+      "generating_title": "Creating your image..."
+    },
+    "generate": "Generate Images",
+    "checking_account": "Checking Account...",
+    "loading": "Loading...",
+    "generating": "Generating...",
+    "sign_in_to_generate": "Sign In to Generate Image",
+    "credits_cost": "Cost {credits} credits",
+    "credits_remaining": "Remaining {credits} credits",
+    "buy_credits": "Buy Credits",
+    "progress": "Progress",
+    "generated_images": "Image Preview",
+    "ready_to_generate": "Ready to Generate",
+    "ready_for_generating": "Ready for Generating",
+    "no_images_generated": "No Images Generated"
+  }
+}

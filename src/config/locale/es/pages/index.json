@@ -1,0 +1,408 @@
+{
+  "page": {
+    "show_sections": [
+      "hero",
+      "logos",
+      "introduce",
+      "benefits",
+      "usage",
+      "features",
+      "stats",
+      "testimonials",
+      "faq",
+      "cta"
+    ],
+    "sections": {
+      "hero": {
+        "id": "hero",
+        "title": "Seedance 2.5 para generar video e imagen",
+        "description": "Crea videos e imagenes con Seedance 2.5, Nano Banana, nanobanana, GPT Image 2 y workflows guiados por prompts.",
+        "tip": "Empezar",
+        "highlight_text": "impulsada por IA",
+        "announcement": {
+          "badge": "Nuevo",
+          "title": "Seedance 2.5 ahora soporta workflows de video e imagen",
+          "url": "/pricing"
+        },
+        "avatars_tip": "Creadores usan Seedance 2.5 para visuales de campana, videos cortos y experimentos con modelos.",
+        "buttons": [
+          {
+            "icon": "Zap",
+            "url": "/pricing",
+            "target": "_self",
+            "variant": "default",
+            "title": "Comenzar"
+          },
+          {
+            "icon": "BookOpenText",
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "title": "Probar gratis"
+          }
+        ],
+        "show_avatars": true,
+        "show_award": false,
+        "image": {
+          "src": "/imgs/features/admin.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        },
+        "image_invert": {
+          "src": "/imgs/features/admin-dark.png",
+          "alt": "hero",
+          "width": 1200,
+          "height": 800
+        }
+      },
+      "logos": {
+        "id": "logos",
+        "title": "Para creadores de IA, estudios y equipos de crecimiento",
+        "items": [
+          {
+            "title": "TanStack",
+            "image": {
+              "src": "/imgs/logos/tanstack.svg",
+              "alt": "TanStack"
+            }
+          },
+          {
+            "title": "React",
+            "image": {
+              "src": "/imgs/logos/react.svg",
+              "alt": "React"
+            }
+          },
+          {
+            "title": "TailwindCSS",
+            "image": {
+              "src": "/imgs/logos/tailwindcss.svg",
+              "alt": "TailwindCSS"
+            }
+          },
+          {
+            "title": "Shadcn/UI",
+            "image": {
+              "src": "/imgs/logos/shadcn.svg",
+              "alt": "Shadcn/UI"
+            }
+          },
+          {
+            "title": "Vercel",
+            "image": {
+              "src": "/imgs/logos/vercel.svg",
+              "alt": "Vercel"
+            }
+          },
+          {
+            "title": "Supabase",
+            "image": {
+              "src": "/imgs/logos/supabase.svg",
+              "alt": "Supabase"
+            }
+          }
+        ]
+      },
+      "introduce": {
+        "id": "introduce",
+        "block": "features-list",
+        "title": "Crear con Seedance 2.5",
+        "description": "Seedance 2.5 une generacion de video, generacion de imagen, seleccion de modelos y workflows de prompts en un espacio creativo enfocado.",
+        "items": [
+          {
+            "title": "Creacion con prompts",
+            "description": "Workspace de generacion de video",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "Workspace de generacion de video",
+            "description": "Generacion y edicion de imagen",
+            "icon": "RiDatabase2Line",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "Generacion y edicion de imagen",
+            "description": "Comparacion de modelos",
+            "icon": "RiCloudyFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "introduce"
+            }
+          },
+          {
+            "title": "Comparacion de modelos",
+            "description": "Workflows con referencias",
+            "icon": "RiRobot2Line",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "introduce"
+            }
+          }
+        ],
+        "image": {
+          "src": "/imgs/features/landing-page.png",
+          "alt": "introduce"
+        },
+        "className": "bg-muted"
+      },
+      "benefits": {
+        "id": "benefits",
+        "block": "features-accordion",
+        "title": "Por que elegir Seedance 2.5?",
+        "description": "Pasa mas rapido de la idea a imagen y video con controles practicos para produccion creativa.",
+        "items": [
+          {
+            "title": "Creacion con prompts",
+            "description": "Workspace de generacion de video",
+            "icon": "RiNextjsFill",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "Workspace de generacion de video",
+            "description": "Generacion y edicion de imagen",
+            "icon": "RiClapperboardAiLine",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "benefits"
+            }
+          },
+          {
+            "title": "Generacion y edicion de imagen",
+            "description": "Comparacion de modelos",
+            "icon": "RiCodeFill",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "benefits"
+            }
+          }
+        ]
+      },
+      "usage": {
+        "id": "usage",
+        "block": "features-step",
+        "title": "Seedance 2.5 en tu workflow",
+        "description": "Empieza con un prompt, refina visuales, compara modelos y convierte referencias en assets de produccion.",
+        "items": [
+          {
+            "title": "Creacion con prompts",
+            "description": "Workspace de generacion de video",
+            "image": {
+              "src": "/imgs/features/1.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "Workspace de generacion de video",
+            "description": "Generacion y edicion de imagen",
+            "image": {
+              "src": "/imgs/features/2.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "Generacion y edicion de imagen",
+            "description": "Comparacion de modelos",
+            "image": {
+              "src": "/imgs/features/3.png",
+              "alt": "usage"
+            }
+          },
+          {
+            "title": "Comparacion de modelos",
+            "description": "Workflows con referencias",
+            "image": {
+              "src": "/imgs/features/4.png",
+              "alt": "usage"
+            }
+          }
+        ],
+        "image_position": "left",
+        "text_align": "center",
+        "className": "bg-muted"
+      },
+      "features": {
+        "id": "features",
+        "title": "Funciones de Seedance 2.5",
+        "description": "Herramientas para produccion de imagen y video con IA.",
+        "items": [
+          {
+            "title": "Creacion con prompts",
+            "description": "Workspace de generacion de video",
+            "icon": "RiNextjsFill"
+          },
+          {
+            "title": "Workspace de generacion de video",
+            "description": "Generacion y edicion de imagen",
+            "icon": "RiKey2Fill"
+          },
+          {
+            "title": "Generacion y edicion de imagen",
+            "description": "Comparacion de modelos",
+            "icon": "RiDatabase2Line"
+          },
+          {
+            "title": "Comparacion de modelos",
+            "description": "Workflows con referencias",
+            "icon": "RiCloudy2Fill"
+          },
+          {
+            "title": "Workflows con referencias",
+            "description": "Salidas creativas comerciales",
+            "icon": "RiBarChart2Line"
+          },
+          {
+            "title": "Salidas creativas comerciales",
+            "description": "Creacion con prompts",
+            "icon": "RiRobot2Line"
+          }
+        ]
+      },
+      "stats": {
+        "id": "stats",
+        "title": "Metricas de workflow Seedance 2.5",
+        "description": "Senales de workflows creativos reales y necesidades de produccion.",
+        "items": [
+          {
+            "title": "10K+",
+            "description": "Profesionales usando Seedance 2.5 para sus necesidades de generacion de video e imagen con IA."
+          },
+          {
+            "title": "98%",
+            "description": "Tasa de satisfaccion de usuarios basada en encuestas recientes."
+          },
+          {
+            "title": "500+",
+            "description": "Horas ahorradas por usuario al mes con nuestras herramientas de IA."
+          }
+        ],
+        "className": "bg-muted"
+      },
+      "testimonials": {
+        "id": "testimonials",
+        "title": "Lo que dicen los creadores",
+        "description": "Los equipos usan Seedance 2.5 para explorar conceptos, comparar resultados y pasar mas rapido del prompt a publicar.",
+        "items": [
+          {
+            "name": "John Doe",
+            "role": "Fotografo profesional",
+            "quote": "Seedance 2.5 me ha ahorrado incontables horas. El escalado con IA es un cambio revolucionario.",
+            "image": {
+              "src": "/imgs/avatars/1.png",
+              "alt": "John Doe"
+            }
+          },
+          {
+            "name": "Jane Smith",
+            "role": "Directora creativa",
+            "quote": "Con Seedance 2.5, nuestro equipo puede enfocarse en la creatividad en lugar de tareas tediosas.",
+            "image": {
+              "src": "/imgs/avatars/2.png",
+              "alt": "Jane Smith"
+            }
+          },
+          {
+            "name": "Emily Johnson",
+            "role": "Propietaria de agencia",
+            "quote": "El procesamiento por lotes de Seedance 2.5 es un salvavidas para nuestros plazos ajustados.",
+            "image": {
+              "src": "/imgs/avatars/3.png",
+              "alt": "Emily Johnson"
+            }
+          },
+          {
+            "name": "Michael Brown",
+            "role": "Fotografo",
+            "quote": "La funcion de transferencia de estilo ha llevado mis retratos a un nivel completamente nuevo.",
+            "image": {
+              "src": "/imgs/avatars/4.png",
+              "alt": "Michael Brown"
+            }
+          },
+          {
+            "name": "Sophia Lee",
+            "role": "Disenadora grafica",
+            "quote": "La interfaz facil de usar de Seedance 2.5 hace que la generacion de video e imagen con IA sea muy sencilla.",
+            "image": {
+              "src": "/imgs/avatars/5.png",
+              "alt": "Sophia Lee"
+            }
+          },
+          {
+            "name": "David Wilson",
+            "role": "Fotografo freelance",
+            "quote": "No puedo imaginar mi flujo de trabajo sin las herramientas impulsadas por IA de Seedance 2.5.",
+            "image": {
+              "src": "/imgs/avatars/6.png",
+              "alt": "David Wilson"
+            }
+          }
+        ]
+      },
+      "faq": {
+        "id": "faq",
+        "title": "Preguntas frecuentes",
+        "description": "Respuestas claras sobre generacion de video e imagen con Seedance 2.5.",
+        "items": [
+          {
+            "question": "Que es Seedance 2.5?",
+            "answer": "Seedance 2.5 es un espacio creativo de IA para generacion de video, generacion de imagen y produccion basada en prompts."
+          },
+          {
+            "question": "Que modelos soporta Seedance 2.5?",
+            "answer": "Seedance 2.5 destaca workflows con Seedance 2.5, GPT Image 2, Nano Banana, nanobanana y otros proveedores compatibles."
+          },
+          {
+            "question": "Puedo generar videos desde imagenes?",
+            "answer": "Si. Puedes empezar con un prompt o una imagen de referencia y pasar a un workflow de imagen a video."
+          },
+          {
+            "question": "Puedo editar imagenes generadas?",
+            "answer": "Si. Seedance 2.5 soporta generacion y edicion de imagenes para posters, productos, anuncios y conceptos."
+          },
+          {
+            "question": "Necesito un navegador moderno?",
+            "answer": "Si. Usa un navegador actual y una conexion estable para subir referencias y previsualizar resultados."
+          },
+          {
+            "question": "Puedo usar los resultados comercialmente?",
+            "answer": "El uso comercial depende del modelo, plan y terminos del proveedor. Revisa la licencia antes de publicar."
+          }
+        ]
+      },
+      "cta": {
+        "id": "cta",
+        "title": "Crear con Seedance 2.5",
+        "description": "Genera videos e imagenes con workflows por prompt para equipos creativos modernos.",
+        "buttons": [
+          {
+            "url": "/pricing",
+            "target": "_self",
+            "icon": "Zap",
+            "title": "Empezar"
+          },
+          {
+            "url": "/docs",
+            "target": "_blank",
+            "variant": "outline",
+            "icon": "BookOpenText",
+            "title": "Saber mas"
+          }
+        ],
+        "className": "bg-muted"
+      }
+    },
+    "title": "Seedance 2.5 para generar video e imagen",
+    "description": "Crea videos e imagenes con Seedance 2.5, Nano Banana, nanobanana, GPT Image 2 y workflows guiados por prompts."
+  }
+}
