@@ -23,7 +23,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Priya Sharma',
     role: 'Social Media Manager',
     quote:
-      'I can test three campaign directions before lunch and still hand over visuals that feel client-ready.',
+      'I can test three campaign directions before lunch and still hand over videos that feel client-ready.',
     image: {
       src: '/imgs/avatars/gpt-image2-priya-sharma.svg',
       alt: 'Priya Sharma avatar',
@@ -33,7 +33,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Jessica Liu',
     role: 'Animation Director',
     quote:
-      'Storyboard frames come out coherent enough that we can discuss camera rhythm before production art begins.',
+      'Reference-led clips come out coherent enough that we can discuss camera rhythm before production begins.',
     image: {
       src: '/imgs/avatars/gpt-image2-jessica-liu.svg',
       alt: 'Jessica Liu avatar',
@@ -43,7 +43,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Maya Okonkwo',
     role: 'Music Artist',
     quote:
-      'The visual polish is strong enough to explore single covers, lyric worlds, and performance moods in one sitting.',
+      'The visual polish is strong enough to explore performance moods, lyric worlds, and music visuals in one sitting.',
     image: {
       src: '/imgs/avatars/gpt-image2-maya-okonkwo.svg',
       alt: 'Maya Okonkwo avatar',
@@ -53,7 +53,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Daniel Yamamoto',
     role: 'VFX Artist',
     quote:
-      'Previs concepts hold lighting and composition better than most fast image tools I have tried this year.',
+      'Previs clips hold lighting, composition, and camera movement better than most fast video tools I have tried.',
     image: {
       src: '/imgs/avatars/gpt-image2-daniel-yamamoto.svg',
       alt: 'Daniel Yamamoto avatar',
@@ -63,7 +63,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Sarah Chen',
     role: 'Content Creator',
     quote:
-      'I move from idea to polished ad mockup in minutes, which changes how often I publish and test.',
+      'I move from idea to polished social cut in minutes, which changes how often I publish and test.',
     image: {
       src: '/imgs/avatars/gpt-image2-sarah-chen.svg',
       alt: 'Sarah Chen avatar',
@@ -73,7 +73,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Tom Brennan',
     role: 'Creative Director',
     quote:
-      'The workflow feels practical instead of experimental. Brief, generate, review, refine, and send.',
+      'The workflow feels practical instead of experimental: brief, generate, review, refine, and send.',
     image: {
       src: '/imgs/avatars/gpt-image2-tom-brennan.svg',
       alt: 'Tom Brennan avatar',
@@ -83,7 +83,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Dr. Linda Park',
     role: 'Film Professor',
     quote:
-      'It is a useful teaching tool because students can compare how the same shot description shifts across directions.',
+      'It is a useful teaching tool because students can compare how the same shot direction changes across languages.',
     image: {
       src: '/imgs/avatars/gpt-image2-linda-park.svg',
       alt: 'Dr. Linda Park avatar',
@@ -93,7 +93,7 @@ const fallbackItems: FeedbackItem[] = [
     name: 'Amanda Foster',
     role: 'Fitness Creator',
     quote:
-      'Product styling, set design, and editorial pacing all come together fast enough for weekly content planning.',
+      'Product styling, set design, and editorial pacing come together fast enough for weekly content planning.',
     image: {
       src: '/imgs/avatars/gpt-image2-amanda-foster.svg',
       alt: 'Amanda Foster avatar',

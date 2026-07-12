@@ -26,6 +26,12 @@ export interface VideoModelDefaults {
   sound?: boolean;
 }
 
+export interface VideoModelReferenceMedia {
+  imageCount: number;
+  videoCount: number;
+  audioCount: number;
+}
+
 export interface VideoModelCapabilities {
   durationOptions?: string[];
   durationRange?: VideoModelDurationRange;
@@ -34,6 +40,7 @@ export interface VideoModelCapabilities {
   modes?: string[];
   sound?: boolean;
   negativePrompt?: boolean;
+  referenceMedia?: VideoModelReferenceMedia;
 }
 
 export interface VideoModelConfig {
@@ -58,12 +65,34 @@ export interface VideoModelConfig {
 }
 
 const COMMON_RATIOS = ['16:9', '9:16', '1:1'];
-const COMMON_DURATIONS = ['5', '10'];
+const COMMON_DURATIONS = [
+  '5',
+  '6',
+  '7',
+  '8',
+  '9',
+  '10',
+  '11',
+  '12',
+  '13',
+  '14',
+  '15',
+];
 const KLING_3_DURATION_ANCHORS = ['4', '5', '10', '15'];
 const KLING_3_DURATION_RANGE = { min: 4, max: 15, step: 1 };
 const WAN_DURATIONS = ['5', '10'];
 const COMMON_RESOLUTIONS = ['720p', '1080p'];
-const SEEDANCE_RESOLUTIONS = ['720p', '1080p'];
+const SEEDANCE_DURATIONS = ['4', ...COMMON_DURATIONS];
+const SEEDANCE_RATIOS = [
+  '1:1',
+  '4:3',
+  '3:4',
+  '16:9',
+  '9:16',
+  '21:9',
+  'adaptive',
+];
+const SEEDANCE_RESOLUTIONS = ['480p', '720p', '1080p', '4k'];
 const KLING_MODES = ['std', 'pro', '4K'];
 
 const VIDEO_MODEL_FAMILY_ICON_SRCS: Record<string, string> = {
@@ -218,12 +247,12 @@ export const DEFAULT_VIDEO_MODEL_CATALOG: VideoModelConfig[] = [
     sortOrder: 0,
     model: 'bytedance/seedance-2',
     label: 'Seedance 2.5',
-    scenes: ['text-to-video', 'image-to-video'],
+    scenes: ['text-to-video', 'image-to-video', 'video-to-video'],
     description: 'Text/image/video references with optional audio',
     icon: 'SD',
     badges: ['Audio', 'Reference'],
     badgeTone: 'quality',
-    credits: { textToVideo: 18, imageToVideo: 20 },
+    credits: { textToVideo: 18, imageToVideo: 20, videoToVideo: 20 },
     defaults: {
       duration: '5',
       aspectRatio: '16:9',
@@ -231,10 +260,15 @@ export const DEFAULT_VIDEO_MODEL_CATALOG: VideoModelConfig[] = [
       sound: true,
     },
     capabilities: {
-      durationOptions: COMMON_DURATIONS,
-      aspectRatios: COMMON_RATIOS,
+      durationOptions: SEEDANCE_DURATIONS,
+      aspectRatios: SEEDANCE_RATIOS,
       resolutions: SEEDANCE_RESOLUTIONS,
       sound: true,
+      referenceMedia: {
+        imageCount: 9,
+        videoCount: 3,
+        audioCount: 3,
+      },
     },
   }),
   videoModel({
@@ -527,6 +561,59 @@ export function findVideoModelForRequest({
       item.model === model &&
       item.scenes.includes(scene as VideoGeneratorScene)
   );
+}
+
+export function getVideoModelReferenceMedia(model?: VideoModelConfig | null) {
+  return model?.capabilities?.referenceMedia;
+}
+
+function getReferenceOptionCount(
+  options: Record<string, unknown>,
+  key: string
+) {
+  const value = options[key];
+  return Array.isArray(value)
+    ? value.filter((item) => typeof item === 'string' && item.trim()).length
+    : 0;
+}
+
+function hasReferenceOption(options: Record<string, unknown>, key: string) {
+  const value = options[key];
+  return typeof value === 'string' && Boolean(value.trim());
+}
+
+export function assertVideoModelReferenceMedia({
+  model,
+  options,
+}: {
+  model: VideoModelConfig;
+  options?: Record<string, unknown>;
+}) {
+  const limits = getVideoModelReferenceMedia(model);
+  if (!limits || !options) return;
+
+  const imageCount =
+    getReferenceOptionCount(options, 'reference_images') +
+    Number(hasReferenceOption(options, 'reference_first_frame')) +
+    Number(hasReferenceOption(options, 'reference_last_frame'));
+  const videoCount = getReferenceOptionCount(options, 'reference_videos');
+  const audioCount = getReferenceOptionCount(options, 'reference_audio');
+
+  if (imageCount > limits.imageCount) {
+    throw new Error(
+      `${model.label} supports up to ${limits.imageCount} image references`
+    );
+  }
+  if (videoCount > limits.videoCount) {
+    throw new Error(
+      `${model.label} supports up to ${limits.videoCount} video references`
+    );
+  }
+  if (audioCount > limits.audioCount) {
+    throw new Error(
+      `${model.label} supports up to ${limits.audioCount} audio references`
+    );
+  }
 }
 
 function parseDurationSeconds(value?: unknown) {

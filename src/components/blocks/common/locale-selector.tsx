@@ -95,7 +95,7 @@ export function LocaleSelector({
         type="button"
         className={cn(
           buttonVariants({ variant: 'outline', size: 'sm' }),
-          'h-9 rounded-full border-border/70 bg-background/80 px-3 shadow-xs',
+          'h-9 rounded-full border-blue-100 bg-white px-3 text-slate-700 shadow-sm shadow-blue-900/5',
           className
         )}
         disabled
@@ -120,12 +120,12 @@ export function LocaleSelector({
           aria-label={`Switch language. Current language: ${currentOption.label}`}
           className={cn(
             buttonVariants({ variant: 'outline', size: 'sm' }),
-            'h-9 cursor-pointer rounded-full border-border/70 bg-background/80 px-3 shadow-xs hover:bg-accent/70 focus-visible:ring-0 focus-visible:ring-offset-0 data-[state=open]:bg-accent/80',
+            'h-9 cursor-pointer rounded-full border-blue-100 bg-white px-3 text-slate-700 shadow-sm shadow-blue-900/5 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/30 focus-visible:ring-offset-0 data-[state=open]:border-blue-300 data-[state=open]:bg-blue-50 data-[state=open]:text-blue-700',
             type === 'icon' && 'backdrop-blur-sm',
             className
           )}
         >
-          <span className="flex size-5 items-center justify-center rounded-full bg-muted text-sm">
+          <span className="flex size-5 items-center justify-center rounded-full bg-blue-50 text-sm">
             {currentOption.flag}
           </span>
           <span
@@ -139,7 +139,7 @@ export function LocaleSelector({
           {!compact && (
             <ChevronDown
               className={cn(
-                'size-3.5 text-muted-foreground transition-transform duration-200',
+                'size-3.5 text-slate-500 transition-transform duration-200',
                 open && 'rotate-180'
               )}
             />
@@ -149,7 +149,7 @@ export function LocaleSelector({
       <DropdownMenuContent
         align="end"
         sideOffset={10}
-        className="w-[220px] rounded-2xl border-border/70 bg-background/95 p-2 shadow-xl backdrop-blur-xl"
+        className="z-[70] w-[220px] rounded-2xl border border-blue-100 bg-white/95 p-2 text-slate-900 shadow-[0_24px_70px_rgba(37,99,235,0.16)] backdrop-blur-xl"
         onCloseAutoFocus={(event) => {
           event.preventDefault();
           triggerRef.current?.blur();
@@ -160,16 +160,16 @@ export function LocaleSelector({
             key={option.code}
             onSelect={() => handleSwitchLanguage(option.code)}
             className={cn(
-              'cursor-pointer rounded-xl px-3 py-2 data-[highlighted]:bg-accent/70 data-[highlighted]:text-foreground',
-              option.code === activeLocale && 'bg-accent/60 text-foreground'
+              'cursor-pointer rounded-xl px-3 py-2 text-slate-700 data-[highlighted]:bg-blue-50 data-[highlighted]:text-blue-700',
+              option.code === activeLocale && 'bg-blue-50 text-blue-700'
             )}
           >
-            <span className="flex size-6 items-center justify-center rounded-full bg-muted text-sm shadow-xs">
+            <span className="flex size-6 items-center justify-center rounded-full bg-blue-50 text-sm shadow-xs">
               {option.flag}
             </span>
             <span className="truncate text-sm font-medium">{option.label}</span>
             {option.code === activeLocale && (
-              <Check size={16} className="text-foreground" />
+              <Check size={16} className="text-blue-600" />
             )}
           </DropdownMenuItem>
         ))}

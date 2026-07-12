@@ -9,6 +9,7 @@ import {
 import type { ImageGeneratorScene } from '@/config/ai-models';
 import {
   DEFAULT_VIDEO_MODEL_CATALOG,
+  assertVideoModelReferenceMedia,
   findVideoModelForRequest,
   getEnabledVideoModels,
   getVideoModelCreditCost,
@@ -153,6 +154,10 @@ async function generateAITask(data: AIGenerateInput) {
 
   if (mediaType === AIMediaType.VIDEO && !videoModel) {
     throw new Error('video model is disabled or not configured');
+  }
+
+  if (videoModel) {
+    assertVideoModelReferenceMedia({ model: videoModel, options });
   }
 
   const user = await getUserInfo();

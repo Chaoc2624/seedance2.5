@@ -71,7 +71,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generate',
     download: 'Download',
     eyebrow: 'Video effects',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Seedance 2.5 video gallery',
     description:
       'Browse Seedance 2.5 motion references. Open any clip in a focused preview, or move straight into Video Generate with Seedance 2.5.',
     viewAll: 'View all',
@@ -92,7 +92,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generieren',
     download: 'Herunterladen',
     eyebrow: 'Videoeffekte',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Seedance 2.5 Videogalerie',
     description:
       'Durchsuche Seedance 2.5 Bewegungsreferenzen. Oeffne Clips in der Vorschau oder starte direkt Video Generate mit Seedance 2.5.',
     viewAll: 'Alle ansehen',
@@ -113,7 +113,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generer',
     download: 'Telecharger',
     eyebrow: 'Effets video',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Galerie video Seedance 2.5',
     description:
       'Parcourez des references de mouvement Seedance 2.5. Ouvrez un clip en apercu ou lancez Video Generate avec Seedance 2.5.',
     viewAll: 'Tout voir',
@@ -134,7 +134,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generar',
     download: 'Descargar',
     eyebrow: 'Efectos de video',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Galeria de videos Seedance 2.5',
     description:
       'Explora referencias de movimiento Seedance 2.5. Abre cualquier clip o entra directo a Video Generate con Seedance 2.5.',
     viewAll: 'Ver todo',
@@ -155,7 +155,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Genera',
     download: 'Scarica',
     eyebrow: 'Effetti video',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Galleria video Seedance 2.5',
     description:
       'Sfoglia reference di movimento Seedance 2.5. Apri una clip in anteprima o passa a Video Generate con Seedance 2.5.',
     viewAll: 'Vedi tutto',
@@ -176,7 +176,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generuj',
     download: 'Pobierz',
     eyebrow: 'Efekty wideo',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Galeria wideo Seedance 2.5',
     description:
       'Przegladaj referencje ruchu Seedance 2.5. Otworz klip w podgladzie albo przejdz do Video Generate z Seedance 2.5.',
     viewAll: 'Zobacz wszystko',
@@ -197,7 +197,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: '生成',
     download: 'ダウンロード',
     eyebrow: '動画エフェクト',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Seedance 2.5 動画ギャラリー',
     description:
       'Seedance 2.5 のモーション参照を閲覧できます。クリップをプレビューし、そのまま Seedance 2.5 の動画生成へ進めます。',
     viewAll: 'すべて見る',
@@ -218,7 +218,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: '생성',
     download: '다운로드',
     eyebrow: '동영상 효과',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Seedance 2.5 동영상 갤러리',
     description:
       'Seedance 2.5 모션 레퍼런스를 둘러보세요. 클립을 미리 보거나 Seedance 2.5 Video Generate로 바로 이동할 수 있습니다.',
     viewAll: '전체 보기',
@@ -239,7 +239,7 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: '生成',
     download: '下載',
     eyebrow: '影片效果',
-    title: 'Seedance 2.5 Seedance 2.5',
+    title: 'Seedance 2.5 影片瀑布流',
     description:
       '瀏覽 Seedance 2.5 動態參考。可開啟單支影片預覽，或直接進入 Seedance 2.5 影片生成。',
     viewAll: '查看全部',
@@ -339,7 +339,7 @@ function VideoTile({
             {item.title}
           </h3>
         </div>
-        <span className="hidden shrink-0 rounded-full bg-[#2563eb] px-2.5 py-1 text-[11px] font-bold text-[#151a0c] transition-transform duration-300 group-hover:-translate-y-0.5 sm:inline-flex">
+        <span className="hidden shrink-0 rounded-full bg-blue-600 px-2.5 py-1 text-[11px] font-bold text-white transition-transform duration-300 group-hover:-translate-y-0.5 sm:inline-flex">
           {String(index + 1).padStart(2, '0')}
         </span>
       </div>
@@ -488,7 +488,7 @@ function VideoPreviewDialog({
 
               <div className="mt-4 grid grid-cols-2 gap-2">
                 <Link
-                  href="/video-generator"
+                  href="/#create"
                   className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#2563eb] text-sm font-bold text-[#111407] transition-colors hover:bg-[#60a5fa] focus-visible:ring-2 focus-visible:ring-[#2563eb]/70 focus-visible:outline-none"
                 >
                   <Video className="size-4" />
@@ -520,14 +520,13 @@ export function SeedanceVideoGallerySection() {
     useState<PreviewTransitionRect | null>(null);
 
   return (
-    <section className={cn(CONTENT_FRAME_CLASS, 'mt-20')}>
+    <section className={cn(CONTENT_FRAME_CLASS, 'mt-16')}>
       <div className="mb-10 max-w-2xl">
         <h2 className="font-display text-3xl leading-tight font-semibold text-slate-950 md:text-5xl">
-          Seedance video gallery
+          {copy.title}
         </h2>
         <p className="mt-4 max-w-xl text-base leading-7 text-slate-600">
-          Explore motion, camera language, character performance, and visual
-          styles across real video references.
+          {copy.description}
         </p>
         <div className="mt-6 flex flex-wrap gap-3">
           <button
@@ -547,7 +546,7 @@ export function SeedanceVideoGallerySection() {
             {copy.viewAll} <ChevronRight className="size-4" />
           </button>
           <Link
-            href="/video-generator"
+            href="/#create"
             className="inline-flex min-h-12 items-center justify-center gap-2 rounded-full border border-blue-200 bg-white px-5 text-sm font-semibold text-blue-700 transition-colors hover:border-blue-400 hover:bg-blue-50 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
           >
             {copy.generate} <ArrowUpRight className="size-4" />

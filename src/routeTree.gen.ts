@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as Char123indexnowKeyChar125DottxtRouteImport } from './routes/{$indexnowKey}[.]txt'
 import { Route as Char123LocaleChar125RouteRouteImport } from './routes/{-$locale}/route'
+import { Route as Char123LocaleChar125ConfigRouteImport } from './routes/{-$locale}/config'
 import { Route as Char123LocaleChar125DocsRouteImport } from './routes/{-$locale}/_docs'
 import { Route as Char123LocaleChar125ShiponceRouteRouteImport } from './routes/{-$locale}/shiponce/route'
 import { Route as Char123LocaleChar125OauthRouteRouteImport } from './routes/{-$locale}/_oauth/route'
@@ -93,6 +94,12 @@ const Char123LocaleChar125RouteRoute =
     id: '/{-$locale}',
     path: '/{-$locale}',
     getParentRoute: () => rootRouteImport,
+  } as any)
+const Char123LocaleChar125ConfigRoute =
+  Char123LocaleChar125ConfigRouteImport.update({
+    id: '/config',
+    path: '/config',
+    getParentRoute: () => Char123LocaleChar125RouteRoute,
   } as any)
 const Char123LocaleChar125DocsRoute =
   Char123LocaleChar125DocsRouteImport.update({
@@ -512,6 +519,7 @@ export interface FileRoutesByFullPath {
   '/{-$locale}': typeof Char123LocaleChar125DocsRouteWithChildren
   '/{$indexnowKey}.txt': typeof Char123indexnowKeyChar125DottxtRoute
   '/{-$locale}/shiponce': typeof Char123LocaleChar125ShiponceRouteRouteWithChildren
+  '/{-$locale}/config': typeof Char123LocaleChar125ConfigRoute
   '/{-$locale}/activity': typeof Char123LocaleChar125LandingActivityRouteRouteWithChildren
   '/{-$locale}/settings': typeof Char123LocaleChar125LandingSettingsRouteRouteWithChildren
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -581,6 +589,7 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/{-$locale}': typeof Char123LocaleChar125LandingIndexRoute
   '/{$indexnowKey}.txt': typeof Char123indexnowKeyChar125DottxtRoute
+  '/{-$locale}/config': typeof Char123LocaleChar125ConfigRoute
   '/api/auth/$': typeof ApiAuthSplatRoute
   '/api/payment/callback': typeof ApiPaymentCallbackRoute
   '/api/proxy/file': typeof ApiProxyFileRoute
@@ -653,6 +662,7 @@ export interface FileRoutesById {
   '/{-$locale}/_oauth': typeof Char123LocaleChar125OauthRouteRouteWithChildren
   '/{-$locale}/shiponce': typeof Char123LocaleChar125ShiponceRouteRouteWithChildren
   '/{-$locale}/_docs': typeof Char123LocaleChar125DocsRouteWithChildren
+  '/{-$locale}/config': typeof Char123LocaleChar125ConfigRoute
   '/{-$locale}/_landing/activity': typeof Char123LocaleChar125LandingActivityRouteRouteWithChildren
   '/{-$locale}/_landing/settings': typeof Char123LocaleChar125LandingSettingsRouteRouteWithChildren
   '/api/auth/$': typeof ApiAuthSplatRoute
@@ -725,6 +735,7 @@ export interface FileRouteTypes {
     | '/{-$locale}'
     | '/{$indexnowKey}.txt'
     | '/{-$locale}/shiponce'
+    | '/{-$locale}/config'
     | '/{-$locale}/activity'
     | '/{-$locale}/settings'
     | '/api/auth/$'
@@ -794,6 +805,7 @@ export interface FileRouteTypes {
   to:
     | '/{-$locale}'
     | '/{$indexnowKey}.txt'
+    | '/{-$locale}/config'
     | '/api/auth/$'
     | '/api/payment/callback'
     | '/api/proxy/file'
@@ -865,6 +877,7 @@ export interface FileRouteTypes {
     | '/{-$locale}/_oauth'
     | '/{-$locale}/shiponce'
     | '/{-$locale}/_docs'
+    | '/{-$locale}/config'
     | '/{-$locale}/_landing/activity'
     | '/{-$locale}/_landing/settings'
     | '/api/auth/$'
@@ -955,6 +968,13 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}'
       preLoaderRoute: typeof Char123LocaleChar125RouteRouteImport
       parentRoute: typeof rootRouteImport
+    }
+    '/{-$locale}/config': {
+      id: '/{-$locale}/config'
+      path: '/config'
+      fullPath: '/{-$locale}/config'
+      preLoaderRoute: typeof Char123LocaleChar125ConfigRouteImport
+      parentRoute: typeof Char123LocaleChar125RouteRoute
     }
     '/{-$locale}/_docs': {
       id: '/{-$locale}/_docs'
@@ -1749,6 +1769,7 @@ interface Char123LocaleChar125RouteRouteChildren {
   Char123LocaleChar125OauthRouteRoute: typeof Char123LocaleChar125OauthRouteRouteWithChildren
   Char123LocaleChar125ShiponceRouteRoute: typeof Char123LocaleChar125ShiponceRouteRouteWithChildren
   Char123LocaleChar125DocsRoute: typeof Char123LocaleChar125DocsRouteWithChildren
+  Char123LocaleChar125ConfigRoute: typeof Char123LocaleChar125ConfigRoute
 }
 
 const Char123LocaleChar125RouteRouteChildren: Char123LocaleChar125RouteRouteChildren =
@@ -1762,6 +1783,7 @@ const Char123LocaleChar125RouteRouteChildren: Char123LocaleChar125RouteRouteChil
     Char123LocaleChar125ShiponceRouteRoute:
       Char123LocaleChar125ShiponceRouteRouteWithChildren,
     Char123LocaleChar125DocsRoute: Char123LocaleChar125DocsRouteWithChildren,
+    Char123LocaleChar125ConfigRoute: Char123LocaleChar125ConfigRoute,
   }
 
 const Char123LocaleChar125RouteRouteWithChildren =

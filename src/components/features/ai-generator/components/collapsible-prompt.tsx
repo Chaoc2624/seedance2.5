@@ -44,16 +44,16 @@ export function CollapsiblePrompt({
     <div className={cn('min-w-0 space-y-2', className)}>
       <div
         className={cn(
-          'relative overflow-hidden rounded-lg border border-white/[0.06] bg-black/18 px-3 py-2.5',
+          'relative overflow-hidden rounded-lg border border-blue-100 bg-blue-50/70 px-3 py-2.5',
           expanded ? expandedClassName : collapsedClassName,
           bodyClassName
         )}
       >
-        <p className="text-sm leading-5 font-medium break-words whitespace-pre-wrap text-zinc-200">
+        <p className="text-sm leading-5 font-medium break-words whitespace-pre-wrap text-slate-700">
           {normalizedPrompt}
         </p>
         {!expanded && canExpand && (
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-linear-to-b from-transparent to-[#080b06]" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-8 bg-linear-to-b from-transparent to-blue-50" />
         )}
       </div>
 
@@ -62,7 +62,7 @@ export function CollapsiblePrompt({
           type="button"
           variant="secondary"
           size="sm"
-          className="h-8 rounded-lg bg-white/[0.045] px-2.5 text-xs font-semibold text-zinc-300 hover:bg-white/[0.08] hover:text-white"
+          className="h-8 rounded-lg border border-blue-100 bg-white px-2.5 text-xs font-semibold text-slate-600 hover:bg-blue-50 hover:text-blue-700"
           onClick={copyPrompt}
         >
           <Copy className="size-3.5" />
@@ -73,7 +73,7 @@ export function CollapsiblePrompt({
             type="button"
             variant="secondary"
             size="sm"
-            className="h-8 rounded-lg bg-white/[0.045] px-2.5 text-xs font-semibold text-zinc-300 hover:bg-white/[0.08] hover:text-white"
+            className="h-8 rounded-lg border border-blue-100 bg-white px-2.5 text-xs font-semibold text-slate-600 hover:bg-blue-50 hover:text-blue-700"
             aria-expanded={expanded}
             onClick={() => setExpanded((value) => !value)}
           >

@@ -12,12 +12,12 @@ export function LuseePublicFooter({ footer }: LuseePublicFooterProps) {
 
   return (
     <footer
-      className="border-t border-[#f4f2df12] bg-[#090b08] py-10 md:py-12"
+      className="border-t border-blue-500/10 bg-slate-950 py-10 md:py-12"
       id={footer.id || 'footer'}
     >
       <div className="mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8">
         <div className="grid gap-8 md:grid-cols-[minmax(13rem,1fr)_minmax(0,2fr)]">
-          <Link href="/" className="flex items-start gap-2 text-[#f4f2e6]">
+          <Link href="/" className="flex items-start gap-2 text-white">
             <img
               alt=""
               className="size-7 rounded-md object-contain"
@@ -33,11 +33,11 @@ export function LuseePublicFooter({ footer }: LuseePublicFooterProps) {
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 text-[12px] md:grid-cols-3">
             {columns.map((column) => (
               <div className="space-y-2" key={column.title}>
-                <p className="font-semibold text-[#f4f2e6]">{column.title}</p>
+                <p className="font-semibold text-white">{column.title}</p>
                 {column.children?.map((link) =>
                   link.url ? (
                     <Link
-                      className="block text-[#a9ac96] transition-colors hover:text-[#f4f2e6]"
+                      className="block text-slate-400 transition-colors hover:text-blue-200"
                       href={link.url}
                       key={link.title}
                     >
@@ -50,14 +50,14 @@ export function LuseePublicFooter({ footer }: LuseePublicFooterProps) {
           </div>
         </div>
 
-        <div className="mt-10 border-t border-[#f4f2df12] pt-6">
-          <p className="mb-3 text-[12px] font-semibold text-[#f4f2e6]">
+        <div className="mt-10 border-t border-white/10 pt-6">
+          <p className="mb-3 text-[12px] font-semibold text-white">
             Languages
           </p>
           <div className="flex flex-wrap gap-x-4 gap-y-2 text-[12px]">
             {localeOptions.map((option) => (
               <Link
-                className="inline-flex items-center gap-1.5 text-[#a9ac96] transition-colors hover:text-[#f4f2e6]"
+                className="inline-flex items-center gap-1.5 text-slate-400 transition-colors hover:text-blue-200"
                 href="/"
                 key={option.code}
                 locale={option.code}
@@ -69,10 +69,10 @@ export function LuseePublicFooter({ footer }: LuseePublicFooterProps) {
           </div>
         </div>
 
-        <div className="mt-12 font-display text-[20vw] leading-none font-black tracking-normal text-[#f4f2e6] md:text-[10rem]">
+        <div className="mt-12 font-display text-[20vw] leading-none font-black tracking-normal text-white md:text-[10rem]">
           Seedance 2.5
         </div>
-        <p className="mt-6 border-t border-[#f4f2df12] pt-6 text-[11px] text-[#a9ac96]">
+        <p className="mt-6 border-t border-white/10 pt-6 text-[11px] text-slate-500">
           {footer.copyright || '2026 All rights reserved.'}
         </p>
       </div>

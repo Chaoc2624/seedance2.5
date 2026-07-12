@@ -29,7 +29,8 @@ export type GalleryItem = {
   className?: string;
 };
 
-export const CONTENT_FRAME_CLASS = 'mx-auto w-full px-4 sm:px-6 lg:px-8';
+export const CONTENT_FRAME_CLASS =
+  'mx-auto w-full max-w-[1440px] px-4 sm:px-6 lg:px-8';
 export const BRAND_LOGO_SRC = '/logo.svg';
 export const SEEDANCE_VIDEO_CDN_BASE =
   'https://pub-06bb62f2aed546cface4bcc4a5aa7f2f.r2.dev/uploads/media/seedance-2';
@@ -192,28 +193,28 @@ export const seedanceVideos: SeedanceVideoAsset[] = [
 
 export const whatsNew: ShowcaseCard[] = [
   {
-    title: 'Seedance 2.5 Film Studio',
-    label: 'Cinematic scenes',
-    image: showcaseImage('gpt-image-2-prompt-12.jpg'),
-    accent: 'from-[#d8f269]/5 to-[#11140f]/78',
+    title: 'Seedance 2.5 multilingual video',
+    label: 'Small-language prompts',
+    image: seedanceVideos[14]?.poster ?? seedanceVideos[0]!.poster,
+    accent: 'from-blue-500/24 to-transparent',
   },
   {
-    title: 'Magic Text',
-    label: 'Poster campaigns',
-    image: showcaseImage('gpt-image-2-prompt-15.jpg'),
-    accent: 'from-[#a86642]/10 to-[#11140f]/78',
+    title: 'Sharper cinematic motion',
+    label: 'Cleaner video output',
+    image: seedanceVideos[0]!.poster,
+    accent: 'from-cyan-400/22 to-transparent',
   },
   {
-    title: 'Seedance 2.5 Audio',
-    label: 'Voice and music',
-    image: '/imgs/features/music-dark.png',
-    accent: 'from-[#6f7f1f]/14 to-[#090b08]/78',
+    title: 'Reference-led direction',
+    label: 'Images, clips, frames',
+    image: seedanceVideos[3]?.poster ?? seedanceVideos[1]!.poster,
+    accent: 'from-indigo-500/24 to-transparent',
   },
   {
-    title: 'Seedance 2.5 GPT Image 2',
-    label: 'Next-gen image model',
-    image: showcaseImage('gpt-image-2-prompt-06.jpg'),
-    accent: 'from-[#d8f269]/8 to-[#090b08]/78',
+    title: 'Sound-aware storytelling',
+    label: 'Dialogue and ambience',
+    image: seedanceVideos[18]?.poster ?? seedanceVideos[2]!.poster,
+    accent: 'from-blue-600/24 to-transparent',
   },
 ];
 

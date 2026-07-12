@@ -89,29 +89,29 @@ function CreatePendingTaskSkeleton({ info }: { info: PendingTaskInfo }) {
   const Icon = info.mediaType === 'video' ? Video : ImageIcon;
 
   return (
-    <article className="w-fit max-w-full rounded-xl bg-white/[0.018] p-4 text-white shadow-[0_22px_70px_rgba(0,0,0,0.18)]">
+    <article className="w-fit max-w-full rounded-2xl border border-blue-100 bg-white/92 p-4 text-slate-950 shadow-[0_22px_70px_rgba(37,99,235,0.1)]">
       <div className="flex max-w-full items-start justify-between gap-4">
         <div className="max-w-[min(860px,72vw)] min-w-0">
-          <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
-            <span className="rounded-md bg-white/[0.055] px-2 py-1 text-zinc-300">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+            <span className="rounded-md bg-blue-50 px-2 py-1 font-semibold text-blue-700">
               {info.scene}
             </span>
-            <span className="rounded-md bg-white/[0.04] px-2 py-1">
+            <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600">
               {info.modelLabel}
             </span>
             <time>{timeStr}</time>
           </div>
           {/* Show the real prompt so the user can confirm what they submitted */}
-          <p className="mt-3 line-clamp-3 text-sm/[1.6] text-white">
+          <p className="mt-3 line-clamp-3 text-sm/[1.6] text-slate-700">
             {info.prompt}
           </p>
         </div>
-        <span className="shrink-0 rounded-full bg-pink-500/14 px-3 py-1 text-xs font-bold text-pink-300">
+        <span className="shrink-0 rounded-full bg-blue-50 px-3 py-1 text-xs font-bold text-blue-700">
           {t('status.processing')}
         </span>
       </div>
 
-      <div className="mt-3 flex items-center gap-1.5 text-sm text-zinc-500">
+      <div className="mt-3 flex items-center gap-1.5 text-sm text-slate-500">
         <Icon className="size-4" />
         {info.mediaType === 'video'
           ? t('timeline.video')
@@ -128,7 +128,7 @@ function CreatePendingTaskSkeleton({ info }: { info: PendingTaskInfo }) {
             style={{ width: '18%' }}
           />
         </div>
-        <p className="text-xs text-zinc-500">{t('skeleton.processing')}</p>
+        <p className="text-xs text-slate-500">{t('skeleton.processing')}</p>
       </div>
     </article>
   );
@@ -143,25 +143,28 @@ function HistorySkeletonCard({
 }) {
   return (
     <article
-      className={cn('lusee-liquid-panel w-full rounded-xl p-4', className)}
+      className={cn(
+        'w-full rounded-2xl border border-blue-100 bg-white/84 p-4 shadow-[0_22px_70px_rgba(37,99,235,0.08)]',
+        className
+      )}
       aria-hidden="true"
     >
       <div className="flex items-start justify-between gap-4">
         <div className="min-w-0 flex-1 space-y-3">
           <div className="flex flex-wrap items-center gap-2">
-            <Skeleton className="h-7 w-20 rounded-md bg-white/[0.105]" />
-            <Skeleton className="h-7 w-28 rounded-md bg-white/[0.085]" />
-            <Skeleton className="h-5 w-24 bg-white/[0.07]" />
+            <Skeleton className="h-7 w-20 rounded-md bg-blue-100/80" />
+            <Skeleton className="h-7 w-28 rounded-md bg-blue-100/60" />
+            <Skeleton className="h-5 w-24 bg-blue-100/50" />
           </div>
-          <Skeleton className="h-5 w-full max-w-[520px] bg-white/[0.115]" />
-          <Skeleton className="h-5 w-2/3 max-w-[360px] bg-white/[0.09]" />
+          <Skeleton className="h-5 w-full max-w-[520px] bg-blue-100/70" />
+          <Skeleton className="h-5 w-2/3 max-w-[360px] bg-blue-100/50" />
         </div>
-        <Skeleton className="h-6 w-16 shrink-0 rounded-full bg-white/[0.1]" />
+        <Skeleton className="h-6 w-16 shrink-0 rounded-full bg-blue-100/70" />
       </div>
 
       <div className="mt-3 flex items-center gap-4">
-        <Skeleton className="h-5 w-20 bg-white/[0.08]" />
-        <Skeleton className="h-5 w-16 bg-white/[0.07]" />
+        <Skeleton className="h-5 w-20 bg-blue-100/60" />
+        <Skeleton className="h-5 w-16 bg-blue-100/50" />
       </div>
 
       <div
@@ -173,14 +176,14 @@ function HistorySkeletonCard({
         {Array.from({ length: mediaCount }).map((_, index) => (
           <Skeleton
             key={index}
-            className="aspect-[4/3] min-h-28 rounded-lg bg-white/[0.09]"
+            className="aspect-[4/3] min-h-28 rounded-lg bg-blue-100/60"
           />
         ))}
       </div>
 
       <div className="mt-3 flex flex-wrap gap-2">
-        <Skeleton className="h-9 w-32 rounded-md bg-white/[0.08]" />
-        <Skeleton className="h-9 w-24 rounded-md bg-white/[0.08]" />
+        <Skeleton className="h-9 w-32 rounded-md bg-blue-100/60" />
+        <Skeleton className="h-9 w-24 rounded-md bg-blue-100/60" />
       </div>
     </article>
   );

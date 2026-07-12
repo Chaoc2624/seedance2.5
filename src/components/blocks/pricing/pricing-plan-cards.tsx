@@ -33,27 +33,28 @@ function getPlanTone(item: PricingItem) {
 
   if (plan?.includes('ultra') || item.product_id.includes('studio')) {
     return {
-      card: 'border-[#9aae49]/45 bg-[#20291a] shadow-[0_24px_56px_-40px_rgba(234,255,79,0.58)]',
-      credit: 'border-[#dced7b]/15 bg-black/20',
-      button: 'border-[#f2ff9a] bg-[#eaff4f] text-[#151a0c] hover:bg-[#f2ff9a]',
-      icon: 'text-[#eaff4f]',
+      card: 'border-blue-500/45 bg-blue-950/55 shadow-[0_24px_56px_-40px_rgba(96,165,250,0.58)]',
+      credit: 'border-blue-300/15 bg-black/20',
+      button: 'border-blue-500 bg-blue-500 text-white hover:bg-blue-400',
+      icon: 'text-blue-300',
     };
   }
 
   if (plan?.includes('pro')) {
     return {
-      card: 'border-[#667535]/50 bg-[#182016] shadow-[0_24px_56px_-40px_rgba(174,198,75,0.4)]',
-      credit: 'border-[#b7cc66]/15 bg-[#232d1a]',
-      button: 'border-[#ddec7c] bg-[#cfe94a] text-[#151a0c] hover:bg-[#eaff4f]',
-      icon: 'text-[#ddec7c]',
+      card: 'border-blue-400/50 bg-blue-950/35 shadow-[0_24px_56px_-40px_rgba(59,130,246,0.42)]',
+      credit: 'border-blue-300/15 bg-blue-950/35',
+      button: 'border-blue-600 bg-blue-600 text-white hover:bg-blue-500',
+      icon: 'text-blue-300',
     };
   }
 
   return {
-    card: 'border-[#374034] bg-[#141914]',
-    credit: 'border-[#3c4436] bg-black/15',
-    button: 'border-[#e2e6d2] bg-[#e9eadf] text-[#151a0c] hover:bg-white',
-    icon: 'text-[#e2e6d2]',
+    card: 'border-slate-700 bg-slate-900',
+    credit: 'border-slate-700 bg-black/15',
+    button:
+      'border-slate-200 bg-white text-slate-950 hover:bg-blue-50 hover:text-blue-700',
+    icon: 'text-blue-300',
   };
 }
 
@@ -79,7 +80,7 @@ export function PricingPlanCards({
             className={cn(
               'relative flex min-w-0 flex-col overflow-hidden rounded-lg border p-5 shadow-[0_18px_45px_-38px_rgba(0,0,0,0.9)]',
               tone.card,
-              isCurrentPlan && 'border-[#ddec7c]/60 bg-[#ddec7c]/[0.08]'
+              isCurrentPlan && 'border-blue-400/60 bg-blue-500/[0.08]'
             )}
             key={item.product_id}
           >

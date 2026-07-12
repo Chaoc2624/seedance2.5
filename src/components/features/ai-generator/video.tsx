@@ -29,6 +29,13 @@ import {
   ImageUploaderValue,
 } from '@/components/features/ai-generator/components/image-uploader';
 import {
+  EMPTY_SEEDANCE_REFERENCE_MEDIA,
+  getSeedanceReferenceItems,
+  getUploadedSeedanceReferenceOptions,
+} from '@/components/features/ai-generator/components/seedance-reference-media';
+import type { SeedanceReferenceMedia } from '@/components/features/ai-generator/components/seedance-reference-media';
+import { SeedanceReferencePanel } from '@/components/features/ai-generator/components/seedance-reference-panel';
+import {
   DEFAULT_VIDEO_MODEL_ID,
   getDefaultVideoModelIdForScene,
   VideoAspectRatioOptions,
@@ -218,6 +225,8 @@ export function VideoGenerator({
   >([]);
   const [referenceImageUrls, setReferenceImageUrls] = useState<string[]>([]);
   const [referenceVideoUrl, setReferenceVideoUrl] = useState<string>('');
+  const [seedanceReferenceMedia, setSeedanceReferenceMedia] =
+    useState<SeedanceReferenceMedia>(EMPTY_SEEDANCE_REFERENCE_MEDIA);
   const [generatedVideos, setGeneratedVideos] = useState<GeneratedVideo[]>([]);
   const [isGenerating, setIsGenerating] = useState(false);
   const [progress, setProgress] = useState(0);
@@ -411,6 +420,18 @@ export function VideoGenerator({
   const isImageToVideoMode = activeTab === 'image-to-video';
   const isVideoToVideoMode = activeTab === 'video-to-video';
   const capabilities = selectedModelOption?.capabilities;
+  const isSeedance2Model =
+    selectedModelOption?.model === 'bytedance/seedance-2';
+  const seedanceReferenceItems = useMemo(
+    () => getSeedanceReferenceItems(seedanceReferenceMedia),
+    [seedanceReferenceMedia]
+  );
+  const isSeedanceReferenceUploading = seedanceReferenceItems.some(
+    (item) => item.status === 'uploading'
+  );
+  const hasSeedanceReferenceUploadError = seedanceReferenceItems.some(
+    (item) => item.status === 'error'
+  );
 
   const handleTabChange = (value: string) => {
     const tab = value as VideoGeneratorTab;
@@ -613,7 +634,7 @@ export function VideoGenerator({
     }
 
     const trimmedPrompt = prompt.trim();
-    if (!trimmedPrompt && isTextToVideoMode) {
+    if (!trimmedPrompt && (isTextToVideoMode || isSeedance2Model)) {
       toast.error('Please enter a prompt before generating.');
       return;
     }
@@ -626,12 +647,16 @@ export function VideoGenerator({
       return;
     }
 
-    if (isImageToVideoMode && referenceImageUrls.length === 0) {
+    if (
+      !isSeedance2Model &&
+      isImageToVideoMode &&
+      referenceImageUrls.length === 0
+    ) {
       toast.error('Please upload a reference image before generating.');
       return;
     }
 
-    if (isVideoToVideoMode && !referenceVideoUrl) {
+    if (!isSeedance2Model && isVideoToVideoMode && !referenceVideoUrl) {
       toast.error('Please provide a reference video URL before generating.');
       return;
     }
@@ -669,11 +694,16 @@ export function VideoGenerator({
         options.negative_prompt = negativePrompt.trim();
       }
 
-      if (isImageToVideoMode) {
+      if (isSeedance2Model) {
+        Object.assign(
+          options,
+          getUploadedSeedanceReferenceOptions(seedanceReferenceMedia)
+        );
+      } else if (isImageToVideoMode) {
         options.image_input = referenceImageUrls;
       }
 
-      if (isVideoToVideoMode) {
+      if (!isSeedance2Model && isVideoToVideoMode) {
         options.video_input = [referenceVideoUrl];
       }
 
@@ -811,7 +841,13 @@ export function VideoGenerator({
                   onChange={setModelKey}
                 />
 
-                {isImageToVideoMode && (
+                {isSeedance2Model ? (
+                  <SeedanceReferencePanel
+                    value={seedanceReferenceMedia}
+                    onChange={setSeedanceReferenceMedia}
+                    disabled={isGenerating}
+                  />
+                ) : isImageToVideoMode ? (
                   <div className="space-y-4">
                     <ImageUploader
                       title={t('form.reference_image')}
@@ -828,9 +864,9 @@ export function VideoGenerator({
                       </p>
                     )}
                   </div>
-                )}
+                ) : null}
 
-                {isVideoToVideoMode && (
+                {!isSeedance2Model && isVideoToVideoMode && (
                   <div className="space-y-2">
                     <Label htmlFor="video-url">
                       {t('form.reference_video')}
@@ -941,12 +977,17 @@ export function VideoGenerator({
                     onClick={handleGenerate}
                     disabled={
                       isGenerating ||
-                      (isTextToVideoMode && !prompt.trim()) ||
+                      ((isTextToVideoMode || isSeedance2Model) &&
+                        !prompt.trim()) ||
                       isPromptTooLong ||
-                      isReferenceUploading ||
-                      hasReferenceUploadError ||
-                      (isImageToVideoMode && referenceImageUrls.length === 0) ||
-                      (isVideoToVideoMode && !referenceVideoUrl)
+                      (isSeedance2Model
+                        ? isSeedanceReferenceUploading ||
+                          hasSeedanceReferenceUploadError
+                        : isReferenceUploading ||
+                          hasReferenceUploadError ||
+                          (isImageToVideoMode &&
+                            referenceImageUrls.length === 0) ||
+                          (isVideoToVideoMode && !referenceVideoUrl))
                     }
                   >
                     {isGenerating ? (

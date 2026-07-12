@@ -10,11 +10,12 @@ import type { ComponentType } from 'react';
 
 import { Link } from '@/core/i18n/navigation';
 
-import { localeOptions } from '@/config/locale';
+import { CreatorFeedbackWall } from '@/themes/default/blocks/creator-feedback-wall';
+import { Faq } from '@/themes/default/blocks/faq';
 
 import { cn } from '@/lib/utils';
 
-import { CONTENT_FRAME_CLASS } from './-home-data';
+import { CONTENT_FRAME_CLASS, whatsNew } from './-home-data';
 import { SeedanceVideoGallerySection } from './-seedance-video-gallery';
 
 type FeatureItem = {
@@ -88,6 +89,68 @@ const useCases = [
     'Build visual performances around lyrics, beats, and choreography.',
   ],
 ] as const;
+
+const supportedSmallLanguages = [
+  ['Español', 'es'],
+  ['Français', 'fr'],
+  ['Italiano', 'it'],
+  ['العربية', 'ar'],
+  ['Português', 'pt'],
+  ['Norsk', 'no'],
+  ['Русский', 'ru'],
+  ['Polski', 'pl'],
+] as const;
+
+const creatorFeedbackSection = {
+  id: 'creator-feedback',
+  title: 'Loved by creators',
+  description:
+    'Directors, marketers, educators, and content teams use Seedance 2.5 to move from a creative brief to finished motion faster.',
+};
+
+const faqSection = {
+  id: 'faq',
+  title: 'Frequently asked questions',
+  description:
+    'Clear answers about multimodal video creation with Seedance 2.5.',
+  items: [
+    {
+      question: 'What is Seedance 2.5?',
+      answer:
+        'Seedance 2.5 is a video-first AI creation workflow for turning prompts, reference media, camera direction, and sound cues into cinematic videos.',
+    },
+    {
+      question: 'Which inputs can I use?',
+      answer:
+        'You can start with a text prompt, reference images, video clips, or audio cues. Combine them to describe the subject, motion, composition, atmosphere, and pacing you want.',
+    },
+    {
+      question: 'Can I generate a video from an image or an existing clip?',
+      answer:
+        'Yes. Use the text/image-to-video workflow for a reference image, or use a video reference when you want to extend or reshape an existing visual direction.',
+    },
+    {
+      question: 'Can I control camera movement and character consistency?',
+      answer:
+        'Yes. Describe shot scale, camera movement, lens behavior, transitions, and performance in natural language. Reference images and clips can also help preserve characters, wardrobe, and visual identity across a sequence.',
+    },
+    {
+      question: 'Can I extend or edit an existing video?',
+      answer:
+        'Yes. The workflow supports video extension and targeted editing so you can continue a shot, reshape a scene, or connect shots while keeping the creative direction consistent.',
+    },
+    {
+      question: 'Which output settings are available?',
+      answer:
+        'The generator exposes controls for duration, resolution, and aspect ratio. The homepage composer starts with a 5-second, 1080p, 16:9 video setup, and you can adjust those settings in the generator.',
+    },
+    {
+      question: 'Does Seedance 2.5 support multilingual prompts?',
+      answer:
+        'Yes. You can write creative briefs in supported languages and use the same workflow for localized stories, regional variants, and culturally specific direction.',
+    },
+  ],
+};
 
 const plans = [
   {
@@ -184,6 +247,60 @@ function CapabilitySection() {
   );
 }
 
+function WhatsNewSection() {
+  return (
+    <section className="border-b border-blue-100 bg-white py-10">
+      <div className={CONTENT_FRAME_CLASS}>
+        <div className="mb-5 flex items-end justify-between gap-4">
+          <div>
+            <p className="text-sm font-semibold text-blue-700">
+              Seedance 2.5 updates
+            </p>
+            <h2 className="mt-2 font-display text-3xl leading-tight font-semibold tracking-[-0.035em] text-slate-950 md:text-5xl">
+              What's new
+            </h2>
+          </div>
+          <p className="hidden max-w-md text-sm leading-6 text-slate-500 md:block">
+            New video-first workflows for cleaner motion, multilingual prompts,
+            references, and sound-aware creative direction.
+          </p>
+        </div>
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
+          {whatsNew.map((item, index) => (
+            <article
+              key={item.title}
+              className="group relative min-h-56 overflow-hidden rounded-2xl border border-blue-100 bg-slate-950 shadow-[0_24px_80px_rgba(15,23,42,0.14)]"
+            >
+              <img
+                src={item.image}
+                alt=""
+                className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
+                loading={index === 0 ? 'eager' : 'lazy'}
+                decoding="async"
+              />
+              <div className="absolute inset-0 bg-linear-to-t from-slate-950 via-slate-950/30 to-transparent" />
+              <div
+                className={cn(
+                  'absolute inset-0 bg-linear-to-br opacity-80',
+                  item.accent
+                )}
+              />
+              <div className="absolute inset-x-0 bottom-0 p-5 text-white">
+                <span className="inline-flex min-h-7 items-center rounded-full bg-white/14 px-3 text-[11px] font-semibold text-white backdrop-blur-md">
+                  {item.label}
+                </span>
+                <h3 className="mt-4 text-2xl leading-tight font-semibold tracking-[-0.025em]">
+                  {item.title}
+                </h3>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function MultilingualSection() {
   return (
     <section className="mt-24 border-y border-blue-100 bg-blue-50/70 py-20">
@@ -206,16 +323,17 @@ function MultilingualSection() {
         </div>
         <div className="self-end">
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
-            {localeOptions.map((option) => (
-              <Link
-                key={option.code}
-                href="/"
-                locale={option.code}
-                className="flex min-h-14 items-center justify-between rounded-lg border border-blue-100 bg-white px-4 text-sm font-semibold text-slate-800 transition-colors hover:border-blue-300 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-600 focus-visible:outline-none"
+            {supportedSmallLanguages.map(([label, code]) => (
+              <div
+                key={code}
+                className="flex min-h-14 items-center justify-between rounded-lg border border-blue-100 bg-white px-4 text-sm font-semibold text-slate-800"
               >
-                {option.label}
-                <ArrowUpRight className="size-4 text-blue-500" />
-              </Link>
+                {label}
+                <span
+                  aria-hidden
+                  className="size-1.5 rounded-full bg-blue-400"
+                />
+              </div>
             ))}
           </div>
           <p className="mt-4 text-sm leading-6 text-slate-500">
@@ -241,7 +359,7 @@ function UseCasesSection() {
             key={title}
             className={cn(
               'grid min-h-40 grid-cols-[auto_1fr] gap-5 rounded-lg border border-slate-200 bg-white p-6',
-              index === 2 && 'bg-slate-950 text-white md:row-span-2',
+              index === 2 && 'bg-slate-950 text-white',
               index === 5 && 'border-blue-200 bg-blue-50'
             )}
           >
@@ -360,11 +478,14 @@ function PaywallSection() {
 export function HomePageSections({ locale: _locale }: { locale: string }) {
   return (
     <>
+      <WhatsNewSection />
       <SeedanceVideoGallerySection />
       <CapabilitySection />
       <MultilingualSection />
       <UseCasesSection />
       <WorkflowSection />
+      <CreatorFeedbackWall section={creatorFeedbackSection} />
+      <Faq section={faqSection} />
       <PaywallSection />
     </>
   );

@@ -128,12 +128,12 @@ export function SignIn({
   };
 
   return (
-    <Card className="mx-auto w-full md:max-w-md">
+    <Card className="mx-auto w-full border-blue-100 bg-white text-slate-950 shadow-[0_28px_90px_rgba(15,23,42,0.12)] md:max-w-md">
       <CardHeader>
-        <CardTitle className="text-lg md:text-xl">
+        <CardTitle className="text-lg text-slate-950 md:text-xl">
           <h1>{t('sign_in_title')}</h1>
         </CardTitle>
-        <CardDescription className="text-xs md:text-sm">
+        <CardDescription className="text-xs text-slate-500 md:text-sm">
           <h2>{t('sign_in_description')}</h2>
         </CardDescription>
       </CardHeader>
@@ -148,12 +148,15 @@ export function SignIn({
               }}
             >
               <div className="grid gap-2">
-                <Label htmlFor="email">{t('email_title')}</Label>
+                <Label htmlFor="email" className="text-slate-700">
+                  {t('email_title')}
+                </Label>
                 <Input
                   id="email"
                   type="email"
                   placeholder={t('email_placeholder')}
                   required
+                  className="border-blue-100 bg-white text-slate-950 placeholder:text-slate-400 focus-visible:border-blue-500 focus-visible:ring-blue-500/20"
                   onChange={(e) => {
                     setEmail(e.target.value);
                   }}
@@ -163,7 +166,9 @@ export function SignIn({
 
               <div className="grid gap-2">
                 <div className="flex items-center">
-                  <Label htmlFor="password">{t('password_title')}</Label>
+                  <Label htmlFor="password" className="text-slate-700">
+                    {t('password_title')}
+                  </Label>
                   {/* <Link
                     href="#"
                     className="ml-auto inline-block text-sm underline"
@@ -178,6 +183,7 @@ export function SignIn({
                   placeholder={t('password_placeholder')}
                   autoComplete="password"
                   value={password}
+                  className="border-blue-100 bg-white text-slate-950 placeholder:text-slate-400 focus-visible:border-blue-500 focus-visible:ring-blue-500/20"
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
@@ -192,7 +198,11 @@ export function SignIn({
             <Label htmlFor="remember">Remember me</Label>
           </div> */}
 
-              <Button type="submit" className="w-full" disabled={loading}>
+              <Button
+                type="submit"
+                className="w-full bg-blue-600 text-white shadow-[0_14px_34px_rgba(37,99,235,0.18)] hover:bg-blue-700"
+                disabled={loading}
+              >
                 {loading ? (
                   <Loader2 size={16} className="animate-spin" />
                 ) : (
@@ -212,13 +222,11 @@ export function SignIn({
       </CardContent>
       {isEmailAuthEnabled && (
         <CardFooter>
-          <div className="flex w-full justify-center border-t py-4">
-            <p className="text-center text-xs text-neutral-500">
+          <div className="flex w-full justify-center border-t border-blue-100 py-4">
+            <p className="text-center text-xs text-slate-500">
               {t('no_account')}
-              <Link href="/sign-up" className="underline">
-                <span className="cursor-pointer dark:text-white/70">
-                  {t('sign_up_title')}
-                </span>
+              <Link href="/sign-up" className="text-blue-600 underline">
+                <span className="cursor-pointer">{t('sign_up_title')}</span>
               </Link>
             </p>
           </div>

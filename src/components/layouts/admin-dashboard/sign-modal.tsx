@@ -58,10 +58,12 @@ export function SignModal({ callbackUrl = '/' }: { callbackUrl?: string }) {
   if (isDesktop) {
     return (
       <Dialog open={isShowSignModal} onOpenChange={handleOpenChange}>
-        <DialogContent className="sm:max-w-[425px]">
+        <DialogContent className="border border-blue-100 bg-white text-slate-950 shadow-[0_28px_90px_rgba(15,23,42,0.18)] sm:max-w-[425px]">
           <DialogHeader>
-            <DialogTitle>{title}</DialogTitle>
-            <DialogDescription>{description}</DialogDescription>
+            <DialogTitle className="text-slate-950">{title}</DialogTitle>
+            <DialogDescription className="text-slate-500">
+              {description}
+            </DialogDescription>
           </DialogHeader>
           {formContent}
         </DialogContent>
@@ -71,10 +73,12 @@ export function SignModal({ callbackUrl = '/' }: { callbackUrl?: string }) {
 
   return (
     <Drawer open={isShowSignModal} onOpenChange={handleOpenChange}>
-      <DrawerContent>
+      <DrawerContent className="border-blue-100 bg-white text-slate-950">
         <DrawerHeader className="text-left">
-          <DrawerTitle>{title}</DrawerTitle>
-          <DrawerDescription>{description}</DrawerDescription>
+          <DrawerTitle className="text-slate-950">{title}</DrawerTitle>
+          <DrawerDescription className="text-slate-500">
+            {description}
+          </DrawerDescription>
         </DrawerHeader>
         {mode === 'sign-in' ? (
           <SignInForm
@@ -91,7 +95,12 @@ export function SignModal({ callbackUrl = '/' }: { callbackUrl?: string }) {
         )}
         <DrawerFooter className="pt-4">
           <DrawerClose asChild>
-            <Button variant="outline">{t('cancel_title')}</Button>
+            <Button
+              variant="outline"
+              className="border-blue-100 text-slate-700 hover:bg-blue-50 hover:text-blue-700"
+            >
+              {t('cancel_title')}
+            </Button>
           </DrawerClose>
         </DrawerFooter>
       </DrawerContent>

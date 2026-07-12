@@ -240,7 +240,7 @@ export function UpgradePaywallDialog({
     <>
       <Dialog open={open} onOpenChange={() => {}}>
         <DialogContent
-          className="overflow-y-auto border-0 bg-[#090b08] p-0 text-zinc-100 shadow-none"
+          className="overflow-y-auto border-0 bg-slate-950 p-0 text-slate-100 shadow-none"
           fullScreen
           onEscapeKeyDown={(event) => event.preventDefault()}
           onPointerDownOutside={(event) => event.preventDefault()}
@@ -263,7 +263,7 @@ export function UpgradePaywallDialog({
 
           <div className="min-h-full px-5 pt-14 pb-8 sm:px-8 sm:pt-12 md:px-10">
             <div className="mx-auto max-w-2xl text-center">
-              <div className="mx-auto mb-3 flex size-10 items-center justify-center rounded-full border border-[#ddec7c]/20 bg-[#ddec7c]/10 text-[#ddec7c]">
+              <div className="mx-auto mb-3 flex size-10 items-center justify-center rounded-full border border-blue-400/20 bg-blue-500/10 text-blue-300">
                 <Sparkles className="size-5" />
               </div>
               <h2 className="text-3xl font-semibold text-white md:text-4xl">
@@ -276,17 +276,17 @@ export function UpgradePaywallDialog({
 
             {billingGroups.length > 0 && (
               <Tabs className="mt-7" onValueChange={setGroup} value={group}>
-                <TabsList className="mx-auto flex h-auto w-fit max-w-full flex-wrap border-[#394231] bg-[#151b12] p-1 text-zinc-400">
+                <TabsList className="mx-auto flex h-auto w-fit max-w-full flex-wrap border-blue-900 bg-slate-900 p-1 text-slate-400">
                   {billingGroups.map((billingGroup) => (
                     <TabsTrigger
-                      className="rounded-md px-3 text-zinc-300 data-[state=active]:bg-[#eaff4f] data-[state=active]:text-[#151a0c]"
+                      className="rounded-md px-3 text-slate-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
                       key={billingGroup}
                       value={billingGroup}
                     >
                       {t(`groups.${billingGroup}`)}
                       {billingGroup === 'yearly' &&
                         annualDiscountPercent > 0 && (
-                          <span className="ml-2 rounded-sm bg-[#eaff4f] px-1.5 py-0.5 text-[10px] font-semibold text-[#151a0c]">
+                          <span className="ml-2 rounded-sm bg-blue-500 px-1.5 py-0.5 text-[10px] font-semibold text-white">
                             {t('annual_save', {
                               percent: annualDiscountPercent,
                             })}

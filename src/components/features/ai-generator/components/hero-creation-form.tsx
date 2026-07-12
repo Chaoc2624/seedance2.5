@@ -6,6 +6,7 @@ import Clapperboard from 'lucide-react/dist/esm/icons/clapperboard';
 import Clock from 'lucide-react/dist/esm/icons/clock';
 import CopyPlus from 'lucide-react/dist/esm/icons/copy-plus';
 import Eraser from 'lucide-react/dist/esm/icons/eraser';
+import FileAudio from 'lucide-react/dist/esm/icons/file-audio';
 import FileText from 'lucide-react/dist/esm/icons/file-text';
 import FileVideo from 'lucide-react/dist/esm/icons/file-video';
 import GalleryHorizontalEnd from 'lucide-react/dist/esm/icons/gallery-horizontal-end';
@@ -29,6 +30,7 @@ import {
   type ReactNode,
   useCallback,
   useEffect,
+  useId,
   useLayoutEffect,
   useMemo,
   useRef,
@@ -54,6 +56,7 @@ import {
   DEFAULT_VIDEO_MODEL_CATALOG,
   getVideoModelCreditCost,
   getVideoModelIconSrc,
+  getVideoModelReferenceMedia,
 } from '@/config/ai-video-models';
 import type {
   VideoGeneratorScene,
@@ -94,6 +97,9 @@ import {
   hasHeroCreationInputContent,
   shouldAutoExpandComposerAtPageBottom,
 } from './hero-creation-state';
+import type { HeroReferenceRole } from './hero-reference-assets';
+import { getHomepageReferenceDeckWidth } from './homepage-seedance-reference-deck';
+import { HomepageSeedanceReferences } from './homepage-seedance-references';
 import { formatPublicModelMeta } from './model-display';
 import { focusTextareaAtEnd } from './textarea-caret';
 
@@ -122,9 +128,12 @@ export type HeroLocalAsset = {
   id: string;
   slotIndex: number;
   slotLabel: string;
-  mediaType: 'image' | 'video';
+  mediaType: 'image' | 'video' | 'audio';
+  referenceRole?: HeroReferenceRole;
+  duration?: number;
   file?: File;
   previewUrl: string;
+  posterUrl?: string;
   sourceUrl?: string;
 };
 type ImageSettingOptions = {
@@ -195,7 +204,7 @@ const workflowIcons: Record<string, IconComponent> = {
 const visibleModeOptions = modeOptions.filter((item) => item.id !== 'agent');
 
 const controlButtonClass =
-  'inline-flex min-h-11 items-center gap-1.5 rounded-xl border border-border bg-card/82 px-2.5 text-[13px] font-semibold text-foreground shadow-sm shadow-slate-900/5 transition-colors hover:border-primary/35 hover:bg-muted/70 focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none dark:bg-white/[0.07] dark:shadow-none dark:hover:bg-white/[0.1]';
+  'inline-flex min-h-11 items-center gap-1.5 rounded-xl border border-blue-100 bg-white/90 px-2.5 text-[13px] font-semibold text-slate-800 shadow-sm shadow-blue-900/5 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none';
 const COMPOSER_UPLOAD_SLOT_WIDTH = 72;
 const COMPOSER_UPLOAD_SLOT_GAP = 8;
 
@@ -429,12 +438,6 @@ function getSerializableHeroGenerationPayload(
   return serializablePayload;
 }
 
-function revokeLocalPreviewUrl(url: string) {
-  if (url.startsWith('blob:')) {
-    URL.revokeObjectURL(url);
-  }
-}
-
 export function HeroCreationForm({
   className,
   variant = 'hero',
@@ -450,6 +453,7 @@ export function HeroCreationForm({
   onGenerate,
 }: HeroCreationFormProps = {}) {
   const router = useRouter();
+  const promptId = useId();
   const locale = useCurrentLocale();
   const copy = getHeroCreationFormCopy(locale);
   const isLargeControls = useMedia('(min-width: 64rem)');
@@ -461,6 +465,7 @@ export function HeroCreationForm({
   const notifiedDraftSignatureRef = useRef('');
   const draftAssetTimerRef = useRef<number | null>(null);
   const focusPromptAfterExpandRef = useRef(false);
+  const pointerFocusRef = useRef(false);
   const collapseContentTimerRef = useRef<number | null>(null);
   const userCollapsedComposerRef = useRef(false);
   const workflowTriggerRef = useRef<HTMLSpanElement>(null);
@@ -492,6 +497,7 @@ export function HeroCreationForm({
     Record<number, HeroLocalAsset>
   >({});
   const [prompt, setPrompt] = useState(initialPrompt);
+  const [audioPickerSignal, setAudioPickerSignal] = useState(0);
   const [collapsed, setCollapsed] = useState(defaultCollapsed);
   const [expandedContentMounted, setExpandedContentMounted] =
     useState(!defaultCollapsed);
@@ -551,6 +557,14 @@ export function HeroCreationForm({
     availableImageModels.find((item) => item.id === imageModelKey) ??
     availableImageModels[0] ??
     null;
+  const useSeedanceReferences =
+    videoOnly &&
+    mode === 'video' &&
+    selectedVideoModel?.model === 'bytedance/seedance-2';
+  const canImportSeedanceAudio =
+    useSeedanceReferences && workflowId !== 'frames-video';
+  const seedanceReferenceMedia =
+    getVideoModelReferenceMedia(selectedVideoModel);
   const videoCapabilities = selectedVideoModel?.capabilities;
   const imageSettingOptions = useMemo(
     () => getImageSettingOptions(selectedImageModel, imageScene),
@@ -730,16 +744,30 @@ export function HeroCreationForm({
     () =>
       uploadSlots
         .map((slot, index) => `${index}:${slot.ariaLabel}:${slot.mediaType}`)
-        .join('|'),
-    [uploadSlots]
+        .join('|') + `|seedance:${useSeedanceReferences}`,
+    [uploadSlots, useSeedanceReferences]
   );
-  const composerUploadWidth =
+  const seedanceReferenceWidth = getHomepageReferenceDeckWidth({
+    imageCardCount: localAssets.filter((asset) => asset.mediaType === 'image')
+      .length,
+    videoCardCount: localAssets.filter((asset) => asset.mediaType === 'video')
+      .length,
+    frameWorkflow: workflowId === 'frames-video',
+  });
+  const standardComposerUploadWidth =
     uploadSlots.length > 0
       ? uploadSlots.length * COMPOSER_UPLOAD_SLOT_WIDTH +
         Math.max(0, uploadSlots.length - 1) * COMPOSER_UPLOAD_SLOT_GAP
       : 0;
+  const composerUploadWidth = useSeedanceReferences
+    ? `${seedanceReferenceWidth}rem`
+    : standardComposerUploadWidth;
   const composerUploadOffset =
-    isComposer && uploadSlots.length > 0 ? composerUploadWidth + 16 : 0;
+    isComposer && useSeedanceReferences
+      ? `calc(${seedanceReferenceWidth}rem + 1rem)`
+      : isComposer && standardComposerUploadWidth > 0
+        ? standardComposerUploadWidth + 16
+        : 0;
   const promptPreviewVisible =
     isComposer && collapsed && Boolean(prompt.trim());
   const hasCreationInputContent = hasHeroCreationInputContent({
@@ -840,13 +868,14 @@ export function HeroCreationForm({
   };
 
   const clearLocalAssets = () => {
-    setLocalAssetsBySlot((current) => {
-      Object.values(current).forEach((asset) =>
-        revokeLocalPreviewUrl(asset.previewUrl)
-      );
-      return {};
-    });
+    setLocalAssetsBySlot({});
     clearUploadInputs();
+  };
+
+  const setLocalAssets = (assets: HeroLocalAsset[]) => {
+    setLocalAssetsBySlot(
+      Object.fromEntries(assets.map((asset) => [asset.slotIndex, asset]))
+    );
   };
 
   const resetCreationInput = () => {
@@ -873,8 +902,6 @@ export function HeroCreationForm({
 
     const previewUrl = URL.createObjectURL(file);
     setLocalAssetsBySlot((current) => {
-      const previous = current[index];
-      if (previous) revokeLocalPreviewUrl(previous.previewUrl);
       return {
         ...current,
         [index]: {
@@ -910,7 +937,7 @@ export function HeroCreationForm({
         window.clearTimeout(collapseContentTimerRef.current);
       }
       formRef.current
-        ?.querySelector<HTMLTextAreaElement>('#homepage-prompt')
+        ?.querySelector<HTMLTextAreaElement>(`#${CSS.escape(promptId)}`)
         ?.blur();
       setExpandedChromeVisible(false);
       setCollapsed(true);
@@ -926,8 +953,9 @@ export function HeroCreationForm({
     const trimmedPrompt = prompt.trim();
     if (!trimmedPrompt) {
       closeOpenPanel();
-      const promptField =
-        formRef.current?.querySelector<HTMLTextAreaElement>('#homepage-prompt');
+      const promptField = formRef.current?.querySelector<HTMLTextAreaElement>(
+        `#${CSS.escape(promptId)}`
+      );
       promptField?.focus();
       return null;
     }
@@ -967,6 +995,9 @@ export function HeroCreationForm({
         aspectRatio: ratio,
         resolution,
         mode: videoMode,
+        ...(selectedVideoModel?.model === 'bytedance/seedance-2'
+          ? { generate_audio: true }
+          : {}),
       },
     };
   };
@@ -1079,12 +1110,12 @@ export function HeroCreationForm({
     const frameId = window.requestAnimationFrame(() => {
       focusTextareaAtEnd(
         formRef.current?.querySelector<HTMLTextAreaElement>(
-          '#homepage-prompt'
+          `#${CSS.escape(promptId)}`
         ) ?? null
       );
     });
     return () => window.cancelAnimationFrame(frameId);
-  }, [collapsed, isComposer]);
+  }, [collapsed, isComposer, promptId]);
 
   useEffect(() => {
     if (!isComposer) {
@@ -1145,14 +1176,11 @@ export function HeroCreationForm({
     draftAssetTimerRef.current = window.setTimeout(() => {
       draftAssetTimerRef.current = null;
       const incomingAssets = draft.localAssets ?? [];
-      setLocalAssetsBySlot((current) => {
-        Object.values(current).forEach((asset) =>
-          revokeLocalPreviewUrl(asset.previewUrl)
-        );
-        return Object.fromEntries(
+      setLocalAssetsBySlot(
+        Object.fromEntries(
           incomingAssets.map((asset) => [asset.slotIndex, asset])
-        ) as Record<number, HeroLocalAsset>;
-      });
+        ) as Record<number, HeroLocalAsset>
+      );
     }, 0);
   }, [currentDraftSignature, draft, incomingDraftSignature]);
 
@@ -1175,22 +1203,9 @@ export function HeroCreationForm({
   }, [currentDraft, currentDraftSignature, onDraftChange]);
 
   useEffect(() => {
-    setLocalAssetsBySlot((current) => {
-      Object.values(current).forEach((asset) =>
-        URL.revokeObjectURL(asset.previewUrl)
-      );
-      return {};
-    });
+    setLocalAssetsBySlot({});
     clearUploadInputs();
   }, [uploadSlotSignature]);
-
-  useEffect(() => {
-    return () => {
-      Object.values(localAssetsBySlot).forEach((asset) =>
-        revokeLocalPreviewUrl(asset.previewUrl)
-      );
-    };
-  }, [localAssetsBySlot]);
 
   useEffect(() => {
     if (!expandOnPageBottom || !isComposer || typeof window === 'undefined') {
@@ -1382,6 +1397,7 @@ export function HeroCreationForm({
       className={cn(
         'mx-auto w-full text-left transition-[max-width] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
         'relative',
+        isComposer && renderedPanel && 'z-[200]',
         isComposer
           ? collapsed
             ? 'max-w-[720px]'
@@ -1408,6 +1424,7 @@ export function HeroCreationForm({
         )}
         <form
           ref={formRef}
+          data-creation-form-variant={variant}
           onSubmit={(event) => {
             event.preventDefault();
             submitHeroGeneration();
@@ -1420,16 +1437,43 @@ export function HeroCreationForm({
             ) {
               return;
             }
+            pointerFocusRef.current = true;
+          }}
+          onPointerUp={() => {
+            pointerFocusRef.current = false;
+          }}
+          onPointerCancel={() => {
+            pointerFocusRef.current = false;
+          }}
+          onClick={(event) => {
+            const target = event.target;
+            if (
+              target instanceof Element &&
+              target.closest('[data-mini-submit],[data-reset-control]')
+            ) {
+              return;
+            }
             expandComposer();
           }}
-          onFocusCapture={expandComposer}
+          onFocusCapture={(event) => {
+            const target = event.target;
+            if (
+              !pointerFocusRef.current &&
+              target instanceof Element &&
+              target.matches(':focus-visible')
+            ) {
+              expandComposer();
+            }
+          }}
           className={cn(
-            'relative flex-1 rounded-2xl border border-primary/25 bg-card/76 p-3 shadow-[0_18px_80px_rgba(111,127,31,0.14)] backdrop-blur-xl transition-[height,padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] dark:border-primary/30 dark:bg-card/80 dark:shadow-[0_0_44px_rgba(216,242,105,0.14)]',
+            'relative flex-1 rounded-2xl border border-blue-200 bg-white/82 p-3 shadow-[0_18px_70px_rgba(37,99,235,0.12)] backdrop-blur-xl transition-[height,padding] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)]',
             isComposer &&
-              'lusee-composer-glass overflow-hidden border-white/12 bg-[#11130f]/90 shadow-[0_26px_90px_rgba(0,0,0,0.46)] backdrop-blur-2xl backdrop-saturate-125 dark:border-white/12 dark:bg-[#11130f]/90 dark:shadow-[0_26px_90px_rgba(0,0,0,0.46)]',
+              (renderedPanel ? 'overflow-visible' : 'overflow-hidden'),
+            isComposer &&
+              'border-blue-200/90 bg-white/92 shadow-[0_26px_90px_rgba(37,99,235,0.16)] backdrop-blur-2xl backdrop-saturate-150',
             isComposer &&
               (collapsed
-                ? 'h-[68px] shadow-[0_18px_70px_rgba(0,0,0,0.44)] dark:shadow-[0_18px_70px_rgba(0,0,0,0.44)]'
+                ? 'h-[68px] shadow-[0_18px_70px_rgba(37,99,235,0.16)]'
                 : 'h-[224px] lg:h-[184px]')
           )}
         >
@@ -1439,7 +1483,7 @@ export function HeroCreationForm({
               aria-label={copy.minimizeComposer}
               onClick={collapseComposer}
               className={cn(
-                'absolute top-3 right-3 z-20 inline-flex size-8 items-center justify-center rounded-lg border border-white/12 bg-white/[0.06] text-[#c6c9bc] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-opacity hover:bg-white/[0.1] hover:text-[#f4f2e6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none dark:border-white/12 dark:bg-white/[0.06] dark:shadow-none dark:hover:bg-white/[0.1]',
+                'absolute top-3 right-3 z-20 inline-flex size-8 items-center justify-center rounded-lg border border-blue-100 bg-white text-slate-500 shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-opacity hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none',
                 expandedChromeReady
                   ? 'opacity-100 delay-100 duration-200'
                   : 'pointer-events-none opacity-0 delay-0 duration-100'
@@ -1451,20 +1495,23 @@ export function HeroCreationForm({
           {showComposerMini ? (
             <label
               className="block min-h-11 pr-[152px] transition-[opacity,transform] duration-300 ease-[cubic-bezier(0.22,1,0.36,1)] sm:pr-[180px]"
-              htmlFor="homepage-prompt"
+              htmlFor={promptId}
             >
               <span className="sr-only">{copy.describePrompt}</span>
               <textarea
-                id="homepage-prompt"
+                id={promptId}
                 rows={1}
                 wrap="off"
+                required
+                minLength={useSeedanceReferences ? 3 : 1}
+                maxLength={useSeedanceReferences ? 20_000 : undefined}
                 onFocus={closeOpenPanel}
                 onPointerDown={closeOpenPanel}
                 value={prompt}
                 onChange={(event) => setPrompt(event.target.value)}
                 placeholder={promptPlaceholder}
                 className={cn(
-                  'h-11 min-h-11 w-full resize-none overflow-hidden !border-0 !bg-transparent py-2.5 text-base leading-6 whitespace-nowrap text-[#f4f2e6] placeholder:text-[#9da291] focus:ring-0 focus:outline-none [&::placeholder]:whitespace-nowrap',
+                  'h-11 min-h-11 w-full resize-none overflow-hidden !border-0 !bg-transparent py-2.5 text-base leading-6 whitespace-nowrap text-slate-950 placeholder:text-slate-400 focus:ring-0 focus:outline-none [&::placeholder]:whitespace-nowrap',
                   promptPreviewVisible && 'truncate'
                 )}
               />
@@ -1482,7 +1529,8 @@ export function HeroCreationForm({
                 aria-hidden={isComposer && !expandedChromeReady}
                 className={cn(
                   'flex shrink-0 items-start gap-2 transition-opacity',
-                  isComposer && 'absolute top-1 left-0 z-10 overflow-hidden',
+                  isComposer && 'absolute top-1 left-0 z-10',
+                  isComposer && !useSeedanceReferences && 'overflow-hidden',
                   isComposer &&
                     !composerChromeVisible &&
                     'pointer-events-none opacity-0 delay-0 duration-100',
@@ -1499,89 +1547,101 @@ export function HeroCreationForm({
                     : undefined
                 }
               >
-                {uploadSlots.map((slot, index) => {
-                  const Icon = slot.icon;
-                  const asset = localAssetsBySlot[index];
-                  return (
-                    <div
-                      key={`${slot.ariaLabel}-${index}`}
-                      className="shrink-0"
-                    >
-                      <input
-                        ref={(node) => {
-                          uploadInputRefs.current[index] = node;
-                        }}
-                        type="file"
-                        accept={slot.accept}
-                        className="hidden"
-                        onChange={(event) =>
-                          handleUploadAssetChange(
-                            slot,
-                            index,
-                            event.currentTarget.files?.[0] ?? null
-                          )
-                        }
-                      />
-                      <button
-                        type="button"
-                        aria-label={slot.ariaLabel}
-                        onClick={() => openUploadSlot(index)}
-                        className={cn(
-                          'group flex shrink-0 flex-col items-center gap-1 text-[11px] font-semibold text-[#aeb3a4] transition-colors hover:text-[#3b82f6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none',
-                          !slot.label && 'gap-0'
-                        )}
+                {useSeedanceReferences ? (
+                  <HomepageSeedanceReferences
+                    assets={localAssets}
+                    workflowId={workflowId}
+                    copy={copy}
+                    referenceMedia={seedanceReferenceMedia}
+                    compact={isComposer}
+                    audioPickSignal={audioPickerSignal}
+                    onChange={setLocalAssets}
+                  />
+                ) : (
+                  uploadSlots.map((slot, index) => {
+                    const Icon = slot.icon;
+                    const asset = localAssetsBySlot[index];
+                    return (
+                      <div
+                        key={`${slot.ariaLabel}-${index}`}
+                        className="shrink-0"
                       >
-                        <span
+                        <input
+                          ref={(node) => {
+                            uploadInputRefs.current[index] = node;
+                          }}
+                          type="file"
+                          accept={slot.accept}
+                          className="hidden"
+                          onChange={(event) =>
+                            handleUploadAssetChange(
+                              slot,
+                              index,
+                              event.currentTarget.files?.[0] ?? null
+                            )
+                          }
+                        />
+                        <button
+                          type="button"
+                          aria-label={slot.ariaLabel}
+                          onClick={() => openUploadSlot(index)}
                           className={cn(
-                            'relative flex items-center justify-center overflow-hidden rounded-xl border border-dashed border-border bg-card/42 text-muted-foreground transition-colors group-hover:border-[#3b82f6]/55 group-hover:text-[#3b82f6] dark:border-white/14 dark:bg-white/[0.055]',
-                            isComposer ? 'h-[5.25rem] w-[4.5rem]' : 'size-14'
+                            'group flex shrink-0 flex-col items-center gap-1 text-[11px] font-semibold text-slate-500 transition-colors hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none',
+                            !slot.label && 'gap-0'
                           )}
                         >
-                          {asset ? (
-                            asset.mediaType === 'image' ? (
-                              <img
-                                src={asset.previewUrl}
-                                alt=""
-                                className={cn(
-                                  'absolute inset-0 h-full w-full',
-                                  isComposer
-                                    ? 'bg-black/28 object-contain p-1'
-                                    : 'object-cover'
-                                )}
-                              />
-                            ) : (
-                              <video
-                                src={asset.previewUrl}
-                                muted
-                                playsInline
-                                className={cn(
-                                  'absolute inset-0 h-full w-full',
-                                  isComposer
-                                    ? 'bg-black/28 object-contain p-1'
-                                    : 'object-cover'
-                                )}
-                              />
-                            )
-                          ) : null}
                           <span
                             className={cn(
-                              'relative z-10 flex size-8 items-center justify-center rounded-lg transition-colors',
-                              asset &&
-                                'absolute right-1.5 bottom-1.5 size-7 bg-black/58 text-[#3b82f6] backdrop-blur-sm'
+                              'relative flex items-center justify-center overflow-hidden rounded-xl border border-dashed border-blue-200 bg-blue-50/70 text-slate-500 transition-colors group-hover:border-blue-400 group-hover:bg-blue-50 group-hover:text-blue-700',
+                              isComposer ? 'h-[5.25rem] w-[4.5rem]' : 'size-14'
                             )}
                           >
-                            <Icon className="size-5" />
+                            {asset ? (
+                              asset.mediaType === 'image' ? (
+                                <img
+                                  src={asset.previewUrl}
+                                  alt=""
+                                  className={cn(
+                                    'absolute inset-0 h-full w-full',
+                                    isComposer
+                                      ? 'bg-slate-100 object-contain p-1'
+                                      : 'object-cover'
+                                  )}
+                                />
+                              ) : (
+                                <video
+                                  src={asset.previewUrl}
+                                  muted
+                                  playsInline
+                                  className={cn(
+                                    'absolute inset-0 h-full w-full',
+                                    isComposer
+                                      ? 'bg-slate-100 object-contain p-1'
+                                      : 'object-cover'
+                                  )}
+                                />
+                              )
+                            ) : null}
+                            <span
+                              className={cn(
+                                'relative z-10 flex size-8 items-center justify-center rounded-lg transition-colors',
+                                asset &&
+                                  'absolute right-1.5 bottom-1.5 size-7 bg-white/82 text-blue-700 shadow-sm backdrop-blur-sm'
+                              )}
+                            >
+                              <Icon className="size-5" />
+                            </span>
                           </span>
-                        </span>
-                        {slot.label && (
-                          <span className="max-w-[4.5rem] truncate">
-                            {slot.label}
-                          </span>
-                        )}
-                      </button>
-                    </div>
-                  );
-                })}
+                          {slot.label && (
+                            <span className="max-w-[4.5rem] truncate">
+                              {slot.label}
+                            </span>
+                          )}
+                        </button>
+                      </div>
+                    );
+                  })
+                )}
               </div>
               <label
                 className={cn(
@@ -1597,18 +1657,21 @@ export function HeroCreationForm({
                     ? { paddingLeft: composerUploadOffset }
                     : undefined
                 }
-                htmlFor="homepage-prompt"
+                htmlFor={promptId}
               >
                 <span className="sr-only">{copy.describePrompt}</span>
                 <textarea
-                  id="homepage-prompt"
+                  id={promptId}
                   rows={4}
+                  required
+                  minLength={useSeedanceReferences ? 3 : 1}
+                  maxLength={useSeedanceReferences ? 20_000 : undefined}
                   onFocus={closeOpenPanel}
                   onPointerDown={closeOpenPanel}
                   value={prompt}
                   onChange={(event) => setPrompt(event.target.value)}
                   placeholder={promptPlaceholder}
-                  className="min-h-[4.75rem] w-full resize-none !border-0 !bg-transparent py-1 text-base text-[#f4f2e6] placeholder:text-[#9da291] focus:ring-0 focus:outline-none"
+                  className="min-h-[4.75rem] w-full resize-none !border-0 !bg-transparent py-1 text-base text-slate-950 placeholder:text-slate-400 focus:ring-0 focus:outline-none"
                 />
               </label>
             </div>
@@ -1769,6 +1832,29 @@ export function HeroCreationForm({
                   </DropdownPanel>
                 )}
               </div>
+              {canImportSeedanceAudio && (
+                <button
+                  type="button"
+                  aria-label={copy.upload.audio}
+                  onClick={() => setAudioPickerSignal((value) => value + 1)}
+                  className={cn(
+                    controlButtonClass,
+                    'shrink-0 cursor-pointer whitespace-nowrap'
+                  )}
+                >
+                  <FileAudio className="size-4 text-blue-600" />
+                  <span>{copy.upload.audio}</span>
+                  {localAssets.some((asset) => asset.mediaType === 'audio') && (
+                    <span className="grid size-5 place-items-center rounded-full bg-blue-600 text-[10px] font-bold text-white">
+                      {
+                        localAssets.filter(
+                          (asset) => asset.mediaType === 'audio'
+                        ).length
+                      }
+                    </span>
+                  )}
+                </button>
+              )}
               <div ref={settingsTriggerRef} className="relative shrink-0">
                 <div
                   role="button"
@@ -1838,7 +1924,7 @@ export function HeroCreationForm({
                     panelRef={floatingPanelRef}
                     portalRootRef={rootRef}
                     triggerRef={activeSettingsTriggerRef}
-                    className="w-fit max-w-[calc(100vw-2rem)]"
+                    className="w-[360px] max-w-[calc(100vw-2rem)] rounded-xl p-2"
                   >
                     {mode === 'video' ? (
                       <>
@@ -1918,7 +2004,7 @@ export function HeroCreationForm({
                   type="button"
                   aria-label={copy.clearInput}
                   onClick={resetCreationInput}
-                  className="ml-auto hidden size-11 shrink-0 items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] text-[#d7dcc7] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-[background-color,color,transform] hover:bg-white/[0.1] hover:text-[#3b82f6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none sm:inline-flex"
+                  className="ml-auto hidden size-11 shrink-0 items-center justify-center rounded-xl border border-blue-100 bg-white text-slate-500 shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-[background-color,color,transform] hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none sm:inline-flex"
                 >
                   <Eraser className="size-4" />
                 </button>
@@ -1930,7 +2016,7 @@ export function HeroCreationForm({
                     Number.isFinite(selectedCredits) ? selectedCredits : 20
                   )}
                   className={cn(
-                    'hidden min-h-11 max-w-[164px] min-w-[140px] flex-[0_1_auto] items-center justify-center gap-1.5 rounded-xl border border-[#3b82f6]/42 bg-[#3b82f6] px-3.5 text-[13px] font-bold text-[#111407] shadow-[0_14px_36px_-22px_rgba(234,255,79,0.58)] transition-transform hover:scale-[1.02] hover:bg-[#60a5fa] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/70 focus-visible:outline-none sm:inline-flex dark:shadow-[0_14px_36px_-22px_rgba(234,255,79,0.5)]',
+                    'hidden min-h-11 max-w-[164px] min-w-[140px] flex-[0_1_auto] items-center justify-center gap-1.5 rounded-xl border border-blue-600 bg-blue-600 px-3.5 text-[13px] font-bold text-white shadow-[0_14px_36px_rgba(37,99,235,0.2)] transition-transform hover:scale-[1.02] hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-none sm:inline-flex',
                     !hasCreationInputContent && 'ml-auto'
                   )}
                 >
@@ -1962,7 +2048,7 @@ export function HeroCreationForm({
                         const nextMode = mode === 'video' ? 'image' : 'video';
                         switchMode(nextMode);
                       }}
-                      className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-lg bg-[#2563eb]/16 px-2.5 text-sm font-bold text-[#3b82f6] transition-colors hover:bg-[#2563eb]/20 focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none"
+                      className="inline-flex min-h-10 shrink-0 items-center gap-1.5 rounded-lg bg-blue-50 px-2.5 text-sm font-bold text-blue-700 transition-colors hover:bg-blue-100 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none"
                     >
                       <span>{mode === 'video' ? 'Video' : 'Image'}</span>
                       <ChevronDown className="size-3.5" />
@@ -1981,10 +2067,10 @@ export function HeroCreationForm({
                         toggleOpenPanel('workflow');
                       }}
                       className={cn(
-                        'inline-flex min-h-10 max-w-[11.5rem] items-center gap-1.5 rounded-lg bg-white/[0.045] px-2.5 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none',
+                        'inline-flex min-h-10 max-w-[11.5rem] items-center gap-1.5 rounded-lg bg-blue-50 px-2.5 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none',
                         openPanel === 'workflow'
-                          ? 'bg-white/[0.1] text-[#f4f2e6]'
-                          : 'text-[#f4f2e6]/82 hover:bg-white/[0.07] hover:text-[#f4f2e6]'
+                          ? 'bg-blue-600 text-white'
+                          : 'text-slate-700 hover:bg-blue-100 hover:text-blue-700'
                       )}
                     >
                       <span className="truncate">{selectedWorkflow.title}</span>
@@ -2004,18 +2090,30 @@ export function HeroCreationForm({
                         toggleOpenPanel('model');
                       }}
                       className={cn(
-                        'inline-flex min-h-10 max-w-[11.5rem] items-center gap-1.5 rounded-lg bg-white/[0.045] px-2.5 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none',
+                        'inline-flex min-h-10 max-w-[11.5rem] items-center gap-1.5 rounded-lg bg-blue-50 px-2.5 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none',
                         openPanel === 'model'
-                          ? 'bg-white/[0.1] text-[#f4f2e6]'
-                          : 'text-[#f4f2e6]/82 hover:bg-white/[0.07] hover:text-[#f4f2e6]'
+                          ? 'bg-blue-600 text-white'
+                          : 'text-slate-700 hover:bg-blue-100 hover:text-blue-700'
                       )}
                     >
                       <span className="truncate">{selectedModelLabel}</span>
                     </button>
                   </div>
+                  {canImportSeedanceAudio && (
+                    <button
+                      type="button"
+                      data-mobile-step="3"
+                      aria-label={copy.upload.audio}
+                      onClick={() => setAudioPickerSignal((value) => value + 1)}
+                      className="inline-flex min-h-10 shrink-0 cursor-pointer items-center gap-1.5 rounded-lg bg-blue-50 px-2.5 text-sm font-bold text-slate-700 transition-colors hover:bg-blue-100 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none"
+                    >
+                      <FileAudio className="size-4 text-blue-600" />
+                      <span>{copy.upload.audio}</span>
+                    </button>
+                  )}
                   <div
                     ref={compactSettingsTriggerRef}
-                    data-mobile-step="3"
+                    data-mobile-step="4"
                     className="inline-flex min-w-0 shrink-0"
                   >
                     <button
@@ -2027,17 +2125,17 @@ export function HeroCreationForm({
                         toggleOpenPanel('settings');
                       }}
                       className={cn(
-                        'inline-flex min-h-10 max-w-[14rem] items-center gap-0 overflow-hidden rounded-lg bg-white/[0.045] px-2 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none',
+                        'inline-flex min-h-10 max-w-[14rem] items-center gap-0 overflow-hidden rounded-lg bg-blue-50 px-2 text-sm font-bold transition-colors focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none',
                         openPanel === 'settings'
-                          ? 'bg-white/[0.1] text-[#f4f2e6]'
-                          : 'text-[#f4f2e6]/82 hover:bg-white/[0.07] hover:text-[#f4f2e6]'
+                          ? 'bg-blue-600 text-white'
+                          : 'text-slate-700 hover:bg-blue-100 hover:text-blue-700'
                       )}
                     >
                       {mode === 'video'
                         ? videoSettingSegments.map((segment, index) => (
                             <span key={segment.label} className="contents">
                               {index > 0 && (
-                                <span className="h-5 w-px bg-white/10" />
+                                <span className="h-5 w-px bg-blue-200" />
                               )}
                               <SettingsSegment
                                 label={segment.label}
@@ -2049,7 +2147,7 @@ export function HeroCreationForm({
                         : imageSettingSegments.map((segment, index) => (
                             <span key={segment.label} className="contents">
                               {index > 0 && (
-                                <span className="h-5 w-px bg-white/10" />
+                                <span className="h-5 w-px bg-blue-200" />
                               )}
                               <SettingsSegment
                                 label={segment.label}
@@ -2066,7 +2164,7 @@ export function HeroCreationForm({
                     type="button"
                     aria-label="Scroll settings left"
                     onClick={() => scrollMobileStepperTrack(-1)}
-                    className="absolute top-1/2 left-0 z-10 inline-flex h-10 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg border border-white/8 bg-[#2a2d29]/88 text-[#f4f2e6]/82 shadow-[0_10px_22px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-colors hover:bg-[#343832]/92 hover:text-[#f4f2e6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none sm:hidden"
+                    className="absolute top-1/2 left-0 z-10 inline-flex h-10 w-6 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg border border-blue-100 bg-white text-slate-500 shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-colors hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none sm:hidden"
                   >
                     <ChevronLeft className="size-4" />
                   </button>
@@ -2076,7 +2174,7 @@ export function HeroCreationForm({
                     type="button"
                     aria-label="Scroll settings right"
                     onClick={() => scrollMobileStepperTrack(1)}
-                    className="absolute top-1/2 right-0 z-10 inline-flex h-10 w-6 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg border border-white/8 bg-[#2a2d29]/88 text-[#f4f2e6]/82 shadow-[0_10px_22px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-colors hover:bg-[#343832]/92 hover:text-[#f4f2e6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none sm:hidden"
+                    className="absolute top-1/2 right-0 z-10 inline-flex h-10 w-6 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-lg border border-blue-100 bg-white text-slate-500 shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-colors hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none sm:hidden"
                   >
                     <ChevronRight className="size-4" />
                   </button>
@@ -2087,7 +2185,7 @@ export function HeroCreationForm({
                 aria-label={copy.generateForCredits(
                   Number.isFinite(selectedCredits) ? selectedCredits : 20
                 )}
-                className="ml-auto inline-flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-xl border border-[#3b82f6]/42 bg-[#3b82f6] px-3.5 text-[13px] font-black text-[#111407] shadow-[0_14px_36px_-22px_rgba(234,255,79,0.58)] transition-transform hover:scale-[1.02] hover:bg-[#60a5fa] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/70 focus-visible:outline-none"
+                className="ml-auto inline-flex min-h-11 shrink-0 items-center justify-center gap-1.5 rounded-xl border border-blue-600 bg-blue-600 px-3.5 text-[13px] font-black text-white shadow-[0_14px_36px_rgba(37,99,235,0.2)] transition-transform hover:scale-[1.02] hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-none"
               >
                 <span>
                   {Number.isFinite(selectedCredits) ? selectedCredits : 20}
@@ -2102,7 +2200,7 @@ export function HeroCreationForm({
               type="button"
               aria-label={copy.clearInput}
               onClick={resetCreationInput}
-              className="absolute right-[160px] bottom-4 hidden size-11 items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] text-[#d7dcc7] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-[background-color,color,transform] hover:bg-white/[0.1] hover:text-[#3b82f6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none"
+              className="absolute right-[160px] bottom-4 hidden size-11 items-center justify-center rounded-xl border border-blue-100 bg-white text-slate-500 shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-[background-color,color,transform] hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none"
             >
               <Eraser className="size-4" />
             </button>
@@ -2118,7 +2216,7 @@ export function HeroCreationForm({
                   )
             }
             className={cn(
-              'absolute inline-flex min-h-11 items-center gap-1.5 rounded-xl border border-[#3b82f6]/42 bg-[#3b82f6] px-4 text-[13px] font-bold text-[#111407] shadow-[0_14px_36px_-22px_rgba(234,255,79,0.58)] hover:scale-[1.02] hover:bg-[#60a5fa] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/70 focus-visible:outline-none dark:shadow-[0_14px_36px_-22px_rgba(234,255,79,0.5)]',
+              'absolute inline-flex min-h-11 items-center gap-1.5 rounded-xl border border-blue-600 bg-blue-600 px-4 text-[13px] font-bold text-white shadow-[0_14px_36px_rgba(37,99,235,0.2)] hover:scale-[1.02] hover:bg-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/50 focus-visible:outline-none',
               isComposer
                 ? cn(
                     'bottom-3 z-20 justify-center transition-[right,min-width,transform]',
@@ -2140,7 +2238,7 @@ export function HeroCreationForm({
             {copy.generate}
             <span
               className={cn(
-                'overflow-hidden text-[#111407]/72 transition-[max-width,opacity] duration-200',
+                'overflow-hidden text-white/75 transition-[max-width,opacity] duration-200',
                 isComposer && collapsed
                   ? 'max-w-0 opacity-0'
                   : 'max-w-8 opacity-100'
@@ -2159,7 +2257,7 @@ export function HeroCreationForm({
               aria-label={copy.clearInput}
               onClick={resetCreationInput}
               className={cn(
-                'absolute right-[232px] bottom-3 z-20 hidden size-11 items-center justify-center rounded-xl border border-white/12 bg-white/[0.06] text-[#d7dcc7] shadow-[inset_0_1px_0_rgba(255,255,255,0.08)] backdrop-blur-xl transition-[opacity,background-color,color,transform] hover:bg-white/[0.1] hover:text-[#3b82f6] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/60 focus-visible:outline-none lg:inline-flex',
+                'absolute right-[232px] bottom-3 z-20 hidden size-11 items-center justify-center rounded-xl border border-blue-100 bg-white text-slate-500 shadow-sm shadow-blue-900/5 backdrop-blur-xl transition-[opacity,background-color,color,transform] hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none lg:inline-flex',
                 expandedChromeReady
                   ? 'opacity-100 delay-100 duration-200'
                   : 'pointer-events-none opacity-0 delay-0 duration-100'
@@ -2205,8 +2303,8 @@ function ModeSwitch({
                 ? 'h-[62px] min-w-[146px] gap-2 rounded-[1.75rem_1.15rem_1.15rem_1.75rem] px-5 pr-7 text-base sm:h-[74px] sm:min-w-[252px] sm:gap-4 sm:px-6 sm:pr-9'
                 : 'h-11 min-w-[94px] gap-2 rounded-[1.05rem_1.6rem_1.6rem_1.05rem] px-4 text-sm sm:h-14 sm:min-w-[156px] sm:px-5',
               active
-                ? 'border-[#3b82f6] bg-[#2563eb] text-[#0f1308] shadow-[inset_0_0_0_1px_rgba(17,20,7,0.14),0_18px_48px_rgba(216,242,105,0.18)]'
-                : 'border-white/14 bg-[#151811]/86 text-[#d4dac5] shadow-[inset_0_1px_0_rgba(255,255,255,0.09)] hover:border-[#2563eb]/48 hover:bg-[#222719]/90 hover:text-[#3b82f6]'
+                ? 'border-blue-600 bg-blue-600 text-white shadow-[0_18px_48px_rgba(37,99,235,0.18)]'
+                : 'border-blue-100 bg-white/88 text-slate-600 shadow-sm shadow-blue-900/5 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700'
             )}
           >
             <span
@@ -2216,8 +2314,8 @@ function ModeSwitch({
                   ? 'size-9 rounded-[0.9rem] sm:size-10'
                   : 'size-7 rounded-[0.7rem] sm:size-8',
                 active
-                  ? 'border-[#0f1308]/16 bg-[#0f1308] text-[#3b82f6]'
-                  : 'border-white/14 bg-white/[0.055] text-current'
+                  ? 'border-white/20 bg-white/18 text-white'
+                  : 'border-blue-100 bg-blue-50 text-current'
               )}
             >
               <Icon className={cn(primary ? 'size-5' : 'size-4')} />
@@ -2226,7 +2324,7 @@ function ModeSwitch({
             {active && (
               <span
                 aria-hidden="true"
-                className="pointer-events-none absolute inset-y-2 right-2 w-7 rounded-[0.85rem] bg-[#0f1308]/10 opacity-80 [clip-path:polygon(38%_0,100%_0,62%_100%,0_100%)]"
+                className="pointer-events-none absolute inset-y-2 right-2 w-7 rounded-[0.85rem] bg-white/15 opacity-80 [clip-path:polygon(38%_0,100%_0,62%_100%,0_100%)]"
               />
             )}
           </button>
@@ -2278,8 +2376,8 @@ function ModeRail({
             className={cn(
               'relative z-10 inline-flex min-h-12 w-full items-center justify-center overflow-hidden rounded-2xl border text-base font-bold backdrop-blur-2xl transition-[background-color,color,border-color,box-shadow] focus-visible:ring-2 focus-visible:ring-[#3b82f6]/70 focus-visible:outline-none',
               active
-                ? 'border-[#3b82f6]/72 bg-[#2563eb] text-[#111407] shadow-[0_0_0_1px_rgba(234,255,79,0.24),0_14px_34px_rgba(216,242,105,0.24)]'
-                : 'border-[#2563eb]/22 bg-[#11130f]/82 text-[#c8cbb9] shadow-[0_10px_28px_rgba(0,0,0,0.32),inset_0_1px_0_rgba(255,255,255,0.08)] hover:border-[#2563eb]/42 hover:bg-[#1b1f15]/92 hover:text-[#3b82f6]'
+                ? 'border-blue-600 bg-blue-600 text-white shadow-[0_14px_34px_rgba(37,99,235,0.18)]'
+                : 'border-blue-100 bg-white/88 text-slate-600 shadow-sm shadow-blue-900/5 hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700'
             )}
           >
             <Icon className="size-5" />
@@ -2388,7 +2486,7 @@ function DropdownPanel({
       style={panelStyle}
       onWheel={(event) => event.stopPropagation()}
       className={cn(
-        'absolute z-[90] max-h-[min(560px,calc(100vh-7rem))] overflow-x-hidden overflow-y-auto overscroll-contain rounded-2xl border border-[#2563eb]/18 bg-[#10120d]/96 p-3 text-[#f4f2e6] shadow-[0_30px_110px_rgba(0,0,0,0.58),0_0_42px_rgba(216,242,105,0.08)] backdrop-blur-xl backdrop-saturate-125 transition-[opacity,transform] duration-200 ease-out data-[open=false]:pointer-events-none data-[open=false]:translate-y-1 data-[open=false]:scale-[0.98] data-[open=false]:opacity-0 data-[open=true]:translate-y-0 data-[open=true]:scale-100 data-[open=true]:opacity-100',
+        'absolute z-[200] max-h-[min(560px,calc(100vh-7rem))] overflow-x-hidden overflow-y-auto overscroll-contain rounded-2xl border border-blue-100 bg-white/98 p-3 text-slate-950 shadow-[0_30px_100px_rgba(37,99,235,0.16)] backdrop-blur-xl backdrop-saturate-150 transition-[opacity,transform] duration-200 ease-out data-[open=false]:pointer-events-none data-[open=false]:translate-y-1 data-[open=false]:scale-[0.98] data-[open=false]:opacity-0 data-[open=true]:translate-y-0 data-[open=true]:scale-100 data-[open=true]:opacity-100',
         className
       )}
     >
@@ -2475,7 +2573,7 @@ function ImageModelPicker({
 
   return (
     <div className="space-y-2">
-      <div className="flex items-center gap-2 px-2 text-sm font-semibold text-[#c8cbb9]">
+      <div className="flex items-center gap-2 px-2 text-sm font-semibold text-slate-700">
         <ImageIcon className="hidden h-4 w-4 sm:block" />
         <span>{copy.model}</span>
       </div>
@@ -2496,8 +2594,8 @@ function ImageModelPicker({
                 className={cn(
                   'mb-0.5 flex min-h-10 w-full items-center gap-1.5 rounded-md px-2 py-1.5 text-left text-sm transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none sm:gap-2 sm:px-2.5',
                   family.id === activeFamilyId
-                    ? 'bg-[#2563eb]/10 text-[#f4f2e6]'
-                    : 'text-[#c8cbb9]/80 hover:bg-[#2563eb]/7 hover:text-[#f4f2e6]',
+                    ? 'bg-blue-50 text-blue-700'
+                    : 'text-slate-600 hover:bg-blue-50 hover:text-blue-700',
                   active &&
                     'text-primary shadow-[inset_3px_0_0_var(--primary)]',
                   availableCount === 0 && 'cursor-not-allowed opacity-40'
@@ -2667,7 +2765,7 @@ function SettingsGroup({
 }) {
   return (
     <div className="space-y-2 py-2 first:pt-0 last:pb-0">
-      <p className="text-xs font-semibold text-[#c8cbb9]">{title}</p>
+      <p className="text-xs font-semibold text-slate-700">{title}</p>
       <div className="grid grid-cols-2 gap-1 rounded-xl border border-[#2563eb]/12 bg-[#2563eb]/7 p-1 sm:grid-cols-3">
         {options.map((option) => (
           <button
@@ -2677,8 +2775,8 @@ function SettingsGroup({
             className={cn(
               'min-h-10 rounded-lg px-3 text-sm font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-primary focus-visible:outline-none',
               option === value
-                ? 'bg-[#2563eb] text-[#10120d] shadow-sm shadow-[#2563eb]/20'
-                : 'text-[#c8cbb9]/80 hover:bg-[#2563eb]/8 hover:text-[#f4f2e6]'
+                ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/20'
+                : 'text-slate-600 hover:bg-white hover:text-blue-700'
             )}
           >
             {option}
@@ -2691,7 +2789,7 @@ function SettingsGroup({
 
 function ModelMark({ model }: { model: ModelOption }) {
   return (
-    <span className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-[#030502] text-[11px] font-black text-[#2563eb] ring-1 ring-white/10">
+    <span className="flex size-6 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[11px] font-black text-blue-700 ring-1 ring-blue-100">
       {model.provider.charAt(0)}
     </span>
   );
@@ -2711,7 +2809,7 @@ function ModelLogo({
   return (
     <span
       className={cn(
-        'flex size-6 shrink-0 items-center justify-center rounded-lg bg-[#030502] text-[10px] font-black text-[#2563eb] ring-1 ring-white/10',
+        'flex size-6 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-[10px] font-black text-blue-700 ring-1 ring-blue-100',
         className
       )}
     >

@@ -15,6 +15,10 @@ const IMAGE_MIME_EXTENSIONS: Record<string, string> = {
 
 const MEDIA_MIME_EXTENSIONS: Record<string, string> = {
   ...IMAGE_MIME_EXTENSIONS,
+  'audio/mpeg': 'mp3',
+  'audio/mp3': 'mp3',
+  'audio/wav': 'wav',
+  'audio/x-wav': 'wav',
   'video/mp4': 'mp4',
   'video/mpeg': 'mpeg',
   'video/quicktime': 'mov',
@@ -123,6 +127,6 @@ export async function uploadMediaToConfiguredStorage(
 ) {
   return uploadFilesToConfiguredStorage({
     files,
-    allowedPrefixes: ['image/', 'video/'],
+    allowedPrefixes: ['audio/', 'image/', 'video/'],
   });
 }

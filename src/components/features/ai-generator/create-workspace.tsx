@@ -53,6 +53,7 @@ import {
   type HeroLocalAsset,
 } from '@/components/features/ai-generator/components/hero-creation-form';
 import { modelsByMode } from '@/components/features/ai-generator/components/hero-creation-form-data';
+import { buildSeedanceReferenceSettings } from '@/components/features/ai-generator/components/hero-reference-assets';
 import {
   CreateHistoryLoadMoreSkeleton,
   CreateHistorySkeleton,
@@ -387,6 +388,25 @@ function getVideoRequest(payload: HeroGenerationPayload) {
   if (Array.isArray(settings.video_input)) {
     options.video_input = settings.video_input;
   }
+  if (typeof settings.sound === 'boolean') options.sound = settings.sound;
+  if (typeof settings.generate_audio === 'boolean') {
+    options.generate_audio = settings.generate_audio;
+  }
+  if (typeof settings.reference_first_frame === 'string') {
+    options.reference_first_frame = settings.reference_first_frame;
+  }
+  if (typeof settings.reference_last_frame === 'string') {
+    options.reference_last_frame = settings.reference_last_frame;
+  }
+  if (Array.isArray(settings.reference_images)) {
+    options.reference_images = settings.reference_images;
+  }
+  if (Array.isArray(settings.reference_videos)) {
+    options.reference_videos = settings.reference_videos;
+  }
+  if (Array.isArray(settings.reference_audio)) {
+    options.reference_audio = settings.reference_audio;
+  }
 
   return {
     scene,
@@ -580,6 +600,7 @@ function getDraftFromPayload(
             ? settings.outputCount
             : '1',
       prompt: payload.prompt,
+      localAssets: payload.localAssets,
     };
   }
 
@@ -604,6 +625,7 @@ function getDraftFromPayload(
     imageOutputFormat: 'PNG',
     imageOutputCount: '1',
     prompt: payload.prompt,
+    localAssets: payload.localAssets,
   };
 }
 
@@ -771,34 +793,55 @@ async function resolvePayloadLocalAssets(payload: HeroGenerationPayload) {
         )
       : null;
   const uploadedUrls = result?.urls ?? [];
-  const imageUrls: string[] = [];
-  const videoUrls: string[] = [];
+  if (
+    uploadedUrls.length !== uploadCandidates.length ||
+    uploadedUrls.some((url) => !url)
+  ) {
+    throw new Error('Some reference files could not be uploaded. Try again.');
+  }
 
-  uploadCandidates.forEach((asset, index) => {
-    const url = uploadedUrls[index];
-    if (!url) return;
-    if (asset.mediaType === 'video') {
-      videoUrls.push(url);
-    } else {
-      imageUrls.push(url);
+  const uploadedUrlById = new Map(
+    uploadCandidates.map((asset, index) => [asset.id, uploadedUrls[index]!])
+  );
+  const resolvedLocalAssets = payload.localAssets.map((asset) => {
+    const sourceUrl = asset.sourceUrl ?? uploadedUrlById.get(asset.id);
+    if (!sourceUrl) {
+      throw new Error(`Reference file "${asset.slotLabel}" is unavailable.`);
     }
+    return {
+      ...asset,
+      file: undefined,
+      previewUrl: sourceUrl,
+      sourceUrl,
+    } satisfies HeroLocalAsset;
   });
-  payload.localAssets.forEach((asset) => {
-    if (!asset.sourceUrl) return;
-    if (asset.mediaType === 'video') {
-      videoUrls.push(asset.sourceUrl);
-    } else {
-      imageUrls.push(asset.sourceUrl);
-    }
-  });
+  const resolvedAssets = resolvedLocalAssets.map((asset) => ({
+    mediaType: asset.mediaType,
+    referenceRole: asset.referenceRole,
+    url: asset.sourceUrl!,
+  }));
 
-  const { localAssets: _localAssets, ...restPayload } = payload;
+  const seedanceReferences =
+    payload.modelKey === 'kie:seedance-2'
+      ? buildSeedanceReferenceSettings(resolvedAssets)
+      : {};
+  const imageUrls = resolvedAssets
+    .filter((asset) => asset.mediaType === 'image')
+    .map((asset) => asset.url);
+  const videoUrls = resolvedAssets
+    .filter((asset) => asset.mediaType === 'video')
+    .map((asset) => asset.url);
   return {
-    ...restPayload,
+    ...payload,
+    localAssets: resolvedLocalAssets,
     settings: {
       ...payload.settings,
-      ...(imageUrls.length > 0 ? { image_input: imageUrls } : {}),
-      ...(videoUrls.length > 0 ? { video_input: videoUrls } : {}),
+      ...(payload.modelKey === 'kie:seedance-2'
+        ? seedanceReferences
+        : {
+            ...(imageUrls.length > 0 ? { image_input: imageUrls } : {}),
+            ...(videoUrls.length > 0 ? { video_input: videoUrls } : {}),
+          }),
     },
   } satisfies HeroGenerationPayload;
 }
@@ -830,14 +873,14 @@ function TimelineFilterMenu({
   return (
     <div className="fixed top-[5.75rem] right-5 z-30 lg:right-16 xl:right-20">
       <DropdownMenu>
-        <DropdownMenuTrigger className="lusee-liquid-control inline-flex h-9 items-center gap-1.5 rounded-lg px-3 text-sm font-semibold text-[#f4f2e6] transition-colors hover:bg-white/[0.105] focus-visible:ring-2 focus-visible:ring-[#eaff4f]/60 focus-visible:outline-none">
+        <DropdownMenuTrigger className="inline-flex h-9 items-center gap-1.5 rounded-lg border border-blue-100 bg-white px-3 text-sm font-semibold text-slate-700 shadow-sm shadow-blue-900/5 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none">
           {selected.label}
-          <ChevronDown className="size-4 text-[#d0d3c3]" />
+          <ChevronDown className="size-4 text-slate-500" />
         </DropdownMenuTrigger>
         <DropdownMenuContent
           align="end"
           sideOffset={8}
-          className="z-[70] min-w-40 rounded-xl border-white/12 bg-[#10120d]/90 p-1.5 text-[#ecede2] shadow-2xl shadow-black/45 backdrop-blur-2xl backdrop-saturate-125"
+          className="z-[70] min-w-40 rounded-xl border border-blue-100 bg-white/95 p-1.5 text-slate-900 shadow-[0_24px_70px_rgba(37,99,235,0.16)] backdrop-blur-2xl backdrop-saturate-150"
           onWheel={(event) => event.stopPropagation()}
         >
           {options.map((option) => {
@@ -846,12 +889,12 @@ function TimelineFilterMenu({
               <DropdownMenuItem
                 key={option.value}
                 className={cn(
-                  'min-h-10 cursor-pointer rounded-lg text-sm font-semibold text-[#d2d5c6] focus:bg-white/[0.09] focus:text-[#f4f2e6]',
-                  value === option.value && 'bg-white/[0.095] text-[#f4f2e6]'
+                  'min-h-10 cursor-pointer rounded-lg text-sm font-semibold text-slate-600 focus:bg-blue-50 focus:text-blue-700',
+                  value === option.value && 'bg-blue-50 text-blue-700'
                 )}
                 onSelect={() => onChange(option.value)}
               >
-                <Icon className="size-4 text-[#b8bcad]" />
+                <Icon className="size-4 text-slate-500" />
                 {option.label}
               </DropdownMenuItem>
             );
@@ -1095,7 +1138,17 @@ export function CreateWorkspace() {
         return;
       }
 
-      const resolvedPayload = await resolvePayloadLocalAssets(payload);
+      let resolvedPayload: HeroGenerationPayload;
+      try {
+        resolvedPayload = await resolvePayloadLocalAssets(payload);
+      } catch (error) {
+        toast.error(
+          error instanceof Error
+            ? error.message
+            : 'Reference upload failed. Try again.'
+        );
+        return;
+      }
       const request =
         resolvedPayload.mode === 'image'
           ? getImageRequest(resolvedPayload)
@@ -1425,7 +1478,7 @@ export function CreateWorkspace() {
   }, [pollSignature, updateEntryFromBatch, updateEntryFromTask]);
 
   return (
-    <div className="create-workspace-shell relative h-[calc(100dvh-4rem)] overflow-hidden bg-[#030502] text-white">
+    <div className="create-workspace-shell relative h-[calc(100dvh-4rem)] overflow-hidden bg-[linear-gradient(180deg,#f8fbff_0%,#eff6ff_46%,#ffffff_100%)] text-slate-950">
       <UpgradePaywallDialog
         onClose={closeUpgradePaywall}
         open={upgradeReason !== null}
@@ -1476,7 +1529,7 @@ export function CreateWorkspace() {
                 <div className="flex min-h-14 items-center justify-center">
                   <button
                     type="button"
-                    className="text-sm text-white/55 underline underline-offset-4 hover:text-white"
+                    className="text-sm text-slate-500 underline underline-offset-4 hover:text-blue-700"
                     onClick={() => void loadHistoryPage(historyPage + 1)}
                   >
                     {t('timeline.retry_load')}
@@ -1491,7 +1544,7 @@ export function CreateWorkspace() {
                 <div className="mt-4 flex justify-center">
                   <button
                     type="button"
-                    className="text-sm text-white/55 underline underline-offset-4 hover:text-white"
+                    className="text-sm text-slate-500 underline underline-offset-4 hover:text-blue-700"
                     onClick={() => void loadHistoryPage(historyPage)}
                   >
                     {t('timeline.retry_load')}
@@ -1565,14 +1618,14 @@ function TimelineCard({
   const hiddenCount = Math.max(0, slots.length - visibleSlots.length);
 
   return (
-    <article className="w-fit max-w-full rounded-xl bg-white/[0.018] p-4 shadow-[0_22px_70px_rgba(0,0,0,0.18)]">
+    <article className="w-fit max-w-full rounded-2xl border border-blue-100 bg-white/92 p-4 shadow-[0_22px_70px_rgba(37,99,235,0.1)] backdrop-blur-sm">
       <div className="flex max-w-full items-start justify-between gap-4">
         <div className="max-w-[min(860px,72vw)] min-w-0">
-          <div className="flex flex-wrap items-center gap-2 text-sm text-zinc-500">
-            <span className="rounded-md bg-white/[0.055] px-2 py-1 text-zinc-300">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+            <span className="rounded-md bg-blue-50 px-2 py-1 font-semibold text-blue-700">
               {sceneText(t, entry.scene, entry.mediaType)}
             </span>
-            <span className="rounded-md bg-white/[0.04] px-2 py-1">
+            <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-600">
               {entry.modelLabel}
             </span>
             <time>{formatEntryTime(entry.createdAt, locale)}</time>
@@ -1589,19 +1642,19 @@ function TimelineCard({
           className={cn(
             'shrink-0 rounded-full px-3 py-1 text-xs font-bold',
             entry.status === AITaskStatus.SUCCESS
-              ? 'bg-emerald-500/14 text-emerald-300'
+              ? 'bg-emerald-50 text-emerald-700'
               : entry.status === AITaskStatus.FAILED
-                ? 'bg-rose-500/14 text-rose-300'
+                ? 'bg-rose-50 text-rose-700'
                 : entry.status === 'partial_failed'
-                  ? 'bg-amber-500/14 text-amber-300'
-                  : 'bg-pink-500/14 text-pink-300'
+                  ? 'bg-amber-50 text-amber-700'
+                  : 'bg-blue-50 text-blue-700'
           )}
         >
           {statusText(t, entry.status)}
         </span>
       </div>
 
-      <div className="mt-3 flex items-center gap-4 text-sm text-zinc-500">
+      <div className="mt-3 flex items-center gap-4 text-sm text-slate-500">
         <span className="inline-flex items-center gap-1.5">
           <Icon className="size-4" />
           {entry.mediaType === 'video'
@@ -1633,7 +1686,7 @@ function TimelineCard({
                 slot.status === AITaskStatus.CANCELED ? (
                 <div
                   key={`${entry.id}-${slot.key}-failed`}
-                  className="flex h-40 shrink-0 flex-col items-center justify-center gap-2 rounded-xl border border-rose-400/18 bg-rose-500/[0.055] px-3 text-center text-xs text-rose-200/75 sm:h-64"
+                  className="flex h-40 shrink-0 flex-col items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-3 text-center text-xs text-rose-600 sm:h-64"
                   style={{ aspectRatio: mediaAspectRatio }}
                 >
                   <ImageOff className="size-5 text-rose-300/80" />
@@ -1643,14 +1696,14 @@ function TimelineCard({
                 <div
                   key={`${entry.id}-${slot.key}-skeleton`}
                   aria-hidden
-                  className="lusee-skeleton-shimmer h-40 shrink-0 rounded-xl bg-white/[0.06] sm:h-64"
+                  className="lusee-skeleton-shimmer h-40 shrink-0 rounded-xl bg-blue-100/70 sm:h-64"
                   style={{ aspectRatio: mediaAspectRatio }}
                 />
               )
             )}
             {!pending && hiddenCount > 0 && (
               <div
-                className="flex h-40 shrink-0 items-center justify-center rounded-xl bg-white/[0.035] text-lg font-semibold text-zinc-400 sm:h-64"
+                className="flex h-40 shrink-0 items-center justify-center rounded-xl bg-blue-50 text-lg font-semibold text-slate-500 sm:h-64"
                 style={{ aspectRatio: mediaAspectRatio }}
               >
                 +{hiddenCount}
@@ -1658,8 +1711,8 @@ function TimelineCard({
             )}
           </div>
           {pending && (
-            <p className="mt-2 inline-flex items-center gap-2 text-xs text-zinc-400">
-              <span className="size-1.5 animate-pulse rounded-full bg-pink-400" />
+            <p className="mt-2 inline-flex items-center gap-2 text-xs text-slate-500">
+              <span className="size-1.5 animate-pulse rounded-full bg-blue-500" />
               {entry.status === AITaskStatus.PENDING
                 ? t('timeline.queued_waiting')
                 : t('timeline.generating', {
@@ -1675,7 +1728,7 @@ function TimelineCard({
         <Button
           type="button"
           variant="secondary"
-          className="h-9 bg-white/[0.04] text-zinc-300 hover:bg-white/[0.08] hover:text-white"
+          className="h-9 border border-blue-100 bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-700"
           onClick={onEditPrompt}
         >
           <Pencil className="size-4" />
@@ -1685,7 +1738,7 @@ function TimelineCard({
           type="button"
           variant="secondary"
           disabled={pending}
-          className="h-9 bg-white/[0.04] text-zinc-300 hover:bg-white/[0.08] hover:text-white disabled:cursor-not-allowed disabled:opacity-45"
+          className="h-9 border border-blue-100 bg-white text-slate-700 hover:bg-blue-50 hover:text-blue-700 disabled:cursor-not-allowed disabled:opacity-45"
           onClick={onRegenerate}
         >
           <RefreshCw className="size-4" />
@@ -1723,7 +1776,7 @@ function MediaTile({
 
   return (
     <div
-      className="group/media relative h-40 shrink-0 overflow-hidden rounded-xl bg-white/[0.04] sm:h-64"
+      className="group/media relative h-40 shrink-0 overflow-hidden rounded-xl bg-slate-100 sm:h-64"
       style={{ aspectRatio }}
     >
       <button
@@ -1941,7 +1994,7 @@ function MoreToolsMenu({
         align="end"
         side="right"
         sideOffset={8}
-        className="z-[70] w-36 border-white/10 bg-[#11130e]/96 p-1.5 text-zinc-200 shadow-2xl shadow-black/35 backdrop-blur-xl"
+        className="z-[70] w-36 border border-slate-700 bg-slate-950/96 p-1.5 text-slate-200 shadow-2xl shadow-black/35 backdrop-blur-xl"
         onPointerEnter={openMenu}
         onPointerLeave={closeMenuSoon}
         onPointerDownOutside={() => setMenuOpen(false)}
@@ -1957,10 +2010,10 @@ function MoreToolsMenu({
           return (
             <DropdownMenuItem
               key={tool.labelKey}
-              className="h-10 rounded-md text-zinc-300 focus:bg-white/[0.08] focus:text-white"
+              className="h-10 rounded-md text-slate-300 focus:bg-white/[0.08] focus:text-white"
               onSelect={() => notifyToolAction(t, label)}
             >
-              <Icon className="size-4 text-zinc-400" />
+              <Icon className="size-4 text-slate-400" />
               {label}
             </DropdownMenuItem>
           );
@@ -2062,7 +2115,7 @@ function PreviewDialog({
                 type="button"
                 aria-label={t('preview.close')}
                 title={t('preview.close')}
-                className="absolute top-4 right-4 inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/72 transition-colors hover:bg-white/[0.09] hover:text-white focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                className="absolute top-4 right-4 inline-flex size-10 shrink-0 items-center justify-center rounded-xl border border-white/[0.08] bg-white/[0.04] text-white/72 transition-colors hover:bg-white/[0.09] hover:text-white focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                 onClick={() => onOpenChange(false)}
               >
                 <X className="size-5" />
@@ -2087,7 +2140,7 @@ function PreviewDialog({
                     <button
                       type="button"
                       onClick={() => void copyPrompt()}
-                      className="inline-flex min-h-8 items-center gap-1.5 rounded-lg border border-white/[0.1] px-2.5 text-xs font-semibold text-white/82 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                      className="inline-flex min-h-8 items-center gap-1.5 rounded-lg border border-white/[0.1] px-2.5 text-xs font-semibold text-white/82 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                     >
                       <Copy className="size-3.5" />
                       {copiedPrompt ? t('preview.copied') : t('preview.copy')}
@@ -2124,7 +2177,7 @@ function PreviewDialog({
                     onRegenerate();
                     onOpenChange(false);
                   }}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#d8f269] text-sm font-bold text-[#111407] transition-colors hover:bg-[#e6ff4f] focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-blue-600 text-sm font-bold text-white transition-colors hover:bg-blue-500 focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                 >
                   <RefreshCw className="size-4" />
                   {t('preview.recreate')}
@@ -2135,7 +2188,7 @@ function PreviewDialog({
                     onEditPrompt();
                     onOpenChange(false);
                   }}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                 >
                   <Pencil className="size-4" />
                   {t('preview.edit')}
@@ -2145,7 +2198,7 @@ function PreviewDialog({
                   onClick={() =>
                     notifyToolAction(t, t('actions.image_to_video'))
                   }
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                 >
                   <Film className="size-4" />
                   {t('actions.image_to_video')}
@@ -2153,7 +2206,7 @@ function PreviewDialog({
                 <a
                   href={preview.url}
                   download
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                 >
                   <Download className="size-4" />
                   {t('actions.download')}
@@ -2161,7 +2214,7 @@ function PreviewDialog({
                 <button
                   type="button"
                   onClick={() => void copyShareLink(preview.url, t)}
-                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                  className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-white/[0.08] bg-white/[0.04] text-sm font-semibold text-white/86 transition-colors hover:bg-white/[0.08] focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                 >
                   <Link2 className="size-4" />
                   {t('actions.share')}
@@ -2170,9 +2223,9 @@ function PreviewDialog({
                   type="button"
                   onClick={onToggleFavorite}
                   className={cn(
-                    'inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border text-sm font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none',
+                    'inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border text-sm font-semibold transition-colors focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none',
                     favorite
-                      ? 'border-[#d8f269]/35 bg-[#d8f269] text-[#111407] hover:bg-[#e6ff4f]'
+                      ? 'border-blue-500/50 bg-blue-600 text-white hover:bg-blue-500'
                       : 'border-white/[0.08] bg-white/[0.04] text-white/86 hover:bg-white/[0.08]'
                   )}
                 >
@@ -2192,7 +2245,7 @@ function PreviewDialog({
                     <button
                       key={tool.label}
                       type="button"
-                      className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-xl border border-white/[0.08] bg-white/[0.04] px-2 text-xs font-semibold text-white/78 transition-colors hover:bg-white/[0.08] hover:text-white focus-visible:ring-2 focus-visible:ring-[#d8f269]/70 focus-visible:outline-none"
+                      className="inline-flex min-h-10 items-center justify-center gap-1.5 rounded-xl border border-white/[0.08] bg-white/[0.04] px-2 text-xs font-semibold text-white/78 transition-colors hover:bg-white/[0.08] hover:text-white focus-visible:ring-2 focus-visible:ring-blue-400/70 focus-visible:outline-none"
                       onClick={() => notifyToolAction(t, tool.label)}
                     >
                       <Icon className="size-3.5" />
@@ -2233,10 +2286,10 @@ function EmptyCreateState({ filter }: { filter: TimelineFilter }) {
           />
         ))}
       </div>
-      <h1 className="mt-8 text-3xl font-semibold tracking-normal text-white">
+      <h1 className="mt-8 text-3xl font-semibold tracking-normal text-slate-950">
         {isFavorites ? t('empty.favorites_title') : t('empty.default_title')}
       </h1>
-      <p className="mt-3 max-w-xl text-sm leading-6 text-zinc-400">
+      <p className="mt-3 max-w-xl text-sm leading-6 text-slate-500">
         {isFavorites
           ? t('empty.favorites_description')
           : t('empty.default_description')}

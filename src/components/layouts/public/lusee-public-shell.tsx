@@ -48,8 +48,11 @@ import {
   type GlobalCreationComposerHomeVisibilityDetail,
 } from '@/components/features/ai-generator/components/global-creation-composer-events';
 import {
+  GlobalCreationDraftProvider,
+  useGlobalCreationDraft,
+} from '@/components/features/ai-generator/components/global-creation-draft-context';
+import {
   HeroCreationForm,
-  type HeroCreationDraft,
 } from '@/components/features/ai-generator/components/hero-creation-form';
 import { SignUser } from '@/components/blocks/sign/sign-user';
 import {
@@ -141,7 +144,7 @@ export const PUBLIC_SURFACE_CLASS_NAME = [
 ].join(' ');
 
 const TOP_UTILITY_ICON_BUTTON_CLASS =
-  'flex size-10 shrink-0 items-center justify-center rounded-full border border-border bg-white/[0.04] p-0 text-muted-foreground transition-colors hover:bg-white/[0.08] hover:text-foreground focus-visible:shadow-[inset_0_0_0_1px_color-mix(in_oklab,var(--color-foreground)_30%,transparent)] focus-visible:outline-none [&_svg]:size-4';
+  'flex size-10 shrink-0 items-center justify-center rounded-full border border-blue-100 bg-white p-0 text-slate-600 shadow-sm shadow-blue-900/5 transition-colors hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-500/40 focus-visible:outline-none [&_svg]:size-4';
 const HEADER_SCROLL_THRESHOLD = 8;
 
 const mainNav: ShellNavItem[] = [
@@ -218,7 +221,7 @@ const toolDefinitions: ToolDefinition[] = [
         description: 'Synced audio-visual output',
         icon: Sparkles,
         badge: 'NEW',
-        badgeClassName: 'bg-[#2563eb] text-[#151a0c]',
+        badgeClassName: 'bg-blue-600 text-white',
       },
       {
         id: 'pixverse-v6',
@@ -226,7 +229,7 @@ const toolDefinitions: ToolDefinition[] = [
         description: "Pixverse's latest video model",
         icon: Video,
         badge: 'NEW',
-        badgeClassName: 'bg-[#2563eb] text-[#151a0c]',
+        badgeClassName: 'bg-blue-600 text-white',
       },
       {
         id: 'google-veo-3-lite',
@@ -234,7 +237,7 @@ const toolDefinitions: ToolDefinition[] = [
         description: "Google's fastest video model",
         icon: Bot,
         badge: 'NEW',
-        badgeClassName: 'bg-[#2563eb] text-[#151a0c]',
+        badgeClassName: 'bg-blue-600 text-white',
       },
       {
         id: 'kling-o3',
@@ -348,7 +351,7 @@ const toolDefinitions: ToolDefinition[] = [
         description: "Google's latest model",
         icon: Bot,
         badge: 'NEW',
-        badgeClassName: 'bg-[#2563eb] text-[#151a0c]',
+        badgeClassName: 'bg-blue-600 text-white',
       },
       {
         id: 'seedream-v5-lite',
@@ -356,7 +359,7 @@ const toolDefinitions: ToolDefinition[] = [
         description: 'Advanced image editing',
         icon: Sparkles,
         badge: 'NEW',
-        badgeClassName: 'bg-[#2563eb] text-[#151a0c]',
+        badgeClassName: 'bg-blue-600 text-white',
       },
     ],
   },
@@ -1367,7 +1370,8 @@ export function LuseePublicShell({
     !pathname.startsWith('/settings');
 
   return (
-    <div
+    <GlobalCreationDraftProvider>
+      <div
       className={PUBLIC_SURFACE_CLASS_NAME}
       style={
         {
@@ -1390,12 +1394,13 @@ export function LuseePublicShell({
         <main className="min-h-screen pt-16">{children}</main>
         {showPublicFooter && <LuseePublicFooter footer={footer} />}
       </div>
-      <GlobalCreationComposer
-        visible={isHome || isGenerateWorkspace}
-        suppressForHomeHero={isHome}
-        footerObserveKey={pathname}
-      />
-    </div>
+        <GlobalCreationComposer
+          visible={isHome || isGenerateWorkspace}
+          suppressForHomeHero={isHome}
+          footerObserveKey={pathname}
+        />
+      </div>
+    </GlobalCreationDraftProvider>
   );
 }
 
@@ -1408,7 +1413,7 @@ function GlobalCreationComposer({
   suppressForHomeHero: boolean;
   footerObserveKey: string;
 }) {
-  const [draft, setDraft] = useState<HeroCreationDraft | null>(null);
+  const { draft, setDraft } = useGlobalCreationDraft();
   const [expandSignal, setExpandSignal] = useState(0);
   const [resetCollapsedSignal, setResetCollapsedSignal] = useState(0);
   const [homeHeroVisible, setHomeHeroVisible] = useState(false);
@@ -2089,11 +2094,11 @@ function HeaderUtilityActions({
         className={cn(
           'inline-flex min-h-9 items-center gap-1.5 rounded-full border text-[11px] font-bold transition-colors focus-visible:ring-2 focus-visible:ring-[#3b82f6]/70 focus-visible:outline-none',
           membershipTier === 'free' &&
-            'border-[#3b82f6] bg-[#3b82f6] text-[#151a0c] shadow-[0_0_28px_rgba(216,242,105,0.28)] hover:bg-[#f1ff93]',
+            'border-blue-600 bg-blue-600 text-white shadow-[0_14px_34px_rgba(37,99,235,0.22)] hover:bg-blue-700',
           membershipTier === 'starter' &&
-            'border-[#2563eb]/45 bg-[#1e40af] text-[#efffb1] shadow-[0_0_24px_rgba(216,242,105,0.18)] hover:bg-[#1e3a8a]',
+            'border-blue-700 bg-blue-700 text-white shadow-[0_14px_34px_rgba(30,64,175,0.2)] hover:bg-blue-800',
           membershipTier === 'pro' &&
-            'border-[#3b82f6] bg-[#60a5fa] text-[#151a0c] shadow-[0_0_30px_rgba(216,242,105,0.32)] hover:bg-[#3b82f6]',
+            'border-sky-500 bg-sky-500 text-white shadow-[0_14px_34px_rgba(14,165,233,0.2)] hover:bg-sky-600',
           isUltra &&
             'border-[#ffe08a] bg-[#d9a733] text-[#211806] shadow-[0_0_30px_rgba(232,185,67,0.35)] hover:bg-[#f3c958]',
           compact ? 'px-2.5 sm:px-3' : 'px-3.5'
@@ -2173,10 +2178,10 @@ function AccountButton({ compact = false }: { compact?: boolean }) {
       className="w-auto md:w-auto"
       iconOnly={compact}
       buttonClassName={cn(
-        'ml-0 h-10 rounded-full border border-[#2563eb]/45 bg-primary text-[12px] font-semibold text-primary-foreground shadow-[0_0_28px_rgba(216,242,105,0.18)] hover:bg-[#e5ff78] hover:text-[#151a0c] data-[state=open]:bg-[#e5ff78]',
+        'ml-0 h-10 rounded-full border border-blue-600 bg-blue-600 text-[12px] font-semibold text-white shadow-[0_14px_34px_rgba(37,99,235,0.18)] transition-colors hover:bg-blue-700 data-[state=open]:bg-blue-700',
         compact ? 'w-10 px-0' : 'px-4'
       )}
-      userButtonClassName="ml-0 size-10 rounded-full border border-[#f4f2df18] bg-white/[0.04] p-1 text-[#2563eb] shadow-none hover:border-[#2563eb]/45 hover:bg-white/[0.08] data-[state=open]:border-[#2563eb]/45 data-[state=open]:bg-white/[0.08]"
+      userButtonClassName="ml-0 size-10 rounded-full border border-blue-100 bg-white p-1 text-blue-600 shadow-sm shadow-blue-900/5 hover:border-blue-300 hover:bg-blue-50 data-[state=open]:border-blue-300 data-[state=open]:bg-blue-50"
     />
   );
 }

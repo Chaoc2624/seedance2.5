@@ -2,7 +2,9 @@ import { describe, expect, test } from 'bun:test';
 
 import {
   DEFAULT_VIDEO_MODEL_CATALOG,
+  assertVideoModelReferenceMedia,
   getVideoModelCreditCost,
+  getVideoModelReferenceMedia,
   normalizeVideoModelDuration,
 } from './ai-video-models';
 
@@ -49,14 +51,14 @@ describe('AI video model durations and credits', () => {
     ).toBe(330);
   });
 
-  test('snaps fixed duration models to supported anchors', () => {
+  test('supports common duration values for Kling 2.6 Text', () => {
     const model = DEFAULT_VIDEO_MODEL_CATALOG.find(
       (item) => item.id === 'kie:kling-2-6-text'
     );
 
     expect(model).toBeDefined();
     expect(normalizeVideoModelDuration({ model: model!, duration: '7' })).toBe(
-      '5'
+      '7'
     );
     expect(
       getVideoModelCreditCost({
@@ -67,15 +69,28 @@ describe('AI video model durations and credits', () => {
     ).toBe(180);
   });
 
-  test('reuses the duration slider model for Seedance 2 anchors', () => {
+  test('matches the documented Seedance 2 duration range', () => {
     const model = DEFAULT_VIDEO_MODEL_CATALOG.find(
       (item) => item.id === 'kie:seedance-2'
     );
 
     expect(model).toBeDefined();
-    expect(model?.capabilities?.durationOptions).toEqual(['5', '10']);
+    expect(model?.capabilities?.durationOptions).toEqual([
+      '4',
+      '5',
+      '6',
+      '7',
+      '8',
+      '9',
+      '10',
+      '11',
+      '12',
+      '13',
+      '14',
+      '15',
+    ]);
     expect(normalizeVideoModelDuration({ model: model!, duration: '9' })).toBe(
-      '10'
+      '9'
     );
     expect(
       getVideoModelCreditCost({
@@ -84,5 +99,25 @@ describe('AI video model durations and credits', () => {
         duration: '10',
       })
     ).toBe(180);
+  });
+
+  test('uses the selected model as the source of reference media limits', () => {
+    const model = DEFAULT_VIDEO_MODEL_CATALOG.find(
+      (item) => item.id === 'kie:seedance-2'
+    );
+
+    expect(getVideoModelReferenceMedia(model)).toEqual({
+      imageCount: 9,
+      videoCount: 3,
+      audioCount: 3,
+    });
+    expect(() =>
+      assertVideoModelReferenceMedia({
+        model: model!,
+        options: {
+          reference_videos: ['a', 'b', 'c', 'd'],
+        },
+      })
+    ).toThrow('up to 3 video references');
   });
 });

@@ -55,7 +55,7 @@ export default defineConfig(({ command }) => {
       port: 3000,
     },
     optimizeDeps: {
-      exclude: ['lucide-react'],
+      exclude: ['lucide-react', '@tanstack/start-server-core'],
     },
     resolve: {
       tsconfigPaths: true,

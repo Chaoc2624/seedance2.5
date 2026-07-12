@@ -82,7 +82,12 @@ function copyPublicOptions(
       value === null ||
       value === '' ||
       key === 'image_input' ||
-      key === 'video_input'
+      key === 'video_input' ||
+      key === 'reference_first_frame' ||
+      key === 'reference_last_frame' ||
+      key === 'reference_images' ||
+      key === 'reference_videos' ||
+      key === 'reference_audio'
     ) {
       continue;
     }
@@ -455,7 +460,38 @@ export class KieProvider implements AIProvider {
 
     this.applyVideoInputs({ input, model, options });
 
+    if (model === 'bytedance/seedance-2') {
+      this.applySeedanceReferenceInputs({ input, options });
+      if (typeof options.sound === 'boolean') {
+        input.generate_audio = options.sound;
+        delete input.sound;
+      }
+    }
+
     return input;
+  }
+
+  private applySeedanceReferenceInputs({
+    input,
+    options,
+  }: {
+    input: Record<string, unknown>;
+    options: Record<string, unknown>;
+  }) {
+    const firstFrame = firstString(options.reference_first_frame);
+    const lastFrame = firstString(options.reference_last_frame);
+    const images = toStringArray(options.reference_images);
+    const videos = toStringArray(options.reference_videos);
+    const audio = toStringArray(options.reference_audio);
+
+    if (firstFrame || lastFrame) {
+      if (firstFrame) input.first_frame_url = firstFrame;
+      if (lastFrame) input.last_frame_url = lastFrame;
+      return;
+    }
+    if (images.length > 0) input.reference_image_urls = images;
+    if (videos.length > 0) input.reference_video_urls = videos;
+    if (audio.length > 0) input.reference_audio_urls = audio;
   }
 
   private applyVideoInputs({

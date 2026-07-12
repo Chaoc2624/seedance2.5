@@ -324,30 +324,30 @@
 }
 
 .landing-home-header-theme {
-  --landing-header-start-foreground: #f4f2e6;
-  --landing-header-end-foreground: #f4f2e6;
+  --landing-header-start-foreground: #0f172a;
+  --landing-header-end-foreground: #0f172a;
   --landing-header-foreground: var(--landing-header-start-foreground);
-  --landing-header-nav: #d8d8c7;
-  --landing-header-nav-hover: #ffffff;
-  --landing-header-nav-hover-bg: rgb(255 255 255 / 0.1);
-  --background: #090b08;
+  --landing-header-nav: #64748b;
+  --landing-header-nav-hover: #1d4ed8;
+  --landing-header-nav-hover-bg: rgb(239 246 255 / 0.9);
+  --background: #ffffff;
   --foreground: var(--landing-header-foreground);
-  --card: #11140fe6;
-  --card-foreground: #f4f2e6;
-  --popover: #11140f;
-  --popover-foreground: #f4f2e6;
+  --card: #fffffff2;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
   --primary: #3b82f6;
-  --primary-foreground: #151a0c;
-  --muted: #1c2117;
-  --muted-foreground: #a9ac96;
-  --accent: #242a1d;
+  --primary-foreground: #ffffff;
+  --muted: #eff6ff;
+  --muted-foreground: #64748b;
+  --accent: #dbeafe;
   --accent-foreground: #3b82f6;
-  --border: #f4f2df2e;
-  --input: #f4f2df33;
+  --border: #dbeafe;
+  --input: #bfdbfe;
   --ring: #3b82f6;
   --brand-cyan: #3b82f6;
-  --brand-mint: #a88b54;
-  --brand-lime: #f4f2e6;
+  --brand-mint: #60a5fa;
+  --brand-lime: #e0f2fe;
   color: var(--foreground);
 }
 
@@ -372,51 +372,51 @@
 }
 
 .dark .landing-home-header-theme {
-  --landing-header-start-foreground: #f4f2e6;
-  --landing-header-end-foreground: #f4f2e6;
-  --landing-header-nav: #d8d8c7;
+  --landing-header-start-foreground: #f8fafc;
+  --landing-header-end-foreground: #f8fafc;
+  --landing-header-nav: #cbd5e1;
   --landing-header-nav-hover: #ffffff;
-  --landing-header-nav-hover-bg: rgb(255 255 255 / 0.1);
-  --background: #090b08;
+  --landing-header-nav-hover-bg: rgb(255 255 255 / 0.12);
+  --background: #020617;
   --foreground: var(--landing-header-foreground);
-  --card: #11140fe6;
-  --card-foreground: #f4f2e6;
-  --popover: #11140f;
-  --popover-foreground: #f4f2e6;
+  --card: #0f172ae6;
+  --card-foreground: #f8fafc;
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
   --primary: #3b82f6;
-  --primary-foreground: #151a0c;
-  --muted: #1c2117;
-  --muted-foreground: #a9ac96;
-  --accent: #242a1d;
+  --primary-foreground: #ffffff;
+  --muted: #172554;
+  --muted-foreground: #93a4b8;
+  --accent: #1e3a8a;
   --accent-foreground: #3b82f6;
-  --border: #f4f2df2e;
-  --input: #f4f2df33;
+  --border: #1e3a8a;
+  --input: #1e40af;
   --ring: #3b82f6;
   --brand-cyan: #3b82f6;
-  --brand-mint: #a88b54;
-  --brand-lime: #f4f2e6;
+  --brand-mint: #60a5fa;
+  --brand-lime: #dbeafe;
 }
 
 .landing-home-header-chrome {
-  background: var(--landing-header-light-bg, #090b08);
+  background: var(--landing-header-light-bg, #ffffff);
   border-bottom-color: var(--landing-header-light-border, transparent);
   box-shadow: var(--landing-header-shadow, none);
   will-change: background-color, border-color, box-shadow, backdrop-filter;
 }
 
 .dark .landing-home-header-chrome {
-  background: var(--landing-header-dark-bg, #090b08);
+  background: var(--landing-header-dark-bg, #020617);
   border-bottom-color: var(--landing-header-dark-border, transparent);
 }
 
 .landing-home-header-chrome[data-state='active'] {
-  --landing-header-foreground: #f4f2e6;
-  background: #090b08;
+  --landing-header-foreground: #0f172a;
+  background: #ffffff;
 }
 
 .dark .landing-home-header-chrome[data-state='active'] {
-  --landing-header-foreground: #f4f2e6;
-  background: #090b08;
+  --landing-header-foreground: #f8fafc;
+  background: #020617;
 }
 
 .site-header-scroll-overlay {

@@ -1,4 +1,4 @@
-type HeroCreationFormCopy = {
+export type HeroCreationFormCopy = {
   modeAriaLabel: string;
   minimizeComposer: string;
   describePrompt: string;
@@ -14,6 +14,7 @@ type HeroCreationFormCopy = {
     reference: string;
     image: string;
     video: string;
+    audio: string;
     start: string;
     end: string;
     media: string;
@@ -61,6 +62,7 @@ const en: HeroCreationFormCopy = {
     reference: 'Reference',
     image: 'Image',
     video: 'Video',
+    audio: 'Audio',
     start: 'Start',
     end: 'End',
     media: 'Media',
@@ -112,6 +114,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: 'Referenz',
       image: 'Bild',
       video: 'Video',
+      audio: 'Audio',
       start: 'Start',
       end: 'Ende',
       media: 'Medien',
@@ -162,6 +165,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: 'Reference',
       image: 'Image',
       video: 'Video',
+      audio: 'Audio',
       start: 'Debut',
       end: 'Fin',
       media: 'Media',
@@ -212,6 +216,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: 'Referencia',
       image: 'Imagen',
       video: 'Video',
+      audio: 'Audio',
       start: 'Inicio',
       end: 'Final',
       media: 'Medio',
@@ -260,6 +265,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: 'Riferimento',
       image: 'Immagine',
       video: 'Video',
+      audio: 'Audio',
       start: 'Inizio',
       end: 'Fine',
       media: 'Media',
@@ -308,6 +314,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: 'Referencja',
       image: 'Obraz',
       video: 'Wideo',
+      audio: 'Audio',
       start: 'Start',
       end: 'Koniec',
       media: 'Media',
@@ -355,6 +362,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: '参照',
       image: '画像',
       video: '動画',
+      audio: 'オーディオ',
       start: '開始',
       end: '終了',
       media: 'メディア',
@@ -402,6 +410,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: '참조',
       image: '이미지',
       video: '동영상',
+      audio: '오디오',
       start: '시작',
       end: '끝',
       media: '미디어',
@@ -449,6 +458,7 @@ const copies: Record<string, HeroCreationFormCopy> = {
       reference: '參考',
       image: '圖片',
       video: '影片',
+      audio: '音訊',
       start: '開始',
       end: '結束',
       media: '媒體',
@@ -486,5 +496,3 @@ copies.zh = copies['zh-hant'];
 export function getHeroCreationFormCopy(locale?: string | null) {
   return (locale && copies[locale]) || en;
 }
-
-export type { HeroCreationFormCopy };

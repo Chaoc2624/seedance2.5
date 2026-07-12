@@ -203,7 +203,7 @@ export function PricingExperience({
   return (
     <section
       className={cn(
-        'min-h-[100dvh] overflow-hidden bg-[#090b08] py-14 text-zinc-100 md:py-20',
+        'min-h-[100dvh] overflow-hidden bg-slate-950 py-14 text-slate-100 md:py-20',
         className,
         section.className
       )}
@@ -217,7 +217,7 @@ export function PricingExperience({
         <div className="mx-auto max-w-6xl">
           <div className="grid gap-8 border-b border-white/10 pb-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-end">
             <div>
-              <div className="mb-4 flex items-center gap-2 text-[#ddec7c]">
+              <div className="mb-4 flex items-center gap-2 text-blue-300">
                 <Sparkles className="size-4" />
                 <span className="text-sm font-semibold">
                   {t('value_label')}
@@ -231,7 +231,7 @@ export function PricingExperience({
               </p>
             </div>
 
-            <aside className="rounded-lg border border-[#394231] bg-[#12170f] p-5">
+            <aside className="rounded-lg border border-blue-900 bg-slate-900 p-5">
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-sm text-zinc-400">
@@ -241,7 +241,7 @@ export function PricingExperience({
                     {entitlements.label}
                   </p>
                 </div>
-                <Crown className="size-5 text-[#ddec7c]" />
+                <Crown className="size-5 text-blue-300" />
               </div>
               <div className="mt-5 grid grid-cols-2 gap-3 border-t border-white/10 pt-4 text-sm">
                 <div>
@@ -278,16 +278,16 @@ export function PricingExperience({
 
           {section.groups && section.groups.length > 0 && (
             <Tabs className="mt-9" onValueChange={setGroup} value={group}>
-              <TabsList className="h-auto max-w-full border-[#394231] bg-[#151b12] p-1 text-zinc-400">
+              <TabsList className="h-auto max-w-full border-blue-900 bg-slate-900 p-1 text-slate-400">
                 {section.groups.map((item) => (
                   <TabsTrigger
-                    className="rounded-md text-zinc-300 data-[state=active]:bg-[#eaff4f] data-[state=active]:text-[#151a0c]"
+                    className="rounded-md text-slate-300 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
                     key={item.name}
                     value={item.name || ''}
                   >
                     {item.title}
                     {item.name === 'yearly' && annualDiscountPercent > 0 && (
-                      <span className="ml-2 rounded-sm bg-[#eaff4f] px-1.5 py-0.5 text-[10px] font-semibold text-[#151a0c]">
+                      <span className="ml-2 rounded-sm bg-blue-500 px-1.5 py-0.5 text-[10px] font-semibold text-white">
                         {t('annual_save', { percent: annualDiscountPercent })}
                       </span>
                     )}
