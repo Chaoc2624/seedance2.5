@@ -24,6 +24,7 @@ import {
   type SeedanceVideoAsset,
   seedanceVideos,
 } from './-home-data';
+import { getHomePageCopy } from './-home-page-copy';
 import {
   usePreviewEnterTransition,
   type PreviewTransitionRect,
@@ -54,10 +55,25 @@ type SeedanceGalleryCopy = {
   viewAll: string;
 };
 
+function buildGalleryCopy(
+  locale: string,
+  chrome: Omit<
+    SeedanceGalleryCopy,
+    'dialogDescription' | 'title' | 'description'
+  >
+): SeedanceGalleryCopy {
+  const seo = getHomePageCopy(locale).gallery;
+  return {
+    ...chrome,
+    dialogDescription: seo.dialogDescription,
+    title: seo.title,
+    description: seo.description,
+  };
+}
+
 const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
-  en: {
+  en: buildGalleryCopy('en', {
     preview: (title) => `Preview ${title}`,
-    dialogDescription: 'Seedance 2.5 video reference preview',
     close: 'Close',
     prompt: 'PROMPT',
     copy: 'Copy',
@@ -71,14 +87,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generate',
     download: 'Download',
     eyebrow: 'Video effects',
-    title: 'Seedance 2.5 video gallery',
-    description:
-      'Browse Seedance 2.5 motion references. Open any clip in a focused preview, or move straight into Video Generate with Seedance 2.5.',
     viewAll: 'View all',
-  },
-  de: {
+  }),
+  de: buildGalleryCopy('de', {
     preview: (title) => `${title} ansehen`,
-    dialogDescription: 'Seedance 2.5 Videoreferenz-Vorschau',
     close: 'Schliessen',
     prompt: 'PROMPT',
     copy: 'Kopieren',
@@ -92,14 +104,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generieren',
     download: 'Herunterladen',
     eyebrow: 'Videoeffekte',
-    title: 'Seedance 2.5 Videogalerie',
-    description:
-      'Durchsuche Seedance 2.5 Bewegungsreferenzen. Oeffne Clips in der Vorschau oder starte direkt Video Generate mit Seedance 2.5.',
     viewAll: 'Alle ansehen',
-  },
-  fr: {
+  }),
+  fr: buildGalleryCopy('fr', {
     preview: (title) => `Apercu ${title}`,
-    dialogDescription: 'Apercu video de reference Seedance 2.5',
     close: 'Fermer',
     prompt: 'PROMPT',
     copy: 'Copier',
@@ -113,14 +121,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generer',
     download: 'Telecharger',
     eyebrow: 'Effets video',
-    title: 'Galerie video Seedance 2.5',
-    description:
-      'Parcourez des references de mouvement Seedance 2.5. Ouvrez un clip en apercu ou lancez Video Generate avec Seedance 2.5.',
     viewAll: 'Tout voir',
-  },
-  es: {
+  }),
+  es: buildGalleryCopy('es', {
     preview: (title) => `Vista previa de ${title}`,
-    dialogDescription: 'Vista previa de referencia de video Seedance 2.5',
     close: 'Cerrar',
     prompt: 'PROMPT',
     copy: 'Copiar',
@@ -134,14 +138,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generar',
     download: 'Descargar',
     eyebrow: 'Efectos de video',
-    title: 'Galeria de videos Seedance 2.5',
-    description:
-      'Explora referencias de movimiento Seedance 2.5. Abre cualquier clip o entra directo a Video Generate con Seedance 2.5.',
     viewAll: 'Ver todo',
-  },
-  it: {
+  }),
+  it: buildGalleryCopy('it', {
     preview: (title) => `Anteprima ${title}`,
-    dialogDescription: 'Anteprima riferimento video Seedance 2.5',
     close: 'Chiudi',
     prompt: 'PROMPT',
     copy: 'Copia',
@@ -155,14 +155,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Genera',
     download: 'Scarica',
     eyebrow: 'Effetti video',
-    title: 'Galleria video Seedance 2.5',
-    description:
-      'Sfoglia reference di movimento Seedance 2.5. Apri una clip in anteprima o passa a Video Generate con Seedance 2.5.',
     viewAll: 'Vedi tutto',
-  },
-  pl: {
+  }),
+  pl: buildGalleryCopy('pl', {
     preview: (title) => `Podglad ${title}`,
-    dialogDescription: 'Podglad referencji wideo Seedance 2.5',
     close: 'Zamknij',
     prompt: 'PROMPT',
     copy: 'Kopiuj',
@@ -176,14 +172,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: 'Generuj',
     download: 'Pobierz',
     eyebrow: 'Efekty wideo',
-    title: 'Galeria wideo Seedance 2.5',
-    description:
-      'Przegladaj referencje ruchu Seedance 2.5. Otworz klip w podgladzie albo przejdz do Video Generate z Seedance 2.5.',
     viewAll: 'Zobacz wszystko',
-  },
-  ja: {
+  }),
+  ja: buildGalleryCopy('ja', {
     preview: (title) => `${title} をプレビュー`,
-    dialogDescription: 'Seedance 2.5 動画参照プレビュー',
     close: '閉じる',
     prompt: 'プロンプト',
     copy: 'コピー',
@@ -197,14 +189,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: '生成',
     download: 'ダウンロード',
     eyebrow: '動画エフェクト',
-    title: 'Seedance 2.5 動画ギャラリー',
-    description:
-      'Seedance 2.5 のモーション参照を閲覧できます。クリップをプレビューし、そのまま Seedance 2.5 の動画生成へ進めます。',
     viewAll: 'すべて見る',
-  },
-  ko: {
+  }),
+  ko: buildGalleryCopy('ko', {
     preview: (title) => `${title} 미리보기`,
-    dialogDescription: 'Seedance 2.5 동영상 레퍼런스 미리보기',
     close: '닫기',
     prompt: '프롬프트',
     copy: '복사',
@@ -218,14 +206,10 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: '생성',
     download: '다운로드',
     eyebrow: '동영상 효과',
-    title: 'Seedance 2.5 동영상 갤러리',
-    description:
-      'Seedance 2.5 모션 레퍼런스를 둘러보세요. 클립을 미리 보거나 Seedance 2.5 Video Generate로 바로 이동할 수 있습니다.',
     viewAll: '전체 보기',
-  },
-  'zh-hant': {
+  }),
+  'zh-hant': buildGalleryCopy('zh-hant', {
     preview: (title) => `預覽 ${title}`,
-    dialogDescription: 'Seedance 2.5 影片參考預覽',
     close: '關閉',
     prompt: '提示詞',
     copy: '複製',
@@ -239,11 +223,8 @@ const seedanceCopyByLocale: Record<string, SeedanceGalleryCopy> = {
     generate: '生成',
     download: '下載',
     eyebrow: '影片效果',
-    title: 'Seedance 2.5 影片瀑布流',
-    description:
-      '瀏覽 Seedance 2.5 動態參考。可開啟單支影片預覽，或直接進入 Seedance 2.5 影片生成。',
     viewAll: '查看全部',
-  },
+  }),
 };
 
 seedanceCopyByLocale.zh = seedanceCopyByLocale['zh-hant'];

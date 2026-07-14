@@ -78,7 +78,7 @@
     "id": "footer",
     "brand": {
       "title": "Seedance 2.5",
-      "description": "Seedance 2.5 は、動画生成、画像生成、モデル比較、プロンプト中心の制作ワークフローをまとめた AI クリエイティブワークスペースです。",
+      "description": "Seedance 2.5 は動画生成に特化した AI 制作ワークスペースです。プロンプト・参照・多言語ブリーフからシネマティックな動画を作る Seedance 2.5 video generation を中心に設計されています。",
       "logo": {
         "src": "/seedance-lockup.svg",
         "alt": "Seedance 2.5",
@@ -94,7 +94,7 @@
           "title": "作成",
           "children": [
             {
-              "title": "動画生成",
+              "title": "Seedance 2.5 動画生成",
               "url": "/",
               "target": "_self"
             },

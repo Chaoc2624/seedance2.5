@@ -64,7 +64,7 @@
     "id": "footer",
     "brand": {
       "title": "Seedance 2.5",
-      "description": "Seedance 2.5는 동영상 생성, 이미지 생성, 모델 비교, 프롬프트 중심 제작 워크플로를 위한 AI 크리에이티브 워크스페이스입니다.",
+      "description": "Seedance 2.5는 영상 생성에 특화된 AI 제작 워크스페이스입니다. 프롬프트, 레퍼런스, 다국어 브리프로 시네마틱 영상을 만드는 Seedance 2.5 video generation을 중심으로 설계되었습니다.",
       "logo": {
         "src": "/seedance-lockup.svg",
         "alt": "Seedance 2.5",
@@ -80,7 +80,7 @@
           "title": "제작",
           "children": [
             {
-              "title": "동영상 생성",
+              "title": "Seedance 2.5 동영상 생성",
               "url": "/",
               "target": "_self"
             },

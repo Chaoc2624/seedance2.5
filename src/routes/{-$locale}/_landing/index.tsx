@@ -9,84 +9,27 @@ import { HeroCreationForm } from '@/components/features/ai-generator/components/
 import { getHeadMeta } from '@/lib/seo';
 
 import { seedanceVideos } from './-home-data';
+import { getHomePageCopy } from './-home-page-copy';
 import { HomePageSections } from './-home-sections';
 
 export const Route = createFileRoute('/{-$locale}/_landing/')({
   component: LandingPage,
-  head: ({ params }) =>
-    getHeadMeta({
-      title: 'Seedance 2.5 AI Video Generator | Multilingual Video Creation',
-      description:
-        'Create cinematic AI videos with Seedance 2.5 using prompts, images, clips, camera direction, synchronized sound, and multilingual creative briefs.',
+  head: ({ params }) => {
+    const copy = getHomePageCopy(params.locale);
+    return getHeadMeta({
+      title: copy.meta.title,
+      description: copy.meta.description,
       canonicalUrl: '/',
       imageUrl: '/preview.png',
       locale: params.locale,
-    }),
+    });
+  },
 });
-
-const heroCopyByLocale: Record<
-  string,
-  { eyebrow: string; title: string; description: string }
-> = {
-  en: {
-    eyebrow: 'Seedance 2.5 video generation',
-    title: 'Create sharper AI videos in every language',
-    description:
-      'Turn prompts, images, clips, camera direction, and sound cues into cinematic videos. Seedance 2.5 is built for global teams, including small-language creative briefs.',
-  },
-  de: {
-    eyebrow: 'Mehrsprachige KI-Videoproduktion',
-    title: 'Schaerfere KI-Videos fuer jede Sprache',
-    description:
-      'Erstelle filmische Videos aus Prompts, Referenzen, Kameraanweisungen und Soundideen fuer globale Teams.',
-  },
-  fr: {
-    eyebrow: 'Creation video IA multilingue',
-    title: 'Des videos IA plus nettes dans chaque langue',
-    description:
-      'Creez des videos cinematographiques avec prompts, references, direction camera et indications sonores pour des audiences mondiales.',
-  },
-  es: {
-    eyebrow: 'Creacion de video con IA multilingue',
-    title: 'Videos IA mas claros para cada idioma',
-    description:
-      'Crea videos cinematograficos con prompts, referencias, camara y sonido para historias globales.',
-  },
-  it: {
-    eyebrow: 'Creazione video IA multilingue',
-    title: 'Video IA piu nitidi in ogni lingua',
-    description:
-      'Crea video cinematografici con prompt, riferimenti, regia camera e indicazioni sonore per storie globali.',
-  },
-  pl: {
-    eyebrow: 'Wielojezyczne tworzenie wideo AI',
-    title: 'Wyrazniejsze wideo AI w kazdym jezyku',
-    description:
-      'Tworz filmowe wideo z promptow, referencji, ruchu kamery i wskazowek dzwiekowych dla globalnych odbiorcow.',
-  },
-  ja: {
-    eyebrow: '多言語対応 AI 動画制作',
-    title: 'Seedance 2.5 AI 動画ジェネレーター',
-    description:
-      'プロンプトと参照素材から、世界の視聴者に届くシネマティックな動画を制作できます。',
-  },
-  ko: {
-    eyebrow: '다국어 AI 영상 제작',
-    title: 'Seedance 2.5 AI 영상 생성기',
-    description:
-      '프롬프트와 레퍼런스로 전 세계 시청자를 위한 시네마틱 영상을 제작하세요.',
-  },
-  'zh-hant': {
-    eyebrow: '多語言 AI 影片創作',
-    title: 'Seedance 2.5 AI 影片生成器',
-    description:
-      '使用提示詞與參考素材建立電影級影片，並以多語言創作面向全球觀眾。',
-  },
-};
 
 function HeroSection() {
   const locale = useCurrentLocale();
-  const copy = heroCopyByLocale[locale] ?? heroCopyByLocale.en;
+  const pageCopy = getHomePageCopy(locale);
+  const copy = pageCopy.hero;
   const formVisibilityRef = useRef<HTMLDivElement>(null);
   const { draft: creationDraft, setDraft: setCreationDraft } =
     useGlobalCreationDraft();
@@ -145,12 +88,7 @@ function HeroSection() {
               {copy.description}
             </p>
             <div className="mt-7 flex flex-wrap gap-2.5">
-              {[
-                'Video only',
-                'Reference to video',
-                'Small-language prompts',
-                'Sound-aware scenes',
-              ].map((item) => (
+              {copy.chips.map((item) => (
                 <span
                   key={item}
                   className="rounded-full border border-blue-100 bg-white/78 px-3 py-1.5 text-xs font-semibold text-slate-700 shadow-sm shadow-blue-900/5 backdrop-blur-xl"

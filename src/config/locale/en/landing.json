@@ -78,7 +78,7 @@
     "id": "footer",
     "brand": {
       "title": "Seedance 2.5",
-      "description": "Seedance 2.5 is an AI creative workspace for video generation, model comparison, and prompt-first production workflows.",
+      "description": "Seedance 2.5 is an AI video generation workspace for prompt-first cinematic production, multilingual briefs, and reference-led motion workflows.",
       "logo": {
         "src": "/seedance-lockup.svg",
         "alt": "Seedance 2.5",
@@ -94,7 +94,7 @@
           "title": "Create",
           "children": [
             {
-              "title": "Video Generate",
+              "title": "Seedance 2.5 Video Generate",
               "url": "/",
               "target": "_self"
             },

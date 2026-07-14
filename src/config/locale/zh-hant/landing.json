@@ -78,7 +78,7 @@
     "id": "footer",
     "brand": {
       "title": "Seedance 2.5",
-      "description": "Seedance 2.5 是一個 AI 創作工作區，可用於影片生成、模型比較與以提示詞為核心的製作流程。",
+      "description": "Seedance 2.5 是專注影片生成的 AI 創作工作區，以提示詞、參考素材與多語言簡報製作電影級影片，核心能力是 Seedance 2.5 video generation。",
       "logo": {
         "src": "/seedance-lockup.svg",
         "alt": "Seedance 2.5",
@@ -94,7 +94,7 @@
           "title": "創作",
           "children": [
             {
-              "title": "影片生成",
+              "title": "Seedance 2.5 影片生成",
               "url": "/",
               "target": "_self"
             },

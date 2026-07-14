@@ -8,6 +8,43 @@ import { ScrollAnimation } from '@/components/ui/scroll-animation';
 import { cn } from '@/lib/utils';
 import { Section } from '@/types/blocks/landing';
 
+export type FaqItemLike = {
+  question?: string;
+  title?: string;
+  answer?: string;
+  description?: string;
+};
+
+/** Normalize FAQ rows for both the interactive accordion and crawlable SSR answers. */
+export function getFaqAnswerEntries(items: FaqItemLike[] = []) {
+  return items
+    .map((item) => ({
+      question: (item.question || item.title || '').trim(),
+      answer: (item.answer || item.description || '').trim(),
+    }))
+    .filter((item) => item.answer.length > 0);
+}
+
+/**
+ * Always-in-DOM answers for crawlers. Kept visually hidden so the accordion can
+ * collapse normally without keeping closed panels mounted (Radix closed height).
+ */
+export function FaqCrawlableAnswers({ items }: { items?: FaqItemLike[] }) {
+  const entries = getFaqAnswerEntries(items);
+  if (entries.length === 0) return null;
+
+  return (
+    <div className="sr-only" data-faq-seo-answers aria-hidden="true">
+      {entries.map((item, idx) => (
+        <article key={`${item.question}-${idx}`}>
+          {item.question ? <h3>{item.question}</h3> : null}
+          <p>{item.answer}</p>
+        </article>
+      ))}
+    </div>
+  );
+}
+
 export function Faq({
   section,
   className,
@@ -42,6 +79,7 @@ export function Faq({
 
         <ScrollAnimation delay={0.2}>
           <div className="mx-auto max-w-4xl">
+            <FaqCrawlableAnswers items={section.items} />
             <Accordion
               type="single"
               collapsible

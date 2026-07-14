@@ -78,7 +78,7 @@
     "id": "footer",
     "brand": {
       "title": "Seedance 2.5",
-      "description": "Seedance 2.5 ist ein KI-Kreativworkspace fuer Videogenerierung, Bildgenerierung, Modellvergleich und promptbasierte Produktionsablaeufe.",
+      "description": "Seedance 2.5 ist ein KI-Arbeitsbereich für Video Generation: filmische Clips aus Prompts, Referenzen und mehrsprachigen Briefings – mit Seedance 2.5 video generation im Fokus.",
       "logo": {
         "src": "/seedance-lockup.svg",
         "alt": "Seedance 2.5",
@@ -94,7 +94,7 @@
           "title": "Erstellen",
           "children": [
             {
-              "title": "Video Generate",
+              "title": "Seedance 2.5 Video Generate",
               "url": "/",
               "target": "_self"
             },

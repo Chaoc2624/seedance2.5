@@ -78,7 +78,7 @@
     "id": "footer",
     "brand": {
       "title": "Seedance 2.5",
-      "description": "Seedance 2.5 es un espacio creativo de IA para generar videos, crear imagenes, comparar modelos y trabajar con flujos guiados por prompts.",
+      "description": "Seedance 2.5 es un espacio de IA para generación de video cinematográfico con prompts, referencias y briefs multilingües, centrado en Seedance 2.5 video generation.",
       "logo": {
         "src": "/seedance-lockup.svg",
         "alt": "Seedance 2.5",
@@ -94,7 +94,7 @@
           "title": "Crear",
           "children": [
             {
-              "title": "Generar video",
+              "title": "Seedance 2.5 Video Generate",
               "url": "/",
               "target": "_self"
             },
