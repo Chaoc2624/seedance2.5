@@ -119,6 +119,82 @@ console.log('Cloudflare Worker route:', process.env.CF_WORKER_ROUTE_PATTERN);
 "
 }
 
+parse_bool_flag() {
+  local raw
+  raw="$(printf '%s' "${1:-}" | tr '[:upper:]' '[:lower:]')"
+  case "$raw" in
+    1 | true | yes | on) printf 'true' ;;
+    0 | false | no | off | '') printf 'false' ;;
+    *)
+      echo "Invalid boolean flag: $1 (use true/false)." >&2
+      exit 1
+      ;;
+  esac
+}
+
+patch_worker_observability() {
+  # Full observability block (dashboard-compatible). Defaults match current CF UI.
+  local obs_enabled logs_enabled logs_persist logs_invocation traces_enabled traces_persist
+  local head_rate logs_head_rate traces_head_rate
+
+  obs_enabled="$(parse_bool_flag "${CF_WORKER_OBSERVABILITY_ENABLED:-false}")"
+  logs_enabled="$(parse_bool_flag "${CF_WORKER_OBSERVABILITY_LOGS_ENABLED:-true}")"
+  logs_persist="$(parse_bool_flag "${CF_WORKER_OBSERVABILITY_LOGS_PERSIST:-true}")"
+  logs_invocation="$(parse_bool_flag "${CF_WORKER_OBSERVABILITY_LOGS_INVOCATION:-true}")"
+  traces_enabled="$(parse_bool_flag "${CF_WORKER_OBSERVABILITY_TRACES_ENABLED:-true}")"
+  traces_persist="$(parse_bool_flag "${CF_WORKER_OBSERVABILITY_TRACES_PERSIST:-true}")"
+  head_rate="${CF_WORKER_OBSERVABILITY_HEAD_SAMPLING_RATE:-1}"
+  logs_head_rate="${CF_WORKER_OBSERVABILITY_LOGS_HEAD_SAMPLING_RATE:-$head_rate}"
+  traces_head_rate="${CF_WORKER_OBSERVABILITY_TRACES_HEAD_SAMPLING_RATE:-$head_rate}"
+
+  CF_WORKER_OBSERVABILITY_ENABLED="$obs_enabled" \
+    CF_WORKER_OBSERVABILITY_HEAD_SAMPLING_RATE="$head_rate" \
+    CF_WORKER_OBSERVABILITY_LOGS_ENABLED="$logs_enabled" \
+    CF_WORKER_OBSERVABILITY_LOGS_HEAD_SAMPLING_RATE="$logs_head_rate" \
+    CF_WORKER_OBSERVABILITY_LOGS_PERSIST="$logs_persist" \
+    CF_WORKER_OBSERVABILITY_LOGS_INVOCATION="$logs_invocation" \
+    CF_WORKER_OBSERVABILITY_TRACES_ENABLED="$traces_enabled" \
+    CF_WORKER_OBSERVABILITY_TRACES_PERSIST="$traces_persist" \
+    CF_WORKER_OBSERVABILITY_TRACES_HEAD_SAMPLING_RATE="$traces_head_rate" \
+    node --input-type=module -e "
+import { readFileSync, writeFileSync } from 'node:fs';
+
+const path = '.output/server/wrangler.json';
+const config = JSON.parse(readFileSync(path, 'utf8'));
+const flag = (key, fallback = false) =>
+  String(process.env[key] ?? fallback).toLowerCase() === 'true';
+const rate = (key, fallback = 1) => {
+  const value = Number(process.env[key] ?? fallback);
+  return Number.isFinite(value) ? value : fallback;
+};
+
+config.observability = {
+  enabled: flag('CF_WORKER_OBSERVABILITY_ENABLED', false),
+  head_sampling_rate: rate('CF_WORKER_OBSERVABILITY_HEAD_SAMPLING_RATE', 1),
+  logs: {
+    enabled: flag('CF_WORKER_OBSERVABILITY_LOGS_ENABLED', true),
+    head_sampling_rate: rate('CF_WORKER_OBSERVABILITY_LOGS_HEAD_SAMPLING_RATE', 1),
+    persist: flag('CF_WORKER_OBSERVABILITY_LOGS_PERSIST', true),
+    invocation_logs: flag('CF_WORKER_OBSERVABILITY_LOGS_INVOCATION', true),
+  },
+  traces: {
+    enabled: flag('CF_WORKER_OBSERVABILITY_TRACES_ENABLED', true),
+    persist: flag('CF_WORKER_OBSERVABILITY_TRACES_PERSIST', true),
+    head_sampling_rate: rate(
+      'CF_WORKER_OBSERVABILITY_TRACES_HEAD_SAMPLING_RATE',
+      1
+    ),
+  },
+};
+
+writeFileSync(path, JSON.stringify(config, null, 2) + '\n');
+console.log(
+  'Cloudflare Worker observability:',
+  JSON.stringify(config.observability)
+);
+"
+}
+
 patch_worker_runtime_vars() {
   node --input-type=module - <<'NODE'
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -285,6 +361,7 @@ run_worker_deploy() {
   bun run build:cf:worker
   patch_worker_name
   patch_worker_route
+  patch_worker_observability
   patch_worker_runtime_vars
   bunx wrangler deploy --config .output/server/wrangler.json
 }

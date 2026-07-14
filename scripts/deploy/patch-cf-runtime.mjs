@@ -142,13 +142,60 @@ function patchWorkerWranglerConfig() {
   if (!existsSync(configPath)) return;
 
   const config = JSON.parse(readFileSync(configPath, 'utf8'));
-  if (!('pages_build_output_dir' in config)) return;
+  let changed = false;
 
-  delete config.pages_build_output_dir;
-  writeFileSync(configPath, `${JSON.stringify(config, null, 2)}\n`, 'utf8');
-  console.log(
-    `✔ Patched ${displayPath(configPath)}: removed Pages-only output field`
-  );
+  if ('pages_build_output_dir' in config) {
+    delete config.pages_build_output_dir;
+    changed = true;
+    console.log(
+      `✔ Patched ${displayPath(configPath)}: removed Pages-only output field`
+    );
+  }
+
+  // Align with Cloudflare dashboard Observability / wrangler.jsonc shape.
+  // deploy.sh can further override via CF_WORKER_OBSERVABILITY_* env vars.
+  const flag = (key, fallback = false) =>
+    String(process.env[key] ?? fallback)
+      .trim()
+      .toLowerCase() === 'true';
+  const rate = (key, fallback = 1) => {
+    const value = Number(process.env[key] ?? fallback);
+    return Number.isFinite(value) ? value : fallback;
+  };
+  const headRate = rate('CF_WORKER_OBSERVABILITY_HEAD_SAMPLING_RATE', 1);
+  const nextObservability = {
+    enabled: flag('CF_WORKER_OBSERVABILITY_ENABLED', false),
+    head_sampling_rate: headRate,
+    logs: {
+      enabled: flag('CF_WORKER_OBSERVABILITY_LOGS_ENABLED', true),
+      head_sampling_rate: rate(
+        'CF_WORKER_OBSERVABILITY_LOGS_HEAD_SAMPLING_RATE',
+        headRate
+      ),
+      persist: flag('CF_WORKER_OBSERVABILITY_LOGS_PERSIST', true),
+      invocation_logs: flag('CF_WORKER_OBSERVABILITY_LOGS_INVOCATION', true),
+    },
+    traces: {
+      enabled: flag('CF_WORKER_OBSERVABILITY_TRACES_ENABLED', true),
+      persist: flag('CF_WORKER_OBSERVABILITY_TRACES_PERSIST', true),
+      head_sampling_rate: rate(
+        'CF_WORKER_OBSERVABILITY_TRACES_HEAD_SAMPLING_RATE',
+        headRate
+      ),
+    },
+  };
+  const prev = config.observability;
+  if (JSON.stringify(prev ?? null) !== JSON.stringify(nextObservability)) {
+    config.observability = nextObservability;
+    changed = true;
+    console.log(
+      `✔ Patched ${displayPath(configPath)}: observability=${JSON.stringify(nextObservability)}`
+    );
+  }
+
+  if (changed) {
+    writeFileSync(configPath, `${JSON.stringify(config, null, 2)}\n`, 'utf8');
+  }
 }
 
 if (workerDirs.length === 0) {
