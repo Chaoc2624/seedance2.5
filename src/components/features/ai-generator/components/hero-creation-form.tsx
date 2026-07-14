@@ -54,6 +54,7 @@ import {
 import type { ImageGeneratorScene, ImageModelConfig } from '@/config/ai-models';
 import {
   DEFAULT_VIDEO_MODEL_CATALOG,
+  getVideoModelPickerModels,
   getVideoModelCreditCost,
   getVideoModelIconSrc,
   getVideoModelReferenceMedia,
@@ -533,7 +534,7 @@ export function HeroCreationForm({
   );
   const availableVideoModels = useMemo(
     () =>
-      DEFAULT_VIDEO_MODEL_CATALOG.filter(
+      getVideoModelPickerModels(DEFAULT_VIDEO_MODEL_CATALOG).filter(
         (item) => item.enabled && item.scenes.includes(videoScene)
       ),
     [videoScene]
@@ -1039,7 +1040,7 @@ export function HeroCreationForm({
       window.dispatchEvent(
         new CustomEvent(HERO_IMAGE_PROMPT_EVENT_NAME, { detail: payload })
       );
-      router.push('/image-generator');
+      router.push('/');
       return;
     }
 
@@ -1051,7 +1052,7 @@ export function HeroCreationForm({
     window.dispatchEvent(
       new CustomEvent(HERO_VIDEO_PROMPT_EVENT_NAME, { detail: payload })
     );
-    router.push('/video-generator');
+    router.push('/');
   };
 
   useEffect(() => {

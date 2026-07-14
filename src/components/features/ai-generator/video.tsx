@@ -14,6 +14,7 @@ import { Link } from '@/core/i18n/navigation';
 import {
   DEFAULT_VIDEO_MODEL_CATALOG,
   getVideoModelCreditCost,
+  getVideoModelPickerModels,
 } from '@/config/ai-video-models';
 import type {
   VideoGeneratorScene,
@@ -370,7 +371,7 @@ export function VideoGenerator({
   }, [applyIncomingPrompt]);
 
   const availableModels = useMemo(() => {
-    return videoModels.filter(
+    return getVideoModelPickerModels(videoModels).filter(
       (option) => option.enabled && option.scenes.includes(activeTab)
     );
   }, [activeTab, videoModels]);

@@ -30,7 +30,7 @@
             {
               "title": "Generador de videos IA",
               "description": "Usa IA para generar videos",
-              "url": "/video-generator",
+              "url": "/",
               "icon": "RiVideoLine"
             }
           ]
@@ -95,7 +95,7 @@
           "children": [
             {
               "title": "Generar video",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {
@@ -110,7 +110,7 @@
           "children": [
             {
               "title": "Seedance 2.5",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {

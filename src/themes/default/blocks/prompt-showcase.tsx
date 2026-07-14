@@ -631,7 +631,7 @@ export function PromptShowcase({
         {showViewMore && (
           <div className="mt-7 flex justify-center">
             <Button asChild variant="outline" size="lg">
-              <Link href="/image-generator">
+              <Link href="/">
                 {labels.view_more ?? 'View more showcase'}
                 <ArrowRight className="h-4 w-4" />
               </Link>

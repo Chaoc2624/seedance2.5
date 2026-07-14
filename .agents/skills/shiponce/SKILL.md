@@ -1,6 +1,6 @@
 ---
 name: shiponce
-description: shiponce TanStack template engineering guide for Codex and Claude Code. Use when modifying, refactoring, extending, debugging, or reviewing this repository; when changing init scripts, presets, modules, runtime configuration, database schemas, blog/content storage, landing content, images/media assets, auth/RBAC, payments, AI generation, storage/email/analytics integrations, routes, server functions, models, UI blocks, theme code, pricing/Price pages, public layout (top vs left header), or sidebar/header behavior.
+description: shiponce TanStack template engineering, SEO operating-standard, and skill-routing guide for Codex and Claude Code. Use when modifying, refactoring, extending, debugging, or reviewing this repository; when changing init scripts, presets, modules, runtime configuration, database schemas, blog/content storage, landing content, images/media assets, auth/RBAC, payments, AI generation, storage/email/analytics integrations, routes, server functions, models, UI blocks, theme code, pricing/Price pages, public layout (top vs left header), or sidebar/header behavior; and to automatically apply ShipOnce SEO invariants and select supporting design, engineering, and SEO skills for those tasks.
 ---
 
 # shiponce
@@ -13,7 +13,8 @@ description: shiponce TanStack template engineering guide for Codex and Claude C
    - Otherwise run `codegraph explore "<symbol names or question>"`.
    - Use `rg` only after CodeGraph has identified the boundary or when CodeGraph has no coverage for the target file type.
 3. Identify the feature boundary: route, server function, model, service, extension, config, schema, UI block, or theme.
-4. Read only the relevant reference file before making changes:
+4. Route supporting skills before proposing or implementing a solution. Read `references/skill-routing.md` when the task involves public/indexable pages, SEO, blog writing or auditing, multilingual content, user-facing UI/design, a complex feature, a bug, an architecture change, or an explicit question about skill combinations. For any ShipOnce SEO, GEO, or indexability task, also read `references/seo-operating-standard.md` before selecting generic SEO skills.
+5. Read only the relevant project reference file before making changes:
    - Architecture and file ownership: `references/architecture.md`
    - Presets, env, runtime settings, and init script: `references/configuration.md`
    - DB schemas, models, server functions, blog/content: `references/data-and-content.md`
@@ -21,13 +22,14 @@ description: shiponce TanStack template engineering guide for Codex and Claude C
    - Feature workflows for auth, RBAC, payment, AI, storage, UI, and i18n: `references/feature-workflows.md`
    - Admin request batching, auth bootstrap, and dashboard scaling patterns: `references/admin-request-scales.md`
    - Pricing page SEO and conversion structure: `references/pricing-page-seo.md`
+   - SEO, GEO/AI search, multilingual indexability, metadata, canonical/hreflang, sitemap, robots/llms, and JSON-LD: `references/seo-operating-standard.md`
    - Public layout (top vs left header), sidebar transitions, scroll-spy, utility-button stability: `references/layout-and-header.md`
    - Code structure, component size, and function complexity boundaries: `references/code-structure.md`
    - Theme blocks, MagicUI components, utility libraries, init templates, and block catalog: `references/template-customization.md`
-5. Apply Ponytail constraints before editing: reuse existing project helpers, prefer platform/stdlib/dependencies already installed, delete or narrow code before adding, and make the smallest root-cause change that covers all callers.
-6. Follow existing patterns and keep edits narrow.
-7. After making changes, run the required Oxc validation workflow before finishing.
-8. Report the commands you ran and any blockers that could not be resolved.
+6. Apply Ponytail constraints before editing: reuse existing project helpers, prefer platform/stdlib/dependencies already installed, delete or narrow code before adding, and make the smallest root-cause change that covers all callers.
+7. Follow existing patterns and keep edits narrow.
+8. After making changes, run the required Oxc validation workflow before finishing.
+9. Report the commands you ran, skills used or skipped, and any blockers that could not be resolved.
 
 ## Default Agent Discipline
 
@@ -82,6 +84,12 @@ Apply the local `how-to-ask-question` discipline automatically for this project.
 
 ## Local Skills
 
+- Apply `references/skill-routing.md` automatically when its trigger conditions match. `shiponce` remains the project authority; routed skills supplement it and do not replace repository boundaries or validation rules. Select one primary supporting skill per phase and at most two supporting skills. Announce the selected skills and reason before using them, then read each selected `SKILL.md` fully.
+- Apply `references/seo-operating-standard.md` automatically for every ShipOnce SEO, GEO, public metadata, multilingual indexability, sitemap, robots, llms, JSON-LD, blog/detail SEO, or indexation task. This project reference is mandatory and does not count toward the supporting-skill limit.
+- Outbound SaaS locale note: public landing/blog may deprioritize creating `zh` / `zh-hant` copy, but **any live public route must still pass full on-page SEO acceptance** (title, description, canonical, hreflang only for real content, no EN body under `/zh` or `/zh-hant`, JSON-LD on article pages). Never emit hreflang for missing Chinese locales pointing at EN. Admin UI changes should still add/update **Simplified Chinese (`zh`)** strings.
+- **Non-EN page body must not be thin:** do not publish indexable ja/ko/de/… stubs that are short summaries of EN (known anti-pattern: EN ~full article, other locales ~15–30% length with FAQ/tables cut). Prefer fewer full locales; omit thin locales from content, hreflang, and sitemap. See `references/seo-operating-standard.md` § Non-EN body must not be thin.
+- Cloudflare deploy/debug (`deploy.sh`, `deploy.env`, Pages vs Worker, wrangler preview, post-deploy env): use nested `$cf-deploy` from `.agents/skills/shiponce/skills/cf-deploy` automatically. Read that `SKILL.md` fully before deep deploy changes.
+- Auth/session/OAuth/password/RBAC (`/api/auth/*`, Better Auth, init-admin, AUTH_SECRET, edge hash CPU limits): use nested `$auth` from `.agents/skills/shiponce/skills/auth` automatically. Read that `SKILL.md` fully before deep auth changes.
 - When the user asks to commit code, 提交代码, 提交全部, commit, push, 提交并推送, or 提交到 GitHub, use the project-local `$commit-code` skill from `.agents/skills/commit-code` automatically. Do not wait for the user to explicitly remind you to invoke it. This skill owns diff inspection, scope selection, required validation, detailed Chinese Conventional Commit messages, and push behavior when push is explicitly requested.
 
 ## Non-Negotiables
@@ -108,15 +116,16 @@ Apply the local `how-to-ask-question` discipline automatically for this project.
 - Init/setup work: read `references/configuration.md`, then edit `scripts/init/init-project.ts`.
 - Runtime setting work: read `references/configuration.md`, then update `src/config/runtime.defaults.ts`, `src/services/settings.ts`, and runtime consumers.
 - DB/model work: read `references/data-and-content.md`, then update provider schemas, model helpers, and server functions.
-- Blog/content work: read `references/data-and-content.md`, especially `BLOG_STORAGE_MODE`.
+- Blog/content work: read `references/data-and-content.md`, especially `BLOG_STORAGE_MODE`. Also read `references/skill-routing.md` and `references/seo-operating-standard.md` when writing, localizing, auditing, or optimizing public content.
 - Route/root-loader work: read `references/feature-workflows.md`, then check the matching file route plus shared entrypoints such as `src/routes/__root.tsx` and `src/server/root.functions.ts` when metadata, analytics, or app-wide loaders are involved.
 - Landing copy/media replacement: read `references/media-and-content-replacement.md`, then update locale JSON and public assets.
-- Pricing/Price page SEO or conversion work: read `references/pricing-page-seo.md`, then update the pricing route, locale copy, package data, FAQ/schema, and CTA behavior as needed.
-- Admin/auth/payment/AI/storage work: read `references/feature-workflows.md`.
+- Pricing/Price page SEO or conversion work: read `references/pricing-page-seo.md`, `references/seo-operating-standard.md`, and `references/skill-routing.md`, then update the pricing route, locale copy, package data, FAQ/schema, and CTA behavior as needed.
+- General SEO, GEO, indexability, metadata, canonical/hreflang, sitemap, robots/llms, JSON-LD, or GSC indexing work: read `references/seo-operating-standard.md` and `references/skill-routing.md`.
+- Admin/auth/payment/AI/storage work: read `references/feature-workflows.md`. For auth/session/OAuth/password/RBAC, prefer nested skill `auth` (`.agents/skills/shiponce/skills/auth/SKILL.md`).
 - Admin route performance, dashboard batching, RBAC/config caching, or request-storm reduction work: read `references/admin-request-scales.md` before editing routes or server functions.
-- Cloudflare deploy/debug work: read `references/configuration.md` and `references/feature-workflows.md`, especially `deploy.sh`, `deploy.env`, the Cloudflare targets, generated Wrangler config, runtime variable sources, and deployment pitfalls.
-- UI/theme work: read `references/architecture.md` and `references/feature-workflows.md`.
-- Large component, route, or logic changes: read `references/code-structure.md`, then split UI and logic along existing feature boundaries before adding more behavior.
+- Cloudflare deploy/debug work: prefer nested skill `cf-deploy` (`.agents/skills/shiponce/skills/cf-deploy/SKILL.md`), then `references/configuration.md` and `references/feature-workflows.md` (Cloudflare section).
+- UI/theme work: read `references/architecture.md`, `references/feature-workflows.md`, and `references/skill-routing.md`.
+- Large component, route, or logic changes: read `references/code-structure.md` and `references/skill-routing.md`, then split UI and logic along existing feature boundaries before adding more behavior.
 - Public layout, header position, sidebar UI, or any sidebar utility (theme/locale/sign-in) work: read `references/layout-and-header.md`. Treat mobile friendliness as the default requirement; for `left` header mode, desktop may use the sidebar but mobile must still fall back to a top header/menu.
 - AI music/video generator work: read `references/feature-workflows.md` (AI section), then update the music/video routes, AI task pipeline, or locale JSON in `src/config/locale/*/ai/`.
 - Showcase/prompt showcase work: read `references/feature-workflows.md` and `references/data-and-content.md`, then update showcase routes, server functions, DB schema, or static seed data in `src/config/showcase-data.ts`.
@@ -129,7 +138,7 @@ Apply the local `how-to-ask-question` discipline automatically for this project.
 - Utility library work: read `references/template-customization.md`, then update the relevant file in `src/lib/`.
 - Init template work: read `references/template-customization.md` and `references/configuration.md`, then update `scripts/templates/` and `scripts/init/init-project.ts`.
 - Dev config panel work: read `references/configuration.md` (Dev Config Panel section), then update `src/routes/{-$locale}/config.tsx` and `src/services/config-settings`.
-- OAuth/callback work: read `references/feature-workflows.md`, then update `_oauth/` routes and Better Auth config.
+- OAuth/callback work: use nested skill `auth`, then update `_oauth/` routes and Better Auth config.
 - Image upload/file proxy work: read `references/feature-workflows.md`, then update `api/proxy/file.ts` and storage services.
 
 ## Verification Defaults

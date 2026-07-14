@@ -72,54 +72,6 @@ export const Route = createRootRoute({
 
 BProgress.configure({ showSpinner: false });
 
-function useBodyScrollLockGap() {
-  useEffect(() => {
-    const body = document.body;
-    const documentElement = document.documentElement;
-    let scrollbarWidth = 0;
-
-    const setScrollbarWidth = (width: number) => {
-      scrollbarWidth = Math.max(0, width);
-      documentElement.style.setProperty(
-        '--removed-body-scroll-bar-size',
-        `${scrollbarWidth}px`
-      );
-    };
-
-    const measureScrollbarWidth = () => {
-      if (body.hasAttribute('data-scroll-locked')) return;
-      setScrollbarWidth(window.innerWidth - documentElement.clientWidth);
-    };
-
-    const syncScrollLockGap = () => {
-      if (!body.hasAttribute('data-scroll-locked')) {
-        measureScrollbarWidth();
-        return;
-      }
-
-      documentElement.style.setProperty(
-        '--removed-body-scroll-bar-size',
-        `${scrollbarWidth}px`
-      );
-    };
-
-    measureScrollbarWidth();
-
-    const observer = new MutationObserver(syncScrollLockGap);
-    observer.observe(body, {
-      attributes: true,
-      attributeFilter: ['data-scroll-locked'],
-    });
-    window.addEventListener('resize', measureScrollbarWidth, { passive: true });
-
-    return () => {
-      observer.disconnect();
-      window.removeEventListener('resize', measureScrollbarWidth);
-      documentElement.style.removeProperty('--removed-body-scroll-bar-size');
-    };
-  }, []);
-}
-
 function isChunkLoadError(value: unknown): boolean {
   const message =
     value instanceof Error
@@ -187,7 +139,6 @@ function RootLayout() {
     bingWebmasterVerificationId,
   } = Route.useLoaderData();
 
-  useBodyScrollLockGap();
   useChunkLoadReload();
 
   useEffect(() => {

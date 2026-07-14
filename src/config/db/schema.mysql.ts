@@ -152,7 +152,7 @@ export const post = table(
       .notNull()
       .references(() => user.id, { onDelete: 'cascade' }),
     parentId: varchar191('parent_id'),
-    slug: varchar191('slug').unique().notNull(),
+    slug: varchar191('slug').notNull(),
     language: varchar('language', { length: 20 }).default('en').notNull(),
     type: varchar('type', { length: 50 }).notNull(),
     title: varchar('title', { length: 255 }),
@@ -170,6 +170,8 @@ export const post = table(
     sort: int('sort').default(0).notNull(),
   },
   (table) => [
+    // Same public slug may exist once per language
+    uniqueIndex('idx_post_slug_language').on(table.slug, table.language),
     // Composite: Query posts by type and status
     // Can also be used for: WHERE type = ? (left-prefix)
     index('idx_post_type_status').on(table.type, table.status),

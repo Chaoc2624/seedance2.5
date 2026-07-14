@@ -27,14 +27,12 @@ import { Route as Char123LocaleChar125ShiponceCreditsRouteImport } from './route
 import { Route as Char123LocaleChar125ShiponceAiTasksRouteImport } from './routes/{-$locale}/shiponce/ai-tasks'
 import { Route as Char123LocaleChar125OauthAuthPopupRouteImport } from './routes/{-$locale}/_oauth/auth-popup'
 import { Route as Char123LocaleChar125OauthAuthCallbackRouteImport } from './routes/{-$locale}/_oauth/auth-callback'
-import { Route as Char123LocaleChar125LandingVideoGeneratorRouteImport } from './routes/{-$locale}/_landing/video-generator'
 import { Route as Char123LocaleChar125LandingUpdatesRouteImport } from './routes/{-$locale}/_landing/updates'
 import { Route as Char123LocaleChar125LandingTermsOfServiceRouteImport } from './routes/{-$locale}/_landing/terms-of-service'
 import { Route as Char123LocaleChar125LandingShowcasesRouteImport } from './routes/{-$locale}/_landing/showcases'
 import { Route as Char123LocaleChar125LandingShowcaseRouteImport } from './routes/{-$locale}/_landing/showcase'
 import { Route as Char123LocaleChar125LandingPrivacyPolicyRouteImport } from './routes/{-$locale}/_landing/privacy-policy'
 import { Route as Char123LocaleChar125LandingPricingRouteImport } from './routes/{-$locale}/_landing/pricing'
-import { Route as Char123LocaleChar125LandingImageGeneratorRouteImport } from './routes/{-$locale}/_landing/image-generator'
 import { Route as Char123LocaleChar125LandingGenerateRouteImport } from './routes/{-$locale}/_landing/generate'
 import { Route as Char123LocaleChar125LandingFeedbackRouteImport } from './routes/{-$locale}/_landing/feedback'
 import { Route as Char123LocaleChar125LandingExamplesRouteImport } from './routes/{-$locale}/_landing/examples'
@@ -58,13 +56,11 @@ import { Route as Char123LocaleChar125AuthSignInIndexRouteImport } from './route
 import { Route as Char123LocaleChar125ShiponceSettingsTabRouteImport } from './routes/{-$locale}/shiponce/settings/$tab'
 import { Route as Char123LocaleChar125ShiponcePostsAddRouteImport } from './routes/{-$locale}/shiponce/posts/add'
 import { Route as Char123LocaleChar125ShiponceCategoriesAddRouteImport } from './routes/{-$locale}/shiponce/categories/add'
-import { Route as Char123LocaleChar125LandingVideoGeneratorSlugRouteImport } from './routes/{-$locale}/_landing/video-generator/$slug'
 import { Route as Char123LocaleChar125LandingSettingsSecurityRouteImport } from './routes/{-$locale}/_landing/settings/security'
 import { Route as Char123LocaleChar125LandingSettingsProfileRouteImport } from './routes/{-$locale}/_landing/settings/profile'
 import { Route as Char123LocaleChar125LandingSettingsPaymentsRouteImport } from './routes/{-$locale}/_landing/settings/payments'
 import { Route as Char123LocaleChar125LandingSettingsCreditsRouteImport } from './routes/{-$locale}/_landing/settings/credits'
 import { Route as Char123LocaleChar125LandingSettingsBillingRouteImport } from './routes/{-$locale}/_landing/settings/billing'
-import { Route as Char123LocaleChar125LandingImageGeneratorSlugRouteImport } from './routes/{-$locale}/_landing/image-generator/$slug'
 import { Route as Char123LocaleChar125LandingBlogSlugRouteImport } from './routes/{-$locale}/_landing/blog/$slug'
 import { Route as Char123LocaleChar125LandingAiMusicGeneratorRouteImport } from './routes/{-$locale}/_landing/ai/music-generator'
 import { Route as Char123LocaleChar125LandingActivityFeedbacksRouteImport } from './routes/{-$locale}/_landing/activity/feedbacks'
@@ -187,12 +183,6 @@ const Char123LocaleChar125OauthAuthCallbackRoute =
     path: '/auth-callback',
     getParentRoute: () => Char123LocaleChar125OauthRouteRoute,
   } as any)
-const Char123LocaleChar125LandingVideoGeneratorRoute =
-  Char123LocaleChar125LandingVideoGeneratorRouteImport.update({
-    id: '/video-generator',
-    path: '/video-generator',
-    getParentRoute: () => Char123LocaleChar125LandingRouteRoute,
-  } as any)
 const Char123LocaleChar125LandingUpdatesRoute =
   Char123LocaleChar125LandingUpdatesRouteImport.update({
     id: '/updates',
@@ -227,12 +217,6 @@ const Char123LocaleChar125LandingPricingRoute =
   Char123LocaleChar125LandingPricingRouteImport.update({
     id: '/pricing',
     path: '/pricing',
-    getParentRoute: () => Char123LocaleChar125LandingRouteRoute,
-  } as any)
-const Char123LocaleChar125LandingImageGeneratorRoute =
-  Char123LocaleChar125LandingImageGeneratorRouteImport.update({
-    id: '/image-generator',
-    path: '/image-generator',
     getParentRoute: () => Char123LocaleChar125LandingRouteRoute,
   } as any)
 const Char123LocaleChar125LandingGenerateRoute =
@@ -370,12 +354,6 @@ const Char123LocaleChar125ShiponceCategoriesAddRoute =
     path: '/categories/add',
     getParentRoute: () => Char123LocaleChar125ShiponceRouteRoute,
   } as any)
-const Char123LocaleChar125LandingVideoGeneratorSlugRoute =
-  Char123LocaleChar125LandingVideoGeneratorSlugRouteImport.update({
-    id: '/$slug',
-    path: '/$slug',
-    getParentRoute: () => Char123LocaleChar125LandingVideoGeneratorRoute,
-  } as any)
 const Char123LocaleChar125LandingSettingsSecurityRoute =
   Char123LocaleChar125LandingSettingsSecurityRouteImport.update({
     id: '/security',
@@ -405,12 +383,6 @@ const Char123LocaleChar125LandingSettingsBillingRoute =
     id: '/billing',
     path: '/billing',
     getParentRoute: () => Char123LocaleChar125LandingSettingsRouteRoute,
-  } as any)
-const Char123LocaleChar125LandingImageGeneratorSlugRoute =
-  Char123LocaleChar125LandingImageGeneratorSlugRouteImport.update({
-    id: '/$slug',
-    path: '/$slug',
-    getParentRoute: () => Char123LocaleChar125LandingImageGeneratorRoute,
   } as any)
 const Char123LocaleChar125LandingBlogSlugRoute =
   Char123LocaleChar125LandingBlogSlugRouteImport.update({
@@ -530,14 +502,12 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/examples': typeof Char123LocaleChar125LandingExamplesRoute
   '/{-$locale}/feedback': typeof Char123LocaleChar125LandingFeedbackRoute
   '/{-$locale}/generate': typeof Char123LocaleChar125LandingGenerateRoute
-  '/{-$locale}/image-generator': typeof Char123LocaleChar125LandingImageGeneratorRouteWithChildren
   '/{-$locale}/pricing': typeof Char123LocaleChar125LandingPricingRoute
   '/{-$locale}/privacy-policy': typeof Char123LocaleChar125LandingPrivacyPolicyRoute
   '/{-$locale}/showcase': typeof Char123LocaleChar125LandingShowcaseRoute
   '/{-$locale}/showcases': typeof Char123LocaleChar125LandingShowcasesRoute
   '/{-$locale}/terms-of-service': typeof Char123LocaleChar125LandingTermsOfServiceRoute
   '/{-$locale}/updates': typeof Char123LocaleChar125LandingUpdatesRoute
-  '/{-$locale}/video-generator': typeof Char123LocaleChar125LandingVideoGeneratorRouteWithChildren
   '/{-$locale}/auth-callback': typeof Char123LocaleChar125OauthAuthCallbackRoute
   '/{-$locale}/auth-popup': typeof Char123LocaleChar125OauthAuthPopupRoute
   '/{-$locale}/shiponce/ai-tasks': typeof Char123LocaleChar125ShiponceAiTasksRoute
@@ -553,13 +523,11 @@ export interface FileRoutesByFullPath {
   '/{-$locale}/activity/feedbacks': typeof Char123LocaleChar125LandingActivityFeedbacksRoute
   '/{-$locale}/ai/music-generator': typeof Char123LocaleChar125LandingAiMusicGeneratorRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125LandingBlogSlugRoute
-  '/{-$locale}/image-generator/$slug': typeof Char123LocaleChar125LandingImageGeneratorSlugRoute
   '/{-$locale}/settings/billing': typeof Char123LocaleChar125LandingSettingsBillingRoute
   '/{-$locale}/settings/credits': typeof Char123LocaleChar125LandingSettingsCreditsRoute
   '/{-$locale}/settings/payments': typeof Char123LocaleChar125LandingSettingsPaymentsRoute
   '/{-$locale}/settings/profile': typeof Char123LocaleChar125LandingSettingsProfileRoute
   '/{-$locale}/settings/security': typeof Char123LocaleChar125LandingSettingsSecurityRoute
-  '/{-$locale}/video-generator/$slug': typeof Char123LocaleChar125LandingVideoGeneratorSlugRoute
   '/{-$locale}/shiponce/categories/add': typeof Char123LocaleChar125ShiponceCategoriesAddRoute
   '/{-$locale}/shiponce/posts/add': typeof Char123LocaleChar125ShiponcePostsAddRoute
   '/{-$locale}/shiponce/settings/$tab': typeof Char123LocaleChar125ShiponceSettingsTabRoute
@@ -598,14 +566,12 @@ export interface FileRoutesByTo {
   '/{-$locale}/examples': typeof Char123LocaleChar125LandingExamplesRoute
   '/{-$locale}/feedback': typeof Char123LocaleChar125LandingFeedbackRoute
   '/{-$locale}/generate': typeof Char123LocaleChar125LandingGenerateRoute
-  '/{-$locale}/image-generator': typeof Char123LocaleChar125LandingImageGeneratorRouteWithChildren
   '/{-$locale}/pricing': typeof Char123LocaleChar125LandingPricingRoute
   '/{-$locale}/privacy-policy': typeof Char123LocaleChar125LandingPrivacyPolicyRoute
   '/{-$locale}/showcase': typeof Char123LocaleChar125LandingShowcaseRoute
   '/{-$locale}/showcases': typeof Char123LocaleChar125LandingShowcasesRoute
   '/{-$locale}/terms-of-service': typeof Char123LocaleChar125LandingTermsOfServiceRoute
   '/{-$locale}/updates': typeof Char123LocaleChar125LandingUpdatesRoute
-  '/{-$locale}/video-generator': typeof Char123LocaleChar125LandingVideoGeneratorRouteWithChildren
   '/{-$locale}/auth-callback': typeof Char123LocaleChar125OauthAuthCallbackRoute
   '/{-$locale}/auth-popup': typeof Char123LocaleChar125OauthAuthPopupRoute
   '/{-$locale}/shiponce/ai-tasks': typeof Char123LocaleChar125ShiponceAiTasksRoute
@@ -620,13 +586,11 @@ export interface FileRoutesByTo {
   '/{-$locale}/activity/feedbacks': typeof Char123LocaleChar125LandingActivityFeedbacksRoute
   '/{-$locale}/ai/music-generator': typeof Char123LocaleChar125LandingAiMusicGeneratorRoute
   '/{-$locale}/blog/$slug': typeof Char123LocaleChar125LandingBlogSlugRoute
-  '/{-$locale}/image-generator/$slug': typeof Char123LocaleChar125LandingImageGeneratorSlugRoute
   '/{-$locale}/settings/billing': typeof Char123LocaleChar125LandingSettingsBillingRoute
   '/{-$locale}/settings/credits': typeof Char123LocaleChar125LandingSettingsCreditsRoute
   '/{-$locale}/settings/payments': typeof Char123LocaleChar125LandingSettingsPaymentsRoute
   '/{-$locale}/settings/profile': typeof Char123LocaleChar125LandingSettingsProfileRoute
   '/{-$locale}/settings/security': typeof Char123LocaleChar125LandingSettingsSecurityRoute
-  '/{-$locale}/video-generator/$slug': typeof Char123LocaleChar125LandingVideoGeneratorSlugRoute
   '/{-$locale}/shiponce/categories/add': typeof Char123LocaleChar125ShiponceCategoriesAddRoute
   '/{-$locale}/shiponce/posts/add': typeof Char123LocaleChar125ShiponcePostsAddRoute
   '/{-$locale}/shiponce/settings/$tab': typeof Char123LocaleChar125ShiponceSettingsTabRoute
@@ -673,14 +637,12 @@ export interface FileRoutesById {
   '/{-$locale}/_landing/examples': typeof Char123LocaleChar125LandingExamplesRoute
   '/{-$locale}/_landing/feedback': typeof Char123LocaleChar125LandingFeedbackRoute
   '/{-$locale}/_landing/generate': typeof Char123LocaleChar125LandingGenerateRoute
-  '/{-$locale}/_landing/image-generator': typeof Char123LocaleChar125LandingImageGeneratorRouteWithChildren
   '/{-$locale}/_landing/pricing': typeof Char123LocaleChar125LandingPricingRoute
   '/{-$locale}/_landing/privacy-policy': typeof Char123LocaleChar125LandingPrivacyPolicyRoute
   '/{-$locale}/_landing/showcase': typeof Char123LocaleChar125LandingShowcaseRoute
   '/{-$locale}/_landing/showcases': typeof Char123LocaleChar125LandingShowcasesRoute
   '/{-$locale}/_landing/terms-of-service': typeof Char123LocaleChar125LandingTermsOfServiceRoute
   '/{-$locale}/_landing/updates': typeof Char123LocaleChar125LandingUpdatesRoute
-  '/{-$locale}/_landing/video-generator': typeof Char123LocaleChar125LandingVideoGeneratorRouteWithChildren
   '/{-$locale}/_oauth/auth-callback': typeof Char123LocaleChar125OauthAuthCallbackRoute
   '/{-$locale}/_oauth/auth-popup': typeof Char123LocaleChar125OauthAuthPopupRoute
   '/{-$locale}/shiponce/ai-tasks': typeof Char123LocaleChar125ShiponceAiTasksRoute
@@ -696,13 +658,11 @@ export interface FileRoutesById {
   '/{-$locale}/_landing/activity/feedbacks': typeof Char123LocaleChar125LandingActivityFeedbacksRoute
   '/{-$locale}/_landing/ai/music-generator': typeof Char123LocaleChar125LandingAiMusicGeneratorRoute
   '/{-$locale}/_landing/blog/$slug': typeof Char123LocaleChar125LandingBlogSlugRoute
-  '/{-$locale}/_landing/image-generator/$slug': typeof Char123LocaleChar125LandingImageGeneratorSlugRoute
   '/{-$locale}/_landing/settings/billing': typeof Char123LocaleChar125LandingSettingsBillingRoute
   '/{-$locale}/_landing/settings/credits': typeof Char123LocaleChar125LandingSettingsCreditsRoute
   '/{-$locale}/_landing/settings/payments': typeof Char123LocaleChar125LandingSettingsPaymentsRoute
   '/{-$locale}/_landing/settings/profile': typeof Char123LocaleChar125LandingSettingsProfileRoute
   '/{-$locale}/_landing/settings/security': typeof Char123LocaleChar125LandingSettingsSecurityRoute
-  '/{-$locale}/_landing/video-generator/$slug': typeof Char123LocaleChar125LandingVideoGeneratorSlugRoute
   '/{-$locale}/shiponce/categories/add': typeof Char123LocaleChar125ShiponceCategoriesAddRoute
   '/{-$locale}/shiponce/posts/add': typeof Char123LocaleChar125ShiponcePostsAddRoute
   '/{-$locale}/shiponce/settings/$tab': typeof Char123LocaleChar125ShiponceSettingsTabRoute
@@ -746,14 +706,12 @@ export interface FileRouteTypes {
     | '/{-$locale}/examples'
     | '/{-$locale}/feedback'
     | '/{-$locale}/generate'
-    | '/{-$locale}/image-generator'
     | '/{-$locale}/pricing'
     | '/{-$locale}/privacy-policy'
     | '/{-$locale}/showcase'
     | '/{-$locale}/showcases'
     | '/{-$locale}/terms-of-service'
     | '/{-$locale}/updates'
-    | '/{-$locale}/video-generator'
     | '/{-$locale}/auth-callback'
     | '/{-$locale}/auth-popup'
     | '/{-$locale}/shiponce/ai-tasks'
@@ -769,13 +727,11 @@ export interface FileRouteTypes {
     | '/{-$locale}/activity/feedbacks'
     | '/{-$locale}/ai/music-generator'
     | '/{-$locale}/blog/$slug'
-    | '/{-$locale}/image-generator/$slug'
     | '/{-$locale}/settings/billing'
     | '/{-$locale}/settings/credits'
     | '/{-$locale}/settings/payments'
     | '/{-$locale}/settings/profile'
     | '/{-$locale}/settings/security'
-    | '/{-$locale}/video-generator/$slug'
     | '/{-$locale}/shiponce/categories/add'
     | '/{-$locale}/shiponce/posts/add'
     | '/{-$locale}/shiponce/settings/$tab'
@@ -814,14 +770,12 @@ export interface FileRouteTypes {
     | '/{-$locale}/examples'
     | '/{-$locale}/feedback'
     | '/{-$locale}/generate'
-    | '/{-$locale}/image-generator'
     | '/{-$locale}/pricing'
     | '/{-$locale}/privacy-policy'
     | '/{-$locale}/showcase'
     | '/{-$locale}/showcases'
     | '/{-$locale}/terms-of-service'
     | '/{-$locale}/updates'
-    | '/{-$locale}/video-generator'
     | '/{-$locale}/auth-callback'
     | '/{-$locale}/auth-popup'
     | '/{-$locale}/shiponce/ai-tasks'
@@ -836,13 +790,11 @@ export interface FileRouteTypes {
     | '/{-$locale}/activity/feedbacks'
     | '/{-$locale}/ai/music-generator'
     | '/{-$locale}/blog/$slug'
-    | '/{-$locale}/image-generator/$slug'
     | '/{-$locale}/settings/billing'
     | '/{-$locale}/settings/credits'
     | '/{-$locale}/settings/payments'
     | '/{-$locale}/settings/profile'
     | '/{-$locale}/settings/security'
-    | '/{-$locale}/video-generator/$slug'
     | '/{-$locale}/shiponce/categories/add'
     | '/{-$locale}/shiponce/posts/add'
     | '/{-$locale}/shiponce/settings/$tab'
@@ -888,14 +840,12 @@ export interface FileRouteTypes {
     | '/{-$locale}/_landing/examples'
     | '/{-$locale}/_landing/feedback'
     | '/{-$locale}/_landing/generate'
-    | '/{-$locale}/_landing/image-generator'
     | '/{-$locale}/_landing/pricing'
     | '/{-$locale}/_landing/privacy-policy'
     | '/{-$locale}/_landing/showcase'
     | '/{-$locale}/_landing/showcases'
     | '/{-$locale}/_landing/terms-of-service'
     | '/{-$locale}/_landing/updates'
-    | '/{-$locale}/_landing/video-generator'
     | '/{-$locale}/_oauth/auth-callback'
     | '/{-$locale}/_oauth/auth-popup'
     | '/{-$locale}/shiponce/ai-tasks'
@@ -911,13 +861,11 @@ export interface FileRouteTypes {
     | '/{-$locale}/_landing/activity/feedbacks'
     | '/{-$locale}/_landing/ai/music-generator'
     | '/{-$locale}/_landing/blog/$slug'
-    | '/{-$locale}/_landing/image-generator/$slug'
     | '/{-$locale}/_landing/settings/billing'
     | '/{-$locale}/_landing/settings/credits'
     | '/{-$locale}/_landing/settings/payments'
     | '/{-$locale}/_landing/settings/profile'
     | '/{-$locale}/_landing/settings/security'
-    | '/{-$locale}/_landing/video-generator/$slug'
     | '/{-$locale}/shiponce/categories/add'
     | '/{-$locale}/shiponce/posts/add'
     | '/{-$locale}/shiponce/settings/$tab'
@@ -1081,13 +1029,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125OauthAuthCallbackRouteImport
       parentRoute: typeof Char123LocaleChar125OauthRouteRoute
     }
-    '/{-$locale}/_landing/video-generator': {
-      id: '/{-$locale}/_landing/video-generator'
-      path: '/video-generator'
-      fullPath: '/{-$locale}/video-generator'
-      preLoaderRoute: typeof Char123LocaleChar125LandingVideoGeneratorRouteImport
-      parentRoute: typeof Char123LocaleChar125LandingRouteRoute
-    }
     '/{-$locale}/_landing/updates': {
       id: '/{-$locale}/_landing/updates'
       path: '/updates'
@@ -1128,13 +1069,6 @@ declare module '@tanstack/react-router' {
       path: '/pricing'
       fullPath: '/{-$locale}/pricing'
       preLoaderRoute: typeof Char123LocaleChar125LandingPricingRouteImport
-      parentRoute: typeof Char123LocaleChar125LandingRouteRoute
-    }
-    '/{-$locale}/_landing/image-generator': {
-      id: '/{-$locale}/_landing/image-generator'
-      path: '/image-generator'
-      fullPath: '/{-$locale}/image-generator'
-      preLoaderRoute: typeof Char123LocaleChar125LandingImageGeneratorRouteImport
       parentRoute: typeof Char123LocaleChar125LandingRouteRoute
     }
     '/{-$locale}/_landing/generate': {
@@ -1298,13 +1232,6 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof Char123LocaleChar125ShiponceCategoriesAddRouteImport
       parentRoute: typeof Char123LocaleChar125ShiponceRouteRoute
     }
-    '/{-$locale}/_landing/video-generator/$slug': {
-      id: '/{-$locale}/_landing/video-generator/$slug'
-      path: '/$slug'
-      fullPath: '/{-$locale}/video-generator/$slug'
-      preLoaderRoute: typeof Char123LocaleChar125LandingVideoGeneratorSlugRouteImport
-      parentRoute: typeof Char123LocaleChar125LandingVideoGeneratorRoute
-    }
     '/{-$locale}/_landing/settings/security': {
       id: '/{-$locale}/_landing/settings/security'
       path: '/security'
@@ -1339,13 +1266,6 @@ declare module '@tanstack/react-router' {
       fullPath: '/{-$locale}/settings/billing'
       preLoaderRoute: typeof Char123LocaleChar125LandingSettingsBillingRouteImport
       parentRoute: typeof Char123LocaleChar125LandingSettingsRouteRoute
-    }
-    '/{-$locale}/_landing/image-generator/$slug': {
-      id: '/{-$locale}/_landing/image-generator/$slug'
-      path: '/$slug'
-      fullPath: '/{-$locale}/image-generator/$slug'
-      preLoaderRoute: typeof Char123LocaleChar125LandingImageGeneratorSlugRouteImport
-      parentRoute: typeof Char123LocaleChar125LandingImageGeneratorRoute
     }
     '/{-$locale}/_landing/blog/$slug': {
       id: '/{-$locale}/_landing/blog/$slug'
@@ -1556,36 +1476,6 @@ const Char123LocaleChar125LandingSettingsRouteRouteWithChildren =
     Char123LocaleChar125LandingSettingsRouteRouteChildren,
   )
 
-interface Char123LocaleChar125LandingImageGeneratorRouteChildren {
-  Char123LocaleChar125LandingImageGeneratorSlugRoute: typeof Char123LocaleChar125LandingImageGeneratorSlugRoute
-}
-
-const Char123LocaleChar125LandingImageGeneratorRouteChildren: Char123LocaleChar125LandingImageGeneratorRouteChildren =
-  {
-    Char123LocaleChar125LandingImageGeneratorSlugRoute:
-      Char123LocaleChar125LandingImageGeneratorSlugRoute,
-  }
-
-const Char123LocaleChar125LandingImageGeneratorRouteWithChildren =
-  Char123LocaleChar125LandingImageGeneratorRoute._addFileChildren(
-    Char123LocaleChar125LandingImageGeneratorRouteChildren,
-  )
-
-interface Char123LocaleChar125LandingVideoGeneratorRouteChildren {
-  Char123LocaleChar125LandingVideoGeneratorSlugRoute: typeof Char123LocaleChar125LandingVideoGeneratorSlugRoute
-}
-
-const Char123LocaleChar125LandingVideoGeneratorRouteChildren: Char123LocaleChar125LandingVideoGeneratorRouteChildren =
-  {
-    Char123LocaleChar125LandingVideoGeneratorSlugRoute:
-      Char123LocaleChar125LandingVideoGeneratorSlugRoute,
-  }
-
-const Char123LocaleChar125LandingVideoGeneratorRouteWithChildren =
-  Char123LocaleChar125LandingVideoGeneratorRoute._addFileChildren(
-    Char123LocaleChar125LandingVideoGeneratorRouteChildren,
-  )
-
 interface Char123LocaleChar125LandingRouteRouteChildren {
   Char123LocaleChar125LandingActivityRouteRoute: typeof Char123LocaleChar125LandingActivityRouteRouteWithChildren
   Char123LocaleChar125LandingSettingsRouteRoute: typeof Char123LocaleChar125LandingSettingsRouteRouteWithChildren
@@ -1593,14 +1483,12 @@ interface Char123LocaleChar125LandingRouteRouteChildren {
   Char123LocaleChar125LandingExamplesRoute: typeof Char123LocaleChar125LandingExamplesRoute
   Char123LocaleChar125LandingFeedbackRoute: typeof Char123LocaleChar125LandingFeedbackRoute
   Char123LocaleChar125LandingGenerateRoute: typeof Char123LocaleChar125LandingGenerateRoute
-  Char123LocaleChar125LandingImageGeneratorRoute: typeof Char123LocaleChar125LandingImageGeneratorRouteWithChildren
   Char123LocaleChar125LandingPricingRoute: typeof Char123LocaleChar125LandingPricingRoute
   Char123LocaleChar125LandingPrivacyPolicyRoute: typeof Char123LocaleChar125LandingPrivacyPolicyRoute
   Char123LocaleChar125LandingShowcaseRoute: typeof Char123LocaleChar125LandingShowcaseRoute
   Char123LocaleChar125LandingShowcasesRoute: typeof Char123LocaleChar125LandingShowcasesRoute
   Char123LocaleChar125LandingTermsOfServiceRoute: typeof Char123LocaleChar125LandingTermsOfServiceRoute
   Char123LocaleChar125LandingUpdatesRoute: typeof Char123LocaleChar125LandingUpdatesRoute
-  Char123LocaleChar125LandingVideoGeneratorRoute: typeof Char123LocaleChar125LandingVideoGeneratorRouteWithChildren
   Char123LocaleChar125LandingIndexRoute: typeof Char123LocaleChar125LandingIndexRoute
   Char123LocaleChar125LandingAiMusicGeneratorRoute: typeof Char123LocaleChar125LandingAiMusicGeneratorRoute
   Char123LocaleChar125LandingBlogSlugRoute: typeof Char123LocaleChar125LandingBlogSlugRoute
@@ -1622,8 +1510,6 @@ const Char123LocaleChar125LandingRouteRouteChildren: Char123LocaleChar125Landing
       Char123LocaleChar125LandingFeedbackRoute,
     Char123LocaleChar125LandingGenerateRoute:
       Char123LocaleChar125LandingGenerateRoute,
-    Char123LocaleChar125LandingImageGeneratorRoute:
-      Char123LocaleChar125LandingImageGeneratorRouteWithChildren,
     Char123LocaleChar125LandingPricingRoute:
       Char123LocaleChar125LandingPricingRoute,
     Char123LocaleChar125LandingPrivacyPolicyRoute:
@@ -1636,8 +1522,6 @@ const Char123LocaleChar125LandingRouteRouteChildren: Char123LocaleChar125Landing
       Char123LocaleChar125LandingTermsOfServiceRoute,
     Char123LocaleChar125LandingUpdatesRoute:
       Char123LocaleChar125LandingUpdatesRoute,
-    Char123LocaleChar125LandingVideoGeneratorRoute:
-      Char123LocaleChar125LandingVideoGeneratorRouteWithChildren,
     Char123LocaleChar125LandingIndexRoute:
       Char123LocaleChar125LandingIndexRoute,
     Char123LocaleChar125LandingAiMusicGeneratorRoute:

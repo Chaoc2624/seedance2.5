@@ -39,6 +39,7 @@
     "db:migrate": "tsx scripts/with-env.ts bunx drizzle-kit migrate --config=src/core/db/config.ts",
     "db:push": "tsx scripts/with-env.ts bunx drizzle-kit push --config=src/core/db/config.ts",
     "db:studio": "tsx scripts/with-env.ts bunx drizzle-kit studio --config=src/core/db/config.ts",
+    "db:seed:seedance-2-0-posts": "tsx scripts/with-env.ts bunx tsx scripts/db/seed-seedance-2-0-posts.ts",
     "auth:generate": "tsx scripts/with-env.ts bunx @better-auth/cli generate --config=src/core/auth/index.ts",
     "admin:init": "tsx scripts/with-env.ts bunx tsx scripts/init/init-admin.ts",
     "rbac:init": "tsx scripts/with-env.ts bunx tsx scripts/init/init-rbac.ts",

@@ -20,7 +20,7 @@
         },
         {
           "title": "동영상 생성",
-          "url": "/video-generator",
+          "url": "/",
           "target": "_self"
         },
         {
@@ -81,7 +81,7 @@
           "children": [
             {
               "title": "동영상 생성",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {
@@ -96,7 +96,7 @@
           "children": [
             {
               "title": "Seedance 2.5",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {

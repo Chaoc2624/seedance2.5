@@ -27,14 +27,18 @@ export function Blog({
   posts: PostType[];
 }) {
   const t = useTranslations('pages.blog.messages');
+  // Temporarily hide category filter tabs until taxonomy content is ready.
+  const showCategoryTabs = false;
   const actualCategories =
     categories?.filter(
       (category: CategoryType) => category.slug && category.slug !== 'all'
     ) || [];
   const visibleCategories =
-    posts?.length > 0 && actualCategories.length > 1
+    showCategoryTabs && posts?.length > 0 && actualCategories.length > 1
       ? categories
-      : actualCategories;
+      : showCategoryTabs
+        ? actualCategories
+        : [];
   const tabs: Tab[] = [];
   visibleCategories?.map((category: CategoryType) => {
     tabs.push({

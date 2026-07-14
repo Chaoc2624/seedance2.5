@@ -95,6 +95,12 @@ const SEEDANCE_RATIOS = [
 const SEEDANCE_RESOLUTIONS = ['480p', '720p', '1080p', '4k'];
 const KLING_MODES = ['std', 'pro', '4K'];
 
+const VIDEO_MODEL_PICKER_FAMILY_IDS = new Set([
+  'seedance',
+  'kling',
+  'happyhorse',
+]);
+
 const VIDEO_MODEL_FAMILY_ICON_SRCS: Record<string, string> = {
   kling: '/ai-model-icons/kling.png',
   grok: '/ai-model-icons/grok.png',
@@ -762,4 +768,10 @@ export function groupVideoModelsByFamily(models: VideoModelConfig[]) {
   }
 
   return [...families.values()];
+}
+
+export function getVideoModelPickerModels(models: VideoModelConfig[]) {
+  return models.filter((model) =>
+    VIDEO_MODEL_PICKER_FAMILY_IDS.has(model.familyId)
+  );
 }

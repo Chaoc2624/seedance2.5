@@ -4,11 +4,22 @@ import {
   DEFAULT_VIDEO_MODEL_CATALOG,
   assertVideoModelReferenceMedia,
   getVideoModelCreditCost,
+  getVideoModelPickerModels,
   getVideoModelReferenceMedia,
   normalizeVideoModelDuration,
 } from './ai-video-models';
 
 describe('AI video model durations and credits', () => {
+  test('limits the generator model picker to Seedance, Kling, and HappyHorse', () => {
+    expect(
+      new Set(
+        getVideoModelPickerModels(DEFAULT_VIDEO_MODEL_CATALOG).map(
+          (model) => model.familyId
+        )
+      )
+    ).toEqual(new Set(['seedance', 'kling', 'happyhorse']));
+  });
+
   test('charges Kling 3.0 by selected seconds', () => {
     const model = DEFAULT_VIDEO_MODEL_CATALOG.find(
       (item) => item.id === 'kie:kling-3-0'

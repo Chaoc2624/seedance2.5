@@ -1,4 +1,4 @@
 interface:
   display_name: 'shiponce'
-  short_description: 'shiponce project, SEO pricing, content, media, and module modification guide'
-  default_prompt: 'Use $shiponce to modify the shiponce TanStack template following its project structure, module boundaries, configuration rules, pricing page SEO/conversion rules, and landing media/content replacement workflows.'
+  short_description: 'shiponce project engineering, SEO, and skill-routing guide'
+  default_prompt: 'Use $shiponce to modify the project within its architecture, apply its SEO operating standard when relevant, and route the smallest supporting skill combination.'

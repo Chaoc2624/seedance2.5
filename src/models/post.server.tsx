@@ -90,6 +90,28 @@ export async function findPost({
   return result;
 }
 
+/** Distinct published languages for a slug — used for accurate hreflang. */
+export async function getPostLanguages({
+  slug,
+  status = PostStatus.PUBLISHED,
+}: {
+  slug: string;
+  status?: PostStatus;
+}): Promise<string[]> {
+  const rows = await db()
+    .select({ language: post.language })
+    .from(post)
+    .where(
+      and(eq(post.slug, slug), status ? eq(post.status, status) : undefined)
+    );
+
+  return Array.from(
+    new Set(
+      rows.map((row) => String(row.language || '').trim()).filter(Boolean)
+    )
+  ).sort();
+}
+
 export async function getPosts({
   type,
   status,

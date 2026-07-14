@@ -2,7 +2,13 @@
  * Blog schema — post + taxonomy tables.
  * Module: blog (always enabled)
  */
-import { index, integer, sqliteTable, text } from 'drizzle-orm/sqlite-core';
+import {
+  index,
+  integer,
+  sqliteTable,
+  text,
+  uniqueIndex,
+} from 'drizzle-orm/sqlite-core';
 
 import { user, sqliteNowMs } from './core.sqlite';
 
@@ -45,7 +51,7 @@ export const post = table(
       .notNull()
       .references(() => user.id, { onDelete: 'cascade' }),
     parentId: text('parent_id'),
-    slug: text('slug').unique().notNull(),
+    slug: text('slug').notNull(),
     language: text('language').default('en').notNull(),
     type: text('type').notNull(),
     title: text('title'),
@@ -67,5 +73,8 @@ export const post = table(
     deletedAt: integer('deleted_at', { mode: 'timestamp_ms' }),
     sort: integer('sort').default(0).notNull(),
   },
-  (table) => [index('idx_post_type_status').on(table.type, table.status)]
+  (table) => [
+    uniqueIndex('idx_post_slug_language').on(table.slug, table.language),
+    index('idx_post_type_status').on(table.type, table.status),
+  ]
 );

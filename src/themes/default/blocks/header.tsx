@@ -78,9 +78,9 @@ function NavigationMenuTrigger(
  */
 const liteAllowedPaths = ['/', '/blog', '/feedback'];
 const aiModuleAllowedPaths = [
-  '/image-generator',
+  '/',
   '/ai/music-generator',
-  '/video-generator',
+  '/',
   '/ai-image-generator',
   '/ai-music-generator',
   '/ai-video-generator',

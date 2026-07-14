@@ -194,7 +194,7 @@ export function GalleryGrid({
           {showViewMore && (
             <div className="flex justify-center pt-2">
               <Button asChild variant="outline" size="lg">
-                <Link href="/image-generator">
+                <Link href="/">
                   {viewMoreLabel}
                   <ArrowRight className="h-4 w-4" />
                 </Link>

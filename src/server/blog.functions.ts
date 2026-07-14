@@ -6,6 +6,7 @@ import { envConfigs } from '@/config';
 import {
   findPost,
   getPostDate,
+  getPostLanguages,
   getPosts,
   PostStatus,
   PostType,
@@ -365,17 +366,48 @@ export const getBlogPostsAndCategoriesFn = createServerFn({ method: 'GET' })
     };
   });
 
+function getLocalPostAvailableLocales(slug: string): string[] {
+  const found = new Set<string>();
+
+  for (const filePath of Object.keys(contentPosts)) {
+    if (!contentPosts[filePath]?.default) continue;
+    const parsed = parseLocalPostSlug(filePath);
+    if (parsed.slug !== slug) continue;
+    found.add(parsed.locale || defaultLocale);
+  }
+
+  return Array.from(found).sort();
+}
+
+async function getDbPostAvailableLocales(slug: string): Promise<string[]> {
+  if (!shouldUseBlogDatabase()) return [];
+  return getPostLanguages({ slug, status: PostStatus.PUBLISHED });
+}
+
+function toIsoDate(value: Date | string | null | undefined): string {
+  if (!value) return '';
+  if (value instanceof Date) return value.toISOString();
+  const parsed = new Date(value);
+  return Number.isNaN(parsed.getTime()) ? '' : parsed.toISOString();
+}
+
 export const getBlogPostFn = createServerFn({ method: 'GET' })
   .inputValidator((data: { slug: string; locale: string }) => data)
   .handler(async ({ data }) => {
+    const locale = data.locale || defaultLocale;
+
     if (shouldUseBlogDatabase()) {
       const dbPost = await findPost({
         slug: data.slug,
         status: PostStatus.PUBLISHED,
-        language: data.locale,
+        language: locale,
       });
 
       if (dbPost) {
+        const availableLocales = await getDbPostAvailableLocales(data.slug);
+        const createdIso = toIsoDate(dbPost.createdAt);
+        const updatedIso = toIsoDate(dbPost.updatedAt) || createdIso;
+
         return {
           id: dbPost.id,
           slug: dbPost.slug,
@@ -384,23 +416,38 @@ export const getBlogPostFn = createServerFn({ method: 'GET' })
           content: dbPost.content || '',
           created_at:
             getPostDate({
-              created_at: dbPost.createdAt.toISOString(),
-              locale: data.locale,
+              created_at: createdIso,
+              locale,
             }) || '',
+          created_at_iso: createdIso,
+          updated_at_iso: updatedIso,
           author_name: dbPost.authorName || '',
           author_image: dbPost.authorImage || '',
           image: dbPost.image || '',
           url: `/blog/${dbPost.slug}`,
+          // Only locales with real published content — never invent zh/zh-hant → EN
+          availableLocales,
         };
       }
+
+      // No silent EN fallback under a localized URL when using DB mode.
+      // Missing locale (e.g. zh without a zh row) must 404 for indexability.
     }
 
-    const candidates = [
-      `/content/posts/${data.slug}.${data.locale}.mdx`,
-      `/content/posts/${data.slug}.${data.locale}.md`,
-      `/content/posts/${data.slug}.mdx`,
-      `/content/posts/${data.slug}.md`,
-    ];
+    // Prefer exact locale files. Default-locale unsuffixed files only serve
+    // the default locale — do not render EN under /zh/... or /zh-hant/...
+    const candidates =
+      locale === defaultLocale
+        ? [
+            `/content/posts/${data.slug}.${locale}.mdx`,
+            `/content/posts/${data.slug}.${locale}.md`,
+            `/content/posts/${data.slug}.mdx`,
+            `/content/posts/${data.slug}.md`,
+          ]
+        : [
+            `/content/posts/${data.slug}.${locale}.mdx`,
+            `/content/posts/${data.slug}.${locale}.md`,
+          ];
 
     for (const filePath of candidates) {
       if (contentPosts[filePath]?.default) {
@@ -408,6 +455,8 @@ export const getBlogPostFn = createServerFn({ method: 'GET' })
           contentPosts[filePath].default
         );
         const createdAt = stringValue(frontmatter.created_at);
+        const availableLocales = getLocalPostAvailableLocales(data.slug);
+        const createdIso = createdAt ? toIsoDate(createdAt) : '';
 
         return {
           id: filePath,
@@ -418,13 +467,16 @@ export const getBlogPostFn = createServerFn({ method: 'GET' })
           created_at: createdAt
             ? getPostDate({
                 created_at: createdAt,
-                locale: data.locale,
+                locale,
               })
             : '',
+          created_at_iso: createdIso,
+          updated_at_iso: createdIso,
           author_name: stringValue(frontmatter.author_name),
           author_image: stringValue(frontmatter.author_image),
           image: stringValue(frontmatter.image),
           url: `/blog/${data.slug}`,
+          availableLocales,
         };
       }
     }

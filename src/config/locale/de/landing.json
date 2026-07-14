@@ -30,7 +30,7 @@
             {
               "title": "KI-Videogenerator",
               "description": "Videos mit KI erstellen",
-              "url": "/video-generator",
+              "url": "/",
               "icon": "RiVideoLine"
             }
           ]
@@ -95,7 +95,7 @@
           "children": [
             {
               "title": "Video Generate",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {
@@ -110,7 +110,7 @@
           "children": [
             {
               "title": "Seedance 2.5",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {

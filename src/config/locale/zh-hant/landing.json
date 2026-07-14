@@ -30,7 +30,7 @@
             {
               "title": "AI 影片產生器",
               "description": "使用 AI 產生影片",
-              "url": "/video-generator",
+              "url": "/",
               "icon": "RiVideoLine"
             }
           ]
@@ -95,7 +95,7 @@
           "children": [
             {
               "title": "影片生成",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {
@@ -110,7 +110,7 @@
           "children": [
             {
               "title": "Seedance 2.5",
-              "url": "/video-generator",
+              "url": "/",
               "target": "_self"
             },
             {
