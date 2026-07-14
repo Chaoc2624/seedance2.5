@@ -1,4 +1,9 @@
-import { createFileRoute, defer, Await } from '@tanstack/react-router';
+import {
+  createFileRoute,
+  defer,
+  Await,
+  useRouter,
+} from '@tanstack/react-router';
 import { useEffect, useMemo, useState, Suspense } from 'react';
 
 import { useTranslations } from '@/core/i18n/hooks';
@@ -326,6 +331,7 @@ function SettingsPageContent({ data }: { data: any }) {
   const { configs, settingGroups, settings } = data;
   const { tab } = Route.useParams();
   const t = useTranslations('admin.settings');
+  const router = useRouter();
   const [currentConfigs, setCurrentConfigs] =
     useState<Record<string, string>>(configs);
   const uploadImageLabels = useMemo(() => getUploadImageLabels(t), [t]);
@@ -370,6 +376,9 @@ function SettingsPageContent({ data }: { data: any }) {
         ...current,
         ...payload,
       }));
+      if ('app_name' in payload) {
+        await router.invalidate();
+      }
     }
     return result;
   };

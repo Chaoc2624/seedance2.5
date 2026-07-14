@@ -66,10 +66,14 @@ export const checkAdminAccessFn = createServerFn({ method: 'GET' }).handler(
 export const getAdminBootstrapFn = createServerFn({ method: 'GET' }).handler(
   async () => {
     const user = await getSignUser();
-    if (!user) return { user: null, isAdmin: false };
+    if (!user) return { user: null, isAdmin: false, appName: '' };
 
     const isAdmin = await canAccessAdmin(user.id);
-    return { user, isAdmin };
+    if (!isAdmin) return { user, isAdmin, appName: '' };
+
+    const { getRuntimeConfig } = await import('@/config/runtime.server');
+    const configs = await getRuntimeConfig();
+    return { user, isAdmin, appName: configs.app_name };
   }
 );
 

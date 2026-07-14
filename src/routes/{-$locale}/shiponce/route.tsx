@@ -1,8 +1,13 @@
 /**
  * Admin layout — wraps admin pages with dashboard sidebar.
  */
-import { createFileRoute, Outlet, redirect } from '@tanstack/react-router';
-import { Suspense } from 'react';
+import {
+  createFileRoute,
+  Outlet,
+  redirect,
+  useRouterState,
+} from '@tanstack/react-router';
+import { Suspense, useEffect } from 'react';
 
 import { useTranslations } from '@/core/i18n/hooks';
 import { ThemeProvider } from '@/core/theme/provider';
@@ -58,14 +63,27 @@ export const Route = createFileRoute('/{-$locale}/shiponce')({
   component: AdminLayout,
 });
 
+function AdminDocumentTitle({ appName }: { appName: string }) {
+  const pathname = useRouterState({
+    select: (state) => state.location.pathname,
+  });
+
+  useEffect(() => {
+    document.title = `${appName} - Admin`;
+  }, [appName, pathname]);
+
+  return null;
+}
+
 function AdminLayout() {
-  const { user } = Route.useLoaderData();
+  const { user, appName } = Route.useLoaderData();
   const t = useTranslations('admin');
   const tSidebar = t.raw('sidebar') as SidebarType;
 
   return (
     <AppContextProvider initialUser={user}>
       <ThemeProvider>
+        <AdminDocumentTitle appName={appName || 'Seedance 2.5'} />
         <DashboardLayout sidebar={tSidebar}>
           <Suspense fallback={<PendingAdminList />}>
             <Outlet />

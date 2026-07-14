@@ -52,7 +52,7 @@ export default defineConfig(({ command }) => {
       __SHIPONCE_SOURCE_ROOT__: JSON.stringify(process.cwd()),
     },
     server: {
-      port: 3000,
+      port: 4000,
     },
     optimizeDeps: {
       exclude: ['lucide-react', '@tanstack/start-server-core'],

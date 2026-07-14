@@ -66,24 +66,16 @@ function isAdminCanonicalUrl(canonicalUrl?: string): boolean {
   }
 }
 
-function formatAdminTitle(title: string, canonicalUrl?: string): string {
+function formatAdminTitle(
+  title: string,
+  canonicalUrl?: string,
+  appName?: string
+): string {
   if (!isAdminCanonicalUrl(canonicalUrl)) {
     return title;
   }
 
-  const path = canonicalUrl?.startsWith('http')
-    ? new URL(canonicalUrl).pathname
-    : canonicalUrl || '';
-  const segments = path.replace(/^\/+/, '').split('/').filter(Boolean).slice(1);
-
-  const page = segments[0]
-    ? `/${segments[0]
-        .split('-')
-        .map((part) => part.charAt(0).toUpperCase() + part.slice(1))
-        .join('')}`
-    : '';
-
-  return `Miracle - Admin${page}`;
+  return `${appName || envConfigs.app_name} - Admin`;
 }
 
 /**
@@ -121,7 +113,11 @@ export function getHeadMeta(
 
   const resolvedTitle =
     passedMetadata.title || translatedMeta.title || defaultMeta.title;
-  const title = formatAdminTitle(resolvedTitle, options.canonicalUrl);
+  const title = formatAdminTitle(
+    resolvedTitle,
+    options.canonicalUrl,
+    options.appName
+  );
   const description =
     passedMetadata.description ||
     translatedMeta.description ||

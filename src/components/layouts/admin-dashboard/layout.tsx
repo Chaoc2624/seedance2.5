@@ -128,6 +128,7 @@ export function DashboardLayout({
   return (
     <SidebarProvider
       ref={providerRef}
+      className="admin-theme"
       style={
         {
           '--sidebar-width': `${width}px`,
