@@ -78,11 +78,39 @@ function formatAdminTitle(
   return `${appName || envConfigs.app_name} - Admin`;
 }
 
+function toAbsoluteUrl(url: string): string {
+  if (!url) return envConfigs.app_url || '';
+  if (url.startsWith('http')) return url;
+  const path = url.startsWith('/') ? url : `/${url}`;
+  return `${envConfigs.app_url}${path}`;
+}
+
+function getLocalizedPath(path: string, locale: string): string {
+  let normalized = path || '/';
+  if (!normalized.startsWith('/')) normalized = `/${normalized}`;
+  if (normalized.startsWith('http')) {
+    try {
+      normalized = new URL(normalized).pathname || '/';
+    } catch {
+      normalized = '/';
+    }
+  }
+
+  if (!locale || locale === defaultLocale) return normalized;
+  if (normalized === '/') return `/${locale}`;
+  return `/${locale}${normalized}`;
+}
+
 /**
  * Build TanStack head() meta/links arrays for SEO.
  *
  * Usage in route definition:
  *   head: ({ params }) => getHeadMeta({ metadataKey: 'pages.pricing.metadata', locale: params.locale })
+ *
+ * Hreflang rules (ShipOnce):
+ * - Only emit alternates for locales that have real equivalent content.
+ * - Never invent hreflang to default/EN when a locale is missing.
+ * - `availableLocales` should be the real content matrix, not the full site locale list.
  */
 export function getHeadMeta(
   options: {
@@ -94,6 +122,15 @@ export function getHeadMeta(
     appName?: string;
     noIndex?: boolean;
     locale?: string;
+    /** Open Graph type; use `article` for blog posts. */
+    ogType?: string;
+    /**
+     * Locales that have real content for this URL path.
+     * Used only for hreflang; missing locales must not appear.
+     */
+    availableLocales?: string[];
+    /** JSON-LD object(s). Emitted via TanStack `script:ld+json` meta entries. */
+    jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
   } = {}
 ) {
   const locale = options.locale || i18n.language || defaultLocale;
@@ -123,21 +160,62 @@ export function getHeadMeta(
     translatedMeta.description ||
     defaultMeta.description;
 
-  const canonicalUrl = getCanonicalUrl(options.canonicalUrl || '', locale);
+  const relativeCanonical = options.canonicalUrl || '';
+  const canonicalUrl = getCanonicalUrl(relativeCanonical, locale);
 
   let imageUrl = options.imageUrl || envConfigs.app_preview_image;
-  if (!imageUrl.startsWith('http')) {
-    imageUrl = `${envConfigs.app_url}${imageUrl}`;
+  if (imageUrl && !imageUrl.startsWith('http')) {
+    imageUrl = `${envConfigs.app_url}${imageUrl.startsWith('/') ? '' : '/'}${imageUrl}`;
   }
 
   const appName = options.appName || envConfigs.app_name || '';
+  const ogType = options.ogType || 'website';
+
+  const jsonLdItems = Array.isArray(options.jsonLd)
+    ? options.jsonLd
+    : options.jsonLd
+      ? [options.jsonLd]
+      : [];
+
+  const alternateLocales = Array.from(
+    new Set(
+      (options.availableLocales || [])
+        .map((item) => String(item || '').trim())
+        .filter(Boolean)
+    )
+  );
+
+  const hreflangLinks =
+    alternateLocales.length > 0
+      ? [
+          ...alternateLocales.map((altLocale) => ({
+            rel: 'alternate',
+            hrefLang: altLocale,
+            href: toAbsoluteUrl(
+              getLocalizedPath(relativeCanonical || '/', altLocale)
+            ),
+          })),
+          {
+            rel: 'alternate',
+            hrefLang: 'x-default',
+            href: toAbsoluteUrl(
+              getLocalizedPath(
+                relativeCanonical || '/',
+                alternateLocales.includes(defaultLocale)
+                  ? defaultLocale
+                  : alternateLocales[0]
+              )
+            ),
+          },
+        ]
+      : [];
 
   return {
     meta: [
       { title },
       { name: 'description', content: description },
       // Open Graph
-      { property: 'og:type', content: 'website' },
+      { property: 'og:type', content: ogType },
       { property: 'og:locale', content: locale },
       { property: 'og:url', content: canonicalUrl },
       { property: 'og:title', content: title },
@@ -156,8 +234,10 @@ export function getHeadMeta(
             { name: 'googlebot', content: 'noindex, nofollow, noarchive' },
           ]
         : []),
+      // JSON-LD (TanStack HeadContent supports script:ld+json)
+      ...jsonLdItems.map((item) => ({ 'script:ld+json': item })),
     ],
-    links: [{ rel: 'canonical', href: canonicalUrl }],
+    links: [{ rel: 'canonical', href: canonicalUrl }, ...hreflangLinks],
   };
 }
 

@@ -66,6 +66,17 @@ export function BlogDetail({ post }: { post: PostType }) {
             </div>
           </div>
 
+          {post.image && (
+            <img
+              src={post.image}
+              alt={post.title || ''}
+              width={1280}
+              height={720}
+              fetchPriority="high"
+              className="mx-auto mt-10 aspect-video w-full max-w-5xl rounded-lg object-cover"
+            />
+          )}
+
           {/* Main Content Grid */}
           <div className="grid grid-cols-1 gap-8 md:mt-12 lg:grid-cols-12">
             {/* Table of Contents - Left Sidebar */}

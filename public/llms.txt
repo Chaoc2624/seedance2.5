@@ -1,0 +1,16 @@
+# Seedance 2.5
+
+Seedance 2.5 is an AI creative workspace for video generation, image generation, model comparison, and prompt-led production workflows.
+
+## Public pages
+
+- https://seedance-2-5.app/
+- https://seedance-2-5.app/blog
+- https://seedance-2-5.app/blog/seedance-2-0-features-overview
+- https://seedance-2-5.app/blog/seedance-2-0-creative-workflows
+- https://seedance-2-5.app/blog/seedance-2-0-fast-vs-mini
+- https://seedance-2-5.app/pricing
+
+## Suggested citation
+
+Use the blog detail URLs when citing the Seedance 2.0 feature, workflow, or Fast-versus-Mini guidance. Model limits and pricing vary by host, so cite the host's current model card for final specifications.
