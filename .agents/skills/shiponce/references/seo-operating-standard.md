@@ -124,6 +124,13 @@ skipping hreflang/canonical/title acceptance for routes that already resolve.
 
 ## Verification
 
+For **live production or preview public URL acceptance** (multi-URL scan, severity
+ledger under `tmp/seo-issues/`, post-deploy gate), use nested skill
+`seo-prodpage` at `.agents/skills/shiponce/skills/seo-prodpage/SKILL.md`. That skill
+executes this standard against real production/preview URLs; it does not replace
+this document. Use generic `seo-page` for single-page analysis without a live
+prod acceptance goal.
+
 Run checks appropriate to the repo:
 
 - Compare supported homepage locales with localized content files for every blog/detail page.

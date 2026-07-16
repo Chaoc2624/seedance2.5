@@ -21,19 +21,24 @@ Common aliases:
 
 - `taste-skill v2` refers to the installed `design-taste-frontend` skill.
 - `output-skill` refers to the installed `full-output-enforcement` skill.
+- `batch-grill-me` is Matt Pocock's frontier-batch interview (rounds of
+  independent questions); prefer it over serial `grill-me` / `grilling` for
+  multi-decision plans unless the user asks to go one question at a time.
 
 Use the installed name when invoking a skill.
 
 ## First Decision
 
-| Question                                                             | Route when true                           | Route when false        |
-| -------------------------------------------------------------------- | ----------------------------------------- | ----------------------- |
-| Is the request materially ambiguous?                                 | `grill-with-docs`                         | Continue                |
-| Are domain terms, states, roles, or rules tangled?                   | `domain-modeling`                         | Continue                |
-| Is the page public, indexable, and intended for organic acquisition? | Select one SEO primary skill              | Skip SEO                |
-| Does the change create or alter user-facing UI?                      | Select one design primary skill           | Skip design skills      |
-| Is this a bug, regression, or unstable behavior?                     | `diagnosing-bugs`, then `tdd` for the fix | Treat as feature work   |
-| Is the implementation complete?                                      | `output-skill`, then `code-review`        | Continue implementation |
+| Question                                                                | Route when true                                                 | Route when false        |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------- | ----------------------- |
+| Is the request a small/routine ambiguity (few blocking choices)?        | Built-in `how-to-ask-question` (≤5 questions; shiponce default) | Continue                |
+| Is this a multi-decision plan/design tree with several tradeoffs?       | `batch-grill-me` (default grill path)                           | Continue                |
+| Does the design also need glossary / ADRs / durable domain docs?        | `grill-with-docs` (+ `domain-modeling` as it already does)      | Continue                |
+| Are domain terms, states, roles, or rules tangled (without full grill)? | `domain-modeling`                                               | Continue                |
+| Is the page public, indexable, and intended for organic acquisition?    | Select one SEO primary skill                                    | Skip SEO                |
+| Does the change create or alter user-facing UI?                         | Select one design primary skill                                 | Skip design skills      |
+| Is this a bug, regression, or unstable behavior?                        | `diagnosing-bugs`, then `tdd` for the fix                       | Treat as feature work   |
+| Is the implementation complete?                                         | `output-skill`, then `code-review`                              | Continue implementation |
 
 ## Phase Order
 
@@ -50,12 +55,41 @@ scope and domain
 
 ### Scope and Domain
 
-- Unclear requirements or meaningful unresolved tradeoffs: `grill-with-docs`.
-- Conflicting domain vocabulary, states, permissions, payments, credits, or AI
-  task concepts: `domain-modeling`.
-- Confirmed discussion that needs a durable specification: `to-spec`.
-- Multi-module, multi-session, or coordinated delivery: `to-tickets`.
-- Uncertain interaction or state model: `prototype` before production work.
+Clarify before designing or implementing. Pick **one** grill path; do not stack
+serial and batch grills in the same phase.
+
+| Situation                                                                 | Skill                                               |
+| ------------------------------------------------------------------------- | --------------------------------------------------- |
+| Small request, a few blocking choices only                                | Built-in `how-to-ask-question` (auto; ≤5 at a time) |
+| Multi-decision plan/design; several independent tradeoffs                 | `batch-grill-me`                                    |
+| Same as above, but also need glossary / ADRs / CONTEXT as you go          | `grill-with-docs`                                   |
+| User explicitly wants one question per turn                               | `grill-me` → runs `/grilling`                       |
+| Conflicting domain vocabulary, states, permissions, payments, credits, AI | `domain-modeling` (alone or after a grill)          |
+| Shared understanding reached; need a durable written spec                 | `to-spec`                                           |
+| Multi-module, multi-session, or coordinated delivery                      | `to-tickets`                                        |
+| Uncertain interaction or state model                                      | `prototype` before production work                  |
+
+**Grill path notes:**
+
+- `batch-grill-me` maps a **design tree** and asks the whole **frontier** each
+  round (every question whose prerequisites are already settled), with a
+  recommended answer per question, then waits. Use sub-agents for facts; only
+  decisions go to the user. Prefer this for complex ShipOnce features when the
+  user has not asked for serial grilling.
+- `grill-with-docs` = `/grilling` + `/domain-modeling`. Keep it when durable
+  domain docs matter (payments, credits, RBAC, AI task pipelines, multi-context
+  products).
+- `grill-me` / `grilling` stay available for serial, one-at-a-time interviews.
+  Do not default to them for multi-decision trees; they are slower than
+  `batch-grill-me` for the same tree.
+- `how-to-ask-question` remains the automatic bar for ordinary ambiguity. Do
+  not escalate every missing detail into a full grill session.
+- `grill-me`, `batch-grill-me`, and `grill-with-docs` set
+  `disable-model-invocation: true` — load them when routing (or when the user
+  invokes `/batch-grill-me`, `/grill-me`, `/grill-with-docs`). Do not wait for
+  the model to “auto-discover” them mid-implementation.
+- After any grill path, do not implement until the user confirms shared
+  understanding.
 
 Do not create a specification or ticket set for a small, already-defined edit.
 
@@ -77,21 +111,22 @@ over shipping them under hreflang.
 Use `seo-router` when the correct SEO specialty is unclear. Otherwise route
 directly:
 
-| Goal                                                        | Primary skill       | Add only when needed                                          |
-| ----------------------------------------------------------- | ------------------- | ------------------------------------------------------------- |
-| Full-site health audit                                      | `seo-audit`         | `seo-google` for first-party data                             |
-| One page or URL review                                      | `seo-page`          | `seo-content`, `seo-schema`, `seo-images`, or `seo-technical` |
-| New article or page brief                                   | `seo-content-brief` | `seo-dataforseo` for live localized SERP/keyword data         |
-| Existing content quality, E-E-A-T, or AI citation readiness | `seo-content`       | `seo-geo` when AI search is central                           |
-| Why a page does not rank or page type mismatches intent     | `seo-sxo`           | `seo-dataforseo` for live SERP evidence                       |
-| Crawl, index, canonical, robots, rendering, or CWV          | `seo-technical`     | `seo-google` for GSC/CrUX/PageSpeed evidence                  |
-| Schema or JSON-LD                                           | `seo-schema`        | `seo-ecommerce` for product pages                             |
-| Topic clusters and content architecture                     | `seo-cluster`       | `seo-content-brief` per target page                           |
-| Multilingual or regional SEO                                | `seo-hreflang`      | `seo-sitemap`                                                 |
-| Programmatic pages                                          | `seo-programmatic`  | `seo-content` for thin-content risk                           |
-| AI search visibility                                        | `seo-geo`           | `seo-content`                                                 |
-| Images, alt text, formats, dimensions, or CLS               | `seo-images`        | `seo-image-gen` only for new assets                           |
-| Deployment or on-page regression                            | `seo-drift`         | `seo-technical` for technical findings                        |
+| Goal                                                                 | Primary skill           | Add only when needed                                                        |
+| -------------------------------------------------------------------- | ----------------------- | --------------------------------------------------------------------------- |
+| Live production/preview URL acceptance, multi-URL scan, issue ledger | `seo-prodpage` (nested) | `seo-page` for local/single-page analysis; `cf-deploy` if SSR/env is broken |
+| Full-site multi-specialty health audit                               | `seo-audit`             | `seo-google` for first-party data; `seo-prodpage` for live HTML ledger      |
+| One page or URL review                                               | `seo-page`              | `seo-content`, `seo-schema`, `seo-images`, or `seo-technical`               |
+| New article or page brief                                            | `seo-content-brief`     | `seo-dataforseo` for live localized SERP/keyword data                       |
+| Existing content quality, E-E-A-T, or AI citation readiness          | `seo-content`           | `seo-geo` when AI search is central                                         |
+| Why a page does not rank or page type mismatches intent              | `seo-sxo`               | `seo-dataforseo` for live SERP evidence                                     |
+| Crawl, index, canonical, robots, rendering, or CWV                   | `seo-technical`         | `seo-google` for GSC/CrUX/PageSpeed evidence                                |
+| Schema or JSON-LD                                                    | `seo-schema`            | `seo-ecommerce` for product pages                                           |
+| Topic clusters and content architecture                              | `seo-cluster`           | `seo-content-brief` per target page                                         |
+| Multilingual or regional SEO                                         | `seo-hreflang`          | `seo-sitemap`                                                               |
+| Programmatic pages                                                   | `seo-programmatic`      | `seo-content` for thin-content risk                                         |
+| AI search visibility                                                 | `seo-geo`               | `seo-content`                                                               |
+| Images, alt text, formats, dimensions, or CLS                        | `seo-images`            | `seo-image-gen` only for new assets                                         |
+| Deployment or on-page regression                                     | `seo-drift`             | `seo-technical` for technical findings; `seo-prodpage` after deploy         |
 
 Data boundaries:
 
@@ -140,12 +175,23 @@ skills. They do not override parent `shiponce` Non-Negotiables.
 | --------------------------------------------------------------------------------------------------- | -------------- | --------------------------------------------------------------------------- |
 | Cloudflare Pages/Worker deploy, `deploy.sh` / `deploy.env`, wrangler preview, post-deploy env drift | `cf-deploy`    | `auth` when login/session fails only after CF secrets/CPU issues surface    |
 | Better Auth sign-in/up, get-session, OAuth, AUTH_SECRET, credential hashes, init-admin, RBAC gates  | `auth`         | `cf-deploy` when the failure is deploy target or missing CF runtime secrets |
+| Live production/preview public URL SEO acceptance, multi-URL HTML scan, `tmp/seo-issues` ledger     | `seo-prodpage` | `cf-deploy` if HTML is 500/env-broken; generic `seo-*` for depth/data only  |
 | Supabase/Postgres → D1 data move                                                                    | `db-migration` | —                                                                           |
 | New project first-pass customization                                                                | `quick-start`  | design/SEO skills only if the brief asks for them                           |
 | Dynamic page from a short spec                                                                      | `page-builder` | SEO skills for public indexable pages                                       |
 
-Announce `cf-deploy` or `auth` before deep edits when the user request is clearly
-in that domain, even if they did not type the slash command.
+Announce `cf-deploy`, `auth`, or `seo-prodpage` before deep work when the user
+request is clearly in that domain, even if they did not type the slash command.
+
+**`seo-prodpage` auto-route triggers** (nested:
+`.agents/skills/shiponce/skills/seo-prodpage/SKILL.md`):
+
+- 线上/预览 SEO 验收、生产 URL 审查、扫 indexable pages、部署后 SEO 检查、`/seo-prodpage`
+- Need an issue-type ledger under `tmp/seo-issues/`
+- Live HTML acceptance after public SEO code changes (title/canonical/hreflang/JSON-LD/sitemap)
+- Prefer over generic `seo-page` when the target is production/preview (not local-only analysis)
+- Prefer over generic `seo-audit` when the user wants ShipOnce-standard
+  acceptance + fix mapping, not a multi-specialty external audit
 
 ## Project Scenarios
 
@@ -157,6 +203,7 @@ seo-sxo or seo-content-brief
 -> implementation and tdd when behavior changes
 -> output-skill
 -> seo-page
+-> seo-prodpage (smoke or matrix on preview/production when a public URL exists)
 -> code-review
 ```
 
@@ -171,6 +218,7 @@ seo-page + seo-drift baseline
 -> implementation
 -> output-skill + code-review
 -> seo-page + seo-drift compare
+-> seo-prodpage smoke on the live URL when accepting the release
 ```
 
 Capture the drift baseline before modifying an existing page.
@@ -189,8 +237,9 @@ Skip SEO and `seo-drift` unless a public, indexable surface is also changed.
 ### Complex AI, Payment, Credit, or Provider Feature
 
 ```text
-grill-with-docs
--> domain-modeling when concepts are unclear
+batch-grill-me
+  (or grill-with-docs when glossary/ADRs are part of the outcome)
+-> domain-modeling only if concepts remain tangled after the grill
 -> to-spec
 -> to-tickets when delivery spans modules or sessions
 -> prototype when interaction is uncertain
@@ -198,8 +247,10 @@ grill-with-docs
 -> code-review
 ```
 
-Run the implementation and verification loop once per independently deliverable
-ticket.
+Prefer `batch-grill-me` for decision throughput. Prefer `grill-with-docs` when
+the feature will leave durable domain language (CONTEXT/glossary/ADRs) in the
+repo. Run the implementation and verification loop once per independently
+deliverable ticket.
 
 ### Bug Fix
 
@@ -227,10 +278,28 @@ seo-page per URL
 -> seo-page acceptance
 ```
 
-Use repeated single-page reviews for a small set of posts. Use `seo-audit` only
-for an explicitly requested full-site audit. For existing posts, capture
-`seo-drift baseline` before editing. For a brand-new post, create the first
-baseline after its initial accepted release.
+For a multi-post or whole-site **live HTML** pass (issue ledger, severity
+counts, shared root-cause fixes), use nested `seo-prodpage` instead of repeating
+ad-hoc curls. Use generic `seo-audit` only for an explicitly requested
+multi-specialty full-site audit. For existing posts, capture `seo-drift
+baseline` before editing. For a brand-new post, create the first baseline after
+its initial accepted release.
+
+### Production or Preview URL Acceptance (`seo-prodpage`)
+
+Read `references/seo-operating-standard.md`, then nested
+`skills/seo-prodpage/SKILL.md`.
+
+```text
+seo-prodpage (smoke | matrix | full)
+-> fix shared head/locale/sitemap boundaries for P0
+-> re-run seo-prodpage on affected URLs
+-> seo-drift baseline when locking a release
+-> cf-deploy only if probes show env/SSR/deploy target failures
+```
+
+Default mode after deploy: `smoke`. Escalate to `matrix`/`full` when the user
+asks for a full scan or when P0 issues look systemic.
 
 ### New Multilingual Blog Content
 
@@ -272,6 +341,10 @@ scale.
 
 - Do not run `seo-audit` when a targeted page or technical skill answers the
   request.
+- Do not run `seo-prodpage` for private dashboards, or when the user only wants
+  a content brief / keyword research / GSC metrics with no live HTML acceptance.
+- Do not treat `seo-prodpage` as a second operating standard; it only executes
+  `references/seo-operating-standard.md` against real URLs.
 - Do not use SEO skills for authenticated product surfaces by default.
 - Do not use design skills for server-only work.
 - Do not combine `minimalist-ui` and `soft-skill` by default.
@@ -283,3 +356,8 @@ scale.
 - Do not let a generic SEO skill override
   `references/seo-operating-standard.md`; surface any conflict and follow the
   project standard.
+- Do not open `batch-grill-me` / `grill-me` / `grill-with-docs` for a small,
+  already-scoped edit; use built-in `how-to-ask-question` or proceed.
+- Do not run serial `grilling` and `batch-grill-me` in the same phase.
+- Do not implement from a grill session before the user confirms shared
+  understanding.
